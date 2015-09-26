@@ -38,6 +38,10 @@ You can (and should) look at existing instances to see how to add content. Here'
 ## Blog posts
 A blog post is simply a markdown file in the `_posts/` folder that is categorized as a blog in the metadata. To add a post, create a markdown file with the appropriate filename format (`YYYY-MM-DD-name-of-post.md`) and fill in the post metadata as follows, being sure to include `blog` under categories:
 ```
+
+## Adding pdfs to teaching
+use markdown: [link text](/assets/filename.pdf)
+Throw filename.pdf in /assets.
 ---
 layout: post
 title:  "Name of post"
