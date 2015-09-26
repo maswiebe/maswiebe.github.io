@@ -5,10 +5,10 @@ highlight_color: '#3498db'
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
-  gravatar: 56e8e22796618ea3b817d4aae19c6e33
-  facebook: tobanw
-  github: tobanw
-  linkedin: tobanw
+  #gravatar: 56e8e22796618ea3b817d4aae19c6e33
+  facebook: michael.wiebe.10
+  github: maswiebe
+  #linkedin: 
   #twitter:
   #bitbucket:
   #hacker_news:
@@ -18,14 +18,14 @@ social:
   #gplus:
 
 # "Hi, I'm _______"
-name: Toban Wiebe
-email-user: tobanw
+name: Michael Wiebe
+email-user: maswiebe
 email-host: gmail.com
 #title:
-tagline: Economics PhD student at Penn
+tagline: Economics PhD student at UBC
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key: UA-67313542-1
+#google_analytics_key: UA-67313542-1
 
 # Toggle "Postings are my own" disclaimer in footer
 show_disclaimer: false

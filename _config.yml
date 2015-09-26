@@ -1,7 +1,7 @@
 # General Jekyll Config
 markdown: kramdown
 highlighter: pygments
-url: http://tobanwiebe.com
+url: http://michaelwiebe.com
 lsi: false
 exclude: [LICENSE, CNAME, README.md, TODO.md, .gitignore, Gemfile, Gemfile.lock]
 permalink: /:year/:month/:title

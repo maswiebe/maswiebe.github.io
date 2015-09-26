@@ -7,8 +7,8 @@ permalink: /research/
 
 ###Papers
 
-In progress...
+In progress
 
 ###Presentations
 
-- [Game Theory and Evolution](/assets/GameTheoryEvolution.pdf): Canadian Undergraduate Mathematics Conference 2012
+Forthcoming
