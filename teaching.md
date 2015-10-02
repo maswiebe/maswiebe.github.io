@@ -6,3 +6,5 @@ permalink: /teaching/
 ---
 
 [Varian workouts](/assets/Varian - workouts.pdf)
+
+[Sept. 30, Oct. 2 tutorial](/assets/Week-3_workouts.pdf)
