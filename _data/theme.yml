@@ -2,6 +2,12 @@
 
 # Color for top bar, links, etc
 highlight_color: '#3498db'
+focus_color: '#aa0000'
+
+# layout position: sidebar and content
+sidebar_position: left
+content_position: right
+
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
