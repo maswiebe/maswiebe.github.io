@@ -5,10 +5,10 @@ nav: main
 permalink: /research/
 ---
 
-###Papers
+### Papers
 
 In progress
 
-###Presentations
+### Presentations
 
 Forthcoming
