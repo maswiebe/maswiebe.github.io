@@ -5,6 +5,4 @@ nav: main
 permalink: /research/
 ---
 
-### Papers
-
 In progress
