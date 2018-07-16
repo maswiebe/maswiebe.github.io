@@ -8,7 +8,3 @@ permalink: /research/
 ### Papers
 
 In progress
-
-### Presentations
-
-Forthcoming
