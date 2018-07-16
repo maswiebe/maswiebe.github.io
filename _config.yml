@@ -1,8 +1,19 @@
 # General Jekyll Config
-markdown: redcarpet
-redcarpet:
-    extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
-url: http://michaelwiebe.com
+url: http://tobanwiebe.com
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 lsi: false
-exclude: [LICENSE, CNAME, README.md, TODO.md, .gitignore, Gemfile, Gemfile.lock]
+exclude:
+  - LICENSE
+  - CNAME
+  - README.md
+  - TODO.md
+  - .gitignore
+  - vendor/bundle
+  - Gemfile
+  - Gemfile.lock
 permalink: /blog/:year/:month/:title
