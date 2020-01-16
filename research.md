@@ -5,4 +5,6 @@ nav: main
 permalink: /research/
 ---
 
-In progress
+"A Bunch of Discretion: Red Tape and Tax Enforcement", with Jeff Hicks and Wei Cui.
+
+"The Economic Effects of China’s Corruption Crackdown"
