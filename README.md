@@ -34,19 +34,19 @@ Just push your changes to the github repo and github will do the rest.
 
 # Adding content
 You can (and should) look at existing instances to see how to add content. Here's an outline to get started:
-
-## Blog posts
-A blog post is simply a markdown file in the `_posts/` folder that is categorized as a blog in the metadata. To add a post, create a markdown file with the appropriate filename format (`YYYY-MM-DD-name-of-post.md`) and fill in the post metadata as follows, being sure to include `blog` under categories:
 ```
-
 ## Adding pdfs to teaching
 use markdown: [link text](/assets/filename.pdf)
 Throw filename.pdf in /assets.
+```
+## Blog posts
+A blog post is simply a markdown file in the `_posts/` folder that is categorized as a blog in the metadata. To add a post, create a markdown file with the appropriate filename format (`YYYY-MM-DD-name-of-post.md`) and fill in the post metadata as follows, being sure to include `blog` under categories:
+```
 ---
 layout: post
 title:  "Name of post"
 date:   2015-07-29 23:31:00
-categories: blog
+type: post
 ---
 ```
 Then add your content (written in markdown).
