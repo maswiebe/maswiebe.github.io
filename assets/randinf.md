@@ -4,14 +4,13 @@ title:  "Is randomization inference a robustness check? For what?"
 date:   2020-11-04 23:20:00
 type: post
 ---
-
-I've seen a few papers that use randomization inference as a robustness check. They permute their treatment variable many times, and estimate their model for each permutation, producing a null distribution of estimates. From this null distribution we can calculate a randomization inference (RI) p-value as the fraction of estimates that are more extreme than the original estimate. (This works because under the null hypothesis of no treatment effect, switching a unit from the treatment to the control group has no effect on the outcome.) These papers show that RI p-values are similar to their conventional p-values, and conclude that their results are robust.
+I've seen a few papers that use [randomization inference](https://egap.org/resource/10-things-to-know-about-randomization-inference/) as a robustness check. They permute their treatment variable many times, and estimate their model for each permutation, producing a null distribution of estimates. From this null distribution we can calculate a randomization inference (RI) p-value as the fraction of estimates that are more extreme than the original estimate. (This works because under the null hypothesis of no treatment effect, switching a unit from the treatment to the control group has no effect on the outcome.) These papers show that RI p-values are similar to their conventional p-values, and conclude that their results are robust.
 
 But robust to what, exactly?
 
 Consider the case of using control variables as a robustness check. When adding control to a regression, we're showing that our result is not driven by possible confounders. If the coefficient loses significance, we conclude that the original effect was spurious. But if the coefficient is stable and remains significant, then we conclude that the effect is not driven by confounding, and we say that it is robust to controls (at least, the ones we included).
 
-Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? Young (2019) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated leverage. This means that the size, AKA the false positive rate $$P($$reject $$H_{0}|H_{0}) = P(p<\alpha|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
+Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? Young (2019) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated leverage. This means that the size, AKA the false positive rate $$P($$reject $$H_{0}\|H_{0}) = P(p<\alpha\|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
 
 By comparison, RI has smaller size distortions. It performs better in settings of concentrated leverage, since it uses an exact test (with a known distribution for any sample size $$N$$), and hence doesn't rely on convergence as $$N$$ grows large. See Young (2019) for details. Upshot: we can think of RI as a robustness test for finite sample bias (in otherwise asymptotically correct variance estimates).
 
@@ -30,7 +29,7 @@ interaction for being a border state.
 
 Here's how they describe their randomization inference exercise (p.24):
 
-We run an in-space placebo test to test whether the control states form
+>We run an in-space placebo test to test whether the control states form
 a valid counterfactual to the treatment states in the absence of
 treatment. In this placebo-test, we randomly reassign both the treatment
 and the border dummies to other states. We select at random four states
@@ -40,7 +39,7 @@ dates in California, Arizona and New Mexico. We also randomly reassign
 the inland treatment dummies and estimate \[Equation\] (1) with the
 placebo dummies rather than the actual dummies. \[\...\]
 
-If our treatment result is driven by strong heterogeneity in trends, the
+>If our treatment result is driven by strong heterogeneity in trends, the
 placebo treatments will often find an effect of similar magnitude and
 our baseline coefficient of -107.98 will be in the thick of the
 distribution of placebo-coefficients. On the other hand, if we are
@@ -58,7 +57,9 @@ first read this paper. The only problem is that it's wrong.[^2]
 To prove this, I run a simulation with differential pre-trends (i.e., a
 violation of the common trends assumption). I simulate panel data for 50
 states over 1995-2015 according to:
-$$y_{st} = \beta D_{st} + \gamma_{s} + \gamma_{t} + \lambda \times D_{s} \times  (t-1995)  + \varepsilon_{st}.$$
+
+$$\tag{1} y_{st} = \beta D_{st} + \gamma_{s} + \gamma_{t} + \lambda \times D_{s} \times  (t-1995)  + \varepsilon_{st}.$$
+
 Here $$D_{st}$$ is a treatment dummy, equal to 1 in the years a state is
 treated. Ten states are treated, with treatment years selected randomly
 in 2000-2010; so this is a staggered rollout diff-in-diff. I draw state
@@ -114,7 +115,9 @@ Simple OLS
 ### Constant effects: $$\beta=0$$
 
 Data-generating process (DGP) with $$\beta=0$$:
-$$y_{i} = \sum_{k=1}^{K} \beta_{k} X_{k,i} + \varepsilon_{i} = \varepsilon_{i}$$
+
+$$ \tag{2} y_{i} = \sum_{k=1}^{K} \beta_{k} X_{k,i} + \varepsilon_{i} = \varepsilon_{i}$$
+
 I p-hack a significant result by regressing $$y$$ on $$X_{k}$$ for
 $$k=1:K=20$$, and selecting the $$X_{k}$$ with the smallest p-value. I use
 $$N=1000$$ and a significance level of $$\alpha=0.05$$.
@@ -135,7 +138,9 @@ homogeneous effects.
 ### Heterogeneous effects: $$\beta_{i} \sim N(0,1)$$
 
 DGP with $$\beta_{k,i} \sim N(0,1)$$:
-$$y_{i} = \sum_{k=1}^{K} \beta_{k,i} X_{k,i} + \varepsilon_{i}$$ Again,
+
+$$ \tag{3} y_{i} = \sum_{k=1}^{K} \beta_{k,i} X_{k,i} + \varepsilon_{i}$$ Again,
+
 I p-hack by cycling through the $$X_{k}$$'s and selecting the most
 significant one.
 
@@ -159,7 +164,9 @@ but with no differential trends.
 ### Constant effects: $$\beta=0$$
 
 DGP:
-$$y_{st} = \beta D_{st} + \gamma_{s} + \gamma_{t} + \varepsilon_{st}$$ I
+
+$$ \tag{4} y_{st} = \beta D_{st} + \gamma_{s} + \gamma_{t} + \varepsilon_{st}$$ I
+
 simulate panel data for 50 states over 1995-2015. 10 states are treated,
 with treatment years selected randomly in 2000-2010; so this is a
 staggered rollout diff-in-diff. I draw state and year fixed effects
@@ -191,7 +198,9 @@ of false positives remain significant using $$p_{RI}$$.
 ### Heterogeneous effects: $$\beta_{s} \sim N(0,1)$$
 
 DGP:
-$$y_{st} = \beta_{s} D_{st} + \gamma_{s} + \gamma_{t} + \varepsilon_{st}$$
+
+$$ \tag{5} y_{st} = \beta_{s} D_{st} + \gamma_{s} + \gamma_{t} + \varepsilon_{st}$$
+
 Now I repeat the same exercise, but with the 10 treated states having
 treatment effects drawn from $$N(0,1)$$.
 
@@ -216,7 +225,7 @@ binary treatment variable to generate a finite sample bias that is
 mitigated by randomization inference. Here's a graph showing how
 $$|p-p_{RI}|$$ varies with $$Var(\beta_{i})$$:
 
-[^1]: With a properly-sized test, $$P($$reject $$H_{0}| H_{0}) = \alpha$$.
+[^1]: With a properly-sized test, $$P($$reject $$H_{0}\| H_{0}) = \alpha$$.
 
 [^2]: Another paper that uses a RI strategy is Yao and Zhang (2015).
     They use RI on a three-way fixed-effects model, regressing GDP
