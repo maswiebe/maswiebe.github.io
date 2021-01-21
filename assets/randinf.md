@@ -144,9 +144,9 @@ homogeneous effects.
 
 DGP with $$\beta_{k,i} \sim N(0,1)$$:
 
-$$ \tag{3} y_{i} = \sum_{k=1}^{K} \beta_{k,i} X_{k,i} + \varepsilon_{i}$$ Again,
+$$ \tag{3} y_{i} = \sum_{k=1}^{K} \beta_{k,i} X_{k,i} + \varepsilon_{i}$$ 
 
-I p-hack by cycling through the $$X_{k}$$'s and selecting the most
+Again, I p-hack by cycling through the $$X_{k}$$'s and selecting the most
 significant one.
 
 From 1000 simulations, I find:
