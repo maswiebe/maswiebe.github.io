@@ -4,6 +4,7 @@ title:  "Is randomization inference a robustness check? For what?"
 date:   2020-11-04 23:20:00
 type: post
 ---
+
 I've seen a few papers that use [randomization inference](https://egap.org/resource/10-things-to-know-about-randomization-inference/) as a robustness check. They permute their treatment variable many times, and estimate their model for each permutation, producing a null distribution of estimates. From this null distribution we can calculate a randomization inference (RI) p-value as the fraction of estimates that are more extreme than the original estimate. (This works because under the null hypothesis of no treatment effect, switching a unit from the treatment to the control group has no effect on the outcome.) These papers show that RI p-values are similar to their conventional p-values, and conclude that their results are robust.
 
 But robust to what, exactly?
@@ -229,6 +230,8 @@ $$|p-p_{RI}|$$ varies with $$Var(\beta_{i})$$:
 
 ![](https://michaelwiebe.com/assets/randinf/p_diff_xbern.png)
 
+So it is possible for RI p-values to diverge substantially from conventional p-values, but it requires a pretty extreme scenario.
+
 -----------------------------------------
 
 [^1]: With a properly-sized test, $$P($$reject $$H_{0}\| H_{0}) = \alpha$$.
@@ -238,7 +241,7 @@ $$|p-p_{RI}|$$ varies with $$Var(\beta_{i})$$:
     growth on leader, city, and year FEs. They give a similar rationale
     for randomization inference:
 
-    Our second robustness check is a placebo test that permutes leaders'
+    >Our second robustness check is a placebo test that permutes leaders'
     tenures. If our estimates of leader effects only picked up
     heteroskedastic shocks, we would have no reason to believe that
     these shocks would form a consistent pattern that follows the cycle
