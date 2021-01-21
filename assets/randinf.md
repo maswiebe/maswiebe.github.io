@@ -10,7 +10,7 @@ But robust to what, exactly?
 
 Consider the case of using control variables as a robustness check. When adding control to a regression, we're showing that our result is not driven by possible confounders. If the coefficient loses significance, we conclude that the original effect was spurious. But if the coefficient is stable and remains significant, then we conclude that the effect is not driven by confounding, and we say that it is robust to controls (at least, the ones we included).
 
-Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? Young (2019) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated leverage. This means that the size, AKA the false positive rate $$P($$reject $$H_{0} &#124; H_{0}) = P(p<\alpha\|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
+Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? Young (2019) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated [leverage](https://en.wikipedia.org/wiki/Leverage_(statistics)). This means that the [size](https://en.wikipedia.org/wiki/Size_(statistics)), AKA the false positive rate $$P($$reject $$H_{0}\|H_{0}) = P(p<\alpha\|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
 
 By comparison, RI has smaller size distortions. It performs better in settings of concentrated leverage, since it uses an exact test (with a known distribution for any sample size $$N$$), and hence doesn't rely on convergence as $$N$$ grows large. See Young (2019) for details. Upshot: we can think of RI as a robustness test for finite sample bias (in otherwise asymptotically correct variance estimates).
 
@@ -18,7 +18,7 @@ So in the case where we lose significance using RI ($$p<0.05$$ and $$p_{RI}>0.05
 
 So RI is a useful robustness check for when we're worried about finite sample bias. However, the papers mentioned above give a different justification for their use of RI.
 
-Randomization inference in Gavrilova et al. (2019)
+Randomization inference in [Gavrilova et al. (2019)](https://sci-hub.st/https://onlinelibrary.wiley.com/doi/abs/10.1111/ecoj.12521)
 ==================================================
 
 This paper studies the effect of medical marijuana legalization on
@@ -87,6 +87,8 @@ estimate across 100 simulations, for different values of differential
 trends. We see that, on average, conventional and RI p-values are almost
 identical. As a result, the rejection rates are also similar.
 
+![](https://michaelwiebe.com/assets/randinf/trends.png)
+
 From the discussion above, we expect $$p_{RI}$$ to differ when leverage is
 concentrated, due to small sample size and heterogeneous effects. Since
 this is not the case here, RI and conventional p-values are similar.
@@ -109,7 +111,7 @@ larger (in absolute value) than the original t-statistic. According to
 Young (2019), using the t-statistic produces better performance than
 using the coefficient.
 
-Simple OLS
+(1) Simple OLS
 ----------
 
 ### Constant effects: $$\beta=0$$
@@ -155,7 +157,7 @@ From 1000 simulations, I find:
 So even with heterogeneous effects, $$N=1000$$ is enough to avoid finite
 sample bias, so RI p-values are no different.
 
-Difference in differences
+(2) Difference in differences
 -------------------------
 
 Next I simulate panel data and estimate a diff-in-diff model as above,
@@ -225,9 +227,13 @@ binary treatment variable to generate a finite sample bias that is
 mitigated by randomization inference. Here's a graph showing how
 $$|p-p_{RI}|$$ varies with $$Var(\beta_{i})$$:
 
+![](https://michaelwiebe.com/assets/randinf/p_diff_xbern.png)
+
+-----------------------------------------
+
 [^1]: With a properly-sized test, $$P($$reject $$H_{0}\| H_{0}) = \alpha$$.
 
-[^2]: Another paper that uses a RI strategy is Yao and Zhang (2015).
+[^2]: Another paper that uses a RI strategy is [Yao and Zhang (2015)](https://sci-hub.st/https://link.springer.com/article/10.1007/s10887-015-9116-1).
     They use RI on a three-way fixed-effects model, regressing GDP
     growth on leader, city, and year FEs. They give a similar rationale
     for randomization inference:
