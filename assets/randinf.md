@@ -234,6 +234,8 @@ $$|p-p_{RI}|$$ varies with $$Var(\beta_{i})$$:
 
 So it is possible for RI p-values to diverge substantially from conventional p-values, but it requires a pretty extreme scenario.
 
+-----------------
+
 Footnotes
 ---------
 See [here](https://michaelwiebe.com/assets/randinf/randinf.r) for R code.
