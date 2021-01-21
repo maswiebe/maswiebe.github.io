@@ -11,7 +11,7 @@ But robust to what, exactly?
 
 Consider the case of using control variables as a robustness check. When adding control to a regression, we're showing that our result is not driven by possible confounders. If the coefficient loses significance, we conclude that the original effect was spurious. But if the coefficient is stable and remains significant, then we conclude that the effect is not driven by confounding, and we say that it is robust to controls (at least, the ones we included).
 
-Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? Young (2019) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated [leverage](https://en.wikipedia.org/wiki/Leverage_(statistics)). This means that the [size](https://en.wikipedia.org/wiki/Size_(statistics)), AKA the false positive rate $$P($$reject $$H_{0}\|H_{0}) = P(p<\alpha\|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
+Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? [Young (2019)](https://sci-hub.st/https://academic.oup.com/qje/article/134/2/557/5195544) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated [leverage](https://en.wikipedia.org/wiki/Leverage_(statistics)). This means that the [size](https://en.wikipedia.org/wiki/Size_(statistics)), AKA the false positive rate $$P($$reject $$H_{0}\|H_{0}) = P(p<\alpha\|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
 
 By comparison, RI has smaller size distortions. It performs better in settings of concentrated leverage, since it uses an exact test (with a known distribution for any sample size $$N$$), and hence doesn't rely on convergence as $$N$$ grows large. See Young (2019) for details. Upshot: we can think of RI as a robustness test for finite sample bias (in otherwise asymptotically correct variance estimates).
 
@@ -100,6 +100,8 @@ positives driven by differential trends also have small RI p-values.
 Randomization inference is a robustness check for finite sample bias,
 and nothing more.
 
+--------------
+
 Appendix: p-hacking simulations
 ===============================
 
@@ -168,9 +170,9 @@ but with no differential trends.
 
 DGP:
 
-$$ \tag{4} y_{st} = \beta D_{st} + \gamma_{s} + \gamma_{t} + \varepsilon_{st}$$ I
+$$ \tag{4} y_{st} = \beta D_{st} + \gamma_{s} + \gamma_{t} + \varepsilon_{st}$$
 
-simulate panel data for 50 states over 1995-2015. 10 states are treated,
+I simulate panel data for 50 states over 1995-2015. 10 states are treated,
 with treatment years selected randomly in 2000-2010; so this is a
 staggered rollout diff-in-diff. I draw state and year fixed effects
 separately from $$N(0,1)$$. To generate a false positive, I set $$\beta=0$$.
@@ -232,7 +234,9 @@ $$|p-p_{RI}|$$ varies with $$Var(\beta_{i})$$:
 
 So it is possible for RI p-values to diverge substantially from conventional p-values, but it requires a pretty extreme scenario.
 
------------------------------------------
+Footnotes
+---------
+See [here](https://michaelwiebe.com/assets/randinf/randinf.r) for R code.
 
 [^1]: With a properly-sized test, $$P($$reject $$H_{0}\| H_{0}) = \alpha$$.
 
