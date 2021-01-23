@@ -8,10 +8,12 @@ type: post
 How robust are false positives to dropping 1% of your sample? Turns out, not at all.
 
 Rachael Meager and co-authors have a [paper](https://twitter.com/economeager/status/1338525095724261378) with a new robustness metric based on dropping a small fraction of the sample.
+It's called the Approximate Maximum Influence Perturbation (AMIP).
 Basically, their algorithm finds the observations that, when dropped, have the biggest [influence](https://en.wikipedia.org/wiki/Influential_observation) on an estimate.
 It calculates the smallest fraction required to change an estimate's significance, sign, and both significance and sign.
 In other words, if you have a significant positive result, it calculates the minimum fractions of data you need to drop in order to (1) kill significance, (2) get a negative result, and (3) get a significant negative result.
-The intuition here is to check whether there are influential observations that are driving a result.[^1] And influence is related to a low signal-to-noise ratio.
+The intuition here is to check whether there are influential observations that are driving a result.[^1]
+And influence is related to the signal-to-noise ratio, where the signal is the true effect size and the noise is the relative variance of the residuals and the regressors.
 
 In a [previous post](https://michaelwiebe.com/blog/2021/01/phack), I explored how p-hacked false positives can be robust to control variables.
 In this post, I want to see how p-hacked results fare under this new robustness test.
@@ -30,7 +32,7 @@ I repeat this process for different values of $$\beta$$, and the results are sho
 
 ![](https://michaelwiebe.com/assets/amip/true_b.png)
 
-We see that as the effect size increases, the proportion required to flip a condition also increases. When $$\beta=0.2$$, we need to drop more than 5% of the data to kill significance. This makes sense, because the signal-to-noise ratio is increasing in the true effect size.
+We see that as the effect size increases, the proportion required to flip a condition also increases. When $$\beta=0.2$$, we need to drop more than 5% of the data to kill significance. This makes sense, because the true effect size increases the signal and hence the signal-to-noise ratio.
 <!-- define s-to-n; how does beta matter? -->
 
 Robustness of p-hacked results
