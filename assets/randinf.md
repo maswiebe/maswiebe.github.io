@@ -239,7 +239,7 @@ So it is possible for RI p-values to diverge substantially from conventional p-v
 
 Footnotes
 ---------
-See [here](https://michaelwiebe.com/assets/randinf/randinf.r) for R code.
+See [here](https://github.com/maswiebe/metrics/blob/main/randinf.r) for R code.
 
 [^1]: With a properly-sized test, $$P($$reject $$H_{0} \mid H_{0}) = \alpha$$.
 
