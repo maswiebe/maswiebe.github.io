@@ -11,8 +11,7 @@ Rachael Meager and co-authors have a [paper](https://twitter.com/economeager/sta
 Basically, their algorithm finds the observations that, when dropped, have the biggest [influence](https://en.wikipedia.org/wiki/Influential_observation) on an estimate.
 It calculates the smallest fraction required to change an estimate's significance, sign, and both significance and sign.
 In other words, if you have a significant positive result, it calculates the minimum fractions of data you need to drop in order to (1) kill significance, (2) get a negative result, and (3) get a significant negative result.
-The intuition here is to check whether there are influential observations that are driving a result.[^1]
-And influence is related to a low signal-to-noise ratio.
+The intuition here is to check whether there are influential observations that are driving a result.[^1] And influence is related to a low signal-to-noise ratio.
 
 In a [previous post](https://michaelwiebe.com/blog/2021/01/phack), I explored how p-hacked false positives can be robust to control variables.
 In this post, I want to see how p-hacked results fare under this new robustness test.
@@ -68,6 +67,8 @@ Hence, dropping data looks like an effective robustness check against false posi
 Hopefully this metric becomes a widely used robustness check, and will help root out bad research.
 
 ------------------
+
 Footnotes
 ----------
+
 [^1]: In the univariate case, influence = leverage $$\times$$ residual.
