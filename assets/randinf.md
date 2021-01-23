@@ -11,18 +11,19 @@ But robust to what, exactly?
 
 Consider the case of using control variables as a robustness check. When adding control to a regression, we're showing that our result is not driven by possible confounders. If the coefficient loses significance, we conclude that the original effect was spurious. But if the coefficient is stable and remains significant, then we conclude that the effect is not driven by confounding, and we say that it is robust to controls (at least, the ones we included).
 
-Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? [Young (2019)](https://sci-hub.st/https://academic.oup.com/qje/article/134/2/557/5195544) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated [leverage](https://en.wikipedia.org/wiki/Leverage_(statistics)). This means that the [size](https://en.wikipedia.org/wiki/Size_(statistics)), AKA the false positive rate $$P($$reject $$H_{0}\|H_{0}) = P(p<\alpha\|H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of 0.1. In this case, conventional p-values are invalid.
+Returning to randomization inference, suppose our result is significant using conventional p-values ($$p<0.05$$), but not with randomization inference ($$p_{RI}>0.05$$). What's happening here? [Young (2019)](https://sci-hub.st/https://academic.oup.com/qje/article/134/2/557/5195544) says that conventional p-values can have 'size distortions' when the sample size is small and treatment effects are heterogeneous, resulting in concentrated [leverage](https://en.wikipedia.org/wiki/Leverage_(statistics)). This means that the [size](https://en.wikipedia.org/wiki/Size_(statistics)), AKA the false positive rate $$P($$reject $$H_{0} \mid H_{0}) = P(p<\alpha \mid H_{0})$$, is higher than the nominal significance level $$\alpha$$.[^1] For instance, using $$\alpha =0.05$$, we might have a false positive rate of $$0.1$$. In this case, conventional p-values are invalid.
 
 By comparison, RI has smaller size distortions. It performs better in settings of concentrated leverage, since it uses an exact test (with a known distribution for any sample size $$N$$), and hence doesn't rely on convergence as $$N$$ grows large. See Young (2019) for details. Upshot: we can think of RI as a robustness test for finite sample bias (in otherwise asymptotically correct variance estimates).
 
 So in the case where we lose significance using RI ($$p<0.05$$ and $$p_{RI}>0.05$$), we infer that the original result was driven by finite sample bias. In contrast, if $$p \approx p_{RI} <0.05$$, then we conclude that the result is not driven by finite sample bias.
 
-So RI is a useful robustness check for when we're worried about finite sample bias. However, the papers mentioned above give a different justification for their use of RI.
+So RI is a useful robustness check for when we're worried about finite sample bias.
+However, this is not the justification I've seen when papers use RI as a robustness check.
 
 Randomization inference in [Gavrilova et al. (2019)](https://sci-hub.st/https://onlinelibrary.wiley.com/doi/abs/10.1111/ecoj.12521)
 ==================================================
 
-This paper studies the effect of medical marijuana legalization on
+This paper (published in Economic Journal) studies the effect of medical marijuana legalization on
 crime, finding that legalization decreases crime in states that border
 Mexico. The paper uses a triple-diff method, essentially doing a
 diff-in-diff for the effect of legalization on crime, then adding an
@@ -48,7 +49,7 @@ measuring an actual treatment effect, the baseline coefficient will be
 in the far left tail of the distribution of placebo-coefficients.
 \[\...\]
 
-Our baseline-treatment coefficient is in the bottom 3rd-percentile of
+>Our baseline-treatment coefficient is in the bottom 3rd-percentile of
 the distribution. This result is consistent with a p-value of about 0.03
 using a one-sided t-test.
 
@@ -144,7 +145,7 @@ homogeneous effects.
 
 DGP with $$\beta_{k,i} \sim N(0,1)$$:
 
-$$ \tag{3} y_{i} = \sum_{k=1}^{K} \beta_{k,i} X_{k,i} + \varepsilon_{i}$$ 
+$$ \tag{3} y_{i} = \sum_{k=1}^{K} \beta_{k,i} X_{k,i} + \varepsilon_{i}$$
 
 Again, I p-hack by cycling through the $$X_{k}$$'s and selecting the most
 significant one.
@@ -240,7 +241,7 @@ Footnotes
 ---------
 See [here](https://michaelwiebe.com/assets/randinf/randinf.r) for R code.
 
-[^1]: With a properly-sized test, $$P($$reject $$H_{0}\| H_{0}) = \alpha$$.
+[^1]: With a properly-sized test, $$P($$reject $$H_{0} \mid H_{0}) = \alpha$$.
 
 [^2]: Another paper that uses a RI strategy is [Yao and Zhang (2015)](https://sci-hub.st/https://link.springer.com/article/10.1007/s10887-015-9116-1).
     They use RI on a three-way fixed-effects model, regressing GDP
