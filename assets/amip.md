@@ -73,5 +73,6 @@ Hopefully this metric becomes a widely used robustness check, and will help root
 
 Footnotes
 ----------
+See [here](https://github.com/maswiebe/metrics/blob/main/amip.r) for R code.
 
 [^1]: In the univariate case, influence = leverage $$\times$$ residual.
