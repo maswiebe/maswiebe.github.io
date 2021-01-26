@@ -32,7 +32,7 @@ I repeat this process for different values of $$\beta$$, and the results are sho
 
 ![](https://michaelwiebe.com/assets/amip/true_b.png)
 
-We see that as the effect size increases, the proportion required to flip a condition also increases. When $$\beta=0.2$$, we need to drop more than 5% of the data to kill significance. This makes sense, because the true effect size increases the signal and hence the signal-to-noise ratio.
+We see that as the effect size increases, the fraction of data needed to be dropped in order to flip a condition also increases. When $$\beta=0.2$$, we need to drop more than 5% of the data to kill significance. This makes sense, because the true effect size increases the signal and hence the signal-to-noise ratio.
 <!-- define s-to-n; how does beta matter? -->
 
 Robustness of p-hacked results
@@ -53,7 +53,7 @@ $$\tag{3} y_{i} = \gamma z_{i} + \varepsilon_{i}.$$
 I'm going to p-hack using the $$X_{k}$$'s, running $$K=20$$ univariate regressions of $$y$$ on $$X_{k}$$ and selecting the one with the smallest p-value.
 Then I run the AMIP algorithm to calculate the fraction of data needed to kill significance, etc.
 
-In my [previous post](https://michaelwiebe.com/blog/2021/01/phack) on p-hacking, we learned that when $$\gamma$$ is small, the partial-$$R^{2}(z)$$ is small, and controlling for $$z$$ is not able to kill false positives.
+In my [previous post](https://michaelwiebe.com/blog/2021/01/phack) on p-hacking, we learned that when $$\gamma$$ is small, the partial-$$R^{2}(z)$$ is small, and controlling for $$z$$ is not able to kill coincidental false positives.
 To see whether dropping data is a better robustness check, I repeat the above process for different values of $$\gamma$$.
 
 ![](https://michaelwiebe.com/assets/amip/falsepos_g.png)
@@ -64,8 +64,9 @@ First, notice that we lose significance after dropping a tiny fraction of the da
 Second, we see that the fraction dropped doesn't vary with $$\gamma$$ at all.
 This is good news: previously, we saw that control variables only kill false positives when they have high partial-$$R^{2}$$.
 But dropping influential observations is equally effective for any value of $$\gamma$$.
+So dropping data is an effective robustness check where control variables fail.
 
-Hence, dropping data looks like an effective robustness check against false positives.
+Overall, dropping data looks like an effective robustness check against coincidental false positives.
 Hopefully this metric becomes a widely used robustness check, and will help root out bad research.
 
 ------------------
