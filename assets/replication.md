@@ -261,8 +261,8 @@ happened to produce results consistent with their story?
 Conclusion
 ==========
 
-The original study of meritocratic promotion for provincial leaders, Li
-and Zhou (2005), has been cited over 2500 times. But follow-up work has
+The original study of meritocratic promotion for provincial leaders, [Li
+and Zhou (2005)](https://sci-hub.st/https://doi.org/10.1016/j.jpubeco.2004.06.009), has been cited over 2500 times. But follow-up work has
 repeatedly failed to confirm its finding of a positive correlation
 between provincial GDP growth and promotion.[^4] And as I have shown in
 this post, attempts to extend the meritocracy story down to prefecture
