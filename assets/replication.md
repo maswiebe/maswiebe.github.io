@@ -84,7 +84,7 @@ didn't. But they'd already invested a lot of time in collecting the data
 and working out a clever identification strategy, so they found an
 interaction that got them statistical significance, even if the
 interpretation wasn't really consistent. Hence, I [reject their p-value
-as invalid](https://michaelwiebe.com/blog/2020/11/pvalues).
+as invalid](https://michaelwiebe.com/blog/2020/11/pvalues).[^3]
 
 And it turns out that this is the right call. Digging into the paper, I
 find that the significant interaction term depends on including
@@ -116,7 +116,7 @@ promotion. But now the interaction with age disappears. The sign remains
 positive, but the magnitude of the coefficient drops by half, and the
 results are nonsignificant.
 
-So it turns out that Yao and Zhang (2015) offers no evidence at all for
+So it turns out that Yao and Zhang (2015) offers no evidence for
 meritocratic promotion of prefecture leaders.
 
 Li et al. (2019)
@@ -158,7 +158,7 @@ growth rates relative to the annual provincial growth rate. Second, OLS
 is the best linear approximation to a nonlinear conditional expectation
 function. So if there is a positive nonlinear relationship between
 promotion and growth, we should be expect that it will be detected by
-OLS.[^3]
+OLS.[^4]
 
 Given the lack of justification for omitting results from linear
 regression, I replicate their results using a linear probability model
@@ -248,13 +248,13 @@ promotion is now negative and nonsignificant. So just like the other two
 papers, Chen and Kung (2019) also fails to provide evidence for
 meritocratic promotion of prefecture leaders.
 
-Frankly, I think this might be fraud. It looks like the authors had a
+This is extremely suspicious. Speculating, it looks like the authors had a
 nice paper using provincial data, but a referee asked them to extend it
 to prefecture leaders. To fit their story, they needed to find an effect
 of land sales for secretaries (but not mayors), and an effect of GDP
-growth for mayors (but not secretaries). Maybe the data didn't agree,
-and they had to falsify the promotion data for mayors. It wouldn't be
-obvious, since the replication files didn't include spell-level data.
+growth for mayors (but not secretaries). But maybe the data didn't agree,
+and their RA had to falsify the mayor promotion data to get the 'correct' result.
+This wouldn't be easy for referees to spot, since the replication files didn't include spell-level data.
 But how else did they collect such error-ridden data that also just
 happened to produce results consistent with their story?
 
@@ -264,7 +264,7 @@ Conclusion
 The original study of meritocratic promotion for provincial leaders, [Li
 and Zhou (2005)](https://sci-hub.st/https://doi.org/10.1016/j.jpubeco.2004.06.009), has been cited over 2500 times. But follow-up work has
 repeatedly failed to confirm its finding of a positive correlation
-between provincial GDP growth and promotion.[^4] And as I have shown in
+between provincial GDP growth and promotion.[^5] And as I have shown in
 this post, attempts to extend the meritocracy story down to prefecture
 leaders have also failed.
 
@@ -311,12 +311,25 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     evidence has indeed shown a strong association between GDP growth
     and promotion (\[\...\] Yao and Zhang, 2015)\".
 
-[^3]: One of the authors, Li-An Zhou, was also an author on the first
+[^3]: In a [previous post](https://michaelwiebe.com/blog/2020/11/pvalues), I discussed how p-values involve the thought experiment of running the exact same test on many samples of data.
+When designing a test, researchers need to follow a procedure that is consistent with this thought experiment. In particular, they need to design the test independently of the data; this guarantees that they would run the same test on different samples.
+As [Gelman and Loken](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf) put it: "For a p-value to be interpreted as evidence, it requires a strong claim that the same analysis would have been performed had the data been different."
+
+As it happens, Yao has recently posted a [working paper](https://www.semanticscholar.org/paper/The-Competence-Loyalty-Tradeoff-in-China%E2%80%99s-Wang-Yao/e43c2d1adff340d9c79ba15da6071f7f913a61d6) re-using the method in Yao and Zhang (2015).
+Like the first paper, the new one also studies how ability affects promotion for prefecture-level leaders, using the same approach to estimate leader effects. Importantly, they update their data on prefecture cities by extending the time series from 2010 to 2017.
+Thus, we have a perfect test case to see whether the same data-analysis decisions would be made when studying the same question and using a different dataset (drawn from the same population).
+It turns out that the new paper doesn't interact with age at all!
+Instead, it reports the average effect of ability on promotion, which is now significant, along with a new specification where ability is interacted with political connections (see Table 2).
+So the p-value requirement is not satisfied: the researcher performs different analyses when the data is different.
+Hence, our skepticism of original age interaction turns out to be justified. 
+Since the researcher would not run the same test on new samples, the significant p-value is actually invalid and does not count as evidence.
+
+[^4]: One of the authors, Li-An Zhou, was also an author on the first
     paper on meritocratic promotion, Li and Zhou (2005). That paper used
     an ordered probit model, so it is curious that they didn't employ
     the same model again here.
 
-[^4]: Su et al. (2012) claims that the results in Li and Zhou (2005)
+[^5]: Su et al. (2012) claims that the results in Li and Zhou (2005)
     don't replicate, after fixing data errors. Shih et al. (2012) finds
     that political connections, rather than economic growth, explain
     promotion. Jia et al. (2015) finds no average effect, but does
@@ -326,7 +339,7 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     dissertation, I replicate this paper using the data from Jia et al.
     (2015); I find no effect.
 
-[^5]: Here are a few of the [researcher degrees of freedom](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf) available when studying meritocratic promotion: promotion definitions; growth
+[^6]: Here are a few of the [researcher degrees of freedom](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf) available when studying meritocratic promotion: promotion definitions; growth
     definitions (annual vs. cumulative average vs. average GDP growth,
     absolute vs. relative GDP growth \[relative to predecessor vs.
     relative to provincial average vs. relative to both\], real vs.
