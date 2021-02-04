@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Replicating the literature on meritocratic promotion in China"
-date:   2021-02-03 20:00:00
+date:   2021-02-04 20:00:00
 type: post
 ---
 
@@ -14,11 +14,11 @@ being promoted. By tying promotion to economic growth, meritocratic
 promotion creates strong incentives to boost GDP, and hence helps
 explain China's rapid growth.
 
-Looking at prefecture politicians, however, I found no evidence for
-meritocracy: in my data, there was no correlation between GDP growth and
+When I collected data on prefecture politicians, however, I found no evidence for
+meritocracy: there was no correlation between GDP growth and
 promotion, despite trying many different models. How is this null result
 consistent with the positive findings in the rest of the literature? To
-find out, I replicated the main papers in the literature. Short answer:
+find out, I replicated the main papers claiming evidence for prefecture-level meritocracy. Short answer:
 the literature is wrong.
 
 This post summarizes my replications. I find that the results in the
@@ -326,8 +326,7 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     dissertation, I replicate this paper using the data from Jia et al.
     (2015); I find no effect.
 
-[^5]: Here are a few of the researcher degrees of freedom available when
-    studying meritocratic promotion: promotion definitions; growth
+[^5]: Here are a few of the [researcher degrees of freedom](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf) available when studying meritocratic promotion: promotion definitions; growth
     definitions (annual vs. cumulative average vs. average GDP growth,
     absolute vs. relative GDP growth \[relative to predecessor vs.
     relative to provincial average vs. relative to both\], real vs.
@@ -337,4 +336,3 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     interactions (with age, political connections \[hometown vs. college
     vs. workplace\], provinces of corrupt politicians, time period); data
     construction (annual vs. spell-level), and so on.
-    See: [garden of forking paths](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf).
