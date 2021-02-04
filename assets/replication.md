@@ -138,11 +138,11 @@ performance (measured by GDP growth) increases the probability of
 promotion. Further, they report an original result: the effect of
 performance on promotion is increasing in the growth target faced. That
 is, a one percentage-point increase in growth will increase a mayor's
-$\mathbbm{P}$(promotion) by a larger amount when the provincial target
+chances of promotion by a larger amount when the provincial target
 is higher, relative to when the target is lower.
 
 This result seems naturally testable by interacting
-$Growth \times Target$ in a panel regression, with a predicted positive
+$$Growth \times Target$$ in a panel regression, with a predicted positive
 coefficient on the interaction term. However, the authors argue that OLS
 is invalid, instead reporting results based on maximum likelihood where
 promotion is determined by a contest success function. Why does OLS not
@@ -212,25 +212,20 @@ while the Chen and Kung (2019) data never exceeds 15% and has six years
 where the promotion rate is less than 2%. Figure 1 compares the annual promotion rate
 from Chen and Kung to my own data as well as the data from Yao and Zhang
 (2015) and Li et al. (2019), where each paper uses a binary promotion
-variable. While the latter three sources broadly agree on the promotion
+variable (and data on prefecture mayors). While the latter three sources broadly agree on the promotion
 rate, the Chen and Kung data is a clear outlier. This is obviously
 suspect.
 
-<figure>
-  <img
-  src="https://michaelwiebe.com/assets/replication/promotion_all_raw_unbalanced.png"
-  alt="">
-  <figcaption>Promotion rate: prefecture mayors</figcaption>
-</figure>
+![](https://michaelwiebe.com/assets/replication/promotion_all_raw_unbalanced.png)
 
 Furthermore, upon investigating this discrepancy, I discovered apparent
 data errors in their promotion variable. The annual promotion variable
 is defined to be 1 in the year a mayor is promoted, and 0 otherwise.
-However, out of the 201 cases with $Promotion=1$, 124 occur *before* the
+However, out of the 201 cases with $$Promotion=1$$, 124 occur *before* the
 mayor's last year in office (with the remaining 77 cases occuring in the
 last year). Moreover, this variable is equal to 1 multiple times per
 spell in 4% of leader spells. Out of 1216 spells, 51 spells have
-$Promotion=1$ more than once per spell. For example, consider a mayor
+$$Promotion=1$$ more than once per spell. For example, consider a mayor
 who is in office for five years and then promoted; the promotion
 variable should be 0 in the first four years, then 1 in the final year.
 However, the Chen and Kung data has spells where the promotion variable
@@ -339,6 +334,6 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     nominal GDP, level vs. per capita GDP); regression model (LPM vs.
     probit/logit vs. ordered probit/logit vs. AKM leader effects vs. MLE
     with contest success function vs. proportional hazards model);
-    interactions (with age, political connections \[hometown vs college
-    vs workplace\], provinces of corrupt politicians, time period); data
+    interactions (with age, political connections \[hometown vs. college
+    vs. workplace\], provinces of corrupt politicians, time period); data
     construction (annual vs. spell-level), and so on.
