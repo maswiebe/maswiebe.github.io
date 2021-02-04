@@ -318,6 +318,7 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     As it happens, Yao has recently posted a [working paper](https://www.semanticscholar.org/paper/The-Competence-Loyalty-Tradeoff-in-China%E2%80%99s-Wang-Yao/e43c2d1adff340d9c79ba15da6071f7f913a61d6) re-using the method in Yao and Zhang (2015).
     Like the first paper, the new one also studies how ability affects promotion for prefecture-level leaders, using the same approach to estimate leader effects. Importantly, they update their data on prefecture cities by extending the time series from 2010 to 2017.
     Thus, we have a perfect test case to see whether the same data-analysis decisions would be made when studying the same question and using a different dataset (drawn from the same population).
+    
     It turns out that the new paper doesn't interact with age at all!
     Instead, it reports the average effect of ability on promotion, which is now significant, along with a new specification where ability is interacted with political connections (see Table 2).
     So the p-value requirement is not satisfied: the researcher performs different analyses when the data is different.
