@@ -219,8 +219,8 @@ suspect.
 <figure>
   <img
   src="https://michaelwiebe.com/assets/replication/promotion_all_raw_unbalanced.png"
-  <figcaption>Promotion rate: prefecture mayors</figcaption>
   alt="">
+  <figcaption>Promotion rate: prefecture mayors</figcaption>
 </figure>
 
 Furthermore, upon investigating this discrepancy, I discovered apparent
