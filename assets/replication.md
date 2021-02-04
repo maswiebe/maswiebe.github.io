@@ -331,9 +331,10 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
     definitions (annual vs. cumulative average vs. average GDP growth,
     absolute vs. relative GDP growth \[relative to predecessor vs.
     relative to provincial average vs. relative to both\], real vs.
-    nominal GDP, level vs. per capita GDP); regression model (LPM vs.
+    nominal GDP, level vs. per capita GDP); regression models (LPM vs.
     probit/logit vs. ordered probit/logit vs. AKM leader effects vs. MLE
     with contest success function vs. proportional hazards model);
     interactions (with age, political connections \[hometown vs. college
     vs. workplace\], provinces of corrupt politicians, time period); data
     construction (annual vs. spell-level), and so on.
+    See: [garden of forking paths](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf).
