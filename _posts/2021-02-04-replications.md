@@ -31,7 +31,7 @@ Yao and Zhang (2015)
 
 [Yao and Zhang (2015)](https://sci-hub.st/https://doi.org/10.1007/s10887-015-9116-1), published in the Journal of Economic Growth, was
 the first paper to study meritocratic promotion at the prefecture level
-in China. They estimate leader ability to grow GDP, and then estimate
+in China. They estimate a leader's ability to grow GDP, and then estimate
 the relationship between ability and promotion. If promotion is
 meritocratic, we should see a positive correlation, as high-growth
 leaders are promoted.
@@ -314,11 +314,11 @@ My null result paper is [here](https://michaelwiebe.com/assets/ch1.pdf).
 [^3]: In a [previous post](https://michaelwiebe.com/blog/2020/11/pvalues), I discussed how p-values involve the thought experiment of running the exact same test on many samples of data.
     When designing a test, researchers need to follow a procedure that is consistent with this thought experiment. In particular, they need to design the test independently of the data; this guarantees that they would run the same test on different samples.
     As [Gelman and Loken](https://stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf) put it: "For a p-value to be interpreted as evidence, it requires a strong claim that the same analysis would have been performed had the data been different."
-    
+
     As it happens, Yao has recently posted a [working paper](https://www.semanticscholar.org/paper/The-Competence-Loyalty-Tradeoff-in-China%E2%80%99s-Wang-Yao/e43c2d1adff340d9c79ba15da6071f7f913a61d6) re-using the method in Yao and Zhang (2015).
     Like the first paper, the new one also studies how ability affects promotion for prefecture-level leaders, using the same approach to estimate leader effects. Importantly, they update their data on prefecture cities by extending the time series from 2010 to 2017.
     Thus, we have a perfect test case to see whether the same data-analysis decisions would be made when studying the same question and using a different dataset (drawn from the same population).
-    
+
     It turns out that the new paper doesn't interact with age at all!
     Instead, it reports the average effect of ability on promotion, which is now significant, along with a new specification where ability is interacted with political connections (see Table 2).
     So the p-value requirement is not satisfied: the researcher performs different analyses when the data is different.
