@@ -216,7 +216,7 @@ variable (and data on prefecture mayors). While the latter three sources broadly
 rate, the Chen and Kung data is a clear outlier. This is obviously
 suspect.
 
-![](https://michaelwiebe.com/assets/replication/promotion_all_raw_unbalanced.png){:width="90%"}
+![](https://michaelwiebe.com/assets/replication/promotion_all_raw_unbalanced.png){:width="95%"}
 
 Furthermore, upon investigating this discrepancy, I discovered apparent
 data errors in their promotion variable. The annual promotion variable
