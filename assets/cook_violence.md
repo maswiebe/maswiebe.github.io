@@ -52,7 +52,7 @@ So let's see what's happening in the data.
 table region, c(mean lynchrevpc)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/table_lynch.png){:width="45%"}
+![](https://michaelwiebe.com/assets/cook_violence/table_lynch.png){:width="40%"}
 
 It turns out that basically all lynchings occurred in the South and West, with zero in the Midwest and Northeast (and roughly zero in Mid-Atlantic).
 Given this, the regression weights make sense.
@@ -83,7 +83,7 @@ What's going on?
 table region, c(sum riot)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/table_riot.png){:width="45%"}
+![](https://michaelwiebe.com/assets/cook_violence/table_riot.png){:width="40%"}
 
 It turns out there are only 5 riots in the state-level data.
 Let's dig deeper.
