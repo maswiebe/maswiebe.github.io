@@ -5,7 +5,7 @@ date:   2020-11-04 23:20:00
 type: post
 ---
 
-One of the main tools I use for replication is regression weights. These show the weight that each observation contributes to a regression coefficient.
+One of the main tools I use for replication is [regression weights](https://sci-hub.st/https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12185). These show the weight that each observation contributes to a regression coefficient.
 Suppose we're regressing $$y$$ on $$X_{1}$$ and $$X_{2}$$, with corresponding coefficients $$\beta_{1}$$ and $$\beta_{2}$$.
 Then, the regression weights for $$\beta_{1}$$ are the residuals from regressing $$X_{1}$$ on $$X_{2}$$.
 This is the variation in $$X_{1}$$ remaining after controlling for $$X_{2}$$.
@@ -19,7 +19,7 @@ In Figure 1, we see a stark drop in black patents around 1900. What is driving t
 
 ![](https://michaelwiebe.com/assets/cook_violence/fig1.png){:width="80%"}
 
-Cook (2014) argues that race riots and lynchings cause reduced patenting, directly by intimidating inventors, and indirectly by undermining trust in intellectual property laws (if the government won't punish race rioters, why should you believe it'll enforce your patents?).
+Cook argues that race riots and lynchings cause reduced patenting, directly by intimidating inventors, and indirectly by undermining trust in intellectual property laws (if the government won't punish race rioters, why should you believe it'll enforce your patents?).
 
 Table 7 contains the main state-level regressions of patents on lynching rates and riots.
 Using a random-effects model, Cook finds negative effects for both lynchings and riots.
@@ -42,7 +42,7 @@ Next, let's see how these weights vary by region.
 table region, c(sum regweight count patent)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/regweight_lynch.png){:width="50%"}
+![](https://michaelwiebe.com/assets/cook_violence/regweight_lynch.png){:width="55%"}
 
 This is a bit surprising. The South has 81% of the weight, with the remainder coming from the West. The other three regions have basically zero contribution to the lynchings coefficient.
 
@@ -58,8 +58,6 @@ It turns out that basically all lynchings occurred in the South and West, with z
 Given this, the regression weights make sense.
 When there's no variation in a variable, it should contribute nothing to the regression. But because the Midwest and Northeast have data on the other covariates, they still add some information, which is why the weights aren't exactly zero.
 
-
-
 -------------------------------
 Next, let's see the riot results.
 
@@ -73,7 +71,7 @@ gen regweight2 = res2/resid_tot2
 table region, c(sum regweight2 count patent)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/regweight_riot.png){:width="50%"}
+![](https://michaelwiebe.com/assets/cook_violence/regweight_riot.png){:width="55%"}
 
 Again, the regional patterns are surprising.
 This time, the South has 27% of the weight, and the Mid-Atlantic has 73%, with the other regions contributing nothing.
@@ -113,6 +111,3 @@ In other words, why should we expect this result to be externally valid for othe
 To sum up, regression weights are an easy way to dig into a paper and see exactly what's driving their results.
 
 Happy replicating!
-
-----------------------
-See [here](https://github.com/maswiebe/metrics/blob/main/.r) for Stata code.
