@@ -9,7 +9,7 @@ One of the main tools I use for replication is regression weights. These show th
 Suppose we're regressing $$y$$ on $$X_{1}$$ and $$X_{2}$$, with corresponding coefficients $$\beta_{1}$$ and $$\beta_{2}$$.
 Then, the regression weights for $$\beta_{1}$$ are the residuals from regressing $$X_{1}$$ on $$X_{2}$$.
 This is the variation in $$X_{1}$$ remaining after controlling for $$X_{2}$$.
-From Frisch-Waugh, we know that $$\beta_{1}$$ can be estimated by regressing y on these residuals.
+From Frisch-Waugh, we know that $$\beta_{1}$$ can be estimated by regressing $$y$$ on these residuals.
 Hence, the regression weights show the actual variation used in the estimate.
 When replicating a paper, looking at regression weights is a handy way to see what's actually driving the result.
 
@@ -17,7 +17,7 @@ In this post, I'll give a quick demo of regression weights, looking at [Cook (20
 This paper starts with striking time series data on patents by African American inventors.
 In Figure 1, we see a stark drop in black patents around 1900. What is driving this pattern?
 
-![](https://michaelwiebe.com/assets/cook_violence/regweight_lynch.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_violence/fig1.png){:width="80%"}
 
 Cook (2014) argues that race riots and lynchings cause reduced patenting, directly by intimidating inventors, and indirectly by undermining trust in intellectual property laws (if the government won't punish race rioters, why should you believe it'll enforce your patents?).
 
@@ -42,7 +42,7 @@ Next, let's see how these weights vary by region.
 table region, c(sum regweight count patent)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/regweight_lynch.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_violence/regweight_lynch.png){:width="50%"}
 
 This is a bit surprising. The South has 81% of the weight, with the remainder coming from the West. The other three regions have basically zero contribution to the lynchings coefficient.
 
@@ -52,7 +52,7 @@ So let's see what's happening in the data.
 table region, c(mean lynchrevpc)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/table_lynch.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_violence/table_lynch.png){:width="30%"}
 
 It turns out that basically all lynchings occurred in the South and West, with zero in the Midwest and Northeast (and roughly zero in Mid-Atlantic).
 Given this, the regression weights make sense.
@@ -73,7 +73,7 @@ gen regweight2 = res2/resid_tot2
 table region, c(sum regweight2 count patent)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/regweight_riot.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_violence/regweight_riot.png){:width="50%"}
 
 Again, the regional patterns are surprising.
 This time, the South has 27% of the weight, and the Mid-Atlantic has 73%, with the other regions contributing nothing.
@@ -83,7 +83,7 @@ What's going on?
 table region, c(sum riot)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/table_riot.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_violence/table_riot.png){:width="30%"}
 
 It turns out there are only 5 riots in the state-level data.
 Let's dig deeper.
@@ -102,7 +102,7 @@ But wait. If you look, you'll see that there are 35 riots in the time-series dat
 It looks like there's just a lot of missing state-level data, which would explain the missing riots. (I emailed Cook to ask about this, but didn't get a response.)
 As you can see, the sample size fluctuates over time; this is far from a balanced panel.
 
-![](https://michaelwiebe.com/assets/cook_violence/sample_size.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_violence/sample_size.png){:width="85%"}
 
 The paper is a bit deceptive about this. Table 5 reports the descriptive stats, but only has the riots variable for the time-series data, and not the state-level data. And Cook does not plot any of the raw state-level data, but instead jumps right into the regressions.
 
