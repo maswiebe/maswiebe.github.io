@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How I use regression weights to replicate research"
-date:   2021-02-25 20:00:00
+date:   2020-11-04 23:20:00
 type: post
 ---
 
@@ -94,7 +94,7 @@ label values region reg_label
 table region, c(sum riot)
 ```
 
-![](https://michaelwiebe.com/assets/cook_violence/table_riot.png){:width="40%"}
+![](https://michaelwiebe.com/assets/cook_violence/table_riot.png){:width="36%"}
 
 It turns out there are only 5 riots in the state-level data.
 Let's dig deeper.
