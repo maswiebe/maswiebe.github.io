@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How I use regression weights to replicate research"
-date:   2020-11-04 23:20:00
+date:   2021-02-25 20:00:00
 type: post
 ---
 
