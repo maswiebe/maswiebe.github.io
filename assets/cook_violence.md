@@ -30,6 +30,8 @@ I regress lynchings on the other variables, grab the residuals, square them, the
 ```
 * Stata code:
 
+use pats_state_regs_AAonly, clear
+
 reghdfe lynchrevpc riot seglaw illit blksh regs regmw regne regw , ab(stateno year1910 year1913 year1928) vce(cl stateno) res(resid)
 
 gen res1 = resid^2
@@ -109,8 +111,16 @@ It's also concentrated on four years: 56% on 1917, 12% on 1918, 15% on 1900, 12%
 This is because there are five riots occurring in four years, with two in 1917 in state 39, two in state 44 in different years, and one in state 33.
 So the riot effect is driven almost entirely by the four state-year observations that had riots.
 
-But wait. If you look, you'll see that there are 35 riots in the time-series data. Where did the rest go?
-It looks like there's just a lot of missing data, which would explain the missing riots.
+But wait. If you look, you'll see that there are 35 riots in the time-series data.
+
+```
+use pats_time_series, clear
+collapse (sum) riot if race==0
+su riot
+```
+
+Where did the other riots go?
+It looks like the state data just has a lot of missing observations, which would explain the missing riots.
 That is, the issue isn't variables with missing values, but that most state-year observations do not even have a row in the data.
 (I emailed Cook to ask about this, but didn't get a response.)
 As you can see, the sample size fluctuates over time; this is far from a balanced panel.
