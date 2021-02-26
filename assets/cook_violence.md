@@ -8,7 +8,7 @@ type: post
 One of the main tools I use for replication is [regression weights](https://sci-hub.st/https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12185). These show the weight that each observation contributes to a regression coefficient.
 Suppose we're regressing $$y$$ on $$X_{1}$$ and $$X_{2}$$, with corresponding coefficients $$\beta_{1}$$ and $$\beta_{2}$$.
 Then, the regression weights for $$\beta_{1}$$ are the residuals from regressing $$X_{1}$$ on $$X_{2}$$, which represent the variation in $$X_{1}$$ remaining after controlling for $$X_{2}$$.
-From Frisch-Waugh, we know that $$\beta_{1}$$ can be estimated by regressing $$y$$ on these residuals.
+From [Frisch-Waugh](https://en.wikipedia.org/wiki/Frisch%E2%80%93Waugh%E2%80%93Lovell_theorem), we know that $$\beta_{1}$$ can be estimated by regressing $$y$$ on these residuals.
 Hence, the regression weights show the actual variation used in the estimate.
 When replicating a paper, looking at regression weights is a handy way to see what's actually driving the result.
 
