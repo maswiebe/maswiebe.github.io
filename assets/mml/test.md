@@ -32,13 +32,15 @@ Here are the homicide results, first in the level-level model (as in the paper).
 ![](https://michaelwiebe.com/assets/mml/hom_level.png){:width="80%"}
 We can see that the estimate is negative and statistically significant in the main specification (trends + border + weights, all covariates).
 
-Next, the log-level model:
+#### Log-level model
 ![](https://michaelwiebe.com/assets/mml/hom_log.png){:width="80%"}
 Now, most estimates are insignificant and zero or positive, including the main specification.
 Two models even have positive and significant results.
 
-Finally, the Poisson model, using the homicide count (instead of the rate per 100,000 population):
+#### Poisson model
 ![](https://michaelwiebe.com/assets/mml/hom_pois.png){:width="80%"}
+Here I use the homicide count (instead of the rate per 100,000 population), though note that the controls include log population and I'm weighting by population.
+<!-- In any case, the results are similar with the homicide rate -->
 Here, the estimates are almost exactly zero and nonsignificant in the main specification.
 So it seems that the homicide results only go through using the level-level regression.
 This leads me to doubt whether the paper's results are actually real.
