@@ -27,6 +27,8 @@ This will also us to see whether possibly debatable modelling choices, such as i
  <!-- eg, including time trends and weighting by population, but excluding covariates. -->
 
 Here are the homicide results, first in the level-level model (as in the paper).
+Level-level model
+=================
 ![](https://michaelwiebe.com/assets/mml/hom_level.png){:width="80%"}
 We can see that the estimate is negative and statistically significant in the main specification (trends + border + weights, all covariates).
 
@@ -39,3 +41,4 @@ Finally, the Poisson model, using the homicide count (instead of the rate per 10
 ![](https://michaelwiebe.com/assets/mml/hom_pois.png){:width="80%"}
 Here, the estimates are almost exactly zero and nonsignificant in the main specification.
 So it seems that the homicide results only go through using the level-level regression.
+This leads me to doubt whether the paper's results are actually real.
