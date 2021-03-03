@@ -48,7 +48,8 @@ This leads me to doubt whether the paper's results are actually real.
 The results for robberies are more robust. The main specification is negative and significant across all three models.
 
 <details>
-<summary>Click to expand</summary>
+<summary>Click to expand</summary><p>
+
 #### Level-level model: robberies
 ![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
 
@@ -57,7 +58,8 @@ The results for robberies are more robust. The main specification is negative an
 
 #### Poisson model: robberies
 ![](https://michaelwiebe.com/assets/mml/rob_pois.png){:width="80%"}
-</details>
+
+</p></details>
 
 However, the assault results are not robust, with the main specification nonsignificant for both log-level and Poisson regressions.
 
