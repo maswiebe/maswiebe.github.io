@@ -50,19 +50,20 @@ However, the assault results are not robust, with the main specification nonsign
 
 
 ------------------
+
 Footnotes
 ---------
 See here for R code.
 
 [^1]: Robbery results:
-#### Level-level model: robberies
-![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
+    #### Level-level model: robberies
+    ![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
 
-#### Log-level model: robberies
-![](https://michaelwiebe.com/assets/mml/rob_log.png){:width="80%"}
+    #### Log-level model: robberies
+    ![](https://michaelwiebe.com/assets/mml/rob_log.png){:width="80%"}
 
-#### Poisson model: robberies
-![](https://michaelwiebe.com/assets/mml/rob_pois.png){:width="80%"}
+    #### Poisson model: robberies
+    ![](https://michaelwiebe.com/assets/mml/rob_pois.png){:width="80%"}
 
 
 [^2]: Assault results:
