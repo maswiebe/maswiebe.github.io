@@ -52,7 +52,9 @@ However, the assault results are not robust, with the main specification nonsign
 ------------------
 Footnotes
 ---------
-[^1]
+See here for R code.
+
+[^1]: Robbery results:
 #### Level-level model: robberies
 ![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
 
@@ -63,7 +65,7 @@ Footnotes
 ![](https://michaelwiebe.com/assets/mml/rob_pois.png){:width="80%"}
 
 
-[^2]
+[^2]: Assault results:
 #### Level-level model: assaults
 ![](https://michaelwiebe.com/assets/mml/ass_level.png){:width="80%"}
 
