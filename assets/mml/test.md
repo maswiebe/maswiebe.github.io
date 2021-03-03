@@ -64,7 +64,9 @@ The results for robberies are more robust. The main specification is negative an
 However, the assault results are not robust, with the main specification nonsignificant for both log-level and Poisson regressions.
 
 <details>
-<summary>Click to expand</summary><p>
+<summary>Click to expand</summary>
+ 
+ <p>
 
 #### Level-level model: assaults
 ![](https://michaelwiebe.com/assets/mml/ass_level.png){:width="80%"}
@@ -75,4 +77,6 @@ However, the assault results are not robust, with the main specification nonsign
 #### Poisson model: assaults
 ![](https://michaelwiebe.com/assets/mml/ass_pois.png){:width="80%"}
 
-</p></details>
+</p>
+
+</details>
