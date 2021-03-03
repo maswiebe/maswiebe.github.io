@@ -67,11 +67,11 @@ See here for R code.
 
 
 [^2]: Assault results:
-#### Level-level model: assaults
-![](https://michaelwiebe.com/assets/mml/ass_level.png){:width="80%"}
+    #### Level-level model: assaults
+    ![](https://michaelwiebe.com/assets/mml/ass_level.png){:width="80%"}
 
-#### Log-level model: assaults
-![](https://michaelwiebe.com/assets/mml/ass_log.png){:width="80%"}
+    #### Log-level model: assaults
+    ![](https://michaelwiebe.com/assets/mml/ass_log.png){:width="80%"}
 
-#### Poisson model: assaults
-![](https://michaelwiebe.com/assets/mml/ass_pois.png){:width="80%"}
+    #### Poisson model: assaults
+    ![](https://michaelwiebe.com/assets/mml/ass_pois.png){:width="80%"}
