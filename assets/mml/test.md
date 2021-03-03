@@ -45,6 +45,7 @@ Here, the estimates are almost exactly zero and nonsignificant in the main speci
 So it seems that the homicide results only go through using the level-level regression.
 This leads me to doubt whether the paper's results are actually real.
 
+The results for robberies are more robust. The main specification is negative and significant across all three models.
 #### Level-level model: robberies
 ![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
 
@@ -54,7 +55,10 @@ This leads me to doubt whether the paper's results are actually real.
 #### Poisson model: robberies
 ![](https://michaelwiebe.com/assets/mml/rob_pois.png){:width="80%"}
 
-
+However, the assault results are not robust, with the main specification nonsignificant for both log-level and Poisson regressions.
+<!-- hide these under fold? -->
+<details>
+<summary>Click to expand</summary>
 #### Level-level model: assaults
 ![](https://michaelwiebe.com/assets/mml/ass_level.png){:width="80%"}
 
@@ -63,3 +67,4 @@ This leads me to doubt whether the paper's results are actually real.
 
 #### Poisson model: assaults
 ![](https://michaelwiebe.com/assets/mml/ass_pois.png){:width="80%"}
+</details>
