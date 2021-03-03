@@ -33,5 +33,7 @@ Here are the homicide results, first in the level-level model (as in the paper).
 Next, the log-level model:
 ![](https://michaelwiebe.com/assets/mml/hom_log.png){:width="80%"}
 
-Next, the Poisson model:
+Finally, the Poisson model, using the homicide count (instead of the rate per 100,000 population):
 ![](https://michaelwiebe.com/assets/mml/hom_pois.png){:width="80%"}
+
+Here, the estimates are almost exactly zero and nonsignificant in the full model
