@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "replication exercise"
+title:  "Did medical marijuana legalization reduce crime? A replication exercise"
 date:   2021-03-04 20:00:00
 type: post
 ---
@@ -10,7 +10,7 @@ Summary
 problems
 - weighting
 - dependent variable: level vs log vs poisson
-- event study
+- event study + differential trends
 
 
 Introduction
@@ -27,17 +27,27 @@ The authors use 'violent crimes' as the outcome variable in their main analysis,
 They also perform separate analyses for each of the three crime categories.
 
 The basic triple-diff regression is:
+
 $$ y_{cst} = \beta^{border} D_{st}B_{s} + \beta^{inland} D_{st} (1-B_{s}) + \gamma_{c} + \gamma_{t} + \varepsilon_{cst}.$$
 
-Here $$y_{cst}$$ is the outcome in county $$c$$ in state $$s$$ in year $$t$$; $$D_{st}$$ is an indicator for having enacted MML by year $$t$$; $$B_{s}$$ is an indicator for bordering Mexico; $$\gamma_{c}$$ are county fixed effects; $$\gamma_{t}$$ are year fixed effects. The full model also includes time-varying controls, border-year fixed effects, and state-specific linear time trends. 
+Here $$y_{cst}$$ is the outcome in county $$c$$ in state $$s$$ in year $$t$$; $$D_{st}$$ is an indicator for having enacted MML by year $$t$$; $$B_{s}$$ is an indicator for bordering Mexico; $$\gamma_{c}$$ are county fixed effects; $$\gamma_{t}$$ are year fixed effects. The full model also includes time-varying controls, border-year fixed effects, and state-specific linear time trends.
 The outcome is crime rates per 100,000 population, measured in levels, so the regression coefficients will not have a percentage interpretation; we'll come back to this later.
 
 This isn't a standard triple-diff. In this model, $$\beta^{border}$$ is capturing the absolute effect of MML in border states, and not the differential effect relative to inland states. To see this, compare to:
+
 $$ y_{cst} = \beta^{DD} D_{st} + \beta^{DDD} D_{st} \times B_{s} + \gamma_{c} + \gamma_{t} + \varepsilon_{cst}.$$
 
 Here, $$\beta^{DD}$$ represents the effect of MML in inland states, and $$\beta^{DDD}$$ is the differential effect in border states (relative to the effect in inland states). That is, $$\beta^{inland} = \beta^{DD}$$ and $$\beta^{border} = \beta^{DD} + \beta^{DDD}$$.
 This is perhaps an issue of taste. What I would primarily want to know is whether MML had a larger effect in border states relative to inland states; the absolute effect in border states is secondary.
-Hence, I will report results from the second model (although the differences are small, because $$\beta^{inland} = \beta^{DD} \sim 0$$).
+Hence, I will report results from the second model (although the differences are small, because the inland effect is small: $$\beta^{inland} = \beta^{DD} \sim 0$$).
+
+The authors find that, on average, MML reduces violent crimes by 35 crimes per 100,000 population, but the estimate is not statistically significant (the standard error is 22).
+Then, zooming in on the border states, they find a significant reduction of 108 crimes per 100,000 (and a nonsignificant increase of 2.8 in inland states).
+There are three border states that legalized medical marijuana: California, New Mexico, and Arizona. (Texas is the remaining border state.)
+Splitting up the effect by treated border state, we have a reduction of 34 in Arizona, 144 in California, and 58 in New Mexico.
+
+- generally: I don't really like this "zoom in on the significance" style of research. We can always find significance if we run enough interactions. And as we zoom in on subgroups, we lose external validity: what would we predict for a state or country that was legalizing marijuana and didn't border on Mexico?
+- differential shocks: can't average these out over n=3
 
 <!--
 Regression weights
@@ -113,12 +123,44 @@ For the other dependent variables, I'll show the graphs in the footnotes.
 The results for robberies are more robust. The full specification is negative and significant across all three models.[^1]
 However, the assault results are not robust, with the full specification nonsignificant for both log-level and Poisson regressions.[^2]
 
-This doesn't look great for the paper. I'd expect real effects to be robust across the three models. I conclude that the paper provides evidence for an effect of MML on robberies in border states, but not on homicides or assaults (and this is assuming the event study graph looks good for pretrends).
-<!-- This leads me to doubt whether the paper's results are actually real. -->
+This doesn't look great for the paper. I'd expect real effects to be robust across the three models. I conclude that at best, the paper provides evidence for an effect of MML on robberies in border states, but not on homicides or assaults. And this is assuming the event study graph looks good for pretrends, which I'll discuss next.
 
 Event study
 ===========
-To show that their triple diff isn't driven by differential trends, the authors present an event study graph, estimating a coefficient in each year. Basically, this is estimating the triple diff for each year relative to an omitted year.
+There are big trends in crime over this period. (Crime fell)[https://www.statista.com/statistics/191219/reported-violent-crime-rate-in-the-usa-since-1990/] a lot during the 90s, and again after 2007.
+To show that their results aren't driven by these trends, the authors present an event study graph in Figure 6, estimating a triple-diff coefficient in each year. Basically, this is estimating the triple diff for each year relative to an omitted year/period.
+
+The authors perform two analyses, one using the 1994-2012 sample, and one using an extended sample from 1990-2012. The extended sample has issues, because it uses imputed data over 1990-1992, and the year 1993 is missing entirely. But having more pretreatment years is helpful, because California is treated in 1996, leaving only one year for estimating pretrends in the original sample.
+
+Here I will show results from the extended sample, 1990-2012.
+
+They include dummies for relative years -5 to 4, and bin all years 5+ in one dummy.
+The omitted years are <-5, in contrast to the standard approach of omitting relative year -1.
+
+Next I reproduce their event study graph, using a level dependent variable. Mine is slightly different because, as noted above, I am estimating the differential effect of MML in border states relative to inland states, while GKZ are estimating the absolute effect.
+
+### Event study: violent crimes (binning 5+)
+![](https://michaelwiebe.com/assets/mml/es_violent_bin.png){:width="80%"}
+This looks pretty similar, but now the coefficients in -3 *and* -5 are negative and significant. This kind of pretreatment noise doesn't inspire confidence.
+
+In any case, note that this graph is for the aggregated violent crime variable. The authors do not show event studies for the individual dependent variables! This is a major flaw, and I can't believe that the referees missed it. Even if there are no pretrends in the aggregate variable, what if there are in the component variables? Let's find out.
+
+### Event study: homicides (binning 5+)
+![](https://michaelwiebe.com/assets/mml/es_hom_bin.png){:width="80%"}
+First up, using the homicide rate as the dependent variable, we get a bunch of nothing. It looks like MML had no effect on homicides, consistent with the nonsignificant results we got above using log-level and Poisson models. Now we know why the authors didn't include separate event study graphs by dependent variable.
+
+### Event study: robberies (binning 5+)
+![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
+Next, the robberies graph looks very similar to the violent crime graph.
+
+### Event study: assaults (binning 5+)
+![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="80%"}
+Finally, for assaults, we see a similar pattern as robberies, but with smaller coefficients.
+Recall that 'violent crime' is defined as the sum of homicide, robbery, and assault rates. The averages of these variables are 4.9, 43.7, and 265.4. So clearly the violent crime results will be driven mostly by assaults and robberies, which swamp the null result for homicides.
+
+
+<!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
+
 Normally, this omitted year would be period -1 in event time, where the treatment occurs in period 0.
 However, the paper doesn't do this. Instead, they seem to use periods outside of the [-5,+5] window as the omitted period.
 
@@ -131,18 +173,22 @@ I wanted to see what a proper event study graph would look like, so I did it:
 They didn't do the event study separately by dependent variable!
 And the graph for homicides looks terrible:
 
+graphs: violent rate, homicides, robberies, assaults (all in levels; don't need to show poisson?)
+
 I'm not sure if I did this right.
 
 They only reported the event study for the triple-diff coefficient, and not the diff-in-diff coefficient.
 
-The authors also use Uniform Crime Reports data to extend their sample back to 1990, but this data is not available in the replication files, so I couldn't check it.
+<!-- The authors also use Uniform Crime Reports data to extend their sample back to 1990, but this data is not available in the replication files, so I couldn't check it. -->
+  <!-- it is in the original data, just don't drop year<1994 -->
+  <!-- no data on 1993 -->
 
 
 Randomization inference
 =======================
 
 The paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
-However, as I discuss in this post, this claim is false. There's no reason to expect RI and standard p-values to differ in this case, so a significant RI p-value provides no additional evidence.
+However, as I discuss in (this post)[https://michaelwiebe.com/blog/2021/01/randinf], this claim is false. There's no reason to expect RI and standard p-values to differ in this case, so a significant RI p-value provides no additional evidence.
 
 ------------------
 
