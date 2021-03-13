@@ -139,25 +139,27 @@ The omitted years are <-5, in contrast to the standard approach of omitting rela
 
 Next I reproduce their event study graph, using a level dependent variable. Mine is slightly different because, as noted above, I am estimating the differential effect of MML in border states relative to inland states, while GKZ are estimating the absolute effect.[^3]
 
-### Event study: violent crimes (binning 5+)
+#### Event study: violent crimes (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_violent_bin.png){:width="80%"}
 <!-- can do higher dpi here -->
 This looks pretty similar, but now the coefficients in -3 *and* -5 are negative and significant. This kind of pretreatment noise doesn't inspire confidence.
 
 In any case, note that this graph is for the aggregated violent crime variable. Where are the event studies for the individual dependent variables? *The authors do not show them!* This is a major flaw, and I can't believe that the referees missed it. Even if there are no pretrends in the aggregate variable, what if there are in the component variables? Let's find out.
 
-### Event study: homicides (binning 5+)
+#### Event study: homicides (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_hom_bin.png){:width="80%"}
 First up, using the homicide rate as the dependent variable, we get... a bunch of nothing. It looks like MML had no effect on homicides, which we might expect based on the nonsignificant results we got above using log-level and Poisson models. Now we know why the authors didn't include separate event study graphs by dependent variable.
 
-### Event study: robberies (binning 5+)
+#### Event study: robberies (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
 Next, the robberies graph looks very similar to the violent crime graph.[^4]
 
-### Event study: assaults (binning 5+)
+#### Event study: assaults (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="80%"}
 Finally, for assaults, we see a similar pattern as robberies, but with smaller coefficients.
 Recall that 'violent crime' is defined as the sum of homicide, robbery, and assault rates. The averages of these variables are 5, 44, and 265. So clearly the violent crime results will be driven mostly by assaults and robberies, which swamp the null result for homicides.
+
+What do these event studies look like using the log-level or Poisson models? I'll throw them in the footnote.[^5]
 
 
 <!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
@@ -223,6 +225,26 @@ See here for R code.
 [^3]: I also drop counties that have the black share of population greater than 100%. It seems the authors were doing some extrapolation that got out of control.
 
 [^4]: Recall that the Breusch-Pagan test failed to justify weighting in the case of robberies. What does the event study graph look like if we don't weight by population?
-    ### Event study: robberies, unweighted (binning 5+)
+    #### Event study: robberies, unweighted (binning 5+)
     ![](https://michaelwiebe.com/assets/mml/es_rob_bin_unw.png){:width="80%"}
     Now the effect size is smaller, and it looks more like a negative trend is driving the result: robberies were decreasing in treated border states before MML was implemented.
+
+[^5]: Log-level results:
+    #### Event study (log-level): homicides, (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_lhom_bin.png){:width="80%"}
+
+    #### Event study (log-level): robberies, unweighted (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_lrob_bin.png){:width="80%"}
+
+    #### Event study (log-level): assaults, (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_lass_bin.png){:width="80%"}
+
+    Poisson results:
+    #### Event study (Poisson): homicides, (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_phom_bin.png){:width="80%"}
+
+    #### Event study (Poisson): robberies, unweighted (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_prob_bin.png){:width="80%"}
+
+    #### Event study (Poisson): assaults, (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_pass_bin.png){:width="80%"}
