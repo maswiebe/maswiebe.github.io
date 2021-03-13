@@ -127,42 +127,43 @@ This doesn't look great for the paper. I'd expect real effects to be robust acro
 
 Event study
 ===========
-There are big trends in crime over this period. (Crime fell)[https://www.statista.com/statistics/191219/reported-violent-crime-rate-in-the-usa-since-1990/] a lot during the 90s, and again after 2007.
+There are big trends in crime over this period. [Crime fell](https://www.statista.com/statistics/191219/reported-violent-crime-rate-in-the-usa-since-1990/) a lot during the 90s, and again after 2007.
 To show that their results aren't driven by these trends, the authors present an event study graph in Figure 6, estimating a triple-diff coefficient in each year. Basically, this is estimating the triple diff for each year relative to an omitted year/period.
 
-The authors perform two analyses, one using the 1994-2012 sample, and one using an extended sample from 1990-2012. The extended sample has issues, because it uses imputed data over 1990-1992, and the year 1993 is missing entirely. But having more pretreatment years is helpful, because California is treated in 1996, leaving only one year for estimating pretrends in the original sample.
+The authors perform two analyses, one using the 1994-2012 sample, and one using an extended sample from 1990-2012. The extended sample has issues, because it uses imputed data over 1990-1992, and the year 1993 is missing entirely. But having more pretreatment years is helpful, because California is treated in 1996, leaving only two years for estimating pretrends in the original sample.
 
 Here I will show results from the extended sample, 1990-2012.
 
 They include dummies for relative years -5 to 4, and bin all years 5+ in one dummy.
 The omitted years are <-5, in contrast to the standard approach of omitting relative year -1.
 
-Next I reproduce their event study graph, using a level dependent variable. Mine is slightly different because, as noted above, I am estimating the differential effect of MML in border states relative to inland states, while GKZ are estimating the absolute effect.
+Next I reproduce their event study graph, using a level dependent variable. Mine is slightly different because, as noted above, I am estimating the differential effect of MML in border states relative to inland states, while GKZ are estimating the absolute effect.[^3]
 
 ### Event study: violent crimes (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_violent_bin.png){:width="80%"}
+<!-- can do higher dpi here -->
 This looks pretty similar, but now the coefficients in -3 *and* -5 are negative and significant. This kind of pretreatment noise doesn't inspire confidence.
 
-In any case, note that this graph is for the aggregated violent crime variable. The authors do not show event studies for the individual dependent variables! This is a major flaw, and I can't believe that the referees missed it. Even if there are no pretrends in the aggregate variable, what if there are in the component variables? Let's find out.
+In any case, note that this graph is for the aggregated violent crime variable. Where are the event studies for the individual dependent variables? *The authors do not show them!* This is a major flaw, and I can't believe that the referees missed it. Even if there are no pretrends in the aggregate variable, what if there are in the component variables? Let's find out.
 
 ### Event study: homicides (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_hom_bin.png){:width="80%"}
-First up, using the homicide rate as the dependent variable, we get a bunch of nothing. It looks like MML had no effect on homicides, consistent with the nonsignificant results we got above using log-level and Poisson models. Now we know why the authors didn't include separate event study graphs by dependent variable.
+First up, using the homicide rate as the dependent variable, we get... a bunch of nothing. It looks like MML had no effect on homicides, which we might expect based on the nonsignificant results we got above using log-level and Poisson models. Now we know why the authors didn't include separate event study graphs by dependent variable.
 
 ### Event study: robberies (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
-Next, the robberies graph looks very similar to the violent crime graph.
+Next, the robberies graph looks very similar to the violent crime graph.[^4]
 
 ### Event study: assaults (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="80%"}
 Finally, for assaults, we see a similar pattern as robberies, but with smaller coefficients.
-Recall that 'violent crime' is defined as the sum of homicide, robbery, and assault rates. The averages of these variables are 4.9, 43.7, and 265.4. So clearly the violent crime results will be driven mostly by assaults and robberies, which swamp the null result for homicides.
+Recall that 'violent crime' is defined as the sum of homicide, robbery, and assault rates. The averages of these variables are 5, 44, and 265. So clearly the violent crime results will be driven mostly by assaults and robberies, which swamp the null result for homicides.
 
 
 <!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
-
+<!--
 Normally, this omitted year would be period -1 in event time, where the treatment occurs in period 0.
-However, the paper doesn't do this. Instead, they seem to use periods outside of the [-5,+5] window as the omitted period.
+However, the paper doesn't do this. Instead, they seem to use periods outside of the [-5,+5] window as the omitted period. -->
 
 This seems problematic, since the sample starts in 1994 and California is treated in 1996, leaving only two preperiods. So if we omit period -1, there will only be a single preperiod coefficient in the event study to use in evaluating pretrends.
 
@@ -188,7 +189,7 @@ Randomization inference
 =======================
 
 The paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
-However, as I discuss in (this post)[https://michaelwiebe.com/blog/2021/01/randinf], this claim is false. There's no reason to expect RI and standard p-values to differ in this case, so a significant RI p-value provides no additional evidence.
+However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. There's no reason to expect RI and standard p-values to differ in this case, so a significant RI p-value provides no additional evidence.
 
 ------------------
 
@@ -200,7 +201,7 @@ See here for R code.
     #### Level-level model: robberies
     ![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
     In the level-level model, we see a big difference between the weighted and unweighted results. Clearly, there are heterogeneous treatment effects, with larger effects in the higher-weight states (California, probably).
-    As noted above, the robbery estimates should not be weighted.
+    As I noted above, the robbery estimates should not be weighted.
 
     #### Log-level model: robberies
     ![](https://michaelwiebe.com/assets/mml/rob_log.png){:width="80%"}
@@ -218,3 +219,10 @@ See here for R code.
 
     #### Poisson model: assaults
     ![](https://michaelwiebe.com/assets/mml/ass_pois.png){:width="80%"}
+
+[^3]: I also drop counties that have the black share of population greater than 100%. It seems the authors were doing some extrapolation that got out of control.
+
+[^4]: Recall that the Breusch-Pagan test failed to justify weighting in the case of robberies. What does the event study graph look like if we don't weight by population?
+    ### Event study: robberies, unweighted (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_rob_bin_unw.png){:width="80%"}
+    Now the effect size is smaller, and it looks more like a negative trend is driving the result: robberies were decreasing in treated border states before MML was implemented.
