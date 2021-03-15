@@ -152,7 +152,7 @@ First up, using the homicide rate as the dependent variable, we get... a bunch o
 
 #### Event study: robberies (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
-Next, the robberies graph looks very similar to the violent crime graph.[^4]
+Next, the robberies graph looks very similar to the violent crime graph. There's a bit of a pretrend, which gets stronger if don't use weights.[^4]
 
 #### Event study: assaults (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="80%"}
@@ -160,31 +160,25 @@ Finally, for assaults, we see a similar pattern as robberies, but with smaller c
 Recall that 'violent crime' is defined as the sum of homicide, robbery, and assault rates. The averages of these variables are 5, 44, and 265. So clearly the violent crime results will be driven mostly by assaults and robberies, which swamp the null result for homicides.
 
 What do these event studies look like using the log-level or Poisson models? I'll throw them in the footnote.[^5]
+The homicide results again look like nothing, in both cases.
+The robbery graph looks good in Poisson, but has pre-trends in log-level.
+Assaults are either flat or have a positive trend.
 
+Overall, I don't trust these event study results very much. There's clearly no effect for homicides, and the assault results are not robust across models. The robbery results are most promising, but still not great.
+
+---------
+I also don't like binning in event studies. In Andrew Baker's [simulations](https://andrewcbaker.netlify.app/2020/06/27/how-to-create-relative-time-indicators/), binning performs badly.
+In contrast, a fully-saturated model including all relative year dummies (except for relative year -1, which is the omitted year) performs perfectly. So let's try that here.
+<!-- want to show -5:5 after all? -->
 
 <!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
-<!--
-Normally, this omitted year would be period -1 in event time, where the treatment occurs in period 0.
-However, the paper doesn't do this. Instead, they seem to use periods outside of the [-5,+5] window as the omitted period. -->
 
-This seems problematic, since the sample starts in 1994 and California is treated in 1996, leaving only two preperiods. So if we omit period -1, there will only be a single preperiod coefficient in the event study to use in evaluating pretrends.
 
-This is not great, because crime fell drastically in California in the 1990s.
+State-level results
+===================
 
-I wanted to see what a proper event study graph would look like, so I did it:
-
-They didn't do the event study separately by dependent variable!
-And the graph for homicides looks terrible:
-
-graphs: violent rate, homicides, robberies, assaults (all in levels; don't need to show poisson?)
-
-I'm not sure if I did this right.
-
-They only reported the event study for the triple-diff coefficient, and not the diff-in-diff coefficient.
-
-<!-- The authors also use Uniform Crime Reports data to extend their sample back to 1990, but this data is not available in the replication files, so I couldn't check it. -->
-  <!-- it is in the original data, just don't drop year<1994 -->
-  <!-- no data on 1993 -->
+#### Synthetic control: California, homicides
+![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
 
 
 Randomization inference
