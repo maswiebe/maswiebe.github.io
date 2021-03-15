@@ -263,9 +263,12 @@ See here for R code.
     #### Event study (Poisson): assaults, (binning 5+)
     ![](https://michaelwiebe.com/assets/mml/es_pass_bin.png){:width="80%"}
 
-[^6]: Specification curve for state-level, level-level results:
+[^6]: Specification curve for state-level results:
+    #### Level-level model: homicides
     ![](https://michaelwiebe.com/assets/mml/s_hom_level.png){:width="80%"}
+    #### Level-level model: robberies
     ![](https://michaelwiebe.com/assets/mml/s_rob_level.png){:width="80%"}
+    #### Level-level model: assaults
     ![](https://michaelwiebe.com/assets/mml/s_ass_level.png){:width="80%"}
 
 [^7]: Synthetic control results for homicides and assaults.
