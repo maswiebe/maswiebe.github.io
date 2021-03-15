@@ -152,9 +152,10 @@ In any case, note that this graph is for the aggregated violent crime variable. 
 ![](https://michaelwiebe.com/assets/mml/es_hom_bin.png){:width="80%"}
 First up, using the homicide rate as the dependent variable, we get... a bunch of nothing. It looks like MML had no effect on homicides, which we might expect based on the nonsignificant results we got above using log-level and Poisson models. Now we know why the authors didn't include separate event study graphs by dependent variable.
 
-#### Event study: robberies (binning 5+)
-![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
-Next, the robberies graph looks very similar to the violent crime graph. There's a bit of a pretrend, which gets stronger if don't use weights.[^4]
+#### Event study: robberies, unweighted (binning 5+)
+![](https://michaelwiebe.com/assets/mml/es_rob_bin_unw.png){:width="80%"}
+For robberies, recall that the Breusch-Pagan test failed to justify weighting, so I do not use weights.
+Here, it looks like a negative trend is driving the result: robberies were decreasing in treated border states before MML was implemented. (See the unweighted graph in the footnote.[^4])
 
 #### Event study: assaults (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="80%"}
@@ -238,10 +239,10 @@ See here for R code.
 
 [^3]: I also drop counties that have the black share of population greater than 100%. It seems the authors were doing some extrapolation that got out of control.
 
-[^4]: Recall that the Breusch-Pagan test failed to justify weighting in the case of robberies. What does the event study graph look like if we don't weight by population?
-    #### Event study: robberies, unweighted (binning 5+)
-    ![](https://michaelwiebe.com/assets/mml/es_rob_bin_unw.png){:width="80%"}
-    Now the effect size is smaller, and it looks more like a negative trend is driving the result: robberies were decreasing in treated border states before MML was implemented.
+[^4]: We shouldn't care about this graph, because weighting is unwarranted.
+    #### Event study: robberies, weighted (binning 5+)
+    ![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
+
 
 [^5]: Log-level results:
     #### Event study (log-level): homicides, (binning 5+)
