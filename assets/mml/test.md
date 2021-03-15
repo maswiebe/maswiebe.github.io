@@ -177,7 +177,6 @@ In contrast, a fully-saturated model including all relative year dummies (except
 State-level results
 ===================
 
-#### Synthetic control: California, homicides
 ![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
 
 
