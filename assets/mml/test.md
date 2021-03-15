@@ -134,6 +134,8 @@ The authors perform two analyses, one using the 1994-2012 sample, and one using 
 
 Here I will show results from the extended sample, 1990-2012.
 
+<!-- in 1994-2012 sample, no omitted group for california! seems like collinearity, omitted variables trap -->
+
 They include dummies for relative years -5 to 4, and bin all years 5+ in one dummy.
 The omitted years are <-5, in contrast to the standard approach of omitting relative year -1.
 
@@ -167,7 +169,7 @@ Assaults are either flat or have a positive trend.
 Overall, I don't trust these event study results very much. There's clearly no effect for homicides, and the assault results are not robust across models. The robbery results are most promising, but still not great.
 
 ---------
-I also don't like binning in event studies. In Andrew Baker's [simulations](https://andrewcbaker.netlify.app/2020/06/27/how-to-create-relative-time-indicators/), binning performs badly.
+I'm also not a fan of binning in event studies. In Andrew Baker's [simulations](https://andrewcbaker.netlify.app/2020/06/27/how-to-create-relative-time-indicators/), binning periods 5- and 5+ performs badly.
 In contrast, a fully-saturated model including all relative year dummies (except for relative year -1, which is the omitted year) performs perfectly. So let's try that here.
 <!-- want to show -5:5 after all? -->
 
@@ -177,14 +179,23 @@ In contrast, a fully-saturated model including all relative year dummies (except
 Synthetic control
 ===================
 
-![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
+To further dig into these trends, I aggregated the data to the state level and performed a synthetic control analysis for each of the three treated border states: California, Arizona, and New Mexico. This aggregation is probably imperfect, and it would be better to start with state-level data, but let's see what happens.
+
+The idea of synthetic control is to construct an artificial control group for our treated state, so we can evaluate the treatment effect simply by comparing the treatment and synthetic control states. The synthetic control group is a weighted average of control states, and these weights are chosen to match the treated state on preperiod trends.
+
+Here I'll show the robbery results for the three states.
+
 ![](https://michaelwiebe.com/assets/mml/sc_cali_rob.png){:width="80%"}
+California's synthetic control is 99% Texas. Recall that California only has two years of pretreatment data, so there's not much to match on.
+
+![](https://michaelwiebe.com/assets/mml/sc_ariz_rob.png){:width="80%"}
+![](https://michaelwiebe.com/assets/mml/sc_nmex_rob.png){:width="80%"}
 
 
 Randomization inference
 =======================
 
-The paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
+One final note: the paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
 However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. There's no reason to expect RI and standard p-values to differ in this case, so a significant RI p-value provides no additional evidence.
 
 ------------------
