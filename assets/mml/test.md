@@ -159,7 +159,7 @@ Here, it looks like a negative trend is driving the result: robberies were decre
 
 #### Event study: assaults (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="80%"}
-Finally, for assaults, we see a similar pattern as robberies, but with smaller coefficients.
+Finally, for assaults, we see a similar pattern as violent crimes, but with smaller coefficients.
 Recall that 'violent crime' is defined as the sum of homicide, robbery, and assault rates. The averages of these variables are 5, 44, and 265. So clearly the violent crime results will be driven mostly by assaults and robberies, which swamp the null result for homicides.
 
 What do these event studies look like using the log-level or Poisson models? I'll throw them in the footnote.[^5]
@@ -170,9 +170,18 @@ Assaults are either flat or have a positive trend.
 Overall, I don't trust these event study results very much. There's clearly no effect for homicides, and the assault results are not robust across models. The robbery results are most promising, but still not great.
 
 ---------
-I'm also not a fan of binning in event studies. In Andrew Baker's [simulations](https://andrewcbaker.netlify.app/2020/06/27/how-to-create-relative-time-indicators/), binning periods 5- and 5+ performs badly.
+I'm not a fan of binning in event studies. In Andrew Baker's [simulations](https://andrewcbaker.netlify.app/2020/06/27/how-to-create-relative-time-indicators/), binning periods 5- and 5+ performs badly.
 In contrast, a fully-saturated model including all relative year dummies (except for relative year -1, which is the omitted year) performs perfectly. So let's try that here.
-<!-- want to show -5:5 after all? -->
+
+#### Event study: homicides
+![](https://michaelwiebe.com/assets/mml/es_hom.png){:width="80%"}
+
+#### Event study: robberies
+![](https://michaelwiebe.com/assets/mml/es_rob.png){:width="80%"}
+
+#### Event study: assaults
+![](https://michaelwiebe.com/assets/mml/es_ass.png){:width="80%"}
+
 
 <!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
 
