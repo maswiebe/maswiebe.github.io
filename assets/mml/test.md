@@ -182,6 +182,9 @@ In contrast, a fully-saturated model including all relative year dummies (except
 #### Event study: assaults
 ![](https://michaelwiebe.com/assets/mml/es_ass.png){:width="80%"}
 
+I'm not sure if these graphs are right. Some of the relative years indicators get dropped due to collinearity, which might affect the interpretation as triple-diff vs double-diff.
+In any case, they don't look good. Homicides are noisy before treatment, robberies have a clear pretrend, and assaults have a noisy pretrend.
+
 
 <!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
 
