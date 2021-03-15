@@ -179,17 +179,27 @@ In contrast, a fully-saturated model including all relative year dummies (except
 Synthetic control
 ===================
 
-To further dig into these trends, I aggregated the data to the state level and performed a synthetic control analysis for each of the three treated border states: California, Arizona, and New Mexico. This aggregation is probably imperfect, and it would be better to start with state-level data, but let's see what happens.
+To further dig into these trends, I aggregated the data from county- to state-level and performed a synthetic control analysis for each of the three treated border states: California, Arizona, and New Mexico. This aggregation is probably imperfect, and it would be better to start with state-level data, but let's see what happens.
 
 The idea of synthetic control is to construct an artificial control group for our treated state, so we can evaluate the treatment effect simply by comparing the treatment and synthetic control states. The synthetic control group is a weighted average of control states, and these weights are chosen to match the treated state on preperiod trends.
 
-Here I'll show the robbery results for the three states.
+Here I'll show the robbery results for the three states (using the level dependent variable).
+<!-- specification curve for level-level in footnotes. Still getting negative effects. -->
 
 ![](https://michaelwiebe.com/assets/mml/sc_cali_rob.png){:width="80%"}
-California's synthetic control is 99% Texas. Recall that California only has two years of pretreatment data, so there's not much to match on.
+California's synthetic control is 68% New York and 28% Minnesota.
+California's MML occurs in the middle of the 1990s crime decrease, and it doesn't look like there's an effect in 1996.
+<!-- Recall that California only has two years of pretreatment data, so there's not much to match on. -->
 
 ![](https://michaelwiebe.com/assets/mml/sc_ariz_rob.png){:width="80%"}
+Arizona's synthetic control is 61% Texas, 24% Florida, and 15% Wyoming.
+Again, there doesn't seem to be a treatment effect.
+
 ![](https://michaelwiebe.com/assets/mml/sc_nmex_rob.png){:width="80%"}
+New Mexico's synthetic control is 51% Mississippi, 21% Louisiana, 18% Texas, and 7% Wyoming.
+Its MML occurs before a drop in homicides that is partly matched by the synthetic control group. 
+
+Overall, I worry that these three states coincidentally legalized medical marijuana when crime was high and falling, and that the triple-diff estimates are just picking up these trends. I'll put the other synthetic control graphs in this footnote.[^6]
 
 
 Randomization inference
@@ -253,3 +263,11 @@ See here for R code.
 
     #### Event study (Poisson): assaults, (binning 5+)
     ![](https://michaelwiebe.com/assets/mml/es_pass_bin.png){:width="80%"}
+
+[^6]: Synthetic control results for homicides and assaults.
+    ![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
+    ![](https://michaelwiebe.com/assets/mml/sc_ariz_hom.png){:width="80%"}
+    ![](https://michaelwiebe.com/assets/mml/sc_nmex_hom.png){:width="80%"}
+    ![](https://michaelwiebe.com/assets/mml/sc_cali_ass.png){:width="80%"}
+    ![](https://michaelwiebe.com/assets/mml/sc_ariz_ass.png){:width="80%"}
+    ![](https://michaelwiebe.com/assets/mml/sc_nmex_ass.png){:width="80%"}
