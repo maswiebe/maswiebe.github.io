@@ -178,6 +178,7 @@ Synthetic control
 ===================
 
 ![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
+![](https://michaelwiebe.com/assets/mml/sc_cali_rob.png){:width="80%"}
 
 
 Randomization inference
