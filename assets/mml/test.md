@@ -174,7 +174,7 @@ In contrast, a fully-saturated model including all relative year dummies (except
 <!-- Bacon-goodman: adding years to sample changes DD estimate: more weight on California, since closer to middle; less weight on Ariz, NM, since closer to end -->
 
 
-State-level results
+Synthetic control
 ===================
 
 ![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
