@@ -12,7 +12,7 @@ In this post I replicate the [paper](https://academic.oup.com/ej/article/129/617
 I find three main problems in the paper:
 - it uses weighting when its own justification doesn't apply
 - it uses a level dependent variable, and isn't robust to log-level or Poisson models
-- it does not test for pretrends in the disaggregated crime variables, and my event study methods show that the results are driven by differential trends
+- it does not test for pretrends in the disaggregated crime variables, and two alternative event studies show that the results are driven by differential trends
 
 
 Introduction
@@ -21,7 +21,7 @@ Introduction
 This paper studies the effect of medical marijuana legalization on crime in the U.S., finding that legalization decreases crime in states that border Mexico. The paper uses a triple-diff method, essentially doing a diff-in-diff for the effect of legalization on crime, then adding an interaction for being a border state.
 
 The paper uses county level data over 1994-2012, with treatment (medical marijuana legalization, MML) occurring at the state level.
-The authors use 'violent crimes' as the outcome variable in their main analysis, defined as the sum of homicides, robberies, and assaults, where each is measured as a rate per 100,000 population.
+The authors use "violent crimes" as the outcome variable in their main analysis, defined as the sum of homicides, robberies, and assaults, where each is measured as a rate per 100,000 population.
 They also perform separate analyses for each of the three crime categories.
 
 The basic triple-diff regression is:
@@ -75,21 +75,23 @@ They justify weighting by performing a Breusch-Pagan test, and finding a positiv
 And yet, the paper still uses weighting when estimating the effect of MML on robberies (in Table 4).
 We'll see below that this makes a big difference for the effect size.
 
-Choice of dependent variable
+Modelling the dependent variable
 ============================
 
-The authors estimate the effect of MML on crime using a level dependent variable measuring crime, instead of taking the logarithm, which I had thought was standard.
-In particular, their main results use the aggregate crime rate per 100,000 population. In secondary results, they break this into categories: homicides, robberies, and assaults (all in rates per 100,000 population).
+The authors estimate the effect of MML on crime using a level dependent variable instead of taking the logarithm, which I had thought was standard.
+In particular, their main results use the aggregate crime rate, which leads to a "level" interpretation: MML reduces the crime rate by $$\hat{beta}=$$ 108 crimes per 100,000 population.
+<!-- In secondary results, they break this into categories: homicides, robberies, and assaults (all in rates per 100,000 population). -->
+<!-- Interpret their results in level terms: MML reduces the crime rate by 100 crimes per 100,000 population. -->
 
-Interpret their results in level terms: MML reduces the crime rate by 100 crimes per 100,000 population.
-Normally, we'd use a log-level regression, taking log(y+1) for the dependent variable (adding 1 if there are zeroes in the data), which gives a semi-elasticity interpretation: MML reduces crime by $$100 \times (exp(\beta)-1) \%$$ (which is approximately $$\beta$$ when $$abs(\beta)<0.1$$).
-The paper doesn't justify why they don't use a log-level model. This is even more surprising when you see that they manually calculate the semi-elasticity, again without mentioning the log-level approach.
+I would have used a log-level regression, taking $$log(y+1)$$ for the dependent variable (adding 1 if there are zeroes in the data), which gives a percentage (or semi-elasticity) interpretation: MML reduces crime by $$100 \times (exp(\hat{\beta})-1) \%$$.
+ <!-- (which is approximately $$\beta$$ when $$abs(\beta)<0.1$$). -->
+The paper doesn't justify why they don't use a log-level model. This is even more surprising when you see that they manually calculate the semi-elasticity (p.19), again without mentioning the log-level approach.
 
 <!-- see Dell drug war paper for use of log(hom+1) ; doesn't actually use it?-->
 
 
 After spending some time looking into this question of logging the dependent variable for skewed, nonnegative data, I'm still pretty confused.
-It seems the options are: (1) level-level regression, as used in this paper; (2) log-level regression; (3) transforming $$y$$ with the inverse hyperbolic sine; and (4) Poisson regression. But it's not clear what the 'correct' approach is.
+It seems the options are: (1) level-level regression, as used in this paper; (2) log-level regression; (3) transforming $$y$$ with the inverse hyperbolic sine; and (4) Poisson regression. But it's not clear what the "correct" approach is.
 I'd expect a true result to be robust across multiple approaches, so let's try that here.
 
 I estimate the triple-diff model using a level-level regression (to directly replicate the paper), a log-level regression, and a Poisson regression. (The inverse hyperbolic sine approach is almost identical to log-level, so I skip it here.)
@@ -98,7 +100,7 @@ This will allow us to see whether possibly debatable modelling choices, such as 
  <!-- eg, including time trends and weighting by population, but excluding covariates. -->
 
 Here are the homicide results, first in the level-level model (as in the paper).
-The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population. The lower part of panel B indicates whether all or no covariates are included in the model. The full covariate list is: an indicator for decriminalization, log median income, log population, poverty rate, unemployment rate, and the fraction of males, African Americans, Hispanics, ages 10-19, and ages 20-24. In general, I find that adding controls barely changes the $$R^{2}$$, so these variables aren't adding much beyond the county and year fixed effects.
+The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population. The lower part of panel B indicates whether all or no covariates are included in the model.[^1]
 The full specification (trends + border + weights) includes state-specific linear trends, border-year fixed effects, and weights by population.
 
 
@@ -121,8 +123,8 @@ So, the homicide results only go through using the level-level regression, and n
 
 
 For the other dependent variables, I'll show the graphs in the footnotes.
-The results for robberies are more robust. The full specification is negative and significant across all three models.[^1]
-However, the assault results are not robust, with the full specification nonsignificant for both log-level and Poisson regressions.[^2]
+The results for robberies are more robust. The full specification is negative and significant across all three models.[^2]
+However, the assault results are not robust, with the full specification nonsignificant for both log-level and Poisson regressions.[^3]
 
 This doesn't look great for the paper. I'd expect real effects to be robust across the three models. I conclude that at best, the paper provides evidence for an effect of MML on robberies in border states, but not on homicides or assaults. And this is assuming the event study graph looks good for pretrends, which I'll discuss next.
 
@@ -137,7 +139,7 @@ The authors estimate their main results using the 1994-2012 sample. For the even
 Here I will show results from the main sample, 1994-2012.
 
 For their main event study, the authors only include dummies for relative years -2 to 4, and bin all years 5+ in one dummy.
-This is because California is treated in 1996 and only has two years of pretreatment data, and wouldn't contribute to any dummies before -2.[^5]
+This is because California is treated in 1996 and only has two years of pretreatment data, and wouldn't contribute to any dummies before -2.[^4]
 But this is a bit of an arbitrary choice. Similarly, Arizona is treated in 2010 and only has two years of post-treatment data, and hence doesn't contribute to any dummies after +2. So should we include dummies only for [-2,2]?
 
 I think it's fine to include dummies for [-5,5], with the understanding that some states do not contribute to some estimates. (Specifically, California doesn't have dummies for -5 to -3, and Arizona doesn't have dummies for 3 to 5+.)
@@ -145,7 +147,7 @@ In this setup, the omitted years are <-5, in contrast to the standard approach o
 
 Next I plot my version of their event study graph, using a level dependent variable.
 Since this is a triple-diff, I include relative year dummies for the treated states, as well as separate relative year dummies for the treated border states. I plot the coefficients on the border-state relative year dummies.
-While the paper only includes dummies for [-2,5+], I estimate coefficients for [-5,5+].[^3]
+While the paper only includes dummies for [-2,5+], I estimate coefficients for [-5,5+].[^5]
 
 #### Event study: violent crimes (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_violent_bin.png){:width="75%"}
@@ -160,14 +162,16 @@ Even if we found no pretrends in the aggregate variable, there could still be pr
 #### Event study: homicides (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_hom_bin.png){:width="75%"}
 First up, using the homicide rate as the dependent variable, we get a big mess.
-There are large negative estimates in relative years -2 and -1, indicating a drop in homicides before MML was implemented.
-So at least for homicides, it looks like the negative triple-diff estimate was just picking up trends.
+There are big movements in years -3 and -2: relative to the treatment year, homicides were higher three years prior, and lower two years prior.
+<!-- There's a drop in the coefficient from -3 to -2, indicating a drop in homicides two years before MML was implemented. -->
+<!-- There are large negative estimates in relative years -2 and -1,  -->
+So at least for homicides, it looks like the negative triple-diff estimate could just be picking up noise.
 Now we know why the authors didn't include separate event study graphs by dependent variable.
 
 #### Event study: robberies, unweighted (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_rob_bin_unw.png){:width="75%"}
 For robberies, recall that the Breusch-Pagan test failed to justify weighting, so I do not use weights.
-Here, it also looks like a negative trend is driving the result: robberies were smoothly decreasing in treated border states before MML was implemented. (See the unweighted graph in the footnote.[^4])
+Here, it also looks like a negative trend is driving the result: robberies were smoothly decreasing in treated border states before MML was implemented. (See the unweighted graph in the footnote.[^6])
 Again, the common trends assumption for the triple-diff appears to be violated.
 
 #### Event study: assaults (binning 5+)
@@ -264,7 +268,9 @@ Footnotes
 ---------
 See here for R code.
 
-[^1]: Robbery results:
+[^1]: The full covariate list is: an indicator for decriminalization, log median income, log population, poverty rate, unemployment rate, and the fraction of males, African Americans, Hispanics, ages 10-19, and ages 20-24. In general, I find that adding controls barely changes the $$R^{2}$$, so these variables aren't adding much beyond the county and year fixed effects.
+
+[^2]: Robbery results:
     #### Level-level model: robberies
     ![](https://michaelwiebe.com/assets/mml/rob_level.png){:width="80%"}
     In the level-level model, we see a big difference between the weighted and unweighted results. Clearly, there are heterogeneous treatment effects, with larger effects in the higher-weight states (California, probably).
@@ -277,7 +283,7 @@ See here for R code.
     ![](https://michaelwiebe.com/assets/mml/rob_pois.png){:width="80%"}
 
 
-[^2]: Assault results:
+[^3]: Assault results:
     #### Level-level model: assaults
     ![](https://michaelwiebe.com/assets/mml/ass_level.png){:width="80%"}
 
@@ -287,14 +293,15 @@ See here for R code.
     #### Poisson model: assaults
     ![](https://michaelwiebe.com/assets/mml/ass_pois.png){:width="80%"}
 
-[^3]: Moreover, as noted above, I am estimating the differential effect of MML in border states relative to inland states, while GKZ are estimating the absolute effect. I also drop counties that have the black share of population greater than 100%. It seems the authors were doing some extrapolation that got out of control.
+[^4]: One problem with this specification is that California has no omitted years. Every year from 1994-2012 has a dummy variable, which seems like a dummy variable trap (i.e., multicollinearity). Specifically: 1994-2000 are covered by dummies for -2 to 4, and 2001-2012 are covered by the 5+ binned dummy.
 
-[^4]: We shouldn't care about this graph, because weighting is unwarranted.
+[^5]: Moreover, as noted above, I am estimating the differential effect of MML in border states relative to inland states, while GKZ are estimating the absolute effect. I also drop counties that have the black share of population greater than 100%. It seems the authors were doing some extrapolation that got out of control.
+
+[^6]: We shouldn't care about this graph, because weighting is unwarranted.
     #### Event study: robberies, weighted (binning 5+)
     ![](https://michaelwiebe.com/assets/mml/es_rob_bin.png){:width="80%"}
 
 
-[^5]: One problem with this specification is that California has no omitted years. Every year from 1994-2012 has a dummy variable, which seems like a dummy variable trap (i.e., multicollinearity). Specifically: 1994-2000 are covered by dummies for -2 to 4, and 2001-2012 are covered by the 5+ binned dummy.
 
 <!-- Log-level results:
     #### Event study (log-level): homicides, (binning 5+)
@@ -316,9 +323,9 @@ See here for R code.
     #### Event study (Poisson): assaults, (binning 5+)
     ![](https://michaelwiebe.com/assets/mml/es_pass_bin.png){:width="80%"} -->
 
-[^6]: It's depressing that event studies can differ so much based on slight model changes. I have a feeling that a lot of diff-in-diffs from the past twenty years are not going to survive replication.
+[^7]: It's depressing that event studies can differ so much based on slight model changes. I have a feeling that a lot of diff-in-diffs from the past twenty years are not going to survive replication.
 
-[^7]: Specification curve for state-level results:
+[^8]: Specification curve for state-level results:
     #### Level-level model: homicides
     ![](https://michaelwiebe.com/assets/mml/s_hom_level.png){:width="80%"}
     #### Level-level model: robberies
@@ -326,7 +333,7 @@ See here for R code.
     #### Level-level model: assaults
     ![](https://michaelwiebe.com/assets/mml/s_ass_level.png){:width="80%"}
 
-[^8]: Synthetic control results for homicides and assaults.
+[^9]: Synthetic control results for homicides and assaults.
     ![](https://michaelwiebe.com/assets/mml/sc_cali_hom.png){:width="80%"}
     ![](https://michaelwiebe.com/assets/mml/sc_ariz_hom.png){:width="80%"}
     ![](https://michaelwiebe.com/assets/mml/sc_nmex_hom.png){:width="80%"}
