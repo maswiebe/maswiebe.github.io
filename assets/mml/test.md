@@ -186,7 +186,7 @@ The homicide results again look like nothing, in both cases.
 The robbery graph looks good in Poisson, but has pre-trends in log-level.
 Assaults are either flat or have a positive trend. -->
 
-Overall, this doesn't look good for the paper. I think this is an equally defensible event study method, but it nukes their homicide and robbery results.[^6]
+Overall, this doesn't look good for the paper. I think this is an equally defensible event study method, but it nukes their homicide and robbery results.[^7]
 <!-- Overall, I don't trust these event study results very much. There's clearly no effect for homicides, and the assault results are not robust across models. The robbery results are most promising, but still not great. -->
 
 ---------
@@ -219,7 +219,7 @@ In any case, they don't look good. Homicides are noisy before treatment, robberi
 Synthetic control
 ===================
 
-To further dig into these trends, I aggregated the data from county- to state-level and performed a synthetic control analysis for each of the three treated border states: California, Arizona, and New Mexico. This aggregation is probably imperfect, and it would be better to start with state-level data, but let's see what happens. (Running level-level regressions, I still get negative results, with effect sizes similar to the county-level data. See the specification curves in the footnote. [^7])
+To further dig into these trends, I aggregated the data from county- to state-level and performed a synthetic control analysis for each of the three treated border states: California, Arizona, and New Mexico. This aggregation is probably imperfect, and it would be better to start with state-level data, but let's see what happens. (Running level-level regressions, I still get negative results, with effect sizes similar to the county-level data. See the specification curves in the footnote. [^8])
 
 The idea of synthetic control is to construct an artificial control group for our treated state, so we can evaluate the treatment effect simply by comparing the outcome variable in the treatment and synthetic control states. The synthetic control group is a weighted average of control states, and these weights are chosen to match the treated state on preperiod trends. I use the nevertreated states as the donor pool; I'll report the weights below.
 
@@ -238,7 +238,7 @@ Again, there doesn't seem to be a treatment effect.
 New Mexico's synthetic control is 51% Mississippi, 21% Louisiana, 18% Texas, and 7% Wyoming.
 Its MML occurs before a drop in homicides that is partly matched by the synthetic control group.
 
-You can look at the other synthetic control graphs in this footnote.[^8]
+You can look at the other synthetic control graphs in this footnote.[^9]
 
 Overall, I worry that these three states coincidentally legalized medical marijuana when crime was high and falling, and that the triple-diff estimates are just picking up these trends.
 Based on my analysis here, I don't believe that medical marijuana legalization reduced crime in the US.
