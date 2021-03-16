@@ -7,22 +7,20 @@ type: post
 
 Summary
 =======
-problems
-- weighting
-- dependent variable: level vs log vs poisson
-- event study + differential trends
+In this post I replicate the [paper](https://academic.oup.com/ej/article/129/617/375/5237193) "Is Legal Pot Crippling Mexican Drug Trafficking Organisations? The Effect of Medical Marijuana Laws on US Crime" by Gavrilova, Kamada, and Zoutman (Economic Journal, 2019; [replication files](https://michaelwiebe.com/assets/mml/gkz_data.zip)).
+
+I find three main problems in the paper:
+- it uses weighting when its own justification doesn't apply
+- it uses a level dependent variable, and isn't robust to log-level or Poisson models
+- it does not test for pretrends in the disaggregated crime variables, and my event study methods show that the results are driven by differential trends
 
 
 Introduction
 ============
 
-This [paper](https://academic.oup.com/ej/article/129/617/375/5237193) ([replication files](https://michaelwiebe.com/assets/mml/gkz_data.zip))  (published in Economic Journal) studies the effect of medical marijuana legalization on
-crime in the U.S., finding that legalization decreases crime in states that border
-Mexico. The paper uses a triple-diff method, essentially doing a
-diff-in-diff for the effect of legalization on crime, then adding an
-interaction for being a border state.
+This paper studies the effect of medical marijuana legalization on crime in the U.S., finding that legalization decreases crime in states that border Mexico. The paper uses a triple-diff method, essentially doing a diff-in-diff for the effect of legalization on crime, then adding an interaction for being a border state.
 
-The paper uses county level data over 1994-2012, with treatment (medical marijuana legalization) occurring at the state level.
+The paper uses county level data over 1994-2012, with treatment (medical marijuana legalization, MML) occurring at the state level.
 The authors use 'violent crimes' as the outcome variable in their main analysis, defined as the sum of homicides, robberies, and assaults, where each is measured as a rate per 100,000 population.
 They also perform separate analyses for each of the three crime categories.
 
@@ -259,6 +257,7 @@ Perhaps the referees were awed by the edifice in front of them, and only request
 <!-- - using aggregated depvar, not doing event study separately by category -->
   <!-- - also allowing them to weight, since rejected BP with aggregate crime variable -->
 <!-- - making up RI bullshit -->
+
 ------------------
 
 Footnotes
