@@ -48,7 +48,7 @@ Splitting up the effect by treated border state, we have a reduction of 34 in Ar
 
 I don't really like this "zoom in on the significance" style of research. We can always find significance if we run enough interactions.
 And as we zoom in on subgroups, we lose external validity: can we make meaningful predictions for a state or country that was legalizing marijuana and didn't border on Mexico?
-Moreover, the identifying assumptions become harder to believe. When n=3, it's more plausible that differential shocks are driving the result (compared to n=20, say). That is, it could be that crime was already decreasing in the three border states when they passed MML.
+Moreover, the identifying assumptions become harder to believe. When n=3, it's more plausible that differential shocks are driving the result (compared to n=20, say). That is, it could be that crime was already decreasing in the three border states when they passed MML, and the negative correlation between MML and crime is coincidental.
 
 <!--
 Regression weights
@@ -66,6 +66,8 @@ so -35 = -107*.34 + 2.8 * .66
 regression weights are not designed for this.
 The DD estimate is a variance-weighted average of the heterogeneous effects, but with different weights.
 -->
+
+Ok, let's get into the issues.
 
 Weighting
 =========
@@ -98,7 +100,7 @@ This will allow us to see whether possibly debatable modelling choices, such as 
  <!-- eg, including time trends and weighting by population, but excluding covariates. -->
 
 Here are the homicide results, first in the level-level model (as in the paper).
-The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population. The lower part of panel B indicates whether all or no covariates are included in the model. The full covariate list is: an indicator for decriminalization, log median income, log population, poverty rate, unemployment rate, and the fraction of males, African Americans, Hispanics, ages 10-19, ages 20-24. In general, I find that adding controls barely changes the $$R^{2}$$, so these variables aren't adding much beyond the county and year fixed effects.
+The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population. The lower part of panel B indicates whether all or no covariates are included in the model. The full covariate list is: an indicator for decriminalization, log median income, log population, poverty rate, unemployment rate, and the fraction of males, African Americans, Hispanics, ages 10-19, and ages 20-24. In general, I find that adding controls barely changes the $$R^{2}$$, so these variables aren't adding much beyond the county and year fixed effects.
 The full specification (trends + border + weights) includes state-specific linear trends, border-year fixed effects, and weights by population.
 
 
@@ -190,6 +192,11 @@ I'm not a fan of binning in event studies. In Andrew Baker's [simulations](https
 In contrast, a fully-saturated model including all relative year dummies (except for relative year -1, which is the omitted year) performs perfectly. So let's try that here.
 <!-- normalizing the above graphs around the -1 estimate; but also changing the estimates, since full set of relative year dummies -->
 
+By omitting year -1, we're basically normalizing the above event study graphs around the -1 estimate (but also changing the estimates, since we're including all other relative year dummies).
+Hence, the homicide graph has the same patterns, but shifted up.
+We again find a clear trend in the robbery graph.
+But now the assault graph also looks to be driven by trends.
+
 #### Event study: homicides
 ![](https://michaelwiebe.com/assets/mml/es_hom.png){:width="75%"}
 
@@ -199,11 +206,7 @@ In contrast, a fully-saturated model including all relative year dummies (except
 #### Event study: assaults
 ![](https://michaelwiebe.com/assets/mml/es_ass.png){:width="75%"}
 
-By omitting year -1, we're basically normalizing the first event study graphs around the -1 estimate (but also changing the estimates, since we're including all other relative year dummies).
-Hence, the homicide graph has the same patterns, but shifted up.
-We again find a clear trend in the robbery graph.
-But now the assault graph also looks to be driven by trends.
-Takeaway: now I really doubt these results.
+Takeaway: now I really doubt that MML had a causal effect on crime.
 
 <!-- I'm not sure if these graphs are right. Some of the relative-year indicators get dropped due to collinearity, which might affect the interpretation as triple-diff vs double-diff.
 In any case, they don't look good. Homicides are noisy before treatment, robberies have a clear pretrend, and assaults have a noisy pretrend. -->
@@ -222,7 +225,7 @@ Here I'll show the robbery results for the three states (using the level depende
 
 ![](https://michaelwiebe.com/assets/mml/sc_cali_rob.png){:width="80%"}
 California's synthetic control is 68% New York and 28% Minnesota.
-California's MML occurs in the middle of the 1990s crime decrease, and it doesn't look like there's an effect in 1996.
+California's MML occurs in the middle of the 1990s crime decrease, and it doesn't look like there's much of an effect in 1996.
 <!-- Recall that California only has two years of pretreatment data, so there's not much to match on. -->
 
 ![](https://michaelwiebe.com/assets/mml/sc_ariz_rob.png){:width="80%"}
@@ -248,13 +251,14 @@ However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randi
 Conclusion
 ==========
 These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
-<!-- greasy
-- using level depvar, not doing log for semi-elasticity
-- weighting robbery results, when not justified
-- using aggregated depvar, not doing event study separately by category
-  - also allowing them to weight, since rejected BP with aggregate crime variable
-- making up RI bullshit
- -->
+The authors present a formal supply and demand model and report several extensions, finding stronger reductions in crime for counties closer to the border, and that MML in border-adjacent inland states reduces crime in the border state.
+Perhaps the referees were awed by the edifice in front of them, and only requested small robustness checks instead of questioning the foundational results.
+<!-- greasy-->
+<!-- - using level depvar, not doing log for semi-elasticity -->
+<!-- - weighting robbery results, when not justified -->
+<!-- - using aggregated depvar, not doing event study separately by category -->
+  <!-- - also allowing them to weight, since rejected BP with aggregate crime variable -->
+<!-- - making up RI bullshit -->
 ------------------
 
 Footnotes
