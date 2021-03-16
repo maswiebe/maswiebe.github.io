@@ -16,7 +16,7 @@ problems
 Introduction
 ============
 
-This paper (published in Economic Journal) studies the effect of medical marijuana legalization on
+This [paper](https://academic.oup.com/ej/article/129/617/375/5237193) ([replication files](https://michaelwiebe.com/assets/mml/gkz_data.zip))  (published in Economic Journal) studies the effect of medical marijuana legalization on
 crime in the U.S., finding that legalization decreases crime in states that border
 Mexico. The paper uses a triple-diff method, essentially doing a
 diff-in-diff for the effect of legalization on crime, then adding an
@@ -46,8 +46,9 @@ Then, zooming in on the border states, they find a significant reduction of 108 
 There are three border states that legalized medical marijuana: California, New Mexico, and Arizona. (Texas is the remaining border state.)
 Splitting up the effect by treated border state, we have a reduction of 34 in Arizona, 144 in California, and 58 in New Mexico.
 
-- generally: I don't really like this "zoom in on the significance" style of research. We can always find significance if we run enough interactions. And as we zoom in on subgroups, we lose external validity: what would we predict for a state or country that was legalizing marijuana and didn't border on Mexico?
-- differential shocks: can't average these out over n=3
+I don't really like this "zoom in on the significance" style of research. We can always find significance if we run enough interactions.
+And as we zoom in on subgroups, we lose external validity: can we make meaningful predictions for a state or country that was legalizing marijuana and didn't border on Mexico?
+Moreover, the identifying assumptions become harder to believe. When n=3, it's more plausible that differential shocks are driving the result (compared to n=20, say). That is, it could be that crime was already decreasing in the three border states when they passed MML.
 
 <!--
 Regression weights
@@ -70,7 +71,7 @@ Weighting
 =========
 
 The authors use weighted least squares (weighting by population) for their main results.
-They justify weighting by performing a Breusch-Pagan test, and finding a positive correlation between the squared residuals and inverse population. This implies larger residuals in smaller counties. In other words, there is heteroskedasticity, and weighting will decrease the size of the standard errors, i.e., increase precision. However, in Appendix Table D7, you'll note that while they get a positive correlation when using homicides and assaults as the dependent variable, this coefficient is negative and nonsignificant for robberies. (And in Table D9, the unweighted robbery estimate has smaller standard errors than the weighted one: weighting is *reducing* precision.) So the robbery results actually should not be weighted!
+They justify weighting by performing a Breusch-Pagan test, and finding a positive correlation between the squared residuals and inverse population. This implies larger residuals in smaller counties. In other words, there is heteroskedasticity, and weighting will decrease the size of the standard errors, i.e., increase precision. However, in Appendix Table D7, you'll note that while they get a positive correlation when using homicides and assaults as the dependent variable, this coefficient is negative and nonsignificant for robberies. And in Table D9, the unweighted robbery estimate has smaller standard errors than the weighted one: weighting is *reducing* precision. So the robbery results actually should not be weighted!
 And yet, the paper still uses weighting when estimating the effect of MML on robberies (in Table 4).
 We'll see below that this makes a big difference for the effect size.
 
@@ -154,14 +155,13 @@ Compared to the event study in the paper, here the coefficients are all negative
 <!-- This looks pretty similar, but now the coefficients in -3 *and* -5 are negative and significant. This kind of pretreatment noise doesn't inspire confidence. -->
 
 In any case, note that this graph is for the aggregated violent crime variable. Where are the event studies for the individual dependent variables? *The authors do not show them!* This is a major flaw, and I can't believe that the referees missed it.
-Even if we found no pretrends in the aggregate variable, what if there are pretrends in the component variables? Let's find out.
+Even if we found no pretrends in the aggregate variable, there could still be pretrends in the component variables. Let's take a look ourselves.
 
 #### Event study: homicides (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_hom_bin.png){:width="75%"}
 First up, using the homicide rate as the dependent variable, we get a big mess.
 There are large negative estimates in relative years -2 and -1, indicating a drop in homicides before MML was implemented.
 So at least for homicides, it looks like the negative triple-diff estimate was just picking up trends.
-<!-- It looks like MML had no effect on homicides, which we might expect based on the nonsignificant results we got above using log-level and Poisson models.  -->
 Now we know why the authors didn't include separate event study graphs by dependent variable.
 
 #### Event study: robberies, unweighted (binning 5+)
@@ -182,7 +182,7 @@ The homicide results again look like nothing, in both cases.
 The robbery graph looks good in Poisson, but has pre-trends in log-level.
 Assaults are either flat or have a positive trend. -->
 
-Overall, this doesn't look good for the paper. I think this is an equally defensible event study, but it nukes their homicide and robbery results.[^6]
+Overall, this doesn't look good for the paper. I think this is an equally defensible event study method, but it nukes their homicide and robbery results.[^6]
 <!-- Overall, I don't trust these event study results very much. There's clearly no effect for homicides, and the assault results are not robust across models. The robbery results are most promising, but still not great. -->
 
 ---------
@@ -218,7 +218,7 @@ To further dig into these trends, I aggregated the data from county- to state-le
 
 The idea of synthetic control is to construct an artificial control group for our treated state, so we can evaluate the treatment effect simply by comparing the outcome variable in the treatment and synthetic control states. The synthetic control group is a weighted average of control states, and these weights are chosen to match the treated state on preperiod trends. I use the nevertreated states as the donor pool; I'll report the weights below.
 
-Here I'll show the robbery results for the three states (using the level dependent variable).
+Here I'll show the robbery results for the three states (using the level dependent variable), to see what's happening with that smooth trend.
 
 ![](https://michaelwiebe.com/assets/mml/sc_cali_rob.png){:width="80%"}
 California's synthetic control is 68% New York and 28% Minnesota.
@@ -233,15 +233,28 @@ Again, there doesn't seem to be a treatment effect.
 New Mexico's synthetic control is 51% Mississippi, 21% Louisiana, 18% Texas, and 7% Wyoming.
 Its MML occurs before a drop in homicides that is partly matched by the synthetic control group.
 
-Overall, I worry that these three states coincidentally legalized medical marijuana when crime was high and falling, and that the triple-diff estimates are just picking up these trends. You can look at the other synthetic control graphs in this footnote.[^8]
+You can look at the other synthetic control graphs in this footnote.[^8]
+
+Overall, I worry that these three states coincidentally legalized medical marijuana when crime was high and falling, and that the triple-diff estimates are just picking up these trends.
+Based on my analysis here, I don't believe that medical marijuana legalization reduced crime in the US.
 
 
 Randomization inference
 =======================
 
 One final note: the paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
-However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. There's no reason to expect RI and standard p-values to differ in this case, so a significant RI p-value provides no additional evidence.
+However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. In this case, there's no reason to expect RI and standard p-values to differ, so a significant RI p-value provides no additional evidence.
 
+Conclusion
+==========
+These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
+<!-- greasy
+- using level depvar, not doing log for semi-elasticity
+- weighting robbery results, when not justified
+- using aggregated depvar, not doing event study separately by category
+  - also allowing them to weight, since rejected BP with aggregate crime variable
+- making up RI bullshit
+ -->
 ------------------
 
 Footnotes
