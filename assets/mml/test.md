@@ -79,7 +79,7 @@ Modelling the dependent variable
 ============================
 
 The authors estimate the effect of MML on crime using a level dependent variable instead of taking the logarithm, which I had thought was standard.
-In particular, their main results use the aggregate crime rate, which leads to a "level" interpretation: MML reduces the crime rate by $$\hat{beta}=$$ 108 crimes per 100,000 population.
+In particular, their main results use the aggregate crime rate, which leads to a "level" interpretation: MML reduces the crime rate by $$\hat{\beta}=$$ 108 crimes per 100,000 population.
 <!-- In secondary results, they break this into categories: homicides, robberies, and assaults (all in rates per 100,000 population). -->
 <!-- Interpret their results in level terms: MML reduces the crime rate by 100 crimes per 100,000 population. -->
 
@@ -172,7 +172,7 @@ Now we know why the authors didn't include separate event study graphs by depend
 ![](https://michaelwiebe.com/assets/mml/es_rob_bin_unw.png){:width="75%"}
 For robberies, recall that the Breusch-Pagan test failed to justify weighting, so I do not use weights.
 Here, it also looks like a negative trend is driving the result: robberies were smoothly decreasing in treated border states before MML was implemented. (See the unweighted graph in the footnote.[^6])
-Again, the common trends assumption for the triple-diff appears to be violated.
+The common trends assumption for the triple-diff appears to be violated.
 
 #### Event study: assaults (binning 5+)
 ![](https://michaelwiebe.com/assets/mml/es_ass_bin.png){:width="75%"}
