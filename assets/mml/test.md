@@ -267,7 +267,8 @@ Perhaps the referees were awed by the edifice in front of them, and only request
 Footnotes
 ---------
 See [here](https://github.com/maswiebe/metrics/blob/main/mml_replication.r) for R code.
-P.S.: Table 5 does heterogeneity by type of homicide; I'd be curious to see the event study for each of these outcomes.
+
+PS: Table 5 does heterogeneity by type of homicide; I'd be curious to see the event study for each of these outcomes.
 
 [^1]: The full covariate list is: an indicator for decriminalization, log median income, log population, poverty rate, unemployment rate, and the fraction of males, African Americans, Hispanics, ages 10-19, and ages 20-24. In general, I find that adding controls barely changes the $$R^{2}$$, so these variables aren't adding much beyond the county and year fixed effects.
 
