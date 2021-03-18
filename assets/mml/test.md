@@ -95,13 +95,17 @@ It seems the options are: (1) level-level regression, as used in this paper; (2)
 I'd expect a true result to be robust across multiple approaches, so let's try that here.
 
 I estimate the triple-diff model using a level-level regression (to directly replicate the paper), a log-level regression, and a Poisson regression. (The inverse hyperbolic sine approach is almost identical to log-level, so I skip it here.)
-To see how the specification matters, I conduct a specification curve analysis using R's `specr` package. Specifically, I run all possible combinations of model elements, including or excluding covariates, weighting by population, state-specific linear time trends, and border-year fixed effects.
+To see how the specification matters, I conduct a specification curve analysis using R's [specr](https://masurp.github.io/specr/) package. Specifically, I run all possible combinations of model elements, either including or excluding covariates, population weights, state-specific linear time trends, and border-year fixed effects.
 This will allow us to see whether possibly debatable modelling choices, such as state-specific linear trends, are driving the results.
  <!-- eg, including time trends and weighting by population, but excluding covariates. -->
 
 Here are the homicide results, first in the level-level model (as in the paper).
-The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population. The lower part of panel B indicates whether all or no covariates are included in the model.[^1]
-The full specification (trends + border + weights) includes state-specific linear trends, border-year fixed effects, and weights by population.
+Panel A plots the coefficient estimates in increasing order, while panel B shows the corresponding specification.
+Each specification in panel B has two markers, one in the upper part indicating the model, and one in the lower part indicating whether all or no covariates are included in the model[^1].
+For example, the specification with the most negative estimate is 'trends + weights, no covariates'.
+In both panels, the x-axis is just counting the number of specifications, and the color scheme is: (red, negative and significant), (grey, insignificant), (blue, positive and significant).
+The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population.
+I'll be focusing on the full specification 'trends + border + weights, all covariates', and includes state-specific linear trends, border-year fixed effects, and weights by population.
 
 
 #### Level-level model: homicides
