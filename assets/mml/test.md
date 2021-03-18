@@ -101,11 +101,11 @@ This will allow us to see whether possibly debatable modelling choices, such as 
 
 Here are the homicide results, first in the level-level model (as in the paper).
 Panel A plots the coefficient estimates in increasing order, while panel B shows the corresponding specification.
-Each specification in panel B has two markers, one in the upper part indicating the model, and one in the lower part indicating whether all or no covariates are included in the model[^1].
+Each specification has two markers in panel B, one in the upper part indicating the model, and one in the lower part indicating whether all or no covariates are included in the model.[^1]
 For example, the specification with the most negative estimate is 'trends + weights, no covariates'.
 In both panels, the x-axis is just counting the number of specifications, and the color scheme is: (red, negative and significant), (grey, insignificant), (blue, positive and significant).
 The 'baseline' specification omits the state-specific trends, border-year fixed effects, and doesn't weight by population.
-I'll be focusing on the full specification 'trends + border + weights, all covariates', and includes state-specific linear trends, border-year fixed effects, and weights by population.
+I'll be focusing on the full specification, 'trends + border + weights, all covariates', which includes state-specific linear trends, border-year fixed effects, and weights by population.
 
 
 #### Level-level model: homicides
@@ -116,7 +116,7 @@ Most estimates are nonsignificant; these are generally the unweighted models, in
 #### Log-level model: homicides
 ![](https://michaelwiebe.com/assets/mml/hom_log.png){:width="80%"}
 Next, in the log-level model, most estimates are insignificant, including the full specification.
-Two models even have positive and significant results. Let's see the Poisson model:
+Two models even have positive and significant results (in blue). Let's see the Poisson model:
 
 #### Poisson model: homicides
 ![](https://michaelwiebe.com/assets/mml/hom_pois.png){:width="80%"}
@@ -254,9 +254,12 @@ Randomization inference
 One final note: the paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
 However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. In this case, there's no reason to expect RI and standard p-values to differ, so a significant RI p-value provides no additional evidence.
 
-<!-- Conclusion
+Conclusion
 ==========
-These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
+I think it's plausible that moving marijuana production from the black market to the legal market would reduce crime (at least in the long run).
+But the effects of medical marijuana legalization are too small to detect.
+
+<!-- These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
 The authors present a formal supply and demand model and report several extensions, finding stronger reductions in crime for counties closer to the border, and that MML in border-adjacent inland states reduces crime in the border state.
 Perhaps the referees were awed by the edifice in front of them, and only requested small robustness checks instead of questioning the foundational results. -->
 <!-- greasy-->
