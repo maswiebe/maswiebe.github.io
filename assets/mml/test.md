@@ -91,7 +91,7 @@ The paper doesn't justify why they don't use a log-level model. This is even mor
 
 
 After spending some time looking into this question of logging the dependent variable for skewed, nonnegative data, I'm still pretty confused.
-It seems the options are: (1) level-level regression, as used in this paper; (2) log-level regression; (3) transforming $$y$$ with the inverse hyperbolic sine; and (4) Poisson regression. But it's not clear what the "correct" approach is.
+It seems the options are: (1) level-level regression, as used in this paper; (2) log-level regression; (3) transforming $$y$$ with the inverse hyperbolic sine; and (4) Poisson regression (with robust standard errors, [you don't need to](https://blog.stata.com/2011/08/22/use-poisson-rather-than-regress-tell-a-friend/) assume mean=variance). But it's not clear what the "correct" approach is.
 I'd expect a true result to be robust across multiple approaches, so let's try that here.
 
 I estimate the triple-diff model using a level-level regression (to directly replicate the paper), a log-level regression, and a Poisson regression. (The inverse hyperbolic sine approach is almost identical to log-level, so I skip it here.)
@@ -257,7 +257,7 @@ However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randi
 Conclusion
 ==========
 I think it's plausible that moving marijuana production from the black market to the legal market would reduce crime (at least in the long run).
-But the effects of medical marijuana legalization are too small to detect.
+But the effect of medical marijuana legalization on crime is too small to detect.
 
 <!-- These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
 The authors present a formal supply and demand model and report several extensions, finding stronger reductions in crime for counties closer to the border, and that MML in border-adjacent inland states reduces crime in the border state.
