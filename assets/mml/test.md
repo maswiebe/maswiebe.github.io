@@ -258,7 +258,7 @@ However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randi
 Conclusion
 ==========
 I think it's plausible that moving marijuana production from the black market to the legal market would reduce crime (at least in the long run).
-But the effect of medical marijuana legalization on crime is too small to detect.
+But the effect of medical marijuana legalization on crime is too small to detect in the data.
 
 <!-- These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
 The authors present a formal supply and demand model and report several extensions, finding stronger reductions in crime for counties closer to the border, and that MML in border-adjacent inland states reduces crime in the border state.
