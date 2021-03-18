@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Did medical marijuana legalization reduce crime? A replication exercise"
-date:   2021-03-04 20:00:00
+date:   2021-03-18 20:00:00
 type: post
 ---
 
@@ -250,11 +250,11 @@ Randomization inference
 One final note: the paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
 However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. In this case, there's no reason to expect RI and standard p-values to differ, so a significant RI p-value provides no additional evidence.
 
-Conclusion
+<!-- Conclusion
 ==========
 These seem like severe problems for a paper published in Economic Journal. How did it get through peer review?
 The authors present a formal supply and demand model and report several extensions, finding stronger reductions in crime for counties closer to the border, and that MML in border-adjacent inland states reduces crime in the border state.
-Perhaps the referees were awed by the edifice in front of them, and only requested small robustness checks instead of questioning the foundational results.
+Perhaps the referees were awed by the edifice in front of them, and only requested small robustness checks instead of questioning the foundational results. -->
 <!-- greasy-->
 <!-- - using level depvar, not doing log for semi-elasticity -->
 <!-- - weighting robbery results, when not justified -->
@@ -266,7 +266,8 @@ Perhaps the referees were awed by the edifice in front of them, and only request
 
 Footnotes
 ---------
-See here for R code.
+See [here](https://github.com/maswiebe/metrics/blob/main/mml_replication.r) for R code.
+P.S. Table 5 does heterogeneity by type of homicide; I'd be curious to see the event study for each of these outcomes.
 
 [^1]: The full covariate list is: an indicator for decriminalization, log median income, log population, poverty rate, unemployment rate, and the fraction of males, African Americans, Hispanics, ages 10-19, and ages 20-24. In general, I find that adding controls barely changes the $$R^{2}$$, so these variables aren't adding much beyond the county and year fixed effects.
 
