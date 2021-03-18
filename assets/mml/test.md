@@ -228,6 +228,7 @@ To further dig into these trends, I aggregated the data from county- to state-le
 The idea of synthetic control is to construct an artificial control group for our treated state, so we can evaluate the treatment effect simply by comparing the outcome variable in the treatment and synthetic control states. The synthetic control group is a weighted average of control states, and these weights are chosen to match the treated state on preperiod trends. I use the nevertreated states as the donor pool; I'll report the weights below.
 
 Here I'll show the robbery results for the three states (using the level dependent variable), to see what's happening with that smooth trend.
+Note that these graphs are plotting the raw outcome variable, so we're seeing the actual trends in the data.
 
 ![](https://michaelwiebe.com/assets/mml/sc_cali_rob.png){:width="80%"}
 California's synthetic control is 68% New York and 28% Minnesota.
@@ -252,7 +253,7 @@ Randomization inference
 =======================
 
 One final note: the paper calculates a (one-sided) randomization inference p-value of 0.03, and claims that this is evidence for their result being real.
-However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. In this case, there's no reason to expect RI and standard p-values to differ, so a significant RI p-value provides no additional evidence.
+However, as I discuss in [this post](https://michaelwiebe.com/blog/2021/01/randinf), this claim is false. With large sample sizes, there's no reason to expect RI and standard p-values to differ, so a significant RI p-value provides no additional evidence.
 
 Conclusion
 ==========
