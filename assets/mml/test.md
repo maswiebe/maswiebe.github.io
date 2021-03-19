@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Did medical marijuana legalization reduce crime? A replication exercise"
-date:   2021-03-18 20:00:00
+date:   2021-03-19 20:00:00
 type: post
 ---
 
@@ -71,7 +71,9 @@ Weighting
 =========
 
 The authors use weighted least squares (weighting by population) for their main results.
-They justify weighting by performing a Breusch-Pagan test, and finding a positive correlation between the squared residuals and inverse population. This implies larger residuals in smaller counties. In other words, there is heteroskedasticity, and weighting will decrease the size of the standard errors, i.e., increase precision. However, in Appendix Table D7, you'll note that while they get a positive correlation when using homicides and assaults as the dependent variable, this coefficient is negative and nonsignificant for robberies. And in Table D9, the unweighted robbery estimate has smaller standard errors than the weighted one: weighting is *reducing* precision. So the robbery results actually should not be weighted!
+They justify weighting by performing a Breusch-Pagan test, and finding a positive correlation between the squared residuals and inverse population. This implies larger residuals in smaller counties. In other words, there is heteroskedasticity, and weighting will decrease the size of the standard errors, i.e., increase precision. However, in Appendix Table D7, you'll note that while they get a positive correlation when using homicides and assaults as the dependent variable, this coefficient is negative and nonsignificant for robberies.
+So by the Breusch-Pagan test, the robbery results actually should not be weighted.
+And in Table D9, the unweighted robbery estimate has smaller standard errors than the weighted one: weighting is *reducing* precision.
 And yet, the paper still uses weighting when estimating the effect of MML on robberies (in Table 4).
 We'll see below that this makes a big difference for the effect size.
 
