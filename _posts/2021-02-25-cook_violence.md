@@ -12,7 +12,7 @@ From [Frisch-Waugh-Lovell](https://en.wikipedia.org/wiki/Frisch%E2%80%93Waugh%E2
 Hence, the regression weights show the actual variation used in the estimate.
 When replicating a paper, looking at regression weights is a handy way to see what's actually driving the result.
 
-In this post, I'll give a quick demo of regression weights, looking at [Cook (2014)](https://sci-hub.st/https://link.springer.com/article/10.1007/s10887-014-9102-z) ([replication files](https://link.springer.com/article/10.1007/s10887-014-9102-z#Sec20)) on the effect of racial violence on African American patents over 1870-1940.
+In this post, I'll give a quick demo of regression weights, looking at [Cook (2014)](https://link.springer.com/article/10.1007/s10887-014-9102-z) ([sci-hub](https://twitter.com/sci_hub_)) ([replication files](https://link.springer.com/article/10.1007/s10887-014-9102-z#Sec20)) on the effect of racial violence on African American patents over 1870-1940.
 This paper starts with striking time series data on patents by African American inventors.
 In Figure 1, we see a big drop in black patents around 1900. What is driving this pattern?
 
