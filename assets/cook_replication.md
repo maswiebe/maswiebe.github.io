@@ -48,7 +48,7 @@ However, we can immediately see a problem: there are 49 states and 71 years in t
 And the pattern of missing data is not random. 
 Below I plot the number of observations by state and year. We see that the majority of states have fewer than 10 observations, while the sample size is increasing up to 1900 before dropping off and rising again starting in 1920.
 ![](https://michaelwiebe.com/assets/cook_replication/obs_state.png){:width="80%"}
-![](https://michaelwiebe.com/assets/cook_replication/obs_state.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="80%"}
 
 Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^3]
 ![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="80%"}
