@@ -43,7 +43,7 @@ Panel data regressions
 
 In Tables 7 and 8, Cook uses state-level panel data over 1870-1940 to run regressions of patents on lynching rates and riots.
 However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A balanced panel would have 49 * 71 = 3479 observations. So Cook is using 430/3479 = 12% of the full sample. 
-[//]: #Hence, before looking at the results, we already know that they are not externally valid for the U.S. over 1870-1940.
+[//]: # Hence, before looking at the results, we already know that they are not externally valid for the U.S. over 1870-1940.
 
 And the pattern of missing data is not random. 
 Below I plot the number of observations by state and year. We see that the majority of states have fewer than 10 observations, while the sample size is increasing up to 1900 before dropping off and rising again starting in 1920.
