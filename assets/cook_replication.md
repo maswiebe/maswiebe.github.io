@@ -23,12 +23,15 @@ One possible explanation is that Cook used the white population (average 75 mill
 If the grant-year patent variable is incorrect, this will affect the Table 6 results, which use the grant-year variable. Cook doesn't report a robustness check, so I will re-run the Table 6 regressions using application-year patents. In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent applications, and with a lag impact patent grants.
 
 First, I am able to reproduce Cook's Table 6, using grant-year patents:
+
 ![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="80%"}
 
 The application-year patent variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote).[^2]
 
 Next, I redo Table 6 using application-year patents.
+
 ![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="80%"}
+
 The results are dramatically different: the negative effect of lynchings and riots disappears, as does the negative effect in 1921.
 If the grant-year patent variable is incorrect and the application-year variable is correct, then the paper's main result is questionable.
 
