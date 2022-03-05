@@ -53,7 +53,7 @@ Below I plot the number of observations by state and year. We see that the major
 Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^3]
 ![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="80%"}
 
-This nonrandom pattern of missingness, combined with the low coverage of the full sample, severely undermines the external validity of the results.
+This nonrandom pattern of missingness, combined with the low coverage of the full sample, severely undermines the external validity of the results. This dataset is not representative of the U.S. over 1870-1940.
 
 To make this concrete, consider the riots variable. There are 35 riots in the time series data, but only 5 in the panel data. 
 Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^4]
