@@ -25,11 +25,11 @@ One possible explanation is that Cook used the white population (average 75 mill
 
 If the grant-year patent variable is incorrect, this will affect the Table 6 results, which use the grant-year variable. Cook doesn't report a robustness check, so I will re-run the Table 6 regressions using application-year patents. In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent applications, and with a lag impact granted patents.
 
-First, I am able to reproduce Cook's Table 6, using grant-year patents:
+First, I am able to reproduce Cook's Table 6, using grant-year patents[^2]:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="80%"}
 
-The application-year patent variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote).[^2]
+The application-year patent variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote).[^3]
 
 Next, I redo Table 6 using application-year patents.
 
@@ -50,13 +50,13 @@ Below I plot the number of observations by state and year. We see that the major
 ![](https://michaelwiebe.com/assets/cook_replication/obs_state.png){:width="80%"}
 ![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="80%"}
 
-Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^3]
+Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^4]
 ![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="80%"}
 
 This nonrandom pattern of missingness, combined with the low coverage of the full sample, severely undermines the external validity of the results. This dataset is not representative of the U.S. over 1870-1940.
 
 To make this concrete, consider the riots variable. There are 35 riots in the time series data, but only 5 in the panel data. 
-Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^4]
+Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^5]
 (The replication files don't have count data on lynchings, but the same problem applies there as well.)
 
 Hence, it seems a near-certainty that the Table 7 estimates would be different if we ran the regressions using a balanced panel.
@@ -82,8 +82,10 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 
 [^1]: Cook notes that "a comparison of a sample of similar patents obtained by white and African American inventors shows that the time between patent application and grant for the two groups was not significantly different, 1.4 years in each case." (p.226, fn. 15) Also, there is no application-year patent data for 1870-72.
 
-[^2]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
+[^2]: Cook's Table 6 incorrectly shows the lynching estimates as having p-values less than 0.05.
 
-[^3]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7.
+[^3]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
-[^4]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
+[^4]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7.
+
+[^5]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
