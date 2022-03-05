@@ -55,8 +55,8 @@ Decomposing by region, we see that the Midwest and Mid-Atlantic regions are rela
 
 This nonrandom pattern of missingness, combined with the low coverage of the full sample, severely undermines the external validity of the results.
 
-To make this concrete, consider the riots variable. There are 35 riots in the time series data. but only 5 in the panel data. 
-Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data. 
+To make this concrete, consider the riots variable. There are 35 riots in the time series data, but only 5 in the panel data. 
+Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^4]
 (The replication files don't have raw count data on lynchings, but the same problem applies there as well.)
 
 Hence, it seems a near-certainty that the Table 7 estimates would be different if we ran the regressions using a balanced panel.
@@ -85,3 +85,5 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 [^2]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
 [^3]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7.
+
+[^4]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
