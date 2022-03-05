@@ -61,8 +61,8 @@ Similarly, there are 290 new segregation laws in the time series data, but only 
 It seems a near-certainty that the Table 7 estimates would be different if we ran the regressions using a balanced panel.
 In other words, the state-level results are 'dead on arrival', and are not externally valid for the U.S. over 1870-1940.
 
-#Cook interprets the riots estimate as follows: "One additional riot in a given state in a given year would diminish the state total by an average of nearly half a patent or by 17 patents in a given year for all states." 
-#But it's very likely that this interpretation would be different if the regression included all 35 riots.
+[//]: # Cook interprets the riots estimate as follows: "One additional riot in a given state in a given year would diminish the state total by an average of nearly half a patent or by 17 patents in a given year for all states." 
+[//]: # But it's very likely that this interpretation would be different if the regression included all 35 riots.
 
 ---------
 computational reproducibility: Cook's code is riddled with errors
