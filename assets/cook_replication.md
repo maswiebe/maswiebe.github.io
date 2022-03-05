@@ -57,7 +57,7 @@ This nonrandom pattern of missingness, combined with the low coverage of the ful
 
 To make this concrete, consider the riots variable. There are 35 riots in the time series data, but only 5 in the panel data. 
 Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^4]
-(The replication files don't have raw count data on lynchings, but the same problem applies there as well.)
+(The replication files don't have count data on lynchings, but the same problem applies there as well.)
 
 Hence, it seems a near-certainty that the Table 7 estimates would be different if we ran the regressions using a balanced panel.
 In other words, the state-level results are 'dead on arrival', and are not externally valid for the U.S. over 1870-1940.
