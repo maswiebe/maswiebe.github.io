@@ -59,19 +59,21 @@ To make this concrete, consider the riots variable. There are 35 riots in the ti
 Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^5]
 (The replication files don't have count data on lynchings, but the same problem applies there as well.)
 
-Hence, it seems a near-certainty that the Table 7 estimates would be different if we ran the regressions using a balanced panel.
+Hence, it seems a near-certainty that the Table 7 and 8 estimates would be different if we ran the regressions using a balanced panel.
 In other words, the state-level results are 'dead on arrival', and are not externally valid for the U.S. over 1870-1940.
 
 [//]: # Cook interprets the riots estimate as follows: "One additional riot in a given state in a given year would diminish the state total by an average of nearly half a patent or by 17 patents in a given year for all states." 
 [//]: # But it's very likely that this interpretation would be different if the regression included all 35 riots.
 
 ---------
+To summarize, the main results in Cook (2014) do not hold up under scrutiny. 
+Nonetheless, the conclusions remain plausible, because they have a high prior probability. Race riots and lynchings were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
+
+But with the data available, statistically detecting causal effects is unrealistic; credible causal inference would require more complete data as well as a better identification strategy. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and provide answers to the effects of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/).
+
+---------
 computational reproducibility: Cook's code is riddled with errors
 This is unacceptable; Journal of Economic Growth must do better at publishing reproducible research.
-
----------------
-conclusions are plausible; had a strong prior before reading this paper. But not able to statistically detect any effects with the data we have. 
-As I said before, Cook deserves credit for raising the research question and working for years on collecting the patent data
 
 
 -----------------
@@ -82,7 +84,7 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 
 [^1]: Cook notes that "a comparison of a sample of similar patents obtained by white and African American inventors shows that the time between patent application and grant for the two groups was not significantly different, 1.4 years in each case." (p.226, fn. 15) Also, there is no application-year patent data for 1870-72.
 
-[^2]: Cook's Table 6 incorrectly shows the lynching estimates as having p-values less than 0.05.
+[^2]: Cook's Table 6 incorrectly shows the lynching estimates in Columns 2 and 3 as having p-values less than 0.05.
 
 [^3]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
