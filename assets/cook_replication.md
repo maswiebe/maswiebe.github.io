@@ -70,10 +70,10 @@ In other words, the state-level results are 'dead on arrival', and are not exter
 To summarize, the main results in Cook (2014) do not hold up under scrutiny. 
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Race riots and lynchings were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
-But with the data available, statistically detecting causal effects is unrealistic; credible causal inference would require more complete data as well as a better identification strategy. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and provide answers to the effects of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/).
+But with the data available, statistically detecting causal effects is unrealistic; credible causal inference would require more complete data as well as a better identification strategy. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and bring attention to the consequences of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/).
 
 ---------
-computational reproducibility: Cook's code is riddled with errors
+computational reproducibility: Cook's code is riddled with errors.
 This is unacceptable; Journal of Economic Growth must do better at publishing reproducible research.
 
 
