@@ -74,6 +74,11 @@ But with the data available, statistically detecting causal effects is unrealist
 
 ---------
 computational reproducibility: Cook's code is riddled with errors.
+- The code includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
+- State 9 has the South dummy equal to 1 for all years, but also has the Mid-Atlantic dummy equal to 0.33 in 1888.
+- State 14 has the Midwest dummy equal to 1 in all years except 1886, when both it as the South dummy are 0.5.
+- In the notes to Tables 7 and 8, Cook writes that "Standard errors robust to clustering on state and year are in parentheses." However, the code only clusters by state, using `vce(stateno)`.
+
 This is unacceptable; Journal of Economic Growth must do better at publishing reproducible research.
 
 
