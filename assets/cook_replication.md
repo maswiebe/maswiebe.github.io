@@ -73,10 +73,10 @@ Nonetheless, the conclusions remain plausible, because they have a high prior pr
 But with the data available, statistically detecting causal effects is unrealistic; credible causal inference would require more complete data as well as a better identification strategy. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and bring attention to the consequences of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/).
 
 ---------
-In terms of computational reproducibility, Cook's code has a bunch of errors:
+In terms of computational reproducibility, Cook's code has several errors:
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
-- The code for Column 1 in Table 7 erroneously includes the 'number of firms' variable, which in the table is only included in columns 3-6.
+- The code for Column 1 in Table 7 includes the 'number of firms' variable, but the paper only includes it in columns 3-6.
 - In the notes to Tables 7 and 8, Cook writes that "Standard errors robust to clustering on state and year are in parentheses." However, the code only clusters by state, using `vce(stateno)`.
 - The code for Table 9 does not reproduce the results in the paper.
 
