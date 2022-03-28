@@ -15,7 +15,7 @@ Figure 1 reports Black (and white) patents per million using grant-year, while F
 Comparing the two graphs, we immediately see that the scale differs by a factor of about 10.
 Here I merge the two datasets and plot the application-year and grant-year variables on the same graph.
 
-![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="90%"}
 
 There is a huge discrepancy between the two patent variables.
 Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1]
@@ -70,7 +70,7 @@ Statistically significant results are easy to get when you're working with small
 For example, let's check for heterogeneous effects by region.
 From Table 7, I run the Column 1 regression separately for each region:
 
-![](https://michaelwiebe.com/assets/cook_replication/table7_region.png){:width="90%"}
+![](https://michaelwiebe.com/assets/cook_replication/table7_region.png){:width="100%"}
 
 The lynchings estimate for the South is similar to the average effect (-0.075 in the subsample, -0.058 in the full sample).
 But there's no estimate at all for the Midwest and Northeast, since there were zero lynchings in those regions.
