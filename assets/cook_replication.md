@@ -21,33 +21,24 @@ Here I merge the two datasets and plot the application-year and grant-year varia
 ![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="100%"}
 
 There is a huge discrepancy between the two patent variables.
-Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1]
-This discrepancy becomes even more puzzling when we compare the paper and the code:
+Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1][^2]
 
-- Figure 1 reports patents per million by grant year, but uses a variable named `patgrntpc` with the label 'Patents by grant year'. The 'pc' would seem to indicate patents per capita.
-- Figure 2 reports patents per million by application year, using a variable `pat_appyear_pm`, with 'pm' corresponding to 'per million'.
-- Table 5 presents descriptive statistics, with a "Patents, per million" variable with a mean of 0.16, but the code uses `patgrntpc`.
-- Equation 1 and Table 6 both refer to patents per capita. The code for Table 6 uses the logarithm of `patgrntpc`.
-
-Although the variable `patgrntpc` would seem to be 'Patents by grant year, per capita`, this can't be true: the average value is 0.16, which implies that the average Black person has 0.16 patents, or that 16% of the Black population received patents. Those values are way too high.
-So the variable must be misnamed, and actually represents patents per million, as described in Figure 1 and Table 5.
-This means that Equation 1 and Table 6 are mistaken: the dependent variable is log patents per million, and _not_ log patents per capita.
-
-But even if the actual variable is 'patents per million by grant year', why is there a discrepancy between grant-year and application-year? Recall that the average values are 0.16 and 1.22.
+<!-- But even if the actual variable is 'patents per million by grant year', why is there a discrepancy between grant-year and application-year? Recall that the average values are 0.16 and 1.22. -->
 
 Cook's replication data does not include the raw patent or population variables, so we can't say for sure what's going on here.
 But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 grant-year patents/M * 10M * 71 years = 114, far less than the 726 patents recorded.
 In contrast, 1.22 application-year patents/M * 10M * 71 years = 866, which is in the ballpark of 726.
-Speculating, one possible explanation is that Cook calculated grant-year patents using the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents.
+Speculating, one possible explanation is that Cook calculated grant-year patents using the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents. 
+Hopefully Cook will publish 
 
 In any case, the grant-year patent variable seems clearly flawed, while the application-year variable looks correct. 
 Since the Table 6 results use the grant-year patent variable, we should run a robustness check using the application-year variable.
 
 Table 6 uses time series data to estimate the effect of lynchings, riots, and segregations laws on patents.
-Column 1 uses race-year panel data, where the lynching and patent variables vary by race (but the riot and segregation law variables only vary by time). 
+Column 1 uses race-year panel data, where the lynching and patent variables vary by race (but the riot and segregation law variables vary only by time). 
 Columns 2 and 3 run time series regressions separately by race, allowing us to estimate differential effects of racial violence on patenting.
 
-I am able to reproduce Table 6[^2], using grant-year patents:
+I am able to reproduce Table 6[^3], using grant-year patents:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="85%"}
 
@@ -57,7 +48,7 @@ However, if the grant-year patent variable is incorrect, then the Table 6 result
 Cook doesn't report a robustness check using the other patent variable, so I will re-run the Table 6 regressions using application-year patents. 
 In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent _applications_, and with a lag impact _granted_ patents. So the effects should be stronger using the application-year variable.
 
-The application-year variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^3]).
+The application-year variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^4]).
 Next, I redo Table 6 using application-year patents:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="85%"}
@@ -80,13 +71,13 @@ First, we see that the majority of states have fewer than 10 observations over 7
 Next, the sample size is increasing up to 1900 before dropping off and rising again starting in 1920.
 ![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="100%"}
 
-Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the South and West are relatively underrepresented.[^4]
+Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the South and West are relatively underrepresented.[^5]
 ![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="100%"}
 
 Moreover, consider how this imbalanced panel compares to the full time series.
 There are 726 patents in the time series, and 702 in the panel data (for 97% coverage).
 But the violence variables are drastically under-reported: there are 35 riots in the time series data, but only 5 in the panel data (14%).
-Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data (7%).[^5]
+Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data (7%).[^6]
 (The same problem applies with lynchings, but the replication files don't have count data, so we can't quantify it.)
 
 What explains the missing data? It appears that Cook dropped any state-year observation that had a variable with a missing value. The resulting dataset has no variables with missing values, but a lot of missing state-year observations, and hence a severely imbalanced panel.
@@ -144,10 +135,21 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 
 [^1]: Cook notes that "a comparison of a sample of similar patents obtained by white and African American inventors shows that the time between patent application and grant for the two groups was not significantly different, 1.4 years in each case." (p.226, fn. 15) Also, there is no application-year patent data for 1870-72.
 
-[^2]: Cook's Table 6 incorrectly shows the lynching estimates in Columns 2 and 3 as having p-values less than 0.05.
+[^2]: This discrepancy becomes even more puzzling when we compare the paper and the code:
 
-[^3]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
+- Figure 1 reports patents per million by grant year, but uses a variable named `patgrntpc` with the label 'Patents by grant year'. The 'pc' would seem to indicate patents per capita.
+- Figure 2 reports patents per million by application year, using a variable `pat_appyear_pm`, with 'pm' corresponding to 'per million'.
+- Table 5 presents descriptive statistics, with a 'Patents, per million' variable with a mean of 0.16, but the code uses `patgrntpc`.
+- Equation 1 and Table 6 both refer to patents per capita. The code for Table 6 uses the logarithm of `patgrntpc`.
 
-[^4]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have less than 71 years in the complete panel. See code for details.
+Although the variable `patgrntpc` would seem to be 'Patents by grant year, per capita', this can't be true: the average value is 0.16, which implies that the average Black person has 0.16 patents, or that 16% of the Black population received patents. Those values are way too high.
+So the variable must be misnamed, and actually represents patents per million, as described in Figure 1 and Table 5.
+This means that Equation 1 and Table 6 are mistaken: the dependent variable is log patents per million, and _not_ log patents per capita.
 
-[^5]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
+[^3]: Cook's Table 6 incorrectly shows the lynching estimates in Columns 2 and 3 as having p-values less than 0.05.
+
+[^4]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
+
+[^5]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have less than 71 years in the complete panel. See code for details.
+
+[^6]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
