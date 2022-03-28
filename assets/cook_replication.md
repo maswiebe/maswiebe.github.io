@@ -26,7 +26,7 @@ Cook collected data on 726 patents over 1870-1940, but the average by grant-year
 <!-- But even if the actual variable is 'patents per million by grant year', why is there a discrepancy between grant-year and application-year? Recall that the average values are 0.16 and 1.22. -->
 
 Cook's replication data does not include the raw patent or population variables, so we can't say for sure what's going on here.
-But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 grant-year patents/M * 10M * 71 years = 114, far less than the 726 patents recorded.
+But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 grant-year patents/M * 10M * 71 years = 114, far fewer than the 726 patents recorded.
 In contrast, 1.22 application-year patents/M * 10M * 71 years = 866, which is in the ballpark of 726.
 Speculating, one possible explanation is that Cook calculated grant-year patents using the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents. 
 Hopefully Cook will publish the raw data and we can resolve this.
@@ -152,6 +152,6 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 
       ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
-[^5]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have less than 71 years in the complete panel. See code for details.
+[^5]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have fewer than 71 years in the complete panel. See code for details.
 
 [^6]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
