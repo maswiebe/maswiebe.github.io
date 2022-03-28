@@ -21,7 +21,7 @@ Here I merge the two datasets and plot the application-year and grant-year varia
 ![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="100%"}
 
 There is a huge discrepancy between the two patent variables.
-Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1][^2]
+Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1,][^2]
 
 <!-- But even if the actual variable is 'patents per million by grant year', why is there a discrepancy between grant-year and application-year? Recall that the average values are 0.16 and 1.22. -->
 
@@ -29,7 +29,7 @@ Cook's replication data does not include the raw patent or population variables,
 But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 grant-year patents/M * 10M * 71 years = 114, far less than the 726 patents recorded.
 In contrast, 1.22 application-year patents/M * 10M * 71 years = 866, which is in the ballpark of 726.
 Speculating, one possible explanation is that Cook calculated grant-year patents using the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents. 
-Hopefully Cook will publish 
+Hopefully Cook will publish the raw data and we can resolve this.
 
 In any case, the grant-year patent variable seems clearly flawed, while the application-year variable looks correct. 
 Since the Table 6 results use the grant-year patent variable, we should run a robustness check using the application-year variable.
