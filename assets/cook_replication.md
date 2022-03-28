@@ -33,6 +33,7 @@ Columns 2 and 3 run time series regressions separately by race, allowing us to e
 I am able to reproduce Table 6[^2], using grant-year patents:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="80%"}
+
 As noted in the paper, lynchings and riots have negative effects on Black patenting, and the 1921 dummy has a large negative effect, corresponding to the Tulsa Race Riot.
 
 However, if the grant-year patent variable is incorrect, then the Table 6 results are problematic.
@@ -45,8 +46,8 @@ Next, I redo Table 6 using application-year patents.
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="80%"}
 
-The results are dramatically different: the negative effect of lynchings and riots disappears, as does the negative effect in 1921 (attributed to the Tulsa Race Riot).
-If the grant-year patent variable is incorrect and the application-year variable is correct, then the paper's main result is questionable.
+The results are dramatically different: the negative effect of lynchings and riots disappears, as does the negative effect in 1921.
+If the grant-year patent variable is incorrect and the application-year variable is correct, then the paper's main result is wrong.
 
 Panel data regressions
 ----------------------
