@@ -114,6 +114,7 @@ But with the data available, it's unrealistic to think we can statistically dete
 ---------
 In terms of computational reproducibility, Cook's code has several errors:
 - The code for Figures 1, 2, and 3 is in Stata graph editor format, which cannot be run from a do-file.
+- Figure 1 uses the variable `patgrntpc`, patents by grant-year per capita, but the graph refers to patents per million.
 - There's no code for Table 4.
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
@@ -141,7 +142,7 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
       - Table 5 presents descriptive statistics, with a 'Patents, per million' variable with a mean of 0.16, but the code uses `patgrntpc`.
       - Equation 1 and Table 6 both refer to patents per capita. The code for Table 6 uses the logarithm of `patgrntpc`.
       
-      Although the variable `patgrntpc` would seem to be 'Patents by grant year, per capita', this can't be true: the average value is 0.16, which implies that the average Black person has 0.16 patents, or that 16% of the Black population received patents. Those values are way too high.
+      Although the variable `patgrntpc` would seem to be 'Patents by grant year, per capita', this can't be true: the average value is 0.16 for Blacks, and 425 for whites. These values are clearly measured per million.
       So the variable must be misnamed, and actually represents patents per million, as described in Figure 1 and Table 5.
       This means that Equation 1 and Table 6 are mistaken: the dependent variable is log patents per million, and _not_ log patents per capita.
 
