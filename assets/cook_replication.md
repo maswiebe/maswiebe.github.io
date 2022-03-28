@@ -149,6 +149,7 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 [^3]: Cook's Table 6 incorrectly shows the lynching estimates in Columns 2 and 3 as having p-values less than 0.05.
 
 [^4]: Note that N = 110 and 55 instead of 112 and 56.
+
       ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
 [^5]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have less than 71 years in the complete panel. See code for details.
