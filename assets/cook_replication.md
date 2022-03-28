@@ -65,6 +65,8 @@ But the violence variables are drastically under-reported: there are 35 riots in
 Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data (7%).[^5]
 (The same problem applies with lynchings, but the replication files don't have count data, so we can't quantify it.)
 
+What explains the missing data? It appears that Cook dropped any state-year observation that had a variable with a missing value. The resulting dataset has no variables with missing values, but a lot of missing state-year observations, and hence a severely imbalanced panel.
+
 With this low level of data coverage, I'm skeptical of the panel data results in Tables 7 and 8.
 It's possible that these results are unbiased, and would remain stable as the missing data was filled in (through a law of large numbers argument). Especially considering the prior plausibility that racial violence and patents are negatively correlated, we should place some weight on this.
 
@@ -87,7 +89,8 @@ There are 19.33 new segregation laws in the data, with 17 in the South, 1 in the
 My takeaway from these subsample results is that statistical power is low, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
 Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, since they would probably change considerably if we had a complete and balanced panel.
 
----------
+Conclusion
+----------
 To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
