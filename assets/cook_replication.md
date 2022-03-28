@@ -140,6 +140,7 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
       - Figure 2 reports patents per million by application year, using a variable `pat_appyear_pm`, with 'pm' corresponding to 'per million'.
       - Table 5 presents descriptive statistics, with a 'Patents, per million' variable with a mean of 0.16, but the code uses `patgrntpc`.
       - Equation 1 and Table 6 both refer to patents per capita. The code for Table 6 uses the logarithm of `patgrntpc`.
+      
       Although the variable `patgrntpc` would seem to be 'Patents by grant year, per capita', this can't be true: the average value is 0.16, which implies that the average Black person has 0.16 patents, or that 16% of the Black population received patents. Those values are way too high.
       So the variable must be misnamed, and actually represents patents per million, as described in Figure 1 and Table 5.
       This means that Equation 1 and Table 6 are mistaken: the dependent variable is log patents per million, and _not_ log patents per capita.
