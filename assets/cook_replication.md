@@ -62,12 +62,11 @@ But the violence variables are drastically under-reported: there are 35 riots in
 Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data (7%).[^5]
 (The same problem applies with lynchings, but the replication files don't have count data, so we can't quantify it.)
 
-This nonrandom pattern of missingness, combined with the low coverage of the full sample, casts doubt on the reliability of the results.
+With this low level of data coverage, I'm skeptical of the panel data results.
+<!-- and would be surprised if they agreed with the time series results. (And as we've seen above, those are not robust.) -->
+Is it possible that the results from this limited sample would remain stable as the missing data was filled in (through a law of large numbers argument)? Yes, and we do have a pretty strong prior that racial violence and patents will be negatively correlated.
 
-
-
-It's possible that the results from this limited sample would remain stable as the missing data was filled in. But I'm skeptical. 
-Statistically significant results are easy to get when you're working with small effects and noisy data.
+But at Statistically significant results are easy to get when you're working with small effects and noisy data.
 
 For example, let's check for heterogeneous effects by region.
 From Table 7, I run the Column 1 regression separately for each region:
@@ -94,7 +93,7 @@ In other words, the state-level results are 'dead on arrival', and are not exter
 [//]: # But it's very likely that this interpretation would be different if the regression included all 35 riots.
 
 ---------
-To summarize, the main time series result in Cook (2014) does not hold up to a robustness check, and the panel data results are questionable.
+To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
 But with the data available, it's unrealistic to think we can statistically detect causal effects; credible causal inference would require more complete data as well as a better identification strategy than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and bring attention to the consequences of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/)).
