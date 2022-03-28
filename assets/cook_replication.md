@@ -41,28 +41,30 @@ If the grant-year patent variable is incorrect and the application-year variable
 Panel data regressions
 ----------------------
 
-In Tables 7 and 8, Cook uses state-level panel data over 1870-1940 to run regressions of patents on lynching rates and riots.
-However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A balanced panel would have 49 * 71 = 3479 observations. So Cook is using 430/3479 = 12% of the full sample. 
-
-[//]: # Hence, before looking at the results, we already know that they are not externally valid for the U.S. over 1870-1940.
+In Tables 7 and 8, Cook uses state-level panel data over 1870-1940 to run regressions of patents on lynching rates, riots, and segregation laws.
+However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A balanced panel would have at least 37 * 71 = 2627 observations, since the [number of states](https://www.statista.com/statistics/1043617/number-us-states-by-year/) was 37 in 1870, growing to 48 in 1940. (I'm not sure why Cook has 49 states, when Alaska wasn't [added](https://en.wikipedia.org/wiki/List_of_U.S._states_by_date_of_admission_to_the_Union) until 1959.)
+So as an upper bound estimate, Cook is using 430/2627 = 16% of the full sample.
 
 And the pattern of missing data is not random. 
 Below I plot the number of observations by state and year. 
-First, we see that the majority of states have fewer than 10 observations.
+First, we see that the majority of states have fewer than 10 observations over 71 years.
 ![](https://michaelwiebe.com/assets/cook_replication/obs_state.png){:width="80%"}
 
 Next, the sample size is increasing up to 1900 before dropping off and rising again starting in 1920.
 ![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="80%"}
 
 Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^4]
-![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="90%"}
+
+Moreover, consider how this imbalanced panel compares to the full time series.
+There are 726 patents in the time series, and 702 in the panel data (for 97% coverage).
+But the violence variables are drastically under-reported: there are 35 riots in the time series data, but only 5 in the panel data (14%).
+Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data (7%).[^5]
+(The same problem applies with lynchings, but the replication files don't have count data, so we can't quantify it.)
 
 This nonrandom pattern of missingness, combined with the low coverage of the full sample, casts doubt on the reliability of the results.
-<!-- severely undermines the external validity of the results. This dataset is not representative of the U.S. over 1870-1940. -->
 
-To make this concrete, consider the riots variable. There are 35 riots in the time series data, but only 5 in the panel data. 
-Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data.[^5]
-(The same problem applies with lynchings, but the replication files don't have count data.)
+
 
 It's possible that the results from this limited sample would remain stable as the missing data was filled in. But I'm skeptical. 
 Statistically significant results are easy to get when you're working with small effects and noisy data.
@@ -92,7 +94,7 @@ In other words, the state-level results are 'dead on arrival', and are not exter
 [//]: # But it's very likely that this interpretation would be different if the regression included all 35 riots.
 
 ---------
-To summarize, the main time series result in Cook (2014) does not hold up under scrutiny, and the panel data results are questionable.
+To summarize, the main time series result in Cook (2014) does not hold up to a robustness check, and the panel data results are questionable.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
 But with the data available, it's unrealistic to think we can statistically detect causal effects; credible causal inference would require more complete data as well as a better identification strategy than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and bring attention to the consequences of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/)).
