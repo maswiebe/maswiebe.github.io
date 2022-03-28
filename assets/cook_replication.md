@@ -32,7 +32,7 @@ Columns 2 and 3 run time series regressions separately by race, allowing us to e
 
 I am able to reproduce Table 6[^2], using grant-year patents:
 
-![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="100%"}
+![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="85%"}
 
 As noted in the paper, lynchings and riots have negative effects on Black patenting, and the 1921 dummy has a large negative effect, corresponding to the Tulsa Race Riot.
 
@@ -43,7 +43,7 @@ In fact, this specification seems more appropriate, since Cook's mechanism is th
 The application-year variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^3]).
 Next, I redo Table 6 using application-year patents:
 
-![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="100%"}
+![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="85%"}
 
 The results are dramatically different: the negative effect of lynchings and riots disappears, as does the negative effect in 1921.
 If the grant-year patent variable is incorrect and the application-year variable is correct, then the paper's main result is wrong.
