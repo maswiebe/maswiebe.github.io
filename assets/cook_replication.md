@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Replicating Cook (2014)"
+title:  "Can we detect the effects of racial violence on patenting? Replicating Cook (2014)"
 date:   2020-11-04 23:20:00
 type: post
 ---
 
-substantial contribution in data collection, rich qualitative evidence, raising the research question, inspiring future research (cite brookings)
+A year ago, I wrote a [short post](https://michaelwiebe.com/blog/2021/02/cook_violence) looking at the data in [Cook (2014)](https://link.springer.com/article/10.1007/s10887-014-9102-z) ([sci-hub](https://twitter.com/sci_hub_)) ([replication files](https://link.springer.com/article/10.1007/s10887-014-9102-z#Sec20)) on the effect of racial violence on African American patents over 1870-1940. 
+I discovered that the state-level panel data was strikingly imbalanced. 
+With Lisa Cook in the news for being nominated to the Federal Reserve Board of Governors, I decided to revisit the paper more thoroughly.
 
 Time series regressions
 -----------------------
@@ -82,20 +84,13 @@ But statistical significance doesn't mean anything here, because the data is noi
 There are 19.33 new segregation laws in the data, with 17 in the South, 1 in the Midwest, 1 in the West, and 0.33 in the Mid-Atlantic (presumably a data error).
 
 My takeaway from these subsample results is that statistical power is low, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
-Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, since they would probably change a lot if we had a complete and balanced panel.
-<!-- And if we're disregarding statistically significant subsample results, we should also be skeptical of the full sample results based on a highly imbalanced panel. -->
-
-<!-- Hence, it seems a near-certainty that the Table 7 and 8 estimates would be different if we ran the regressions using a balanced panel.
-In other words, the state-level results are 'dead on arrival', and are not externally valid for the U.S. over 1870-1940. -->
-
-[//]: # Cook interprets the riots estimate as follows: "One additional riot in a given state in a given year would diminish the state total by an average of nearly half a patent or by 17 patents in a given year for all states." 
-[//]: # But it's very likely that this interpretation would be different if the regression included all 35 riots.
+Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, since they would probably change considerably if we had a complete and balanced panel.
 
 ---------
 To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
-But with the data available, it's unrealistic to think we can statistically detect causal effects; credible causal inference would require more complete data as well as a better identification strategy than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in the work to collect the patent data. Hopefully her example can inspire future researchers to build upon this work and bring attention to the consequences of America's racist history (and it [already has](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/)).
+But with the data available, it's unrealistic to think we can statistically detect causal effects; credible causal inference would require more complete data as well as an identification strategy more convincing than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in years of work to collect the patent data. Hopefully her example can inspire [more researchers](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/) to build upon this work and bring attention to the consequences of America's racist history.
 
 ---------
 In terms of computational reproducibility, Cook's code has several errors:
@@ -110,8 +105,6 @@ There are also a few data errors:
 - State 9 has the South dummy equal to 1 for all years, but also has the Mid-Atlantic dummy equal to 0.33 in 1888.
 - State 14 has the Midwest dummy equal to 1 in all years except 1886, when both it and the South dummy are 0.5.
 - State 31 in 1909 has a value of 0.333333 for 'number of new segregation laws', which should be integer-valued.
-
-<!-- Both Cook and the Journal of Economic Growth must do better at publishing reproducible research. -->
 
 -----------------
 
