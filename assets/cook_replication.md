@@ -8,6 +8,7 @@ type: post
 A year ago, I wrote a [short post](https://michaelwiebe.com/blog/2021/02/cook_violence) looking at the data in [Cook (2014)](https://link.springer.com/article/10.1007/s10887-014-9102-z) ([sci-hub](https://twitter.com/sci_hub_)) ([replication files](https://link.springer.com/article/10.1007/s10887-014-9102-z#Sec20)) on the effect of racial violence on African American patents over 1870-1940. 
 I discovered that the state-level panel data was strikingly imbalanced. 
 With Lisa Cook in the news for being nominated to the Federal Reserve Board of Governors, I decided to revisit the paper more thoroughly.
+I find that the main time series result is not robust, and give suggestive evidence that the panel data results are underpowered.
 
 Time series regressions
 -----------------------
