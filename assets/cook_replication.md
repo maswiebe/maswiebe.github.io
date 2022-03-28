@@ -42,16 +42,16 @@ Panel data regressions
 ----------------------
 
 In Tables 7 and 8, Cook uses state-level panel data over 1870-1940 to run regressions of patents on lynching rates, riots, and segregation laws.
-However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A balanced panel would have at least 37 * 71 = 2627 observations, since the [number of states](https://www.statista.com/statistics/1043617/number-us-states-by-year/) was 37 in 1870, growing to 48 in 1940. (I'm not sure why Cook has 49 states, when Alaska wasn't [added](https://en.wikipedia.org/wiki/List_of_U.S._states_by_date_of_admission_to_the_Union) until 1959.)
+However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A complete, balanced panel would have at least 37 * 71 = 2627 observations, since the [number of states](https://www.statista.com/statistics/1043617/number-us-states-by-year/) was 37 in 1870, growing to 48 in 1940. (I'm not sure why Cook has 49 states, when Alaska wasn't [added](https://en.wikipedia.org/wiki/List_of_U.S._states_by_date_of_admission_to_the_Union) until 1959.)
 So as an upper bound estimate, Cook is using 430/2627 = 16% of the full sample.
 
 And the pattern of missing data is not random. 
 Below I plot the number of observations by state and year. 
 First, we see that the majority of states have fewer than 10 observations over 71 years.
-![](https://michaelwiebe.com/assets/cook_replication/obs_state.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_replication/obs_state.png){:width="100%"}
 
 Next, the sample size is increasing up to 1900 before dropping off and rising again starting in 1920.
-![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="80%"}
+![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="100%"}
 
 Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^4]
 ![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="100%"}
@@ -71,7 +71,7 @@ From Table 7, I run the Column 1 regression separately for each region:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table7_region.png){:width="100%"}
 
-The lynchings estimate for the South is similar to the average effect (-0.075 in the subsample, -0.058 in the full sample).
+The lynchings estimate for the South (-0.075) is similar to the average effect from the full sample (-0.058).
 But there's no estimate at all for the Midwest and Northeast, since there were zero lynchings in those regions.
 The estimate for the Mid-Atlantic is huge with two stars, 200x bigger than the South estimate. But this is almost certainly a [Type M](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html) error, as the lynching rate for the Mid-Atlantic is 3% of the average.
 
@@ -81,8 +81,9 @@ For segregation laws, the Table 7, Column 1 estimate is -0.1. The effects for th
 But statistical significance doesn't mean anything here, because the data is noisy.
 There are 19.33 new segregation laws in the data, with 17 in the South, 1 in the Midwest, 1 in the West, and 0.33 in the Mid-Atlantic (presumably a data error).
 
-My takeaway is that statistical power is low, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
-And if we're disregarding statistically significant subsample results, we should also be skeptical of the full sample results based on a highly imbalanced panel.
+My takeaway from these subsample results is that statistical power is low, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
+Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, since they would probably change a lot if we had a complete and balanced panel.
+<!-- And if we're disregarding statistically significant subsample results, we should also be skeptical of the full sample results based on a highly imbalanced panel. -->
 
 <!-- Hence, it seems a near-certainty that the Table 7 and 8 estimates would be different if we ran the regressions using a balanced panel.
 In other words, the state-level results are 'dead on arrival', and are not externally valid for the U.S. over 1870-1940. -->
@@ -102,6 +103,7 @@ In terms of computational reproducibility, Cook's code has several errors:
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
 - The code for Column 1 in Table 7 includes the 'number of firms' variable, but the paper only includes it in columns 3-6.
 - In the notes to Tables 7 and 8, Cook writes that "Standard errors robust to clustering on state and year are in parentheses." However, the code only clusters by state, using `vce(stateno)`.
+- The code for Table 7 includes a command to collapse the data down to the state-year level, but the data is already in a state-year panel.
 - The code for Table 9 does not reproduce the results in the paper.
 
 There are also a few data errors:
@@ -109,7 +111,7 @@ There are also a few data errors:
 - State 14 has the Midwest dummy equal to 1 in all years except 1886, when both it and the South dummy are 0.5.
 - State 31 in 1909 has a value of 0.333333 for 'number of new segregation laws', which should be integer-valued.
 
-Both Cook and the Journal of Economic Growth must do better at publishing reproducible research.
+<!-- Both Cook and the Journal of Economic Growth must do better at publishing reproducible research. -->
 
 -----------------
 
