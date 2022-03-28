@@ -14,7 +14,7 @@ Time series regressions
 -----------------------
 
 Cook has two measures of patents per year: (1) using the year the patent was applied for, and (2) using the year the patent was granted. 
-Figure 1 reports Black (and white) patents per million using grant year, while Figure 2 shows Black patents per million using application year.
+In the paper, Figure 1 reports Black (and white) patents per million using grant year, while Figure 2 shows Black patents per million using application year.
 Comparing the two graphs, we immediately see that the scale differs by a factor of about 10.
 Here I merge the two datasets and plot the application-year and grant-year variables on the same graph.
 
@@ -26,13 +26,20 @@ Cook's replication data does not include the raw patent or population variables,
 But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 patents/M * 10M * 71 years / 1M  = 114, far less than the 726 patents recorded.
 One possible explanation is that Cook used the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents, which is closer to 726.
 
-If the grant-year patent variable is incorrect, this will affect the Table 6 results, which use the grant-year variable. Cook doesn't report a robustness check, so I will re-run the Table 6 regressions using application-year patents. In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent applications, and with a lag impact granted patents.
+Table 6 uses the grant-year patent variable and time series data to estimate the effect of lynchings, riots, and segregations laws on patents.
+Column 1 uses race-year panel data, where the lynching and patent variables vary by race (but the riot and segregation law variables only vary by time). 
+Columns 2 and 3 run time series regressions separately by race, allowing us to estimate differential effects of racial violence on patenting.
 
-First, I am able to reproduce Cook's Table 6[^2], using grant-year patents:
+I am able to reproduce Table 6[^2], using grant-year patents:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="80%"}
+As noted in the paper, lynchings and riots have negative effects on Black patenting, and the 1921 dummy has a large negative effect, corresponding to the Tulsa Race Riot.
 
-The application-year patent variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^3]).
+However, if the grant-year patent variable is incorrect, then the Table 6 results are problematic.
+Cook doesn't report a robustness check using the other patent variable, so I will re-run the Table 6 regressions using application-year patents. 
+In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent _applications_, and with a lag impact _granted_ patents. So the effects should be stronger using the application-year variable.
+
+The application-year variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^3]).
 
 Next, I redo Table 6 using application-year patents.
 
@@ -94,7 +101,7 @@ Conclusion
 To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
-But with the data available, it's unrealistic to think we can statistically detect causal effects. Credible causal inference would require more complete data as well as an identification strategy more convincing than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself. Cook deserves credit for pursuing this important research question and putting in years of effort to collect the patent data. Hopefully her example can inspire [more researchers](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/) to build upon this work and bring attention to the consequences of America's racist history.
+But with the data available, it's unrealistic to think we can statistically detect causal effects. Credible causal inference would require more complete data as well as an identification strategy more convincing than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself, along with the rich qualitative evidence that Cook provides. Cook deserves credit for pursuing this important research question and putting in years of effort to collect the patent data. Hopefully her example can inspire [more researchers](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/) to build upon this work and bring attention to the consequences of America's racist history.
 
 ---------
 In terms of computational reproducibility, Cook's code has several errors:
