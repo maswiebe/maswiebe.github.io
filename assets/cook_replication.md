@@ -22,11 +22,28 @@ Here I merge the two datasets and plot the application-year and grant-year varia
 
 There is a huge discrepancy between the two patent variables.
 Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1]
-Cook's replication data does not include the raw patent or population variables, so we can't say for sure what's going on here.
-But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 patents/M * 10M * 71 years / 1M  = 114, far less than the 726 patents recorded.
-One possible explanation is that Cook used the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents, which is closer to 726.
+This discrepancy becomes even more puzzling when we compare the paper and the code:
 
-Table 6 uses the grant-year patent variable and time series data to estimate the effect of lynchings, riots, and segregations laws on patents.
+- Figure 1 reports patents per million by grant year, but uses a variable named `patgrntpc` with the label 'Patents by grant year'. The 'pc' would seem to indicate patents per capita.
+- Figure 2 reports patents per million by application year, using a variable `pat_appyear_pm`, with 'pm' corresponding to 'per million'.
+- Table 5 presents descriptive statistics, with a "Patents, per million" variable with a mean of 0.16, but the code uses `patgrntpc`.
+- Equation 1 and Table 6 both refer to patents per capita. The code for Table 6 uses the logarithm of `patgrntpc`.
+
+Although the variable `patgrntpc` would seem to be 'Patents by grant year, per capita`, this can't be true: the average value is 0.16, which implies that the average Black person has 0.16 patents, or that 16% of the Black population received patents. Those values are way too high.
+So the variable must be misnamed, and actually represents patents per million, as described in Figure 1 and Table 5.
+This means that Equation 1 and Table 6 are mistaken: the dependent variable is log patents per million, and _not_ log patents per capita.
+
+But even if the actual variable is 'patents per million by grant year', why is there a discrepancy between grant-year and application-year? Recall that the average values are 0.16 and 1.22.
+
+Cook's replication data does not include the raw patent or population variables, so we can't say for sure what's going on here.
+But the average [Black population](https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf) (see Table 1) was roughly 10 million, and 0.16 grant-year patents/M * 10M * 71 years = 114, far less than the 726 patents recorded.
+In contrast, 1.22 application-year patents/M * 10M * 71 years = 866, which is in the ballpark of 726.
+Speculating, one possible explanation is that Cook calculated grant-year patents using the white population (average 75 million) in the denominator, giving 0.16 * 75 * 71 = 852 patents.
+
+In any case, the grant-year patent variable seems clearly flawed, while the application-year variable looks correct. 
+Since the Table 6 results use the grant-year patent variable, we should run a robustness check using the application-year variable.
+
+Table 6 uses time series data to estimate the effect of lynchings, riots, and segregations laws on patents.
 Column 1 uses race-year panel data, where the lynching and patent variables vary by race (but the riot and segregation law variables only vary by time). 
 Columns 2 and 3 run time series regressions separately by race, allowing us to estimate differential effects of racial violence on patenting.
 
@@ -105,6 +122,8 @@ But with the data available, it's unrealistic to think we can statistically dete
 
 ---------
 In terms of computational reproducibility, Cook's code has several errors:
+- The code for Figures 1, 2, and 3 is in Stata graph editor format, which cannot be run from a do-file.
+- There's no code for Table 4.
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
 - The code for Column 1 in Table 7 includes the 'number of firms' variable, but the paper only includes it in columns 3-6.
