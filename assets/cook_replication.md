@@ -15,7 +15,7 @@ Figure 1 reports Black (and white) patents per million using grant-year, while F
 Comparing the two graphs, we immediately see that the scale differs by a factor of about 10.
 Here I merge the two datasets and plot the application-year and grant-year variables on the same graph.
 
-![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="90%"}
+![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="100%"}
 
 There is a huge discrepancy between the two patent variables.
 Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1]
