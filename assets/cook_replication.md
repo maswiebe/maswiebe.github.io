@@ -136,7 +136,6 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 [^1]: Cook notes that "a comparison of a sample of similar patents obtained by white and African American inventors shows that the time between patent application and grant for the two groups was not significantly different, 1.4 years in each case." (p.226, fn. 15) Also, there is no application-year patent data for 1870-72.
 
 [^2]: This discrepancy becomes even more puzzling when we compare the paper and the code:
-
 - Figure 1 reports patents per million by grant year, but uses a variable named `patgrntpc` with the label 'Patents by grant year'. The 'pc' would seem to indicate patents per capita.
 - Figure 2 reports patents per million by application year, using a variable `pat_appyear_pm`, with 'pm' corresponding to 'per million'.
 - Table 5 presents descriptive statistics, with a 'Patents, per million' variable with a mean of 0.16, but the code uses `patgrntpc`.
