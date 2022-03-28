@@ -44,12 +44,11 @@ I am able to reproduce Table 6[^3], using grant-year patents:
 
 As noted in the paper, lynchings and riots have negative effects on Black patenting, and the 1921 dummy has a large negative effect, corresponding to the Tulsa Race Riot.
 
-However, if the grant-year patent variable is incorrect, then the Table 6 results are problematic.
-Cook doesn't report a robustness check using the other patent variable, so I will re-run the Table 6 regressions using application-year patents. 
-In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent _applications_, and with a lag impact _granted_ patents. So the effects should be stronger using the application-year variable.
+For the robustness check, I redo Table 6 using application-year patents instead of grant-year patents.
+This specification actually seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent _applications_, and with a lag impact _granted_ patents. So the effects should be stronger using the application-year variable.
 
 The application-year variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^4]).
-Next, I redo Table 6 using application-year patents:
+Next, I run Table 6 using application-year patents:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="85%"}
 
@@ -114,7 +113,7 @@ But with the data available, it's unrealistic to think we can statistically dete
 ---------
 In terms of computational reproducibility, Cook's code has several errors:
 - The code for Figures 1, 2, and 3 is in Stata graph editor format, which cannot be run from a do-file.
-- Figure 1 uses the variable `patgrntpc`, patents by grant-year per capita, but the graph refers to patents per million.
+- Figure 1 uses the variable `patgrntpc`, patents by grant-year per capita, but the graph refers to patents per million. Similarly, Table 5 reports 'Patents, per million', but the code uses `patgrntpc`. The variable should be named 'patents by grant-year per million'.
 - There's no code for Table 4.
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
