@@ -21,7 +21,7 @@ Here I merge the two datasets and plot the application-year and grant-year varia
 ![](https://michaelwiebe.com/assets/cook_replication/fig_1_2.png){:width="100%"}
 
 There is a huge discrepancy between the two patent variables.
-Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1,][^2]
+Cook collected data on 726 patents over 1870-1940, but the average by grant-year is 0.16, while the average by application-year is 1.22.[^1] [^2]
 
 <!-- But even if the actual variable is 'patents per million by grant year', why is there a discrepancy between grant-year and application-year? Recall that the average values are 0.16 and 1.22. -->
 
