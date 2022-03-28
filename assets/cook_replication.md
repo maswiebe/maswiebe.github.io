@@ -14,7 +14,7 @@ Time series regressions
 -----------------------
 
 Cook has two measures of patents per year: (1) using the year the patent was applied for, and (2) using the year the patent was granted. 
-Figure 1 reports Black (and white) patents per million using grant-year, while Figure 2 shows Black patents per million using application year.
+Figure 1 reports Black (and white) patents per million using grant year, while Figure 2 shows Black patents per million using application year.
 Comparing the two graphs, we immediately see that the scale differs by a factor of about 10.
 Here I merge the two datasets and plot the application-year and grant-year variables on the same graph.
 
@@ -28,25 +28,25 @@ One possible explanation is that Cook used the white population (average 75 mill
 
 If the grant-year patent variable is incorrect, this will affect the Table 6 results, which use the grant-year variable. Cook doesn't report a robustness check, so I will re-run the Table 6 regressions using application-year patents. In fact, this specification seems more appropriate, since Cook's mechanism is that racial violence deters innovation by Black inventors; so racial violence would first impact patent applications, and with a lag impact granted patents.
 
-First, I am able to reproduce Cook's Table 6, using grant-year patents[^2]:
+First, I am able to reproduce Cook's Table 6[^2], using grant-year patents:
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6a.png){:width="80%"}
 
-The application-year patent variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote).[^3]
+The application-year patent variable is missing in 1940, which reduces the sample size for the robustness check by 1. To make a pure comparison, I re-run the grant-year regressions dropping 1940, and get similar results (see footnote[^3]).
 
 Next, I redo Table 6 using application-year patents.
 
 ![](https://michaelwiebe.com/assets/cook_replication/table6c.png){:width="80%"}
 
-The results are dramatically different: the negative effect of lynchings and riots disappears, as does the negative effect in 1921.
+The results are dramatically different: the negative effect of lynchings and riots disappears, as does the negative effect in 1921 (attributed to the Tulsa Race Riot).
 If the grant-year patent variable is incorrect and the application-year variable is correct, then the paper's main result is questionable.
 
 Panel data regressions
 ----------------------
 
 In Tables 7 and 8, Cook uses state-level panel data over 1870-1940 to run regressions of patents on lynching rates, riots, and segregation laws.
-However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A complete, balanced panel would have at least 37 * 71 = 2627 observations, since the [number of states](https://www.statista.com/statistics/1043617/number-us-states-by-year/) was 37 in 1870, growing to 48 in 1940. (I'm not sure why Cook has 49 states, when Alaska wasn't [added](https://en.wikipedia.org/wiki/List_of_U.S._states_by_date_of_admission_to_the_Union) until 1959.)
-So as an upper bound estimate, Cook is using 430/2627 = 16% of the full sample.
+However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A complete, balanced panel would have 3210 observations, as the number of states grows from 38 in 1870 to 49 in 1940 (including DC).
+So Cook is using 430/3210 = 13% of the full sample.
 
 And the pattern of missing data is not random. 
 Below I plot the number of observations by state and year. 
