@@ -56,7 +56,7 @@ First, we see that the majority of states have fewer than 10 observations over 7
 Next, the sample size is increasing up to 1900 before dropping off and rising again starting in 1920.
 ![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="100%"}
 
-Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^4]
+Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the South and West are relatively underrepresented.[^4]
 ![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="100%"}
 
 Moreover, consider how this imbalanced panel compares to the full time series.
@@ -119,6 +119,6 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 
 [^3]: ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
-[^4]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7.
+[^4]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have less than 71 years in the complete panel. See code for details.
 
 [^5]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
