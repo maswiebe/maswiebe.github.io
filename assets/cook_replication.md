@@ -54,7 +54,7 @@ Next, the sample size is increasing up to 1900 before dropping off and rising ag
 ![](https://michaelwiebe.com/assets/cook_replication/obs_year.png){:width="80%"}
 
 Decomposing by region, we see that the Midwest and Mid-Atlantic regions are relatively overrepresented, while the West is relatively underrepresented.[^4]
-![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="90%"}
+![](https://michaelwiebe.com/assets/cook_replication/obs_region.png){:width="100%"}
 
 Moreover, consider how this imbalanced panel compares to the full time series.
 There are 726 patents in the time series, and 702 in the panel data (for 97% coverage).
@@ -62,12 +62,10 @@ But the violence variables are drastically under-reported: there are 35 riots in
 Similarly, there are 290 new segregation laws in the time series data, but only 19 in the panel data (7%).[^5]
 (The same problem applies with lynchings, but the replication files don't have count data, so we can't quantify it.)
 
-With this low level of data coverage, I'm skeptical of the panel data results.
-<!-- and would be surprised if they agreed with the time series results. (And as we've seen above, those are not robust.) -->
-Is it possible that the results from this limited sample would remain stable as the missing data was filled in (through a law of large numbers argument)? Yes, and we do have a pretty strong prior that racial violence and patents will be negatively correlated.
+With this low level of data coverage, I'm skeptical of the panel data results in Tables 7 and 8.
+It's possible that these results are unbiased, and would remain stable as the missing data was filled in (through a law of large numbers argument). Especially considering the prior plausibility that racial violence and patents are negatively correlated, we should place some weight on this.
 
-But at Statistically significant results are easy to get when you're working with small effects and noisy data.
-
+But it's also possible that they're false positives. And statistically significant results are easy to get when you're working with small effects and noisy data.
 For example, let's check for heterogeneous effects by region.
 From Table 7, I run the Column 1 regression separately for each region:
 
