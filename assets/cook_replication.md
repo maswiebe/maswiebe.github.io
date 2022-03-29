@@ -59,7 +59,7 @@ Panel data regressions
 ----------------------
 
 In Tables 7 and 8, Cook uses state-level panel data over 1870-1940 to run regressions of patents on lynching rates, riots, and segregation laws.
-However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A complete, balanced panel would have 3210 observations, as the number of states grows from 38 in 1870 to 49 in 1940 (including DC; see code for details).
+However, we can immediately see a problem: there are 49 states and 71 years in the data, but only N=430 observations. A complete, balanced panel would have 3210 observations, as the number of states grows from 38 in 1870 to 49 in 1940 (including DC; see [code](https://github.com/maswiebe/metrics/blob/main/cook_replication.do) for details).
 So Cook is using 430/3210 = 13% of the full sample.
 
 And the pattern of missing data is not random. 
@@ -132,7 +132,7 @@ There are also a few data errors:
 
 Footnotes
 ---------
-See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
+See [here](https://github.com/maswiebe/metrics/blob/main/cook_replication.do) for code.
 
 [^1]: Cook notes that "a comparison of a sample of similar patents obtained by white and African American inventors shows that the time between patent application and grant for the two groups was not significantly different, 1.4 years in each case." (p.226, fn. 15) Also, there is no application-year patent data for 1870-72.
 
@@ -152,6 +152,6 @@ See [here](https://github.com/maswiebe/metrics/blob/main/) for  code.
 
       ![](https://michaelwiebe.com/assets/cook_replication/table6b.png){:width="80%"}
 
-[^5]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have fewer than 71 years in the complete panel. See code for details.
+[^5]: Number of states by region: South 15, Midwest 12, Northeast 6, West 12, Mid-Atlantic 7. Eleven states enter after 1870, and hence have fewer than 71 years in the complete panel. See [code](https://github.com/maswiebe/metrics/blob/main/cook_replication.do) for details.
 
 [^6]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
