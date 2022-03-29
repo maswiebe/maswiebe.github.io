@@ -115,7 +115,7 @@ In terms of computational reproducibility, Cook's code has several errors:
 - The code for Figures 1, 2, and 3 is in Stata graph editor format, which cannot be run from a do-file.
 - Figure 1 uses the variable `patgrntpc`, patents by grant-year per capita, but the graph refers to patents per million. Similarly, Table 5 reports 'Patents, per million', but the code uses `patgrntpc`. The variable should be named 'patents by grant-year per million'.
 - There's no code for Table 4.
-- Equation 1 and Table 6 refer to patents per capita, but the variable has mean values of 0.16 for Blacks and 425 for whites; this is patents per million, not per capita.
+- Equation 1 and Table 6 refer to patents per capita, but the variable in the code, `patgrntpc`, has mean values of 0.16 for Blacks and 425 for whites; this is patents per million, not per capita.
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
 - The code for Column 1 in Table 7 includes the 'number of firms' variable, but the paper only includes it in columns 3-6.
