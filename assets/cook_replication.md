@@ -92,9 +92,10 @@ From Table 7, I run the Column 1 regression separately for each region:
 
 The lynchings estimate for the South (-0.075) is similar to the average effect from the full sample (-0.058).
 But there's no estimate at all for the Midwest and Northeast, since there were zero lynchings in those regions.
-The estimate for the Mid-Atlantic is huge with two stars, 200x bigger than the South estimate. But this is almost certainly a [Type M](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html) error, as the lynching rate for the Mid-Atlantic is 3% of the average.
+The estimate for the Mid-Atlantic is huge with two stars, 200x bigger than the South estimate.
+But this is almost certainly a [Type M](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html) error (an overestimate of the true effect), as the lynching rate for the Mid-Atlantic is 3% of the average.
 
-For the riots estimates, with only 5 riots in the dataset, it's no surprise that there's no estimate for the Midwest, Northeast, or West regions (which had zero riots in this data). The effect size is similar for the South and Mid-Atlantic, perhaps indicating a more homogeneous effect of riots on patenting.
+With only 5 riots in the dataset, it's no surprise that there's no estimate for the Midwest, Northeast, or West regions (which had zero riots in this data). The effect size is somewhat similar for the South and Mid-Atlantic, perhaps indicating a more homogeneous effect of riots on patenting.
 
 For segregation laws, the Table 7, Column 1 estimate is -0.1. The effects for the South and West are in the ballpark, at -0.19 and -0.16. But the effects for the Midwest and Mid-Atlantic are positive, massive, and have three stars! 
 But statistical significance doesn't mean anything here, because the data is noisy.
@@ -105,7 +106,7 @@ Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, sin
 
 Conclusion
 ----------
-To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable.
+To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable because of missing data.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
 But with the data available, it's unrealistic to think we can statistically detect causal effects. Credible causal inference would require more complete data as well as an identification strategy more convincing than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself, along with the rich qualitative evidence in the paper. Cook deserves credit for pursuing this important research question and putting in years of effort to collect the patent data. Hopefully her example can inspire [more researchers](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/) to build upon this work and bring attention to the consequences of America's racist history.
