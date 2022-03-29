@@ -120,7 +120,7 @@ In terms of computational reproducibility, Cook's code has several errors:
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
 - The code for Column 1 in Table 7 includes the 'number of firms' variable, but the paper only includes it in columns 3-6.
-- In the notes to Tables 7 and 8, Cook writes that "Standard errors robust to clustering on state and year are in parentheses." However, the code only clusters by state, using `vce(stateno)`.
+- In the notes to Tables 7 and 8, Cook writes that "Standard errors robust to clustering on state and year are in parentheses." However, the code only clusters by state, using `vce(cl stateno)`.
 - The code for Table 7 includes a command to collapse the data down to the state-year level, but the data is already in a state-year panel.
 - The code for Table 8 has an error in its clustering command, using `vce(stateno)` instead of the correct `vce(cl stateno)`.
 - The code for Table 8 does not exactly reproduce the results in the paper. When I run the code, I get N=429, while Cook's regressions have N=428. It's possible that Cook is controlling for firms per capita, as in Table 7, but this variable is not included in the code, and is not mentioned in the table.
