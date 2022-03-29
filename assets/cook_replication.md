@@ -108,13 +108,14 @@ Conclusion
 To summarize, the main time series result in Cook (2014) is not robust to using an alternative patent variable, and the panel data results are questionable.
 Nonetheless, the conclusions remain plausible, because they have a high prior probability. Lynchings, race riots, and segregation laws were a severe problem, and it would be astonishing if they didn't have pervasive effects on the lives of Black people.
 
-But with the data available, it's unrealistic to think we can statistically detect causal effects. Credible causal inference would require more complete data as well as an identification strategy more convincing than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself, along with the rich qualitative evidence that Cook provides. Cook deserves credit for pursuing this important research question and putting in years of effort to collect the patent data. Hopefully her example can inspire [more researchers](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/) to build upon this work and bring attention to the consequences of America's racist history.
+But with the data available, it's unrealistic to think we can statistically detect causal effects. Credible causal inference would require more complete data as well as an identification strategy more convincing than a panel regression. Descriptive analysis is the most that this dataset can support, and is a valuable contribution in itself, along with the rich qualitative evidence in the paper. Cook deserves credit for pursuing this important research question and putting in years of effort to collect the patent data. Hopefully her example can inspire [more researchers](https://www.brookings.edu/research/the-black-innovators-who-elevated-the-united-states-reassessing-the-golden-age-of-invention/) to build upon this work and bring attention to the consequences of America's racist history.
 
 ---------
 In terms of computational reproducibility, Cook's code has several errors:
 - The code for Figures 1, 2, and 3 is in Stata graph editor format, which cannot be run from a do-file.
 - Figure 1 uses the variable `patgrntpc`, patents by grant-year per capita, but the graph refers to patents per million. Similarly, Table 5 reports 'Patents, per million', but the code uses `patgrntpc`. The variable should be named 'patents by grant-year per million'.
 - There's no code for Table 4.
+- Equation 1 and Table 6 refer to patents per capita, but the variable has mean values of 0.16 for Blacks and 425 for whites; this is patents per million, not per capita.
 - The code for Table 6 refers to a variable `LMRindex`, but the dataset contains `DLMRindex`.
 - The code for Table 7 includes a variable, `estbnumpc`, for the number of firms per capita, but it is not included in the dataset.
 - The code for Column 1 in Table 7 includes the 'number of firms' variable, but the paper only includes it in columns 3-6.
