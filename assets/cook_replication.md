@@ -104,7 +104,7 @@ There are 19.33 new segregation laws in the data, with 17 in the South, 1 in the
 Another way to assess noisy data is to decompose the patenting variable by economic category. 
 In fact, Cook does this in Table 8, running separate regressions for assigned patents (e.g., the patentee sells their patent to a firm), mechanical patents, and electrical patents (note that mechanical and electrical patents can be assigned or not).[^8]
 
-![](https://michaelwiebe.com/assets/cook_replication/table8_original.png){:width="100%"}
+![](https://michaelwiebe.com/assets/cook_replication/table8_original.png){:width="70%"}
 
 The lynching estimates are much smaller than in Table 7, and none are statistically significant. (Cook mentions in footnote 49 that lynchings have a negative effect on 'miscellaneous patents', but this is not reported in the table, and the variable is not included in the dataset.)
 The riot estimates have the same sign and magnitude only for assigned patents.
