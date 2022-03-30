@@ -102,18 +102,20 @@ But statistical significance doesn't mean anything here, because the data is noi
 There are 19.33 new segregation laws in the data, with 17 in the South, 1 in the Midwest, 1 in the West, and 0.33 in the Mid-Atlantic (presumably a data error).
 
 Another way to assess noisy data is to decompose the patenting variable by economic category. 
-In fact, Cook does this in Table 8, running separate regressions for assigned patents (e.g., the patentee sells their patent to a firm), mechanical patents, and electrical patents (note that mechanical and electrical patents can be assigned or not).[^8]
+In fact, Cook does this in Table 8, running separate regressions for assigned patents (e.g., the patentee sells their patent to a firm), mechanical patents, and electrical patents (note that mechanical and electrical patents can be assigned or not).[^8] 
 
 ![](https://michaelwiebe.com/assets/cook_replication/table8_original.png)
 <!-- {:width="60%"} -->
 
-The lynching estimates are much smaller than in Table 7, and none are statistically significant. (Cook mentions in footnote 49 that lynchings have a negative effect on 'miscellaneous patents', but this is not reported in the table, and the variable is not included in the dataset.)
-The riot estimates have the same sign and magnitude only for assigned patents.
-For segregation laws, the coefficient has the opposite sign for assigned patents, double the magnitude for mechanical patents, and half the magnitude for electrical patents.
+(For comparison, the Table 7, column 1 estimates are: lynchings -0.058***, riots -0.429***, segregation laws -0.1.)
+The lynching estimates are much smaller than in Table 7, and none are statistically significant.[^9]
+The riot estimates have the same sign and similar magnitude only for assigned patents.
+For segregation laws, the coefficient has the opposite sign for assigned, double the magnitude for mechanical, and half the magnitude for electrical patents.
 Overall, there is strong heterogeneity in the effects of racial violence, and Cook does not provide a theory to predict the pattern of varying estimates.
+This heterogeneity is more consistent with noise than a clear causal effect.
 
-My takeaway from these subsample results is that statistical power is low, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
-It's more likely that these estimates are picking up noise than reflecting true causal effects.
+My takeaway from these subsample results is that the missing data is causing low statistical power, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
+<!-- It's more likely that these estimates are picking up noise than reflecting true causal effects. -->
 Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, since they would probably change considerably if we had a complete and balanced panel.
 
 Conclusion
@@ -175,3 +177,5 @@ See [here](https://github.com/maswiebe/metrics/blob/main/cook_replication.do) fo
 [^7]: The actual number is 19.33. Somehow, one state-year observation has a value of 0.33 for the number of new segregation laws.
 
 [^8]: In Column 4, Cook runs a regression using Southern patents as the dependent variable. That is, while still using the full panel, the patent variable is set to 0 for non-Southern states. This is an incorrect approach for estimating heterogeneous effects. A correct approach would restrict the sample to Southern states, as I did above, or use the full sample and interact the violence variables with a South dummy.
+
+[^9]: Cook mentions in footnote 49 that lynchings have a negative effect on 'miscellaneous patents', but this is not reported in the table, and the variable is not included in the dataset.
