@@ -115,7 +115,6 @@ Overall, there is strong heterogeneity in the effects of racial violence, and Co
 This heterogeneity is more consistent with noise than a clear causal effect.
 
 My takeaway from these subsample results is that the missing data is causing low statistical power, and we're seeing [Type S and Type M errors](https://cran.r-project.org/web/packages/retrodesign/vignettes/Intro_To_retrodesign.html). 
-<!-- It's more likely that these estimates are picking up noise than reflecting true causal effects. -->
 Hence, we shouldn't place much weight on the correlations in Tables 7 and 8, since they would probably change considerably if we had a complete and balanced panel.
 
 Conclusion
