@@ -107,7 +107,7 @@ In fact, Cook does this in Table 8, running separate regressions for assigned pa
 ![](https://michaelwiebe.com/assets/cook_replication/table8_original.png)
 <!-- {:width="60%"} -->
 
-(For comparison, the Table 7, column 1 estimates are: lynchings -0.058***, riots -0.429***, segregation laws -0.1.)
+(For comparison, the Table 7, column 1 estimates are: lynchings -0.058\*\*\*, riots -0.429\*\*\*, segregation laws -0.1.)
 The lynching estimates are much smaller than in Table 7, and none are statistically significant.[^9]
 The riot estimates have the same sign and similar magnitude only for assigned patents.
 For segregation laws, the coefficient has the opposite sign for assigned, double the magnitude for mechanical, and half the magnitude for electrical patents.
