@@ -5,8 +5,12 @@ nav: main
 permalink: /research/
 ---
 
-["Replicating the literature on meritocratic promotion in China"](https://michaelwiebe.com/assets/ch2.pdf)
+[Can we detect the effects of racial violence on patenting? Reanalyzing Cook (2014)](https://michaelwiebe.com/assets/cook_reanalysis.pdf), September 2023.
 
-["Does meritocratic promotion explain China’s growth?"](https://michaelwiebe.com/assets/ch1.pdf)
+[Replicating the literature on meritocratic promotion of prefecture leaders in China](https://michaelwiebe.com/assets/promotion.pdf), September 2023.
+([2020 version](https://michaelwiebe.com/assets/ch2.pdf))
+<!-- ["Replicating the literature on meritocratic promotion in China"]-->
+
+[Does meritocratic promotion explain China’s growth?](https://michaelwiebe.com/assets/ch1.pdf), 2020.
 
 "Bunching on the wrong side: Tax enforcement technology and tax evasion", with Jeff Hicks and Wei Cui.
