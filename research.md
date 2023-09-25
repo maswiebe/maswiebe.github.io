@@ -12,5 +12,3 @@ permalink: /research/
 <!-- ["Replicating the literature on meritocratic promotion in China"]-->
 
 [Does meritocratic promotion explain China’s growth?](https://michaelwiebe.com/assets/ch1.pdf), 2020.
-
-"Bunching on the wrong side: Tax enforcement technology and tax evasion", with Jeff Hicks and Wei Cui.
