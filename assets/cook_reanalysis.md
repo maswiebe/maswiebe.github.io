@@ -122,7 +122,7 @@ Aside from the missing data problem, the issue of application and grant timing a
 As before, racial violence should affect patent applications in the same year, and grants in the following year (given the one-year lag between applications and grants).
 Cook has different data files for applications and grants, and of the three violence variables, only the riots variable is similar across datasets.[^11]
 
-![](https://michaelwiebe.com/assets/cook_reanalysis/table3.png){:width="100%"}
+![](https://michaelwiebe.com/assets/cook_reanalysis/table3.png){:width="80%"}
 
 Hence, in Table 3 I regress patent grants and applications on contemporaneous and lagged riots (omitting lynchings and segregation laws).[^12]
 As with the time series data, the deterrence model is not supported by the data.
