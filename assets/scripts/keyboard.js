@@ -40,7 +40,7 @@ Mousetrap.bind({
 	'g h': function() {	window.location.href = "/"; },
 	'g b': function() {	window.location.href = "/blog"; },
 	'g r': function() {	window.location.href = "/research"; },
-	'g t': function() {	window.location.href = "/teaching"; },
+	'g m': function() {	window.location.href = "/hire-me"; },
 	'j': function() { blogNav('j'); },
 	'k': function() { blogNav('k'); },
 	'o': function() { blogNav('o'); }
