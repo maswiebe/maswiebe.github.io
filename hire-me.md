@@ -9,7 +9,7 @@ I'm a consultant economist focused on re-analyzing empirical social science rese
 
 Here are some of my past projects:
 
-- **How does racial violence affect patenting by Black inventors?** ([pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf), html)
+- **How does racial violence affect patenting by Black inventors?** ([pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf), [html](https://michaelwiebe.com/assets/cook_reanalysis))
 I reanalyze Cook (2014) and show that the results don't hold up.
 The paper claims that racial violence reduces patenting by Black inventors, using time series and panel data regressions.
 However, the time series results go away when using an alternative patent variable, while the panel data results are based on a dataset where most observations are missing.
