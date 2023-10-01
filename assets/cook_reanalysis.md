@@ -37,10 +37,10 @@ Below I test whether the time series regressions are robust to using the aggrega
 Cook uses grant-year patents as the dependent variable for the main results in Tables 6-8, and does not directly use application-year patents.[^5]
 However, we can use the timing of applications and grants to perform a more nuanced test of Cook's hypothesis that racial violence deters innovation by Black inventors.
 Cook reports that the average time gap between application and grant is 1.4 years.
-If violence in year $$T$$ deters inventing, we should observe:
+If violence in year T deters inventing, we should observe:
 (1) a decrease in patent applications in the same year;
-(2) no effect on year $T$ grants, since the applications for those patents were made in year $T-1$;
-(3) a decrease in grants in year $T+1$, as grants lag applications by roughly one year.
+(2) no effect on year T grants, since the applications for those patents were made in year T-1;
+(3) a decrease in grants in year T+1, as grants lag applications by roughly one year.
 Racial violence could also affect contemporaneous grants by influencing patent office behavior; I discuss this possibility below.
 
 To test these predictions, in Table 1 I repeat the Table 6, Column 3 regression using Black patent applications and grants.[^6]
