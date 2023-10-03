@@ -268,10 +268,8 @@ Footnotes
 [^2]: "We also improve on the existing literature on the promotion tournament in China. Using the leader effect estimated for a leader's contribution to local growth as the predictor for his or her promotion, we refine the approach of earlier studies." (Yao and Zhang 2015, p.430)
 
 [^3]: [Chen and Kung (2016)](https://www.sciencedirect.com/science/article/pii/S0304387816300633): "those who are able to grow their local economies the fastest will be rewarded with promotion to higher levels within the Communist hierarchy \[\...\] Empirical evidence has indeed shown a strong association between GDP growth and promotion (\[\...\] Yao and Zhang, 2015)\".
-
-[Yao (2018)](https://www.jstor.org/stable/j.ctv5cgbnk.13): "Some studies have found that officials who perform better during their term of office are promoted more easily (\[\...\] Yao and Zhang 2015)\".
-
-Li et al. (2019): "the promotion of Chinese local officials is linked to economic growth in their jurisdictions. This strong linkage between the private interests of local officials and regional economic development thereby triggers an intensive tournament competition (\[\...\] Yao and Zhang, 2015).\"
+    [Yao (2018)](https://www.jstor.org/stable/j.ctv5cgbnk.13): "Some studies have found that officials who perform better during their term of office are promoted more easily (\[\...\] Yao and Zhang 2015)\".
+    Li et al. (2019): "the promotion of Chinese local officials is linked to economic growth in their jurisdictions. This strong linkage between the private interests of local officials and regional economic development thereby triggers an intensive tournament competition (\[\...\] Yao and Zhang, 2015).\"
 
 [^4]: [Wang et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0147596722000075) builds on the work of Yao and Zhang (2015) by extending the time series from 1998-2010 to 1994-2017 and including provincial politicians (note that Yang Yao is a coauthor on both papers).
     Despite using the same three-way fixed effects model to estimate leader ability, Wang et al. (2022) does not discuss Yao and Zhang (2015)'s focus on age or test for an interaction between ability and age.
