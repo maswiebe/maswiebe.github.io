@@ -28,12 +28,16 @@ They apply a three-way fixed-effects model to leaders and cities, using leaders 
 The main contribution is identifying variation in leader ability, with secondary results on the effect of leader ability on promotion.
 
 Leader effects are estimated in a three-way fixed-effect model, along with year and city fixed effects:
+
 $$y_{ijt} = \beta X_{ijt} + \theta_{i} +\psi_{j} + \gamma_{t} + \epsilon_{ijt}.$$
+
 Here $$y_{ijt}$$ is real GDP growth in city $$j$$ in year $$t$$, $$X_{ijt}$$ is time-varying controls, $$\theta_{i}$$ is leader $$i$$'s fixed effect, and $$\psi_{j}$$ and $$\gamma_{t}$$ are city and year fixed effects.
 When using the largest sample connected by movers, all three fixed effects can be identified in a regression of GDP growth on the fixed effects. Note that this paper pools prefecture mayors and secretaries, which allows for a larger maximal connected set.
 
 The authors estimate the effect of leader ability on promotion in the following model:
+
 $$p_{ijt} = \alpha \theta_{i} + \delta Z_{ijt} + \nu_{k} + \eta_{t} + u_{ijt}.$$
+
 Here $$p_{ijt}$$ is either a dummy or a categorical variable, $$Z_{ijt}$$ is control variables, and $$\nu_{k}$$ and $$\eta_{t}$$ are province and year fixed effects.
 I directly replicate their Table 4 in Table 1 below; the original table is reproduced in Appendix Table A2.
 I make a few changes to their code.
@@ -47,7 +51,7 @@ For example, the original coefficient on $$\mbox{Leader effect} \times (\mbox{Ag
 ![](https://michaelwiebe.com/assets/promotion/table1.png){:width="100%"}
 
 They find no average correlation between leader effects and promotion, in either the LPM or ordered probit models (Column 1 in Tables 4 and 5).
-(Their original Tables 4-5 are reproduced in Appendix Tables A2-A5.)
+(Their original Tables 4-5 are reproduced in Appendix Tables A2-A3.)
 Despite finding no average effect, the authors do not frame their paper as contradicting the literature.[^2]
 Moreover, this paper is cited multiple times as supporting the meritocracy hypothesis.[^3]
 
@@ -74,7 +78,9 @@ While the authors perform multiple robustness checks after they have estimated t
 While the average effect of leader effects (Column 1) is quite similar to the original (0.033 vs. 0.029), I find no statistically significant interaction effect with age (Column 2). The signs remain unchanged, but the magnitude of the coefficients drops by half, and the results are nonsignificant.[^5]
 Turning to the age threshold results (Columns 3-6), I find that the coefficient on $$\mbox{Leader effect} \times (\mbox{Age} > \mbox{Threshold})$$ remains statistically significant only for the age 51 threshold, though at the 5% level instead of the original 1% (Column 5). These coefficients are smaller by one-third to one-half, compared to the original regressions.
 
-I find similar results when reanalyzing the other specifications (LPM and ordered probit in both single- and multiple-equation models); see Appendix Tables A8-A10. The interaction effect with Age becomes nonsignificant, and out of the threshold interactions, only the age 51 threshold retains significance (at the 5% level).
+I find similar results when reanalyzing the other specifications (LPM and ordered probit in both single- and multiple-equation models).
+My reanalyses are in Appendix Tables A8-A10, while Tables A3-A5 show the corresponding reproductions of the original results.
+The interaction effect with Age becomes nonsignificant, and out of the threshold interactions, only the age 51 threshold retains significance (at the 5% level).
 
 Since dropping population and inflation when estimating leader effects seems like an innocuous change, I conclude that the reported interaction effect is not robust.
 This is an innovative, insightful, and well-written paper.
@@ -97,11 +103,17 @@ Given the lack of justification for omitting results from linear and logistic re
 
 First, I present the original Li et al. (2019) Table 5 results in Figure 1. 
 This table shows MLE estimates of the following log-likelihood:
+
 $$log L = \frac{1}{T} \sum_{i,t} (d_{it} log(p_{it}) + (1-d_{it})log(1-p_{it})).$$
+
 Here $$d_{it}$$ is in indicator for promotion, and $$p_{it}$$ is the promotion probability defined by:
+
 $$p_{it} = \frac{g(y_{it},\bar{y}_{t},x_{it})}{\sum_{j} g(y_{jt},\bar{y}_{t},x_{jt})}.$$
+
 In this equation, $$g$$ is a linear score function, $$y_{it}$$ is leader $$i$$'s GDP growth rate, $$\bar{y}_{t}$$ is the growth target set by the upper-level government, and $$x_{it}$$ contains control variables. The score function has the form
+
 $$g(y_{it},\bar{y}_{t},x_{it}) = 1 + \alpha_{1}y_{it} + \alpha_{2} \bar{y}_{t} + x_{it}\beta.$$
+
 The model in Li et al. (2019) assumes that $$\alpha_{1} >0$$ and $$\alpha_{2}<0$$, corresponding to the assumptions of meritocratic promotion and complementarity between growth targets and the responsiveness of promotion to GDP growth.
 As we can see from their results in Figure 1, the coefficient on GDP growth is positive, while the coefficient on the growth target faced is negative, whether using annual or cumulative growth.
 
@@ -114,7 +126,7 @@ $$Promotion_{ijpt} = \beta_{1} Growth_{ijpt} + \beta_{2} Growth_{ijpt} \times Ta
 In this setup, the Li et al. (2019) assumptions are formulated as $$\beta_{1}>0$$ (in a model without the interaction term) and $$\beta_{2}>0$$: growth directly increases the probability of promotion, and the effect of growth on promotion is increasing in the growth target faced.
 To model relative performance, I use GDP growth relative to the annual provincial average.
 
-![](https://michaelwiebe.com/assets/promotion/table3.png){:width="100%"}
+![](https://michaelwiebe.com/assets/promotion/table3.png){:width="85%"}
 
 The estimates from the linear probability model are presented in Table 3, which replicates columns (1) and (3) in Table 5 of Li et al. (2019).
 First, I test the generic meritocracy hypothesis in the first and third columns, omitting the interaction term. I find that GDP growth does not have a statistically significant effect on promotion, either as annual or average cumulative growth.
@@ -123,7 +135,7 @@ I find similar results when using logistic regression in Table 4.
 I again find a positive but nonsignificant average effect of growth on promotion.
 The interaction effect is positive and significant (at the 10%) level using annual growth data, but nonsignificant using cumulative data.[^7]
 
-![](https://michaelwiebe.com/assets/promotion/table4.png){:width="100%"}
+![](https://michaelwiebe.com/assets/promotion/table4.png){:width="85%"}
 
 Hence, while the authors find that the corresponding results are statistically significant when using a structural model based on a contest success function, they are not robust to alternative specifications.
 A further worry is that the panel is unbalanced (due to missing data on growth targets).
@@ -184,7 +196,7 @@ I estimate the following regression:
 $$y_{ijpt} = \beta \cdot Growth_{ijpt} + \delta X_{jpt} + \theta_{t} + \gamma_{j} + \epsilon_{ijpt}.$$
 The dependent variable is an ordered or dummy promotion variable for mayor $$i$$ in prefecture $$j$$ in province $$p$$ and year $$t$$, and prefecture covariates are included in $$X$$. As in the original specification, I include year ($$\theta_{t}$$) and prefecture ($$\gamma_{j}$$) fixed effects.
 
-![](https://michaelwiebe.com/assets/promotion/table5.png){:width="100%"}
+![](https://michaelwiebe.com/assets/promotion/table5.png){:width="90%"}
 
 Table 5 replicates the ordered probit and LPM regressions using the alternative datasets, separated by panel.
 Panel A shows the results using the original promotion variable on the original sample.
@@ -218,24 +230,34 @@ A centralized dataset would help resolve disagreements over data (which politici
 # Appendix
 
 ![](https://michaelwiebe.com/assets/promotion/table_a1.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a2.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a3.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a4.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a5.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a6.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a7.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a8.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a9.png){:width="100%"}
+
 ![](https://michaelwiebe.com/assets/promotion/table_a10.png){:width="100%"}
-![](https://michaelwiebe.com/assets/promotion/table_a11.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/promotion/table_a11.png){:width="70%"}
 
 Figure A1: Sample size, Li et al. (2019)
 ![](https://michaelwiebe.com/assets/promotion/fig_a1.png){:width="100%"}
 Note: There are 333 prefecture-level jurisdictions in China.
 
-![](https://michaelwiebe.com/assets/promotion/table_a11.png){:width="100%"}
-![](https://michaelwiebe.com/assets/promotion/table_a12.png){:width="100%"}
-![](https://michaelwiebe.com/assets/promotion/table_a13.png){:width="100%"}
+![](https://michaelwiebe.com/assets/promotion/table_a12.png){:width="75%"}
+
+![](https://michaelwiebe.com/assets/promotion/table_a13.png){:width="75%"}
 
 
 Footnotes
