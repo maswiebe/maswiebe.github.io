@@ -141,7 +141,7 @@ Descriptive analysis is the most that this dataset can support, and is a valuabl
 Cook deserves credit for pursuing this important research question and putting in years of effort to collect the patent data.
 
 And in fact, recent research, no doubt inspired by Cook, does report findings that are consistent with Cook's claims:
-[Williams 2022](https://www.aeaweb.org/articles?id=10.1257/app.20190549) shows that historical lynchings reduce contemporary Black voter registration[^13]; [Albright et al. (2022)](https://web.archive.org/web/20230412043929/https://nathannunn.sites.olt.ubc.ca/files/2022/10/Tulsa_Draft_short.pdf) studies the Tulsa Race Massacre, and finds that it had persistent negative effects on Black Americans; and [Aneja and Xu (2021)](https://academic.oup.com/qje/article-abstract/137/2/911/6412549) shows that Woodrow Wilson's segregation of the federal government increased racial inequality.
+[Williams (2022)](https://www.aeaweb.org/articles?id=10.1257/app.20190549) shows that historical lynchings reduce contemporary Black voter registration[^13]; [Albright et al. (2022)](https://web.archive.org/web/20230412043929/https://nathannunn.sites.olt.ubc.ca/files/2022/10/Tulsa_Draft_short.pdf) studies the Tulsa Race Massacre, and finds that it had persistent negative effects on Black Americans; and [Aneja and Xu (2021)](https://academic.oup.com/qje/article-abstract/137/2/911/6412549) shows that Woodrow Wilson's segregation of the federal government increased racial inequality.
 Future research should continue in Cook's footsteps and bring attention to the consequences of America's racist history.
 
 # Appendix
