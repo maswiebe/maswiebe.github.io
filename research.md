@@ -5,6 +5,8 @@ nav: main
 permalink: /research/
 ---
 
+The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment ([html](https://michaelwiebe.com/assets/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti_comment.pdf), [code](https://github.com/maswiebe/moretti_comment)), October 2023.
+
 Can we detect the effects of racial violence on patenting? Reanalyzing Cook (2014) ([html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf), [code](https://github.com/maswiebe/cook_reanalysis)), September 2023.
 
 Replicating the literature on prefecture-level meritocratic promotion in China ([html](https://michaelwiebe.com/assets/promotion), [pdf](https://michaelwiebe.com/assets/promotion.pdf), [code]())
