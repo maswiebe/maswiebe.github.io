@@ -40,6 +40,7 @@ $$
      &+ d_{cf} + d_{ck} + d_{ft} + d_{kt} + d_{ct} + d_{i} + d_{j} + \varepsilon_{ijfkct}.
 \end{split}\end{aligned}
 $$
+
 Here $$y$$ is the number of patents by inventor $$i$$ in firm $$j$$, research field $$f$$, city $$c$$, and year $$t$$; $$k$$ is the research class.
 
 The event study results are driven entirely by one coding error.
@@ -79,15 +80,19 @@ While this example uses two firms, the instrument uses all firms active in the f
 In contrast to the OLS results, Moretti defines the instrument in first-differences.
 Let $$\Delta N_{jf(-c)t} = N_{jf(-c)t} - N_{jf(-c)(t-1)}$$ be the first-difference over time in the number of inventors at firm $$j$$ in research field $$f$$ in all cities excluding $$c$$, and let $$\Delta N_{ft}$$ be the national change by field.
 With $$D_{jfc(t-1)}$$ as an indicator for firm $$j$$ employing at least one inventor in city $$c$$ and field $$f$$ in year $$t-1$$ (so that the first-difference is well-defined), the IV is
+
 $$
 IV_{jfct} = \sum_{s \neq j} D_{sfc(t-1)} \frac{\Delta N_{sf(-c)t}}{\Delta N_{ft}},
 $$
+
 where the sum is taken across all firms excluding $$j$$.
 
 The regression equation is
+
 $$
 \Delta \text{ln} y_{ijfkct} = \alpha \Delta \text{ln} S_{-ifct} + d_{t} + d_{f} + d_{k} + d_{j} + d_{ft} + d_{kt} + \varepsilon_{ijfkct},
 $$
+
 where $$y$$ is the number of patents, $$S$$ is cluster size (excluding the focal inventor $$i$$), and $$k$$ is research class.
 
 There are two coding errors that affect the IV results.
