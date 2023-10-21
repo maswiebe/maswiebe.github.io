@@ -5,7 +5,7 @@ title: "The Effect of High-Tech Clusters on the Productivity of Top Inventors: C
 
 # Introduction
 
-Moretti (2021) studies agglomeration effects for innovation, testing whether the size of technology clusters causes patenting.
+[Moretti (2021)](https://www.aeaweb.org/articles?id=10.1257/aer.20191277) studies agglomeration effects for innovation, testing whether the size of technology clusters causes patenting.
 Agglomeration effects are important for understanding technological progress ([Kerr and Robert-Nicoud, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.50)), and are affected by constraints on housing supply ([Hsieh and Moretti, 2019](https://www.aeaweb.org/articles?id=10.1257/mac.20170388), [Duranton and Puga, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.3)).
 Using [US data](https://www.kauffman.org/entrepreneurship/research/comets/) on patents filed between 1971 and 2007, Moretti presents multiple lines of evidence supporting a causal effect of cluster size on patenting.
 The main results are from OLS regressions of patents on cluster size, controlling for an extensive set of fixed effects.
@@ -32,12 +32,14 @@ That is, 'stayers' who never move are excluded, so the event study does not have
 To generate a treatment-control comparison, Moretti uses average cluster size before and after the move as a continuous treatment variable.
 Specifically, Moretti interacts pre-move average cluster size with the pre-move event-time indicators, and post-move average cluster size with the post-move event-time indicators.[^2]
 The regression equation is
-$$\begin{aligned}
+$$
+\begin{aligned}
 \begin{split}
     \label{eq:es}
     \text{ln} y_{ijfct} &= \sum_{s=-5}^{-1} \beta_{s} \text{Size}^{pre}_{-ifc} \times 1\{t=s\} + \sum_{s=0}^{5} \beta_{s} \text{Size}^{post}_{-ifc} \times 1\{t=s\} \\
      &+ d_{cf} + d_{ck} + d_{ft} + d_{kt} + d_{ct} + d_{i} + d_{j} + \varepsilon_{ijfkct}.
-\end{split}\end{aligned}$$
+\end{split}\end{aligned}
+$$
 Here $$y$$ is the number of patents by inventor $$i$$ in firm $$j$$, research field $$f$$, city $$c$$, and year $$t$$; $$k$$ is the research class.
 
 The event study results are driven entirely by one coding error.
