@@ -1,7 +1,12 @@
+---
+layout: page
+title: "The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment"
+---
+
 # Introduction
 
 Moretti (2021) studies agglomeration effects for innovation, testing whether the size of technology clusters causes patenting.
-Agglomeration effects are important for understanding technological progress ([Kerr and Robert-Nicoud, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.50)), and are affected by constraints on housing supply ([Hsieh and Moretti (2019)](https://www.aeaweb.org/articles?id=10.1257/mac.20170388), [Duranton and Puga, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.3)).
+Agglomeration effects are important for understanding technological progress ([Kerr and Robert-Nicoud, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.50)), and are affected by constraints on housing supply ([Hsieh and Moretti, 2019](https://www.aeaweb.org/articles?id=10.1257/mac.20170388), [Duranton and Puga, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.3)).
 Using [US data](https://www.kauffman.org/entrepreneurship/research/comets/) on patents filed between 1971 and 2007, Moretti presents multiple lines of evidence supporting a causal effect of cluster size on patenting.
 The main results are from OLS regressions of patents on cluster size, controlling for an extensive set of fixed effects.
 Moretti addresses identification concerns using an event study and an instrumental variables strategy.
@@ -17,7 +22,7 @@ Hence, the positive correlations from the OLS regressions could be biased upward
 
 # Event study
 
-In Figure 6, Moretti uses an event study to address worries about sorting, where 'rising star' inventors (with increasing patent counts) in small clusters are systematically hired by employers in large clusters.[^2]
+In Figure 6, Moretti uses an event study to address worries about sorting, where 'rising star' inventors (with increasing patent counts) in small clusters are systematically hired by employers in large clusters.[^1]
 If these promising inventors select into larger clusters, then the positive correlation between cluster size and patenting need not represent a causal effect of cluster size.
 Note that the main results control for inventor fixed effects, so the threat to identification comes only from inventors whose inventiveness is increasing over time.
 If sorting does occur, we should observe patenting rising in the years before an inventor moves to a new city.
@@ -25,12 +30,12 @@ If sorting does occur, we should observe patenting rising in the years before an
 To test for sorting, Moretti performs an event study using variation in cluster size from inventors who move across cities exactly once.
 That is, 'stayers' who never move are excluded, so the event study does not have a never-treated group.
 To generate a treatment-control comparison, Moretti uses average cluster size before and after the move as a continuous treatment variable.
-Specifically, Moretti interacts pre-move average cluster size with the pre-move event-time indicators, and post-move average cluster size with the post-move event-time indicators.[^3]
+Specifically, Moretti interacts pre-move average cluster size with the pre-move event-time indicators, and post-move average cluster size with the post-move event-time indicators.[^2]
 The regression equation is
 $$\begin{aligned}
 \begin{split}
     \label{eq:es}
-    \text{ln} y_{ijfct} &= \sum_{s=-5}^{-1} \beta_{s} \text{Size}^{pre}_{-ifc} \times \mathbbm{1}\{t=s\} + \sum_{s=0}^{5} \beta_{s} \text{Size}^{post}_{-ifc} \times \mathbbm{1}\{t=s\} \\
+    \text{ln} y_{ijfct} &= \sum_{s=-5}^{-1} \beta_{s} \text{Size}^{pre}_{-ifc} \times 1\{t=s\} + \sum_{s=0}^{5} \beta_{s} \text{Size}^{post}_{-ifc} \times 1\{t=s\} \\
      &+ d_{cf} + d_{ck} + d_{ft} + d_{kt} + d_{ct} + d_{i} + d_{j} + \varepsilon_{ijfkct}.
 \end{split}\end{aligned}$$
 Here $$y$$ is the number of patents by inventor $$i$$ in firm $$j$$, research field $$f$$, city $$c$$, and year $$t$$; $$k$$ is the research class.
@@ -38,14 +43,14 @@ Here $$y$$ is the number of patents by inventor $$i$$ in firm $$j$$, research fi
 The event study results are driven entirely by one coding error.
 Moretti did not generate an interaction of post-move cluster size with a $$t=0$$ indicator, but instead uses the time-varying cluster size variable used in the OLS regressions.
 Hence, $$\beta_{0}$$ is estimated using data from all event-years, instead of capturing the effect in $$t=0$$.
-I correct the code by interacting post-move cluster size with the $$t=0$$ indicator.[^4]
+I correct the code by interacting post-move cluster size with the $$t=0$$ indicator.[^3]
 
 Figure 1: Replication and correction of Figure 6 event study
 ![](https://michaelwiebe.com/assets/moretti/fig1.png){:width="100%"}
 Note:
 Event study coefficients from Equation 1.
-*Original* estimates $$\beta_{0}$$ using time-varying *Size*$$_{-ifct}$$ and without interacting with $$\mathbbm{1}\{t=0\}$$.
-*Corrected* estimates $$\beta_{0}$$ using *Size*$$^{post}_{-ifc} \times \mathbbm{1}\{t=0\}$$; following Moretti, *Size*$$^{post}_{-ifc}$$ is calculated excluding $$t=0$$.
+*Original* estimates $$\beta_{0}$$ using time-varying *Size*$$_{-ifct}$$ and without interacting with $$1\{t=0\}$$.
+*Corrected* estimates $$\beta_{0}$$ using *Size*$$^{post}_{-ifc} \times 1\{t=0\}$$; following Moretti, *Size*$$^{post}_{-ifc}$$ is calculated excluding $$t=0$$.
 N=18,389 in *Original*, N=18,390 in *Corrected*.
 Standard errors are clustered by city $$\times$$ research field.
 Moretti's Figure 6 switches the leads and lags, for example, putting $$\beta_{-5}$$ as the last coefficient and $$\beta_{5}$$ as the first.
@@ -54,14 +59,14 @@ Figure 1 shows the original and corrected event studies.
 The large effect in $$t=0$$ disappears when using the correct specification.
 Hence, Moretti does not provide evidence against bias in the OLS results from sorting, where promising inventors select into large clusters.
 Moreover, if agglomeration effects are real, we should detect them using a mover event study.
-So the absence of an effect in the corrected event study should lead us to discount the main findings.[^5]
+So the absence of an effect in the corrected event study should lead us to discount the main findings.[^4]
 However, since there are 118,000 inventors in the OLS sample and only 3,000 in the event study sample, the size of this discount should be small.
-Finally, since inventors move in different years, note that this is a staggered adoption design where a two-way fixed-effects estimator may be biased.[^6]
+Finally, since inventors move in different years, note that this is a staggered adoption design where a two-way fixed-effects estimator may be biased.[^5]
 
 # Instrumental variables estimates
 
 In Table 5, Moretti uses an instrumental variables strategy to address worries about omitted variable bias, where cluster size is correlated with unobserved time-varying shocks at the city-field level.
-For example, a city subsidizing biotech firms could increase both biotech patents and the size of the biotech cluster.[^7]
+For example, a city subsidizing biotech firms could increase both biotech patents and the size of the biotech cluster.[^6]
 The idea for the instrument is to use variation in the number of inventors in other cities who are employed by firms that are also active in the focal inventor's city.
 
 To illustrate with an example, for the focal inventor $$i$$ in the field of computer science at Google in San Francisco, we instrument for cluster size using variation in the number of computer science inventors at Microsoft in Seattle, where Microsoft also has inventors in San Francisco.
@@ -72,11 +77,15 @@ While this example uses two firms, the instrument uses all firms active in the f
 In contrast to the OLS results, Moretti defines the instrument in first-differences.
 Let $$\Delta N_{jf(-c)t} = N_{jf(-c)t} - N_{jf(-c)(t-1)}$$ be the first-difference over time in the number of inventors at firm $$j$$ in research field $$f$$ in all cities excluding $$c$$, and let $$\Delta N_{ft}$$ be the national change by field.
 With $$D_{jfc(t-1)}$$ as an indicator for firm $$j$$ employing at least one inventor in city $$c$$ and field $$f$$ in year $$t-1$$ (so that the first-difference is well-defined), the IV is
-$$IV_{jfct} = \sum_{s \neq j} D_{sfc(t-1)} \frac{\Delta N_{sf(-c)t}}{\Delta N_{ft}},$$
+$$
+IV_{jfct} = \sum_{s \neq j} D_{sfc(t-1)} \frac{\Delta N_{sf(-c)t}}{\Delta N_{ft}},
+$$
 where the sum is taken across all firms excluding $$j$$.
 
 The regression equation is
-$$\Delta \text{ln} y_{ijfkct} = \alpha \Delta \text{ln} S_{-ifct} + d_{t} + d_{f} + d_{k} + d_{j} + d_{ft} + d_{kt} + \varepsilon_{ijfkct},$$
+$$
+\Delta \text{ln} y_{ijfkct} = \alpha \Delta \text{ln} S_{-ifct} + d_{t} + d_{f} + d_{k} + d_{j} + d_{ft} + d_{kt} + \varepsilon_{ijfkct},
+$$
 where $$y$$ is the number of patents, $$S$$ is cluster size (excluding the focal inventor $$i$$), and $$k$$ is research class.
 
 There are two coding errors that affect the IV results.
@@ -107,9 +116,9 @@ Hence, firms with a undefined first-difference are assigned the field-city-year 
 I correct the code to exclude firms with an undefined first-difference from the estimation sample.
 
 The original results are reproduced in Panels A and B of Table 1, and the results using the corrected instrument are in Panels C and D.
-Since Moretti's results are not reproducible, my reproductions are similar but not identical to the original estimates in Table 5.[^8]
+Since Moretti's results are not reproducible, my reproductions are similar but not identical to the original estimates in Table 5.[^7]
 The results using the corrected instrument are markedly different, however.
-The 2SLS estimates are now negative and nonsignificant, likely due to the first stage now being close to zero with F-statistics ranging between 1 and 2.[^9]
+The 2SLS estimates are now negative and nonsignificant, likely due to the first stage now being close to zero with F-statistics ranging between 1 and 2.[^8]
 Without a first stage, the IV strategy does not work.
 This is not evidence against agglomeration effects, but it does mean that Moretti fails to provide evidence against confounding from city-field-year shocks, such as local field-specific subsidies that affect both patenting and cluster size.
 
