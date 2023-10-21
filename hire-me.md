@@ -13,6 +13,7 @@ Here are some of my past projects:
 Moretti (2021) studies agglomeration effects for innovation, where being in bigger cities causes inventors to patent more.
 The main results use OLS with fixed effects, and an event study (using inventors who change cities) and instrumental variables strategy (using size of tech clusters in other cities) support a causal interpretation.
 I show that both the event study and IV results are caused by coding errors.
+This project was commissioned by Open Philanthropy.
 
 - **How does racial violence affect patenting by Black inventors?** ([html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf))
 I reanalyze Cook (2014) and show that the results don't hold up.
