@@ -150,7 +150,7 @@ While the OLS results for agglomeration effects remain valid, they are vulnerabl
 [^4]: In Wiebe (2023) I recode the event study to follow standard practices, but again find null results.
     I use a constant treatment variable (difference in average cluster size before and after the move) where average post-move size is calculated including year 0; interact the treatment variable with all year indicators; omit $$t-1$$ as a reference year; and restrict the sample to event years \[-5,5\].
 
-[^5]: Since the treatment is continuous, estimators like @sun2021 and @callaway2021 that are defined for binary treatments are not applicable.
+[^5]: Since the treatment is continuous, estimators like Sun and Abraham (2021) and Callaway and Sant'Anna (2021) that are defined for binary treatments are not applicable.
 
 [^6]: Recall that cluster size for a focal inventor is measured as the number of patents filed that year by other inventors in the same research field and city.
 
