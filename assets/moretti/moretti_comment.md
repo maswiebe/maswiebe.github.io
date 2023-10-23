@@ -130,6 +130,7 @@ Without a first stage, the IV strategy does not work.
 This is not evidence against agglomeration effects, but it does mean that Moretti fails to provide evidence against confounding from city-field-year shocks, such as local field-specific subsidies that affect both patenting and cluster size.
 
 ![](https://michaelwiebe.com/assets/moretti/table1.png){:width="100%"}
+![](https://michaelwiebe.com/assets/moretti/table1_big.png){:width="100%"}
 
 # Conclusion
 
