@@ -131,6 +131,10 @@ This is not evidence against agglomeration effects, but it does mean that Morett
 
 ![](https://michaelwiebe.com/assets/moretti/table1_big.png){:width="100%"}
 
+Test
+
+![](https://michaelwiebe.com/assets/moretti/table1_med.png){:width="100%"}
+
 # Conclusion
 
 I reanalyze Moretti (2021) using the original data and code, and find that the results from the event study and instrumental variables regressions are caused by coding errors.
