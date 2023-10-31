@@ -49,10 +49,10 @@ Hence, $$\beta_{0}$$ is estimated using data from all event-years, instead of ca
 I correct the code by interacting post-move cluster size with the $$t=0$$ indicator.[^3]
 Below I've included a snippet of the original code with the error.
 
+{::options parse_block_html="true" /}
+
 <details>
-<summary>Code</summary>
-    
-<p>
+<summary markdown="span">Code</summary>
 
 ```
 * cluster size and number of patents
@@ -99,6 +99,7 @@ reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea z
 </p>
 
 </details>
+{::options parse_block_html="false" /}
 
 Figure 1: Replication and correction of Figure 6 event study
 ![](https://michaelwiebe.com/assets/moretti/fig1.png){:width="100%"}
@@ -202,8 +203,8 @@ I correct the code to exclude firms with an undefined first-difference from the 
 See the code snippet below.
 
 <details>
-<summary>Code</summary>
-
+<summary markdown="span">Code</summary>
+    
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
 egen tmp9 = sum(tmp8), by(zd year)
@@ -223,6 +224,7 @@ gen IV_orig = tot_iv8
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
 
 </details>
+{::options parse_block_html="false" /}
 
 
 The original results are reproduced in Panels A and B of Table 1, and the results using the corrected instrument are in Panels C and D.
