@@ -52,8 +52,8 @@ Below I've included a snippet of the original code with the error.
 <details>
 <summary>Code</summary>
 
-~~~
 ```
+
 * cluster size and number of patents
 gen x = log(Den_bea_zd)
 gen y = log(number)
@@ -93,10 +93,11 @@ g x_p5 = tmp_p*p5
 
 * note that B_0 is estimated using `x`:
 reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new) vce(cluster cluster1)
+
 ```
-~~~
 
 </details>
+
 
 Figure 1: Replication and correction of Figure 6 event study
 ![](https://michaelwiebe.com/assets/moretti/fig1.png){:width="100%"}
@@ -174,6 +175,7 @@ by zd org_new: g DD1 = DD - DD[_n-1]
 
 </details>
 
+
 Moreover, the code generates unreproducible results.
 This is because firm-field-year is not a unique sorting order, as there are observations with the same values for firm-field-year but in different cities.
 Since Stata's `sort` command randomly orders the data before sorting, each run of the code results in a different sorting by city within tied values of firm-field-year.
@@ -221,6 +223,7 @@ replace IV_orig = IV_orig - iv8 if missing(iv8)==0
     
 </details>
 
+
 The original results are reproduced in Panels A and B of Table 1, and the results using the corrected instrument are in Panels C and D.
 Since Moretti's results are not reproducible, my reproductions are similar but not identical to the original estimates in Table 5.[^7]
 The results using the corrected instrument are markedly different, however.
@@ -243,6 +246,7 @@ Test
 
 ![](https://michaelwiebe.com/assets/moretti/table1_b.png){:width="100%"}
  -->
+ 
 # Conclusion
 
 I reanalyze Moretti (2021) using the original data and code, and find that the results from the event study and instrumental variables regressions are caused by coding errors.
