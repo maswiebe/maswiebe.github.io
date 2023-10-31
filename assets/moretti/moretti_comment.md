@@ -48,6 +48,43 @@ Moretti did not generate an interaction of post-move cluster size with a $$t=0$$
 Hence, $$\beta_{0}$$ is estimated using data from all event-years, instead of capturing the effect in $$t=0$$.
 I correct the code by interacting post-move cluster size with the $$t=0$$ indicator.[^3]
 
+<details>
+<summary>Code</summary>
+    ```
+    g x   = log(Den_bea_zd)
+    g y = log(number)
+    g tt = year - move_year1
+    gegen tmp_mm = mean(x) if tt >= -5 & tt <=-1, by(inventor)
+    gegen tmp_pp = mean(x) if tt >= 1  & tt <= 5, by(inventor)
+    gegen tmp_m = max(tmp_mm),  by(inventor)
+    gegen tmp_p = max(tmp_pp),  by(inventor)
+    
+    g m1 = (tt==-1)
+    g m2 = (tt==-2)
+    g m3 = (tt==-3)
+    g m4 = (tt==-4)
+    g m5 = (tt==-5)
+    g p1 = (tt==1)
+    g p2 = (tt==2)
+    g p3 = (tt==3)
+    g p4 = (tt==4)
+    g p5 = (tt==5)
+        
+    g  x_m1 = tmp_m*m1
+    g  x_m2 = tmp_m*m2
+    g  x_m3 = tmp_m*m3
+    g  x_m4 = tmp_m*m4
+    g  x_m5 = tmp_m*m5
+    g  x_p1 = tmp_p*p1
+    g  x_p2 = tmp_p*p2
+    g  x_p3 = tmp_p*p3
+    g  x_p4 = tmp_p*p4
+    g  x_p5 = tmp_p*p5
+    
+    reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5 ,absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new  ) vce(cluster cluster1)
+    ```
+</details>
+
 Figure 1: Replication and correction of Figure 6 event study
 ![](https://michaelwiebe.com/assets/moretti/fig1.png){:width="100%"}
 Note:
