@@ -96,9 +96,8 @@ g x_p5 = tmp_p*p5
 reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new) vce(cluster cluster1)
 ```
 
-</p>
-
 </details>
+
 {::options parse_block_html="false" /}
 
 Figure 1: Replication and correction of Figure 6 event study
@@ -203,7 +202,8 @@ See the code snippet below.
 
 <details>
 <summary markdown="span">Code</summary>
-    
+
+```
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
 egen tmp9 = sum(tmp8), by(zd year)
@@ -221,6 +221,7 @@ gen IV_orig = tot_iv8
 
 * note: this assigns tot_iv8 to observations with missing(iv8)==1
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
+```
 
 </details>
 
