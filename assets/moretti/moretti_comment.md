@@ -193,7 +193,7 @@ See the code snippet below.
 <details>
 <summary>Code</summary>
 
-```bash
+```stata
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
 egen tmp9 = sum(tmp8), by(zd year)
@@ -225,7 +225,6 @@ This is not evidence against agglomeration effects, but it does mean that Morett
 
 ![](https://michaelwiebe.com/assets/moretti/table1_big.png){:width="100%"}
 
-{% endhighlight %}
 <!-- 
 
 Test
