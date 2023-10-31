@@ -200,9 +200,9 @@ Hence, firms with a undefined first-difference are assigned the field-city-year 
 I correct the code to exclude firms with an undefined first-difference from the estimation sample.
 See the code snippet below.
 
-<details>
-<summary markdown="span">Code</summary>
+{::options parse_block_html="true" /}
 
+<details><summary markdown="span">Code</summary>
 ```
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
@@ -222,7 +222,6 @@ gen IV_orig = tot_iv8
 * note: this assigns tot_iv8 to observations with missing(iv8)==1
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
 ```
-
 </details>
 
 {::options parse_block_html="false" /}
