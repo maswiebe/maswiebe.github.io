@@ -157,8 +157,7 @@ See the code snippet below.
 
 {::options parse_block_html="true" /}
 
-<details>
-<summary markdown="span">Code</summary>
+<details><summary markdown="span">Code</summary>
 
 ```
 * number of inventors by firm-year-field-city
@@ -224,6 +223,7 @@ gen IV_orig = tot_iv8
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
 
 </details>
+
 {::options parse_block_html="false" /}
 
 
