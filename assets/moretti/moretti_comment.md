@@ -5,7 +5,7 @@ title: "The Effect of High-Tech Clusters on the Productivity of Top Inventors: C
 
 # Introduction
 
-[Moretti (2021)](https://www.aeaweb.org/articles?id=10.1257/aer.20191277) ([original code](https://www.openicpsr.org/openicpsr/project/140662/version/V1/view), [my code](https://github.com/maswiebe/moretti_comment)) studies agglomeration effects for innovation, testing whether the size of technology clusters causes patenting.
+[Moretti (2021)](https://www.aeaweb.org/articles?id=10.1257/aer.20191277) ([original code](https://www.openicpsr.org/openicpsr/project/140662/version/V1/view), [my code](https://github.com/maswiebe/moretti_comment), [code walkthrough video]() studies agglomeration effects for innovation, testing whether the size of technology clusters causes patenting.
 Agglomeration effects are important for understanding technological progress ([Kerr and Robert-Nicoud, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.50)), and are affected by constraints on housing supply ([Hsieh and Moretti, 2019](https://www.aeaweb.org/articles?id=10.1257/mac.20170388), [Duranton and Puga, 2020](https://www.aeaweb.org/articles?id=10.1257/jep.34.3.3)).
 Using [US data](https://www.kauffman.org/entrepreneurship/research/comets/) on patents filed between 1971 and 2007, Moretti presents multiple lines of evidence supporting a causal effect of cluster size on patenting.
 The main results are from OLS regressions of patents on cluster size, controlling for an extensive set of fixed effects.
