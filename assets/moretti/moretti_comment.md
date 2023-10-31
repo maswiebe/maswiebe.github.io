@@ -202,7 +202,8 @@ See the code snippet below.
 <details>
 <summary>Code</summary>
 
-```stata
+```
+
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
 egen tmp9 = sum(tmp8), by(zd year)
@@ -220,6 +221,7 @@ gen IV_orig = tot_iv8
 
 * note: this assigns tot_iv8 to observations with missing(iv8)==1
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
+
 ```
     
 </details>
