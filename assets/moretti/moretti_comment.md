@@ -55,17 +55,17 @@ Below I've included a snippet of the original code with the error.
 ~~~
 ```
 * cluster size and number of patents
-g x = log(Den_bea_zd)
-g y = log(number)
+gen x = log(Den_bea_zd)
+gen y = log(number)
 
 * event time
-g tt = year - move_year1
+gen tt = year - move_year1
 
 * average cluster size before and after the move
-gegen tmp_mm = mean(x) if tt >= -5 & tt <=-1, by(inventor)
-gegen tmp_pp = mean(x) if tt >= 1  & tt <= 5, by(inventor)
-gegen tmp_m = max(tmp_mm),  by(inventor)
-gegen tmp_p = max(tmp_pp),  by(inventor)
+egen tmp_mm = mean(x) if tt >= -5 & tt <=-1, by(inventor)
+egen tmp_pp = mean(x) if tt >= 1  & tt <= 5, by(inventor)
+egen tmp_m = max(tmp_mm),  by(inventor)
+egen tmp_p = max(tmp_pp),  by(inventor)
 
 * year indicators
 g m1 = (tt==-1)
@@ -92,7 +92,7 @@ g x_p4 = tmp_p*p4
 g x_p5 = tmp_p*p5
 
 * note that B_0 is estimated using `x`:
-reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5 ,absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new  ) vce(cluster cluster1)
+reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new) vce(cluster cluster1)
 ```
 ~~~
 
@@ -150,6 +150,29 @@ First, when calculating the first-differenced term $$\Delta N_{jf(-c)t}$$, Moret
 This means that the first-difference is taken across different cities, instead of within the focal city.
 Hence, the code generates an incorrect instrument that does not match the definition in the text.
 I correct the code to sort by city and take first-differences within city.
+See the code snippet below.
+
+<details>
+<summary>Code</summary>
+
+~~~
+* number of inventors by firm-year-field-city
+egen r2 = sum(n), by(org_new year zd bea)
+
+* number of inventors by firm-year-field
+egen rr2 = sum(n), by(org_new year zd)
+
+* number of inventors outside of the focal city
+g DD = rr2 - r2
+
+* first-difference
+* note: not sorting by city (bea)
+sort zd org_new year
+by zd org_new: g DD1 = DD - DD[_n-1]
+
+~~~
+
+</details>
 
 Moreover, the code generates unreproducible results.
 This is because firm-field-year is not a unique sorting order, as there are observations with the same values for firm-field-year but in different cities.
@@ -171,6 +194,32 @@ Specifically, Moretti calculates $$\sum_{s \neq j} D_{sfc(t-1)} \frac{\Delta N_{
 However, the code assigns the field-city-year total to all firms, and subtracts the summand for firm $$j$$ *only* if that summand is nonmissing.
 Hence, firms with a undefined first-difference are assigned the field-city-year total when the instrument should be missing.
 I correct the code to exclude firms with an undefined first-difference from the estimation sample.
+See the code snippet below.
+
+<details>
+<summary>Code</summary>
+
+~~~
+* fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
+g tmp8 = DD1
+egen tmp9 = sum(tmp8), by(zd year)
+g iv8 = tmp8/tmp9
+save $main/data2/tmp1, replace
+
+* total value, summing across firms
+* MW: I rename the variables for clarity
+collapse (sum) tot_iv8=iv8, by(year zd bea )
+save $main/data2/tmp3, replace
+
+u $main/data2/tmp1
+merge m:1  year zd bea using $main/data2/tmp3
+gen IV_orig = tot_iv8
+
+* note: this assigns tot_iv8 to observations with missing(iv8)==1
+replace IV_orig = IV_orig - iv8 if missing(iv8)==0
+~~~
+    
+</details>
 
 The original results are reproduced in Panels A and B of Table 1, and the results using the corrected instrument are in Panels C and D.
 Since Moretti's results are not reproducible, my reproductions are similar but not identical to the original estimates in Table 5.[^7]
