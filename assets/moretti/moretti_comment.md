@@ -152,6 +152,8 @@ Hence, the code generates an incorrect instrument that does not match the defini
 I correct the code to sort by city and take first-differences within city.
 See the code snippet below.
 
+{::options parse_block_html="true" /}
+
 <details>
 <summary>Code</summary>
 
@@ -173,6 +175,7 @@ by zd org_new: g DD1 = DD - DD[_n-1]
 
 </details>
 
+{::options parse_block_html="false" /}
 
 Moreover, the code generates unreproducible results.
 This is because firm-field-year is not a unique sorting order, as there are observations with the same values for firm-field-year but in different cities.
