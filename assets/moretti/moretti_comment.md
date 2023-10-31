@@ -49,9 +49,7 @@ Hence, $$\beta_{0}$$ is estimated using data from all event-years, instead of ca
 I correct the code by interacting post-move cluster size with the $$t=0$$ indicator.[^3]
 Below I've included a snippet of the original code with the error.
 
-
-~~~
-
+```bash
 * cluster size and number of patents
 gen x = log(Den_bea_zd)
 gen y = log(number)
@@ -92,10 +90,7 @@ g x_p5 = tmp_p*p5
 * note that B_0 is estimated using `x`, defined above as time-varying cluster size:
 reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new) vce(cluster cluster1)
 
-~~~
-
-
-
+```
 
 Figure 1: Replication and correction of Figure 6 event study
 ![](https://michaelwiebe.com/assets/moretti/fig1.png){:width="100%"}
@@ -154,8 +149,7 @@ See the code snippet below.
 <details>
 <summary>Code</summary>
 
-~~~
-
+```bash
 * number of inventors by firm-year-field-city
 egen r2 = sum(n), by(org_new year zd bea)
 
@@ -169,8 +163,7 @@ g DD = rr2 - r2
 * note: not sorting by city (bea)
 sort zd org_new year
 by zd org_new: g DD1 = DD - DD[_n-1]
-
-~~~
+```
 
 </details>
 
@@ -200,8 +193,7 @@ See the code snippet below.
 <details>
 <summary>Code</summary>
 
-~~~
-
+```bash
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
 egen tmp9 = sum(tmp8), by(zd year)
@@ -219,8 +211,7 @@ gen IV_orig = tot_iv8
 
 * note: this assigns tot_iv8 to observations with missing(iv8)==1
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
-
-~~~
+```
     
 </details>
 
