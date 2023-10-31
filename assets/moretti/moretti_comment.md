@@ -52,6 +52,7 @@ Below I've included a snippet of the original code with the error.
 <details>
 <summary>Code</summary>
 
+[//]: # ({% raw %})
 ```
 
 * cluster size and number of patents
@@ -95,6 +96,7 @@ g x_p5 = tmp_p*p5
 reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea zd class cluster1 cluster_bea_class cluster_zd_year cluster_class_year inventor cluster_bea_year org_new) vce(cluster cluster1)
 
 ```
+[//]: # ({% endraw %})
 
 </details>
 
