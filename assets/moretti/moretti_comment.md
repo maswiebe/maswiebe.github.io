@@ -202,6 +202,7 @@ See the code snippet below.
 <summary>Code</summary>
 
 ~~~
+
 * fraction term in instrument: Delta N_{sf(-c)t} / Delta N_{ft}
 g tmp8 = DD1
 egen tmp9 = sum(tmp8), by(zd year)
@@ -219,6 +220,7 @@ gen IV_orig = tot_iv8
 
 * note: this assigns tot_iv8 to observations with missing(iv8)==1
 replace IV_orig = IV_orig - iv8 if missing(iv8)==0
+
 ~~~
     
 </details>
@@ -232,6 +234,8 @@ Without a first stage, the IV strategy does not work.
 This is not evidence against agglomeration effects, but it does mean that Moretti fails to provide evidence against confounding from city-field-year shocks, such as local field-specific subsidies that affect both patenting and cluster size.
 
 ![](https://michaelwiebe.com/assets/moretti/table1_big.png){:width="100%"}
+
+{% endhighlight %}
 <!-- 
 
 Test
