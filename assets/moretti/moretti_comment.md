@@ -49,7 +49,7 @@ Hence, $$\beta_{0}$$ is estimated using data from all event-years, instead of ca
 I correct the code by interacting post-move cluster size with the $$t=0$$ indicator.[^3]
 Below I've included a snippet of the original code with the error.
 
-```bash
+```
 * cluster size and number of patents
 gen x = log(Den_bea_zd)
 gen y = log(number)
@@ -149,7 +149,7 @@ See the code snippet below.
 <details>
 <summary>Code</summary>
 
-```bash
+```
 * number of inventors by firm-year-field-city
 egen r2 = sum(n), by(org_new year zd bea)
 
