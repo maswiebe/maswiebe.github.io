@@ -155,7 +155,7 @@ See the code snippet below.
 {::options parse_block_html="true" /}
 
 <details>
-<summary>Code</summary>
+<summary markdown="span">Code</summary>
 
 ```
 * number of inventors by firm-year-field-city
