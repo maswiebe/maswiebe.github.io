@@ -10,7 +10,7 @@ I check if published findings are reliable by testing for robustness to alternat
 
 Why replication? 
 I care about truth-seeking and having well-functioning scientific institutions.
-It's a waste if scientists sacrifice rigor to publish and get tenure, and I think we can improve science by making replication a regular part of the scientific process.
+It's a waste if scientists sacrifice rigor to publish and get tenure, and we can improve science by making replication a regular part of the scientific process.
 
 Previously I have worked for Open Philanthropy and on my own projects.
 Please [get in touch](mailto:maswiebe@gmail.com) if you have research you'd like to see scrutinized (or original research you want me to do).
