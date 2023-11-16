@@ -255,7 +255,7 @@ While the OLS results for agglomeration effects remain valid, they are vulnerabl
 [^4]: My replication does not exactly match the original Figure 6, because Moretti's cleaning code is unreproducible. 
     It uses many-to-many merges with a nonunique sort order, resulting in a different sample for each run of the code.
 
-[^5]: In Wiebe (2023) I recode the event study to follow standard practices.
+[^5]: In [Wiebe (2023)](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf) I recode the event study to follow standard practices.
     I use a constant treatment variable (difference in average cluster size before and after the move) where average post-move size is calculated including year 0; interact the treatment variable with all year indicators; omit $$t-1$$ as a reference year; and restrict the sample to event years \[-5,5\].
     I find a positive effect, but with a pre-trend.
 
@@ -266,4 +266,4 @@ While the OLS results for agglomeration effects remain valid, they are vulnerabl
 [^8]: As noted in Footnote 4, Moretti's cleaning code is unreproducible and results in different sample sizes each time.
     Hence, the sample sizes in my reproduced regressions differ slightly from those in Table 5.
 
-[^9]: Defining the instrument in levels instead of first-differences produces a significant first stage, but null 2SLS estimates; see Wiebe (2023).
+[^9]: Defining the instrument in levels instead of first-differences produces a significant first stage, but null 2SLS estimates; see [Wiebe (2023)](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf).
