@@ -255,9 +255,8 @@ While the OLS results for agglomeration effects remain valid, they are vulnerabl
 [^4]: My replication does not exactly match the original Figure 6, because Moretti's cleaning code is unreproducible. 
     It uses many-to-many merges with a nonunique sort order, resulting in a different sample for each run of the code.
 
-[^5]: In [Wiebe (2023)](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf) I recode the event study to follow standard practices.
+[^5]: In [Wiebe (2023)](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf) I recode the event study to follow standard practices, and find no effect.
     I use a constant treatment variable (difference in average cluster size before and after the move) where average post-move size is calculated including year 0; interact the treatment variable with all year indicators; omit $$t-1$$ as a reference year; and restrict the sample to event years \[-5,5\].
-    I find a positive effect, but with a pre-trend.
 
 [^6]: Since the treatment is continuous, estimators like Sun and Abraham (2021) and Callaway and Sant'Anna (2021) that are defined for binary treatments are not applicable.
 
