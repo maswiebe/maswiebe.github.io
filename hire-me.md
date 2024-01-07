@@ -14,7 +14,7 @@ It's a waste if scientists sacrifice rigor to publish and get tenure, and we can
 Plus, academics have little incentive to do replications, so I'm filling the gap.
 
 Previously I have worked for Open Philanthropy and on my own projects.
-Please [get in touch](mailto:maswiebe@gmail.com) if you have research you'd like to see scrutinized (or original research you want me to do).
+Please [get in touch](mailto:maswiebe@gmail.com) [maswiebe[at]gmail.com] if you have research you'd like to see scrutinized (or original research you want me to do).
 
 Here are some of my past projects:
 
