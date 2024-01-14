@@ -5,13 +5,15 @@ nav: main
 permalink: /hire-me/
 ---
 
-I'm a consultant economist focused on re-analyzing empirical social science research. 
+I'm a consultant economist focused on replicating empirical social science research. 
 I check if published findings are reliable by testing for robustness to alternative statistical methods or data sources. 
 
 Why replication? 
-I care about truth-seeking and having well-functioning scientific institutions.
-It's a waste if scientists sacrifice rigor to publish and get tenure, and we can improve science by making replication a regular part of the scientific process.
-Plus, academics have little incentive to do replications, so I'm filling the gap.
+Academia is currently too focused on quantity of research at the expense of quality.
+If we want our scientific institutions to discover truths about the world, we need to incentivize researchers to care more about quality.
+We can do this by making replication a regular part of the scientific process.
+When researchers expect their work to be scrutinized, they will put more effort into research design.
+The problem is that replication work is undervalued in academia—that's where I come in.
 
 Previously I have worked for Open Philanthropy and on my own projects.
 Please [get in touch](mailto:maswiebe@gmail.com) [maswiebe[at]gmail.com] if you have research you'd like to see scrutinized (or original research you want me to do).
