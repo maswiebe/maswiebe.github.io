@@ -10,6 +10,7 @@ I check if published findings are reliable by testing for robustness to alternat
 
 Why replication? 
 Academia is currently too focused on quantity of research at the expense of quality.
+In my work, I've found that even research in top economics journals has unreliable findings.
 If we want our scientific institutions to discover truths about the world, we need to incentivize researchers to care more about quality.
 We can do this by making replication a regular part of the scientific process.
 When researchers expect their work to be scrutinized, they will put more effort into research design.
