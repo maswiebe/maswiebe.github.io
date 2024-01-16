@@ -102,7 +102,7 @@ reghdfe y x_p5 x_p4 x_p3 x_p2 x_p1 x x_m1 x_m2 x_m3 x_m4 x_m5, absorb(year bea z
 
 Figure 1: Replication and correction of Figure 6 event study
 ![](https://michaelwiebe.com/assets/moretti/fig1.png){:width="100%"}
-Note:
+*Note*:
 Event study coefficients from Equation 1.
 *Original* estimates $$\beta_{0}$$ using time-varying *Size*$$_{-ifct}$$ and without interacting with $$1\{t=0\}$$.
 *Corrected* estimates $$\beta_{0}$$ using *Size*$$^{post}_{-ifc} \times 1\{t=0\}$$; following Moretti, *Size*$$^{post}_{-ifc}$$ is calculated excluding $$t=0$$.
@@ -186,7 +186,7 @@ In Figure 2, I show the variance in the original results from 500 iterations of 
 
 Figure 2: Distribution of coefficients and t-statistics from 2SLS regression
 ![](https://michaelwiebe.com/assets/moretti/fig2.png){:width="100%"}
-Note:
+*Note*:
 Estimation results from the 2SLS regression in Table 5, Column 6.
 The distribution is constructed from 500 iterations of generating the instrument and running the regression.
 The original code sorts by firm-field-year but not city, which leads to a random ordering by city within tied values of firm-field-year.
