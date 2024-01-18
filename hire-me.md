@@ -5,7 +5,7 @@ nav: main
 permalink: /hire-me/
 ---
 
-I'm a consultant economist focused on replicating empirical social science research. 
+I'm an independent economist focused on replicating empirical social science research. 
 I check if published findings are reliable by testing for robustness to alternative statistical methods or data sources. 
 
 Why replication? 
