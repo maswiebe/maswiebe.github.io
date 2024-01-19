@@ -26,7 +26,7 @@ Moretti (2021) studies agglomeration effects for innovation, where being in bigg
 The main results use OLS with fixed effects, and an event study (using inventors who change cities) and instrumental variables strategy (using size of tech clusters in other cities) support a causal interpretation.
 I show that both the event study and IV results are caused by coding errors.
 
-- **Do children vaccinated for measles have higher income as adults?** ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf))
+- **Do children vaccinated have higher income as adults?** ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf))
 Atwood (2022) studies the long-run economic effects of the 1963 measles vaccine.
 Since the vaccine was introduced nationally, the paper uses states with high and low measles incidence as the treatment and control groups.
 But measles is so contagious that this probably represents differences in reporting capacity rather than actual disease incidence.
