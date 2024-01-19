@@ -25,7 +25,12 @@ Here are some of my past projects:
 Moretti (2021) studies agglomeration effects for innovation, where being in bigger cities causes inventors to patent more.
 The main results use OLS with fixed effects, and an event study (using inventors who change cities) and instrumental variables strategy (using size of tech clusters in other cities) support a causal interpretation.
 I show that both the event study and IV results are caused by coding errors.
-<!---This project was commissioned by Open Philanthropy.--->
+
+- **Do children vaccinated for measles have higher income as adults?** ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf))
+Atwood (2022) studies the long-run economic effects of the 1963 measles vaccine.
+Since the vaccine was introduced nationally, the paper uses states with high and low measles incidence as the treatment and control groups.
+But measles is so contagious that this probably represents differences in reporting capacity rather than actual disease incidence.
+I run an event study and find that the results are explained by trends, instead of a treatment effect of the vaccine.
 
 - **How does racial violence affect patenting by Black inventors?** ([html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf))
 I reanalyze Cook (2014) and show that the results don't hold up.
