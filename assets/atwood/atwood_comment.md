@@ -41,17 +41,22 @@ Atwood's Table 2 estimates the long-run effects of childhood exposure to the mea
 I replicate these results using the extended sample.
 The regression specification is
 
-$$y_{isct} = \beta \text{Measles}_{s} \times \text{Exposure}_{c} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct},$$
+$$
+y_{isct} = \beta \text{Measles}_{s} \times \text{Exposure}_{c} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct},
+$$
 
 where $$y_{isct}$$ is the outcome (income, poverty, employment, or hours worked) for individual $$i$$ with state-of-birth $$s$$ in birthyear $$c$$, observed in survey year $$t$$.
 *Measles*$$_{s}$$ is the state-level average measles rate over 1952-1962[^7],
 and *Exposure*$$_{c}$$ is the number of years that the vaccine is available to a cohort.
 Controls include fixed effects for survey year, birthyear, the interaction of age, Black, and female, and the interaction of state-of-birth, Black, and female.[^8]
 See the code snippet below.
+
 {::options parse_block_html="true" /}
+
 <details><summary markdown="span">Code</summary>
+
 ```
-*** robustness: include region X birthyear FEs
+* robustness: include region X birthyear FEs
 use year sex age birthyr black bpl female cpi_incwage cpi_incwage_no0 ln_cpi_income poverty100 employed hrs_worked M12_exp_rate bpl_region9 exposure edu1960 employed1960 logfamincome1960 if missing(M12_exp_rate)==0 using "$data/acs_cleaned.dta", clear
 
 local robust_fes year age#black#female bpl#black#female bpl_region9#birthyr
@@ -68,6 +73,7 @@ foreach x in cpi_incwage cpi_incwage_no0 ln_cpi_income poverty100 employed hrs_w
 
 esttab m*, se label compress replace star(* 0.10 ** 0.05 *** 0.01) mtitles("Income" "Income ($>$0)" "Log income" "Poverty" "Employed" "Hours worked") nocons r2
 ```
+
 </details>
 
 {::options parse_block_html="false" /}
@@ -88,7 +94,9 @@ The results are similar, showing that reported measles incidence captures variat
 To test for differential trends in the original results, I run an event study interacting pre-vaccine average reported measles incidence with birthyear indicators.[^10]
 The regression specification is
 
-$$y_{isct} = \sum_{j=1932, j \neq 1948}^{1980} \beta_{j} \text{Measles}_{s} \times \{1\}\{c=j\} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct}.$$
+$$
+y_{isct} = \sum_{j=1932, j \neq 1948}^{1980} \beta_{j} \text{Measles}_{s} \times \{1\}\{c=j\} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct}.
+$$
 
 I restrict the sample to 1932-1980, to include symmetric pre- and post-periods matching the 16-year treatment window.
 See the code snippet below.
