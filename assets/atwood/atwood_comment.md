@@ -10,19 +10,19 @@ Using US data and a difference-in-differences strategy, Atwood finds that the na
 The identification strategy interacts cross-sectional variation in pre-vaccine average reported measles incidence with time-series variation in the availability of the vaccine during childhood.
 
 However, it is not clear how to interpret the geographic variation in pre-vaccine measles incidence, which is calculated as a state-level average over 1952-1963.
-Atwood notes that measles is a universal disease, with 95% of the population contracting the virus by age 16.[^2]
-While states could differ in short-run measles incidence, due to staggered timing of the epidemic cycle, this variation would be averaged out over 12 years.[^3]
+Atwood notes that measles is a universal disease, with 95% of the population contracting the virus by age 16.[^1]
+While states could differ in short-run measles incidence, due to staggered timing of the epidemic cycle, this variation would be averaged out over 12 years.[^2]
 Hence, differences in reported incidence reflect differences in reporting rates, since actual long-run incidence is the same across states.
 Variation in reporting rates could be explained by differences in reporting capacity or differences in the impact of the disease.
 States could vary in their capacity to report cases of contagious diseases, if better health infrastructure enables the detection of a larger fraction of cases.
 Similarly, measles cases would be more severe in states with worse initial health, and more severe cases are more likely to be reported.
 
-Atwood does not discuss reporting capacity or disease severity as sources of geographic variation in reported measles incidence,[^4]
+Atwood does not discuss reporting capacity or disease severity as sources of geographic variation in reported measles incidence,[^3]
 and instead attributes differences in measles incidence to under-18 population density.
 But the $$R^{2}$$ from a cross-sectional regression of average reported measles incidence on under-18 population density is only 0.05 (Table A1, Atwood (2022)).
 Atwood claims that "states with higher prevaccine measles incidence benefited more from the introduction of the vaccine than states with lower levels of prevaccine measles incidence" (p.49).
-This claim is plausible if states with worse initial health have high reported incidence due to having more severe cases, and the vaccine has larger benefits for individuals with poor health.[^5]
-In contrast, if differences in reported incidence reflect reporting capacity, while actual disease incidence is the same, then it is not clear why states with higher reported incidence would benefit more from the vaccine.[^6]
+This claim is plausible if states with worse initial health have high reported incidence due to having more severe cases, and the vaccine has larger benefits for individuals with poor health.[^4]
+In contrast, if differences in reported incidence reflect reporting capacity, while actual disease incidence is the same, then it is not clear why states with higher reported incidence would benefit more from the vaccine.[^5]
 
 Since the identifying variation is ambiguous, we should be worried that differences between high- and low-measles states are capturing trends unrelated to the measles vaccine.
 In this comment, I replicate the main results using an expanded sample, and test for differential trends using an event study.
@@ -32,7 +32,7 @@ the event study shows post-vaccine trends that are inconsistent with a treatment
 # Regression results
 
 Atwood defines the treatment window (exposure to the vaccine) to be 16 years long, since measles incidence after age 16 is negligible.
-The treatment dose, vaccine exposure, is 0 for cohorts born in 1948 and earlier, increases by 1 per year until 1964, and is 16 for cohorts born afterwards.[^7]
+The treatment dose, vaccine exposure, is 0 for cohorts born in 1948 and earlier, increases by 1 per year until 1964, and is 16 for cohorts born afterwards.[^6]
 To test for trends before and after the vaccine, we want symmetric windows for 1932-1948 and 1964-1980.
 But Atwood uses 2000-2017 American Community Survey data on individuals aged 25-60, meaning the earliest cohort is 1940.
 To include cohorts from 1932-1939, I extend the sample using [census data](https://usa.ipums.org/usa/) from 1960-1990.
@@ -40,15 +40,15 @@ To include cohorts from 1932-1939, I extend the sample using [census data](https
 Atwood's Table 2 estimates the long-run effects of childhood exposure to the measles vaccine on adult economic outcomes, using a difference-in-differences strategy with a continuous treatment variable.
 I replicate these results using the extended sample.
 The regression specification is
+
 $$y_{isct} = \beta \text{Measles}_{s} \times \text{Exposure}_{c} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct},$$
+
 where $$y_{isct}$$ is the outcome (income, poverty, employment, or hours worked) for individual $$i$$ with state-of-birth $$s$$ in birthyear $$c$$, observed in survey year $$t$$.
-*Measles*$$_{s}$$ is the state-level average measles rate over 1952-1962[^8],
+*Measles*$$_{s}$$ is the state-level average measles rate over 1952-1962[^7],
 and *Exposure*$$_{c}$$ is the number of years that the vaccine is available to a cohort.
-Controls include fixed effects for survey year, birthyear, the interaction of age, Black, and female, and the interaction of state-of-birth, Black, and female.[^9]
+Controls include fixed effects for survey year, birthyear, the interaction of age, Black, and female, and the interaction of state-of-birth, Black, and female.[^8]
 See the code snippet below.
-
 {::options parse_block_html="true" /}
-
 <details><summary markdown="span">Code</summary>
 ```
 *** robustness: include region X birthyear FEs
@@ -78,16 +78,18 @@ The results are similar to the original, except that the effects on poverty and 
 In Panel B, I add fixed effects for census division by birthyear, to capture different trends across regions, following Table 4, Panel B in Atwood (2022).
 Now the effect on poverty has the expected negative sign, indicating that division-birthyear fixed effects are needed to control for trends when using the longer panel.
 The effect on hours worked is positive, matching Atwood's Table 4.
-In Panel C, I additionally control for 1960 state-level averages of log family income, education, and employment interacted with vaccine exposure, following [Bleakley (2007)](https://academic.oup.com/qje/article-abstract/122/1/73/1924773).[^10]
+In Panel C, I additionally control for 1960 state-level averages of log family income, education, and employment interacted with vaccine exposure, following [Bleakley (2007)](https://academic.oup.com/qje/article-abstract/122/1/73/1924773).[^9]
 The results are similar, showing that reported measles incidence captures variation separate from pre-vaccine state characteristics, conditional on the fixed effects.
 
 ![](https://michaelwiebe.com/assets/atwood/table1.png){:width="100%"}
 
 # Event study
 
-To test for differential trends in the original results, I run an event study interacting pre-vaccine average reported measles incidence with birthyear indicators.[^11]
+To test for differential trends in the original results, I run an event study interacting pre-vaccine average reported measles incidence with birthyear indicators.[^10]
 The regression specification is
-$$y_{isct} = \sum_{j=1932, j \neq 1948}^{1980} \beta_{j} \text{Measles}_{s} \times \mathbbm{1}\{c=j\} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct}.$$
+
+$$y_{isct} = \sum_{j=1932, j \neq 1948}^{1980} \beta_{j} \text{Measles}_{s} \times \{1\}\{c=j\} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct}.$$
+
 I restrict the sample to 1932-1980, to include symmetric pre- and post-periods matching the 16-year treatment window.
 See the code snippet below.
 
@@ -143,10 +145,9 @@ Moreover, the coefficients start to change in 1949, consistent with a treatment 
 However, for five of six outcomes, the coefficients continue to change after the vaccine was introduced in 1963.
 For example, in Panel (c), the coefficients for log income follow a rough positive trend from 1948 to 1980.
 This is inconsistent with a treatment effect of the vaccine, since there is no change in vaccine exposure between successive cohorts after 1963.
-That is, while the 1965 cohort benefits more from the vaccine than the 1955 cohort (because it is more likely that the former obtains immunity from the vaccine and avoids the health costs of measles), there is no such difference between the 1975 and 1965 cohorts.[^12]
-Hence, the evidence in Atwood (2022) appears to reflect differential trends across states, rather than the effect of the measles vaccine.[^13]
+That is, while the 1965 cohort benefits more from the vaccine than the 1955 cohort (because it is more likely that the former obtains immunity from the vaccine and avoids the health costs of measles), there is no such difference between the 1975 and 1965 cohorts.[^11]
+Hence, the evidence in Atwood (2022) appears to reflect differential trends across states, rather than the effect of the measles vaccine.[^12]
 
-Figure 1: Cohort event study
 ![](https://michaelwiebe.com/assets/atwood/fig1.png){:width="100%"}
 
 # Conclusion
