@@ -5,7 +5,7 @@ nav: main
 permalink: /research/
 ---
 
-*The Long-Term Effects of Measles Vaccination on Earnings and Employment: Comment* ([html](), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf), [code]()), January 2024.
+*The Long-Term Effects of Measles Vaccination on Earnings and Employment: Comment* ([html](), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf), [code](https://github.com/maswiebe/atwood_comment)), January 2024.
 - I run an event study and find that the results in Atwood (2022) are explained by trends, instead of a treatment effect of the vaccine.
 - *Extended Commentary on Atwood (2022)*, ([pdf](), [code]()): additional results on the the event study, heterogeneous effects, plotting the raw data, redoing the disease event study, and more.
 
