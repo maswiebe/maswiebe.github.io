@@ -95,7 +95,7 @@ To test for differential trends in the original results, I run an event study in
 The regression specification is
 
 $$
-y_{isct} = \sum_{j=1932, j \neq 1948}^{1980} \beta_{j} \text{Measles}_{s} \times \{1\}\{c=j\} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct}.
+y_{isct} = \sum_{j=1932, j \neq 1948}^{1980} \beta_{j} \text{Measles}_{s} \times 1\{c=j\} + \alpha_{t} + \gamma_{c} + \theta X_{isct} + \varepsilon_{isct}.
 $$
 
 I restrict the sample to 1932-1980, to include symmetric pre- and post-periods matching the 16-year treatment window.
