@@ -70,6 +70,7 @@ However, this model faces several problems.
 First, if the panel data variable is preferred, then there is no negative effect on contemporaneous grants.[^8]
 Second, as Cook notes (p.226, fn.15), the time gap between application and grant was the same for white and Black inventors.
 If patent offices were delaying grants for Black inventors, the time gap should differ by race.
+Third, since race is not listed on the patent, examiners may not have been able to apply discretion by race.
 
 In Table 6, Cook includes a dummy variable for 1921 to capture the effect of the Tulsa Race Riot on patenting.
 However, using patent applications above in Column 1 of Table 1, the coefficient on the 1921 dummy is positive, when we would predict that racial violence directly deters inventing and patent applications.
