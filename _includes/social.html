@@ -64,6 +64,12 @@ Follow me:
   </a>
   {% endif %}
 
+  {% if site.data.theme.social.patreon %}
+  <a title="{{ site.data.theme.name }} on Patreon" href="https://patreon.com/{{ site.data.theme.social.patreon }}">
+    <i class="fab fa-patreon"></i>
+  </a>
+  {% endif %}
+
   <a title="Atom feed" id="atom" href="/atom.xml">
     <i class="fa fa-rss-square"></i>
   </a>
