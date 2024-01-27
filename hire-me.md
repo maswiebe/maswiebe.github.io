@@ -23,24 +23,24 @@ Please [support me](https://www.patreon.com/michael_wiebe/) on Patreon, and [get
 
 Here are some of my past projects:
 
-- **Do bigger cities cause more innovation?** ([html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf))
+- **Do bigger cities cause more innovation?** ([thread](https://twitter.com/michael_wiebe/status/1749462957132759489), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf))
 Moretti (2021) studies agglomeration effects for innovation, where being in bigger cities causes inventors to patent more.
 The main results use OLS with fixed effects, and an event study (using inventors who change cities) and instrumental variables strategy (using size of tech clusters in other cities) support a causal interpretation.
 I show that both the event study and IV results are caused by coding errors.
 
-- **Do vaccinated children have higher income as adults?** ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf))
+- **Do vaccinated children have higher income as adults?** ([thread](https://twitter.com/michael_wiebe/status/1750197740603367689), [html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf))
 Atwood (2022) studies the long-run economic effects of the 1963 measles vaccine.
 Since the vaccine was introduced nationally, the paper uses states with high and low measles incidence as the treatment and control groups.
 But measles is so contagious that this probably represents differences in reporting capacity rather than actual disease incidence.
 I run an event study and find that the results are explained by trends, instead of a treatment effect of the vaccine.
 
-- **How does racial violence affect patenting by Black inventors?** ([html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf))
+- **How does racial violence affect patenting by Black inventors?** ([thread](https://twitter.com/michael_wiebe/status/1749831775378104423), [html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf))
 I reanalyze Cook (2014) and show that the results don't hold up.
 The paper claims that racial violence reduces patenting by Black inventors, using time series and panel data regressions.
 However, the time series results go away when using an alternative patent variable, while the panel data results are based on a dataset where most observations are missing.
 I use the timing of patent applications and grants to perform a more nuanced test of Cook's hypothesis, and the predictions are falsified.
 
-- **Are Chinese mayors promoted based on GDP growth?** ([html](https://michaelwiebe.com/assets/promotion), [pdf](https://michaelwiebe.com/assets/promotion.pdf))
+- **Are Chinese mayors promoted based on GDP growth?** ([thread](https://twitter.com/michael_wiebe/status/1750572525439062384), [html](https://michaelwiebe.com/assets/promotion), [pdf](https://michaelwiebe.com/assets/promotion.pdf))
 The literature on meritocratic promotion claims that Chinese officials are promoted based on GDP growth.
 This system of tournament competition generates incentives for politicians to boost growth, and hence gives an explanation for China's rapic economic growth.
 I reanalyze three papers on meritocratic promotion of prefecture leaders, and find that the results are not robust to alternative control variables, regression specifications, and outcome variables.
