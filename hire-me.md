@@ -23,7 +23,7 @@ Please [support me](https://www.patreon.com/michael_wiebe/) on Patreon, and [get
 
 Here are some of my past projects:
 
-- **Do bigger cities cause more innovation?** ([thread](https://twitter.com/michael_wiebe/status/1749462957132759489), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf))
+- **Do bigger cities cause more innovation?** ([summary](https://michaelwiebe.com/blog/2024/01/moretti_summary), [thread](https://twitter.com/michael_wiebe/status/1749462957132759489), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf))
 Moretti (2021) studies agglomeration effects for innovation, where being in bigger cities causes inventors to patent more.
 The main results use OLS with fixed effects, and an event study (using inventors who change cities) and instrumental variables strategy (using size of tech clusters in other cities) support a causal interpretation.
 I show that both the event study and IV results are caused by coding errors.
