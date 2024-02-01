@@ -175,7 +175,7 @@ The event study results for long-run economic outcomes show trends that are inco
 [^4]: Chuard et al. (2022) estimates the effect of the measles vaccine using pre-vaccine measles mortality as the cross-sectional treatment variable.
     They find long-run effects similar to those in Atwood (2022), and conclude that reported incidence is a proxy for disease severity.
 
-[^5]: Using reported incidence seems more appropriate for diseases like malaria and hookworm, which have geographic variation in climatic suitability for the parasites that cause disease (Roodman ([2018a](https://www.econstor.eu/handle/10419/190496), [2018b](https://www.econstor.eu/handle/10419/192939)), Bleakley ([2007](https://academic.oup.com/qje/article-abstract/122/1/73/1924773), [2010](https://www.aeaweb.org/articles?id=10.1257/app.2.2.1))).
+[^5]: Using reported incidence seems more appropriate for diseases like hookworm and malaria, which have geographic variation in climatic suitability for the parasites that cause disease (Roodman ([2018a](https://www.econstor.eu/handle/10419/190496), [2018b](https://www.econstor.eu/handle/10419/192939)), Bleakley ([2007](https://academic.oup.com/qje/article-abstract/122/1/73/1924773), [2010](https://www.aeaweb.org/articles?id=10.1257/app.2.2.1))).
     There is no corresponding source of geographic variation for measles.
 
 [^6]: Atwood defines vaccine exposure so that the 1963 cohort has 15 years of access.
