@@ -9,6 +9,7 @@ This method uses cross-sectional pre-treatment disease incidence interacted with
 This works for diseases like hookworm and malaria, which have geographic variation in climatic suitability for the parasites that cause disease.
 But, as I discuss in [my comment](https://michaelwiebe.com/assets/atwood/atwood_comment) on Atwood (2022), measles is extremely contagious, so everyone gets infected, and there is no long-run geographic variation in incidence.
 The disease burden method cannot be applied straightforwardly to measles.
+It would be enlightening to see a big picture analysis of which diseases this method can be used on.
 
 Atwood (2022) studies the long-term effects of the measles vaccine on employment and income.
 [Barteska et al. (2023)](https://www.sciencedirect.com/science/article/pii/S0167629623001054) uses a similar approach for the effects on education.
