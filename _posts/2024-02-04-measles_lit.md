@@ -26,15 +26,18 @@ Both Atwood and Barteska et al. have a graph showing the decline in reported mea
 This is taken as evidence that measles incidence declined more in the high-measles states.
 But this is also consistent with *actual* incidence being the same across states, and reporting capacity being different.
 Since measles was eradicated to 0, each state's *reported* incidence will be reduced by ~100%.
-So this graph is also consistent with my story that there is no geographic variation in actual measles incidence.
+So this graph is also consistent with the story that there is no geographic variation in actual measles incidence.
 
 In my comment on Atwood (2022), I ran an event study and found post-vaccine trends: the treatment effect is increasing for cohorts born after the vaccine, which doesn't make sense, since there's no variation in the treatment dose (vaccine access).
-Barteska et al. (2023) does run an event study, which doesn't have the same post-vaccine trends.
+Barteska et al. (2023) does run an event study, and doesn't find the same post-vaccine trends.
 My event study, following Atwood, used a 16-year treatment window over 1949-1964, with comparison windows 1932-1948 and 1965-1980.
 Barteska et al. use an 8-year window over 1959-1966, with comparison windows 1950-1958 and 1967-1975.
+Note that in the Barteska et al. event study, the coefficients start increasing 8 years before the immunization campaign.
+In my event study for Atwood, the coefficients start increasing 16 years before the vaccine.
+If Barteska et al. are right that the vaccine was targeted towards younger children, then the treatment effect for ages 9-16 (at vaccine introduction) is not consistent with a vaccine effect.
 
 What treatment variation is Barteska et al. using, if there's no long-run geographic variation in actual incidence?
-Since they use a shorter window for calculating measles incidence, it's possible they are measuring differences in short-run incidence, based on differences in epidemic cycle timing.
+Since they use a shorter window for calculating measles incidence (1963-66), it's possible they are measuring differences in short-run incidence, based on differences in epidemic cycle timing.
 In contrast, Atwood calculates average measles incidence over 12 years, which would average out differences in cycle timing.
 So Barteska et al. could be capturing variation in the susceptible population; i.e., children who avoid measles and the negative effects of disease, and get vaccine-induced immunity instead of virus-induced immunity.
 
@@ -58,7 +61,7 @@ But Figure 4 shows share ever-infected and mortality for a sample of five states
 WA has highest share ever-infected and the lowest mortality, while AR has the lowest share ever-infected and the highest mortality.
 Also, if incidence is a proxy for disease severity, then it should be correlated with worse health outcomes.
 
-Chuard et al. also makes a few odd choices in research design.
+Chuard et al. also make a few odd choices in research design.
 Like Atwood, they don't run an event study to test for pre- or post-trends.
 They say (footnote 5) that they calculate birthyear using age and survey year, even though IPUMS has a birthyear variable.
 They also aggregate the data to the state-of-birth X year-of-birth X age level, instead of using the micro data and clustering standard errors.
