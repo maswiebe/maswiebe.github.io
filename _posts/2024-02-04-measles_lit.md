@@ -7,7 +7,7 @@ type: post
 There are a handful of papers applying the 'disease burden' method to study the long-term effects of the measles vaccine.
 This method uses cross-sectional pre-treatment disease incidence interacted with a time series variable for vaccine access.
 This works for diseases like hookworm and malaria, which have geographic variation in climatic suitability for the parasites that cause disease.
-But, as I discuss in my comment on [Atwood (2022)](https://michaelwiebe.com/assets/atwood/atwood_comment), measles is extremely contagious, so everyone gets infected, and there is no long-run geographic variation in incidence.
+But, as I discuss in [my comment](https://michaelwiebe.com/assets/atwood/atwood_comment) on Atwood (2022), measles is extremely contagious, so everyone gets infected, and there is no long-run geographic variation in incidence.
 The disease burden method cannot be applied straightforwardly to measles.
 
 Atwood (2022) studies the long-term effects of the measles vaccine on employment and income.
