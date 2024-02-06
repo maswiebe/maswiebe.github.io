@@ -59,7 +59,7 @@ But Figure 4 shows share ever-infected and mortality for a sample of five states
 
 ![](https://michaelwiebe.com/assets/measles_lit/chuard-fig4.png){:width="100%"}
 
-WA has highest share ever-infected and the lowest mortality, while AR has the lowest share ever-infected and the highest mortality.
+WA has the highest share ever-infected and the lowest mortality, while AR has the lowest share ever-infected and the highest mortality.
 Also, if incidence is a proxy for disease severity, then it should be correlated with worse health outcomes.
 
 Chuard et al. also make a few odd choices in research design.
