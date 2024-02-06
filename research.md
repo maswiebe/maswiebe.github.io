@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Can we detect the long-run effects of the measles vaccine? Replicating Atwood and Pearlman (2023)* ([pdf](https://michaelwiebe.com/assets/measles_mexico/ap_replication.pdf), [code](https://github.com/maswiebe/measles_mexico)), February 2024.
+- I run the same analysis from my [comment](https://michaelwiebe.com/assets/atwood/atwood_comment) on Atwood (2022) in the context of the Mexico measles vaccine, and again find that the results are explained by trends.
+
+---
+
 *The Long-Term Effects of Measles Vaccination on Earnings and Employment: Comment* ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf), [code](https://github.com/maswiebe/atwood_comment)), January 2024.
 - I run an event study and find that the results in Atwood (2022) are explained by trends, instead of a treatment effect of the vaccine.
 - *Extended Commentary on Atwood (2022)*, ([pdf](https://michaelwiebe.com/assets/atwood/atwood_extended.pdf), [code](https://github.com/maswiebe/atwood_extended)): additional results on the the event study, heterogeneous effects, plotting the raw data, redoing the disease event study, and more.
