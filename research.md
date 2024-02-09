@@ -33,5 +33,5 @@ permalink: /research/
 
 ---
 
-*Does meritocratic promotion explain China’s growth?* ([pdf](https://michaelwiebe.com/assets/ch1.pdf)), 2020.
+*Does meritocratic promotion explain China’s growth?* ([pdf](https://michaelwiebe.com/assets/ch1.pdf), [code](https://github.com/maswiebe/meritocratic_promotion)), 2020.
 - Using my own data, I find no evidence that prefecture leaders are promoted based on GDP growth.
