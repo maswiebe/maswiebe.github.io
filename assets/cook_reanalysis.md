@@ -215,7 +215,8 @@ Footnotes
 
 [^5]: Table 9 uses application-year data to match Black and white patents, then aggregates over time.
 
-[^6]: Cook does not have application-year time series data for white patents.
+[^6]: Since the main conclusions are for Black inventors, I focus on Column 3.
+    Also, Cook's replication package does not have application-year time series data for white patents.
 
 [^7]: Cook's Table 6 incorrectly shows the lynching estimates in Columns 2 and 3 as being significant at the 5% level, when the p-values are larger than 0.05.
 
