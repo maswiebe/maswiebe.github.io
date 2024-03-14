@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Do subway openings reduce air pollution? A replication exercise* ([pdf](https://michaelwiebe.com/assets/subway_pollution/subway_pollution.pdf), [code](https://github.com/maswiebe/subway_pollution)), March 2024.
+- I reanalyze the results in Gendron-Carrier et al. (2022). I find that the main result (new subways in high-pollution cities reduce pollution) is robust, while the effects for low-pollution cities are mixed.
+
+---
+
 *Can we detect the long-run effects of the measles vaccine? Replicating Atwood and Pearlman (2023)* ([pdf](https://michaelwiebe.com/assets/measles_mexico/ap_replication.pdf), [code](https://github.com/maswiebe/measles_mexico)), February 2024.
 - I run the same analysis from my [comment](https://michaelwiebe.com/assets/atwood/atwood_comment) on Atwood (2022) in the context of the Mexico measles vaccine, and again find that the results are explained by trends.
 
