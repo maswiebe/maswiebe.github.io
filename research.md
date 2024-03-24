@@ -5,7 +5,7 @@ nav: main
 permalink: /research/
 ---
 
-*Administrative procedures as tax enforcement tools*, with Jeff Hicks and Wei Cui, [Economics Letters](https://michaelwiebe.com/assets/subway_pollution/subway_pollution.pdf), April 2024.
+*Administrative procedures as tax enforcement tools*, with Jeff Hicks and Wei Cui, [Economics Letters](https://journals.sagepub.com/doi/full/10.1177/20531680241229875), April 2024.
 - Why do Chinese firms report income just above a threshold that doubles their tax rate?
 
 ---
