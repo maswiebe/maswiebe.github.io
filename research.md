@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Administrative procedures as tax enforcement tools*, with Jeff Hicks and Wei Cui, [Economics Letters](https://michaelwiebe.com/assets/subway_pollution/subway_pollution.pdf), April 2024.
+- Why do Chinese firms report income just above a threshold that doubles their tax rate?
+
+---
+
 *Do subway openings reduce air pollution? A replication exercise* ([pdf](https://michaelwiebe.com/assets/subway_pollution/subway_pollution.pdf), [code](https://github.com/maswiebe/subway_pollution)), March 2024.
 - I reanalyze the results in Gendron-Carrier et al. (2022). I find that the main result (new subways in high-pollution cities reduce pollution) is robust, while the effects for low-pollution cities are mixed.
 
