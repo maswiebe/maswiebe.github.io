@@ -38,7 +38,8 @@ permalink: /research/
 ---
 
 *Replicating the literature on prefecture-level meritocratic promotion in China* ([html](https://michaelwiebe.com/assets/promotion), [pdf](https://michaelwiebe.com/assets/promotion.pdf), [code](https://github.com/maswiebe/promotion)), September 2023.
-([2020 version](https://michaelwiebe.com/assets/ch2.pdf))
+([2020 version](https://michaelwiebe.com/assets/ch2.pdf)).
+Published in [Research and Politics](https://journals.sagepub.com/doi/full/10.1177/20531680241229875), Feb. 2024.
 - A popular idea is that Chinese mayors are promoted based on GDP growth. I show that the evidence in the literature is not robust.
 
 ---
