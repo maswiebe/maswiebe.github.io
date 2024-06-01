@@ -17,7 +17,8 @@ When researchers expect their work to be scrutinized, they will put more effort 
 The problem is that replication work is undervalued in academia—that's where I come in.
 
 Previously I have worked for Open Philanthropy and on my own projects.
-Please [support me](https://www.patreon.com/michael_wiebe/) on Patreon, and [get in touch](mailto:maswiebe@gmail.com) [maswiebe[at]gmail.com] if you have research you'd like to see scrutinized (or original research you want me to do).
+Please <!--[support me](https://www.patreon.com/michael_wiebe/) on Patreon, and -->
+[get in touch](mailto:maswiebe@gmail.com) [maswiebe[at]gmail.com] if you have research you'd like to see scrutinized (or original research you want me to do).
 
 
 
