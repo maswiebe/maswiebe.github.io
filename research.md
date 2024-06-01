@@ -34,6 +34,7 @@ permalink: /research/
 
 *Can we detect the effects of racial violence on patenting? Reanalyzing Cook (2014)* ([html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf), [code](https://github.com/maswiebe/cook_reanalysis)), September 2023.
 - The results in Cook (2014) don't hold up to scrutiny.
+- [Response](https://michaelwiebe.com/assets/cook_reanalysis/response_to_ei_referees.pdf) to referee reports (Economic Inquiry)
 
 ---
 
