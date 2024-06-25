@@ -10,7 +10,7 @@ permalink: /research/
 
 ---
 
-*Administrative procedures as tax enforcement tools*, with Jeff Hicks and Wei Cui, [Economics Letters](https://journals.sagepub.com/doi/full/10.1177/20531680241229875), April 2024.
+*Administrative procedures as tax enforcement tools*, with Jeff Hicks and Wei Cui, [Economics Letters](https://www.sciencedirect.com/science/article/pii/S0165176524001320), April 2024.
 - Why do Chinese firms report income just above a threshold that doubles their tax rate?
 
 ---
