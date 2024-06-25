@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Do gasoline price shocks during adolescence reduce driving as an adult? A replication exercise* ([pdf](https://michaelwiebe.com/assets/formative_gas/formative_gas.pdf), [code](https://github.com/maswiebe/formative_gas)), June 2024.
+- I reanalyze the results in Severen and Bethem (2022). I find supporting evidence for the claim that gas price shocks reduce adult driving, with different effects for price increases and decreases.
+
+---
+
 *Administrative procedures as tax enforcement tools*, with Jeff Hicks and Wei Cui, [Economics Letters](https://journals.sagepub.com/doi/full/10.1177/20531680241229875), April 2024.
 - Why do Chinese firms report income just above a threshold that doubles their tax rate?
 
