@@ -27,6 +27,7 @@ The price threshold determines which good the consumer chooses; if price(Old) is
 Technically, the demand function has a discontinuity at the threshold, so you can imagine the horizontal part as being a dotted line.
 (Note that I'm referring to quantity demanded as a function of price, even though price is on the y-axis. 
 Here I'm following the convention to plot price against quantity.)
+Click below to see the details.
 <!-- note: inverse demand function; thinking of Q(p), but have p on y-axis -->
 
 {::options parse_block_html="true" /}
