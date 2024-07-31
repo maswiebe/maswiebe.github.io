@@ -49,24 +49,24 @@ $$
 &m_{2} = 20 \\
 &m_{3} = 30 \\
 
-&x_{1,1} = \left\{ 
+&x_{1,1} = \bigg\{ 
     0, p_{1} > p_{2}/2 \\
     m_{1}/p_{1}, p_{1} \leq p_{2}/2 \\
-&x_{1,2} = \left\{ 
+&x_{1,2} = \bigg\{ 
     m_{1}/p_{2}, p_{1} > p_{2}/2 \\
     0, p_{1} \leq p_{2}/2 \\
 
-&x_{2,1} = \left\{ 
+&x_{2,1} = \bigg\{ 
     0, p_{1} > p_{2}/3 \\
     m_{1}/p_{1}, p_{1} \leq p_{2}/3 \\
-&x_{2,2} = \left\{ 
+&x_{2,2} = \bigg\{ 
     m_{1}/p_{2}, p_{1} > p_{2}/3 \\
     0, p_{1} \leq p_{2}/3 \\
 
-&x_{3,1} = \left\{ 
+&x_{3,1} = \bigg\{ 
     0, p_{1} > p_{2}/4 \\
     m_{1}/p_{1}, p_{1} \leq p_{2}/4 \\
-&x_{3,2} = \left\{ 
+&x_{3,2} = \bigg\{ 
     m_{1}/p_{2}, p_{1} > p_{2}/4 \\
     0, p_{1} \leq p_{2}/4
 
@@ -99,7 +99,7 @@ Here's aggregate demand for New apartments.
 Now Person 3 has the strongest preference, so they contribute to aggregate demand in all segments, while Person 1 contributes only in the bottom segment.
 ![](https://michaelwiebe.com/assets/vacancy_chain/agg_demand_newapt.png){:width="100%"}
 
-An equilibrium is prices $$(p_{Old}, p_{New})$$ that set supply equal to aggregate demand in both markets.
+An equilibrium is prices $$(P_{Old}, P_{New})$$ that set supply equal to aggregate demand in both markets.
 I'll show an equilibrium where Person 2 initially buys an Old apartment. 
 To capture the vacancy chain effect, we'll increase supply of New apartments, lowering the price, which induces Person 2 to upgrade from Old to New and reduces demand for Old apartments.
 <!-- it's really the lower price that both(induces I2 to upgrade, reduces D1) 
@@ -108,12 +108,12 @@ it's not I2 upgrading that reduces D1; rather, moving alond D1 surface from chan
 
 Here's an equilibrium for Old apartments. 
 I've chosen the supply curve to be consistent with Person 1 & 2 buying Old, while Person 3 buys New (ie. we're on the second segment of the demand curve for Old apartments).
-The price is $$p_{Old} = 3$$.
+The price is $$P_{Old} = 3$$.
 ![](https://michaelwiebe.com/assets/vacancy_chain/eqm1_oldapt.png){:width="100%"}
 
 Here's the corresponding equilibrium for New apartments. 
 Supply intersects demand on the segment of the demand curve where only Person 3 buys a New apartment.
-Here the price is $$p_{New} = 10$$.
+Here the price is $$P_{New} = 10$$.
 ![](https://michaelwiebe.com/assets/vacancy_chain/eqm1_newapt.png){:width="100%"}
 
 (Exercise for the reader: verify that these prices are consistent with the individual demand functions.)
@@ -127,16 +127,16 @@ Instead, we're evaluating the same demand function at different price.
 OK, let's start the vacancy chain. 
 We do so by increasing the supply of new apartments. 
 For example, upzoning reduces land costs, which makes developers willing to produce more at every price.
-Shifting from S1 to S2, we move down the demand curve, with a new price $$p_{New}=7$$.
+Shifting from S1 to S2, we move down the demand curve, with a new price $$P_{New}=7$$.
 ![](https://michaelwiebe.com/assets/vacancy_chain/eqm2_newapt.png){:width="100%"}
 
 Note that now supply intersects demand in the segment where both Person 3 and 2 buy New. 
-Person 2 has upgraded from Old to New, induced by the lower price of New apartments ($$p_{New}=7 < p_{Old}=10$$)! 
+Person 2 has upgraded from Old to New, induced by the lower price of New apartments ($$P_{New}=7 < P_{Old}=10$$)! 
 So we should see a corresponding drop in demand for Old apartments.
 
 Here's the effect on Old apartments. 
 The demand curve 'shifts' down from D1 to D2, and now supply intersects demand on the segment where only Person 1 buys Old. 
-The price falls from $$p_{Old}=3$$ to $$p_{Old}=2.5$$.
+The price falls from $$P_{Old}=3$$ to $$P_{Old}=2.5$$.
 Intuitively, when price(New) falls, Old apartments become relatively less attractive, so demand for Old apartments decreases.
 ![](https://michaelwiebe.com/assets/vacancy_chain/eqm2_oldapt.png){:width="100%"}
 
@@ -152,9 +152,9 @@ Intuitively, when price(New) falls, Old apartments become relatively less attrac
 But if price(Old) fell, shouldn't that reduce demand for New apartments too? 
 Yes. These are substitute goods, so a reduction in the other price makes a good less appealing.
 In this case, demand for New apartments 'shifts' down, but not enough to change the equilibrium.
-Hence, there are no more changes, and we've converged on a new equilibrium, with $$(p_{Old}, p_{New})$$ = (2.5, 7).
+Hence, there are no more changes, and we've converged on a new equilibrium, with $$(P_{Old}, P_{New})$$ = (2.5, 7).
 ![](https://michaelwiebe.com/assets/vacancy_chain/eqm2b_newapt.png){:width="100%"}
 
 If we added more consumers, we could show how the vacancy chain allows a poorer person to afford an Old apartment at the new lower price, when they were originally priced out.
-And with more housing sub-markets (with multiple degrees of quality, instead of only Old vs New), we could trace out the vacancy chain itself, with someone upgrading in each submarket and reducing demand for their original housing type.
+And with more housing sub-markets (with multiple degrees of quality, instead of only Old vs New), we could trace out the vacancy chain itself, with someone upgrading in each submarket and reducing demand for their original housing type, thereby enabling someone in the submarket below to upgrade.
 <!-- not doing unit demand, so not a standard vacancy chain  -->
