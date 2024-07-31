@@ -56,35 +56,35 @@ $$
 % \begin{split}
 &x_{1,1} = \bigg\{ 
     \begin{matrix}
-    0, p_{1} > p_{2}/2 \\
-    m_{1}/p_{1}, p_{1} \leq p_{2}/2 \\
+    0, p_{1} > \frac{p_{2}}{2} \\
+    m_{1}/p_{1}, p_{1} \leq \frac{p_{2}}{2} \\
     \end{matrix} \\
 &x_{1,2} = \bigg\{ 
     \begin{matrix}
-    m_{1}/p_{2}, p_{1} > p_{2}/2 \\
-    0, p_{1} \leq p_{2}/2 \\
+    m_{1}/p_{2}, p_{1} > \frac{p_{2}}{2} \\
+    0, p_{1} \leq \frac{p_{2}}{2} \\
     \end{matrix} \\
 
 &x_{2,1} = \bigg\{ 
     \begin{matrix}
-    0, p_{1} > p_{2}/3 \\
-    m_{1}/p_{1}, p_{1} \leq p_{2}/3 \\
+    0, p_{1} > \frac{p_{2}}{3} \\
+    m_{2}/p_{1}, p_{1} \leq \frac{p_{2}}{3} \\
     \end{matrix} \\
 &x_{2,2} = \bigg\{ 
     \begin{matrix}
-    m_{1}/p_{2}, p_{1} > p_{2}/3 \\
-    0, p_{1} \leq p_{2}/3 \\
+    m_{2}/p_{2}, p_{1} > \frac{p_{2}}{3} \\
+    0, p_{1} \leq \frac{p_{2}}{3} \\
     \end{matrix} \\
 
 &x_{3,1} = \bigg\{ 
     \begin{matrix}
-    0, p_{1} > p_{2}/4 \\
-    m_{1}/p_{1}, p_{1} \leq p_{2}/4 \\
+    0, p_{1} > \frac{p_{2}}{4} \\
+    m_{3}/p_{1}, p_{1} \leq \frac{p_{2}}{4} \\
     \end{matrix} \\
 &x_{3,2} = \bigg\{ 
     \begin{matrix}
-    m_{1}/p_{2}, p_{1} > p_{2}/4 \\
-    0, p_{1} \leq p_{2}/4
+    m_{3}/p_{2}, p_{1} > \frac{p_{2}}{4} \\
+    0, p_{1} \leq \frac{p_{2}}{4}
     \end{matrix} \\
 \end{split}
 \end{aligned}
