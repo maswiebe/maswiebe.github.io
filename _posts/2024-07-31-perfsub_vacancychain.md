@@ -36,8 +36,8 @@ Here I'm following the convention to plot price against quantity.)
 
 <!-- need $$ for inline math on kramdown (?), even though it renders as equations here -->
 Let $$x_{1}$$ = Old apartments, $$x_{2}$$ = New apartments.
-Let $$x_{i,j}$$ be quantity demanded for consumer $$i$$ of good $$j$$.
-Given perfect substitutes utility, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution with the price ratio.
+Let $$x_{i,j}$$ be quantity demanded for consumer $$i$$ of good $$j$$, with income $$m_{i}$$.
+Given perfect substitutes utility $$u(x_{1},x_{2}) = a x_{1} + b x_{2}, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{1}/p_{2}$$).
 
 $$
 \begin{aligned}
@@ -48,7 +48,7 @@ $$
 
 &m_{1} = 10 \\
 &m_{2} = 20 \\
-&m_{3} = 30 
+&m_{3} = 30 \\
 \end{split}
 \end{aligned}
 
@@ -58,34 +58,34 @@ $$
     \begin{matrix}
     0, p_{1} > p_{2}/2 \\
     m_{1}/p_{1}, p_{1} \leq p_{2}/2 \\
-    \end{matrix}
+    \end{matrix} \\
 &x_{1,2} = \bigg\{ 
     \begin{matrix}
     m_{1}/p_{2}, p_{1} > p_{2}/2 \\
     0, p_{1} \leq p_{2}/2 \\
-    \end{matrix}
+    \end{matrix} \\
 
 &x_{2,1} = \bigg\{ 
     \begin{matrix}
     0, p_{1} > p_{2}/3 \\
     m_{1}/p_{1}, p_{1} \leq p_{2}/3 \\
-    \end{matrix}
+    \end{matrix} \\
 &x_{2,2} = \bigg\{ 
     \begin{matrix}
     m_{1}/p_{2}, p_{1} > p_{2}/3 \\
     0, p_{1} \leq p_{2}/3 \\
-    \end{matrix}
+    \end{matrix} \\
 
 &x_{3,1} = \bigg\{ 
     \begin{matrix}
     0, p_{1} > p_{2}/4 \\
     m_{1}/p_{1}, p_{1} \leq p_{2}/4 \\
-    \end{matrix}
+    \end{matrix} \\
 &x_{3,2} = \bigg\{ 
     \begin{matrix}
     m_{1}/p_{2}, p_{1} > p_{2}/4 \\
     0, p_{1} \leq p_{2}/4
-    \end{matrix}
+    \end{matrix} \\
 \end{split}
 \end{aligned}
 
