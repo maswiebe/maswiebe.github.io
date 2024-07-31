@@ -4,7 +4,6 @@ title: "Using microeconomics to model vacancy chains"
 date:   2024-07-31 17:00:00
 type: post
 ---
-<!-- link to published html notebook -->
 
 When we build new apartments, the people moving in vacate their old apartments; this reduces competition for old housing, making it more affordable. 
 This is the vacancy chain effect: building expensive new housing helps improve affordability of cheaper old housing.
@@ -179,3 +178,6 @@ Hence, there are no more changes, and we've converged on a new equilibrium, with
 If we added more consumers, we could show how the vacancy chain allows a poorer person to afford an Old apartment at the new lower price, when they were originally priced out.
 And with more housing sub-markets (with multiple degrees of quality, instead of only Old vs New), we could trace out the vacancy chain itself, with someone upgrading in each submarket and reducing demand for their original housing type, thereby enabling someone in the submarket below to upgrade.
 <!-- not doing unit demand, so not a standard vacancy chain  -->
+
+---
+See [here](https://michaelwiebe.com/assets/vacancy_chain/perfsub_vacancychain.ipynb) for code to produce the graphs.
