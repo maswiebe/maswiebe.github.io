@@ -38,6 +38,8 @@ Here I'm following the convention to plot price against quantity.)
 Let $$x_{1}$$ = Old apartments, $$x_{2}$$ = New apartments.
 Let $$x_{i,j}$$ be quantity demanded for consumer $$i$$ of good $$j$$, with income $$m_{i}$$.
 Given perfect substitutes utility $$u(x_{1},x_{2}) = a x_{1} + b x_{2}$$, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{1}/p_{2}$$).
+I use supply functions $$S_{1}(p_{1}) = -26 + 12 p_{1}$$ and $$S_{2}(p_{2}) = \frac{3}{10} p_{2}$$.
+$$S_{2}$$ shifts to $$S_{2}^{new}(p_{2}) = \frac{50}{49} p_{2}$$.
 
 $$
 \begin{aligned}
