@@ -37,7 +37,7 @@ Here I'm following the convention to plot price against quantity.)
 <!-- need $$ for inline math on kramdown (?), even though it renders as equations here -->
 Let $$x_{1}$$ = Old apartments, $$x_{2}$$ = New apartments.
 Let $$x_{i,j}$$ be quantity demanded for consumer $$i$$ of good $$j$$, with income $$m_{i}$$.
-Given perfect substitutes utility $$u(x_{1},x_{2}) = a x_{1} + b x_{2}, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{1}/p_{2}$$).
+Given perfect substitutes utility $$u(x_{1},x_{2}) = a x_{1} + b x_{2}$$, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{1}/p_{2}$$).
 
 $$
 \begin{aligned}
@@ -49,11 +49,11 @@ $$
 &m_{1} = 10 \\
 &m_{2} = 20 \\
 &m_{3} = 30 \\
-\end{split}
-\end{aligned}
+% \end{split}
+% \end{aligned}
 
-\begin{aligned}
-\begin{split}
+% \begin{aligned}
+% \begin{split}
 &x_{1,1} = \bigg\{ 
     \begin{matrix}
     0, p_{1} > p_{2}/2 \\
