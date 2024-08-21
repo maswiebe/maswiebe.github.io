@@ -3,6 +3,7 @@ layout: post
 title: "Using microeconomics to model vacancy chains"
 date:   2024-07-31 17:00:00
 type: post
+# published: false
 ---
 
 When we build new apartments, the people moving in vacate their old apartments; this reduces competition for old housing, making it more affordable. 
