@@ -7,6 +7,8 @@ type: post
 <!-- housing economics, housing microeconomics -->
 <!-- vacancy chains, demand cascades, and yuppie fishtanks -->
 
+# Vacancy chains
+
 When we build new apartments, the people moving in vacate their old apartments; this reduces competition for old housing, making it more affordable. 
 This is the vacancy chain effect: building expensive new housing helps improve affordability of cheaper old housing.
 In this post I'll show how to model the vacancy chain effect using supply and demand.
@@ -181,6 +183,34 @@ Hence, there are no more changes, and we've converged on a new equilibrium, with
 If we added more consumers, we could show how the vacancy chain allows a poorer person to afford an Old apartment at the new lower price, when they were originally priced out.
 And with more housing sub-markets (with multiple degrees of quality, instead of only Old vs New), we could trace out the vacancy chain itself, with someone upgrading in each submarket and reducing demand for their original housing type, thereby enabling someone in the submarket below to upgrade.
 <!-- not doing unit demand, so not a standard vacancy chain  -->
+
+# Demand cascades and yuppie fishtanks
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/indl_demand_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/agg_demand_oldapt.png){:width="100%"}
+
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/indl_demand_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/agg_demand_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm1_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm1_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2b_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm3_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm3_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm3b_newapt.png){:width="100%"}
+
 
 ---
 See [here](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/perfsub_vacancychain_inelastic.ipynb) for code to produce the graphs.
