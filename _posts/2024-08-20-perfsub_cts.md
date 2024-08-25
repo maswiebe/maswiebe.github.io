@@ -7,7 +7,7 @@ type: post
 <!-- housing economics, housing microeconomics -->
 <!-- vacancy chains, demand cascades, and yuppie fishtanks -->
 
-# Introduction
+<!-- # Introduction -->
 When we build new apartments, the people moving in vacate their old apartments; this reduces competition for old housing, making it more affordable. 
 This is the *vacancy chain* effect: building expensive new housing helps improve affordability of cheaper old housing.
 
