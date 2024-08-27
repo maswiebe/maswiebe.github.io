@@ -188,11 +188,12 @@ Here's a plot of an individual demand surface (for Old apartments).
 The demand curves plotted above are slices of this surface, taken at specific values of price(New).
 If you rotate your head to the left, you can see it: when price(Old) is high, demand is 0; the horizontal discontinuity becomes vertical here; and as price(Old) goes to 0, quantity becomes large, following the 1/x shape.
 
+![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/demand_surface3d.png){:width="100%"}
+
 Changing the price of the other good moves you along the surface, but in 2D this will look like shifting the demand curve.
 This is important, because changing the cross-price does not shift demand in the sense of changing preferences.
 Instead, we're evaluating the same demand function at a different price.
 For example, moving from price(New)=8 to price(New)=4 does not represent a change in preferences, but the demand curves (evaluated as slices at those prices) will look different, reflecting different tradeoffs.
-![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/demand_surface3d.png){:width="100%"}
 
 # Vacancy chains
 
