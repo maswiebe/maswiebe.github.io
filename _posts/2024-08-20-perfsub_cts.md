@@ -63,6 +63,8 @@ Click below to see the underlying demand functions.
 Let $$x_{1}$$ = Old apartments, $$x_{2}$$ = New apartments.
 Let $$x_{i,j}$$ be quantity demanded for consumer $$i$$ of good $$j$$, with income $$m_{i}$$.
 Given perfect substitutes utility $$u(x_{1},x_{2}) = a x_{1} + b x_{2}$$, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{1}/p_{2}$$).
+If $$p_{1}/a > p_{2}/b$$, the consumer chooses $$x_{1}$$ and spends their entire budget on it; otherwise, they choose $$x_{2}$$.
+With perfect substitutes preferences, we get a corner solution: the optimal choice is one or the other, and not a mix of both.
 Note that the demand functions take both $$p_{1}$$ and $$p_{2}$$ as arguments, so they define a 3-dimensional surface.
 I use supply functions $$S_{1}(p_{1}) = 13 $$ (perfectly inelastic supply) and $$S_{2}(p_{2}) = \frac{3}{10} p_{2}$$.
 $$S_{2}$$ shifts to $$S_{2}^{new}(p_{2}) = \frac{50}{9} p_{2}$$.
@@ -146,18 +148,19 @@ Here's aggregate demand for New apartments.
 Now Person 3 has the strongest preference, so they contribute to aggregate demand in all segments, while Person 1 contributes only in the bottom segment.
 ![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/agg_demand_newapt.png){:width="100%"}
 
-An equilibrium is prices $$(P_{Old}, P_{New})$$ that set supply equal to aggregate demand in both markets.
+An equilibrium is prices $$(P_{Old}, P_{New})$$ that set quantity supplied equal to aggregate quantity demanded in both markets.
 This is where the demand curve being evaluated at the price of the other good is key: the equilibrium price in one market has to be consistent with the equilibrium price in the other.
 I'll show an equilibrium where Person 2 initially buys an Old apartment. 
 To capture the vacancy chain effect, we'll increase supply of New apartments, lowering the price, which induces Person 2 to upgrade from Old to New and reduces demand for Old apartments, thereby reducing pressure in that market.
 <!-- it's really the lower price that both(induces I2 to upgrade, reduces D1) 
 it's not I2 upgrading that reduces D1; rather, moving alond D1 surface from change in p2, and we happen to end up at a point where I2 is in the other corner solution.
+    - but do need I2 to upgrade in order to reduce p1
 -->
 
 Here's an equilibrium for Old apartments. 
 To capture the stock of Old apartments being fixed, I use a vertical supply curve; no matter what the price is, developers can't add any more old apartments (at least in the short run).
 I've chosen the supply curve so that Person 1 & 2 buy Old, while Person 3 buys New (ie. we're on the second segment of the demand curve for Old apartments).
-The price is $$P_{Old} = 2.3$$.
+The price is set by the intersection of the supply and demand curves; here, $$P_{Old} = 2.3$$.
 ![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/eqm1_oldapt.png){:width="100%"}
 
 Here's the corresponding equilibrium for New apartments. 
@@ -168,6 +171,16 @@ Here the price is $$P_{New} = 10$$.
 
 You can confirm that these prices are the ones I used when plotting the demand curves for the other good. For example, the first graph shows the individual demand curves for Old apartments when price(New) = 10.
 <!-- (Exercise for the reader: verify that these prices are consistent with the individual demand functions for both goods.) -->
+
+When a consumer buys one good, what happens to their demand for the other one? 
+With perfect substitutes preferences, the demand is still there, but it can never be realized,
+<!-- For example, Person 2 buys Old, but they still contribute to the aggregate demand curve for New. -->
+because perfect substitutes involves a knife-edge threshold.
+For Person 2, if price(Old) $$<$$ price(New)/4, they buy Old; otherwise they buy New.
+Here, that is 2.3 $$<$$ 10/4 = 2.5, hence they buy Old.
+If the prices were different in a way that flipped the inequality, they would buy New.
+(But to be an equilibrium, the supply curve would have to match the quantity demanded.)
+In the next post on unit demand, I'll show how this logic changes.
 
 Stepping back, note that these demand functions are actually 2D slices of a 3D demand surface. 
 Demand for Old apartments depends on the prices of both Old and New apartments, so it makes sense that the demand curve will be plotted as a function of two variables.
@@ -241,6 +254,82 @@ But when we increase the supply of new apartments to match the rise in demand, w
 This is a [yuppie fishtank](https://www.noahpinion.blog/p/yuppie-fishtanks-yimbyism-explained), where we build shiny glass towers to contain the rich yuppies moving in and absorb their demand for housing.
 
 To illustrate, I'll show an example with two people forming an initial equilibrium, which is disrupted by a rich person moving in.
+
+Click below to see the underlying demand functions.
+<!-- note: inverse demand function; thinking of Q(p), but have p on y-axis -->
+
+{::options parse_block_html="true" /}
+
+<details>
+<summary markdown="span">Math</summary>
+
+<!-- need $$ for inline math on kramdown (?), even though it renders as equations here -->
+Let $$x_{1}$$ = Old apartments, $$x_{2}$$ = New apartments.
+Let $$x_{i,j}$$ be quantity demanded for consumer $$i$$ of good $$j$$, with income $$m_{i}$$.
+Given perfect substitutes utility $$u(x_{1},x_{2}) = a x_{1} + b x_{2}$$, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{1}/p_{2}$$).
+If $$p_{1}/a > p_{2}/b$$, the consumer chooses $$x_{1}$$ and spends their entire budget on it; otherwise, they choose $$x_{2}$$.
+With perfect substitutes preferences, we get a corner solution: the optimal choice is one or the other, and not a mix of both.
+Note that the demand functions take both $$p_{1}$$ and $$p_{2}$$ as arguments, so they define a 3-dimensional surface.
+I use supply functions $$S_{1}(p_{1}) = 13 $$ (perfectly inelastic supply) and $$S_{2}(p_{2}) = \frac{20}{21} + \frac{41}{21} p_{2}$$.
+$$S_{2}$$ shifts to $$S_{2}^{new}(p_{2}) = \frac{20}{21} + \frac{1520}{63} p_{2}$$.
+
+$$
+\begin{aligned}
+\begin{split}
+&u_{1}(x_{1},x_{2}) = 9x_{1} + 10x_{2} \\
+&u_{2}(x_{1},x_{2}) = x_{1} + 4x_{2} \\
+&u_{3}(x_{1},x_{2}) = x_{1} + 15.6x_{2} \\
+
+&m_{1} = 10 \\
+&m_{2} = 20 \\
+&m_{3} = 200 \\
+% \end{split}
+% \end{aligned}
+
+% \begin{aligned}
+% \begin{split}
+&x_{1,1} = \bigg\{ 
+    \begin{matrix}
+    0, p_{1} > \frac{9p_{2}}{10} \\
+    \frac{m_{1}}{p_{1}}, p_{1} \leq \frac{9p_{2}}{10} \\
+    \end{matrix} \\
+&x_{1,2} = \bigg\{ 
+    \begin{matrix}
+    \frac{m_{1}}{p_{2}}, p_{1} > \frac{9p_{2}}{10} \\
+    0, p_{1} \leq \frac{9p_{2}}{10} \\
+    \end{matrix} \\
+
+&x_{2,1} = \bigg\{ 
+    \begin{matrix}
+    0, p_{1} > \frac{p_{2}}{4} \\
+    \frac{m_{2}}{p_{1}}, p_{1} \leq \frac{p_{2}}{4} \\
+    \end{matrix} \\
+&x_{2,2} = \bigg\{ 
+    \begin{matrix}
+    \frac{m_{2}}{p_{2}}, p_{1} > \frac{p_{2}}{4} \\
+    0, p_{1} \leq \frac{p_{2}}{4} \\
+    \end{matrix} \\
+
+&x_{3,1} = \bigg\{ 
+    \begin{matrix}
+    0, p_{1} > \frac{p_{2}}{15.6} \\
+    \frac{m_{3}}{p_{1}}, p_{1} \leq \frac{p_{2}}{15.6} \\
+    \end{matrix} \\
+&x_{3,2} = \bigg\{ 
+    \begin{matrix}
+    \frac{m_{3}}{p_{2}}, p_{1} > \frac{p_{2}}{15.6} \\
+    0, p_{1} \leq \frac{p_{2}}{15.6}
+    \end{matrix} \\
+\end{split}
+\end{aligned}
+
+
+$$
+
+</details>
+
+{::options parse_block_html="false" /}
+
 Here are Person 1 and Person 2's demand curves for Old apartments. 
 As before, Person 1 has a stronger preference for Old apartments (relative to Person 2), and Person 2 has a larger budget.
 
