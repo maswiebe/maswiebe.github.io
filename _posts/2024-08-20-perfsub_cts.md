@@ -372,6 +372,7 @@ The increased price of New apartments makes Old apartments more attractive, so d
 Now supply intersects demand on the segment where both Person 1 and Person 2 buy, and the price rises from 0.8 to 2.3.
 The stock of 13 Old units is now shared by both Person 1 and 2.
 This is the demand cascade: rich people moving in and increasing competition in the market for new apartments results in higher prices of old apartments, making housing less affordable for the poor.
+(This is also known as up-filtering, where for a given home, poorer residents are replaced by richer residents.)
 
 ![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2_oldapt.png){:width="100%"}
 
