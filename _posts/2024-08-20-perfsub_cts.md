@@ -28,6 +28,7 @@ They differ in how much they prefer New vs Old apartments, and in the size of th
 With perfect substitutes, you choose one good or the another, and spend your entire budget on the chosen good.
 For example, Person 1 will buy Old if price(Old) is less than half of price(New). 
 Conversely, they buy New if price(New) is less than double price(Old).
+(We use two housing types as the simplest model that demonstrates the key mechanism; in reality, there are dozens of quality gradations.)
 
 Here are the individual demand curves for Old apartments.
 Preference for Old (vs New) is decreasing from Person 1 to Person 3 (since Person 1 chooses an Old apartment at the highest price) while budget size is increasing (at price=2, Person 3 demands the largest quantity).
@@ -164,7 +165,9 @@ The price is set by the intersection of the supply and demand curves; here, $$P_
 ![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/eqm1_oldapt.png){:width="100%"}
 
 Here's the corresponding equilibrium for New apartments. 
-In this case, the supply curve is upward sloping, reflecting that developers will build more units at higher prices.
+In this case, the supply curve is upward sloping, reflecting that developers are willing to build more units at higher prices (and that building them is permitted by zoning, which may be an unrealistic assumption).
+<!-- doesn't matter, could make it vertical, no change to eqms -->
+<!-- cascade: works to do S=20, shift to S=75 -->
 Supply intersects demand on the segment of the demand curve where only Person 3 buys a New apartment.
 Here the price is $$P_{New} = 10$$.
 ![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/eqm1_newapt.png){:width="100%"}
@@ -183,17 +186,17 @@ If the prices were different in a way that flipped the inequality, they would bu
 In the next post on unit demand, I'll show how this logic changes.
 
 Stepping back, note that these demand functions are actually 2D slices of a 3D demand surface. 
-Demand for Old apartments depends on the prices of both Old and New apartments, so it makes sense that the demand curve will be plotted as a function of two variables.
+Demand for Old apartments depends on the prices of both Old and New apartments, so it makes sense that the demand curve will be plotted as a function of two variables (the two prices).
 Here's a plot of an individual demand surface (for Old apartments).
 The demand curves plotted above are slices of this surface, taken at specific values of price(New).
-If you rotate your head to the left, you can see it: when price(Old) is high, demand is 0; the horizontal discontinuity becomes vertical here; and as price(Old) goes to 0, quantity becomes large, following the 1/x shape.
+If you rotate your head to the left, you can see it: when price(Old) is high, demand is 0 (overlapping the y-axis); the original horizontal discontinuity becomes vertical here in 3D; and as price(Old) goes to 0, quantity becomes large, following the 1/x shape.
 
 ![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/demand_surface3d.png){:width="100%"}
 
 Changing the price of the other good moves you along the surface, but in 2D this will look like shifting the demand curve.
 This is important, because changing the cross-price does not shift demand in the sense of changing preferences.
 Instead, we're evaluating the same demand function at a different price.
-For example, moving from price(New)=8 to price(New)=4 does not represent a change in preferences, but the demand curves (evaluated as slices at those prices) will look different, reflecting different tradeoffs.
+For example, moving from price(New)=8 to price(New)=4 does not represent a change in preferences, but the demand curves (evaluated as slices at those prices) will look different, reflecting different tradeoffs (i.e., as New apartments get cheaper, my demand for Old apartments falls).
 
 # Vacancy chains
 
@@ -373,6 +376,7 @@ Now supply intersects demand on the segment where both Person 1 and Person 2 buy
 The stock of 13 Old units is now shared by both Person 1 and 2.
 This is the demand cascade: rich people moving in and increasing competition in the market for new apartments results in higher prices of old apartments, making housing less affordable for the poor.
 (This is also known as up-filtering, where for a given home, poorer residents are replaced by richer residents.)
+Here I've shown how demand cascades over two steps; in reality, demand would flow down dozens of steps, representing different levels of housing quality.
 
 ![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2_oldapt.png){:width="100%"}
 
@@ -400,6 +404,8 @@ Tidying up, the fall in price(Old) shifts demand for New apartments down, but th
 To conclude, note that vacancy chains and yuppie fishtanks are closely related.
 A vacancy chain allows a local resident to upgrade, reducing demand for old housing.
 A yuppie fishtank absorbs demand from a rich newcomer, preventing a demand increase for old housing.
+And the [reversal tests](https://en.wikipedia.org/wiki/Reversal_test) work as expected.
+Reducing the supply of new apartments (say, a new building burns down) causes a demand cascade, while reducing demand for new apartments (say, deporting yuppies) creates a vacancy chain.
 
 <!-- could model vacancy chain as demand increase from local upgrading, which pushes someone else down, raising prices of both -->
 
