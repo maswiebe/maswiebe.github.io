@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A supply and demand model of housing, part 1: unit demand"
+title: "A supply and demand model of housing, part 2: unit demand"
 date:   2024-09-05 17:00:00
 type: post
 ---
