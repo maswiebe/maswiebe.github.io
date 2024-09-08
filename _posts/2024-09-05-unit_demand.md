@@ -88,3 +88,24 @@ Note that with unit demand, we are able to have consumers being priced out (like
 With continuous quantities, this was not possible, since they could always buy some infinitesimal quantity, and so can't be priced out completely.
 But with discrete units, Person 4 initially doesn't get anything, then thanks to the vacancy chain, they get an Old apartment.
 
+# Demand cascade and yuppie fishtank
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/agg_demand_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm1_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/agg_demand_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm1_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm2a_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm2b_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm2_oldapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm3a_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm3b_newapt.png){:width="100%"}
+
+![](https://michaelwiebe.com/assets/housing/unit/cascade/eqm3_oldapt.png){:width="100%"}
