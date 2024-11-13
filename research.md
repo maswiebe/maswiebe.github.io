@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Spillover effects of cash transfers: Reanalysis of Egger et al. (2022)* ([pdf](https://michaelwiebe.com/assets/cash_spillover/cash_spillover.pdf), [code](https://github.com/maswiebe/cash_spillover)), September 2024.
+- As part of GiveWell's [evaluation](https://www.givewell.org/international/technical/programs/givedirectly-cash-for-poverty-relief-program) of GiveDirectly, I reanalyzed Egger et al. (2022) on the general equilibrium effects of a cash transfer program in Kenya. I find mixed evidence that spillovers accrue to richer households. The main findings are robust.
+
+---
+
 *Do gasoline price shocks during adolescence reduce driving as an adult? A replication exercise* ([pdf](https://michaelwiebe.com/assets/formative_gas/formative_gas.pdf), [code](https://github.com/maswiebe/formative_gas)), June 2024.
 - I reanalyze the results in Severen and Bethem (2022). I find supporting evidence for the claim that gas price shocks reduce adult driving, with different effects for price increases and decreases.
 
