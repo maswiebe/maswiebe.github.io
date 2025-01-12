@@ -381,7 +381,7 @@ Here I've shown how demand cascades over two steps; in reality, demand would flo
 ![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2_oldapt.png){:width="100%"}
 
 To finish up the new equilibrium, we account for the effect of the higher price(Old) on the New market.
-Higher prices for Old apartments make New apartments for attractive, so demand shifts up (from D2a to D2b), but this doesn't change the equilibrium.
+Higher prices for Old apartments make New apartments more attractive, so demand shifts up (from D2a to D2b), but this doesn't change the equilibrium.
 
 ![](https://michaelwiebe.com/assets/housing/cts_qty/cascade/eqm2b_newapt.png){:width="100%"}
 
