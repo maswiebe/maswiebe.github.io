@@ -36,7 +36,7 @@ permalink: /research/
 
 ---
 
-*The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment* ([summary](https://michaelwiebe.com/blog/2024/01/moretti_summary), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf), [code](https://github.com/maswiebe/moretti_comment), [code walkthrough video](https://www.youtube.com/watch?v=mXpGyd5wMos)), November 2023; [revise and resubmit, AER].
+*The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment* ([summary](https://michaelwiebe.com/blog/2024/01/moretti_summary), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf), [code](https://github.com/maswiebe/moretti_comment), [code walkthrough video](https://www.youtube.com/watch?v=mXpGyd5wMos)), November 2023; [resubmitted March 2025, AER].
 - I show that the results from the event study and IV regressions in Moretti (2021) are caused by coding errors.
 - *Extended Commentary on Moretti (2021)* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf), [code](https://github.com/maswiebe/moretti_extended)): additional results on the event study and IV, heterogeneity by top-10% and bottom-90% inventors, heterogeneity by movers and stayers, testing the mechanism, imputing missing observations, and more.
 
