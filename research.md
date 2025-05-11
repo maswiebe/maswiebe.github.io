@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Comment on "Supply Constraints do not Explain House Price and Quantity Growth Across U.S. Cities"* ([pdf](https://michaelwiebe.com/assets/supply_constraints/supply_constraints.pdf)), May 2025.
+- I show that the equations in Louie et al. (2025) are incorrect, because they do not use exogenous variation in housing demand.
+
+---
+
 *Spillover effects of cash transfers: Reanalysis of Egger et al. (2022)* ([pdf](https://michaelwiebe.com/assets/cash_spillover/cash_spillover.pdf), [code](https://github.com/maswiebe/cash_spillover)), September 2024.
 - As part of GiveWell's [evaluation](https://www.givewell.org/international/technical/programs/givedirectly-cash-for-poverty-relief-program) of GiveDirectly, I reanalyzed Egger et al. (2022) on the general equilibrium effects of a cash transfer program in Kenya. I find mixed evidence that spillovers accrue to richer households. The main findings are robust.
 
