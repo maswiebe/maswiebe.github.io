@@ -5,7 +5,7 @@ nav: main
 permalink: /research/
 ---
 
-*How many jobs can be done remotely? A reanalysis of Dingel and Neiman (2020)* ([I4R discussion paper](https://www.econstor.eu/handle/10419/318266), May 2025.
+*How many jobs can be done remotely? A reanalysis of Dingel and Neiman (2020)* ([I4R discussion paper](https://www.econstor.eu/handle/10419/318266)), May 2025.
 - The authors report that 37% of jobs in the US can be performed at home. But small changes to the classification algorithm give estimates of 25% and 59%.
 
 ---
