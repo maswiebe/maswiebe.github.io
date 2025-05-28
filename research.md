@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*How many jobs can be done remotely? A reanalysis of Dingel and Neiman (2020)* ([I4R discussion paper](https://www.econstor.eu/handle/10419/318266), May 2025.
+- The authors report that 37% of jobs in the US can be performed at home. But small changes to the classification algorithm give estimates of 25% and 59%.
+
+---
+
 *Comment on "Supply Constraints do not Explain House Price and Quantity Growth Across U.S. Cities"* ([pdf](https://michaelwiebe.com/assets/supply_constraints/supply_constraints.pdf)), May 2025.
 - I show that the equations in Louie et al. (2025) are incorrect, because they do not use exogenous variation in housing demand.
 
@@ -25,7 +30,7 @@ permalink: /research/
 
 ---
 
-*Do subway openings reduce air pollution? A replication exercise* ([pdf](https://michaelwiebe.com/assets/subway_pollution/subway_pollution.pdf), [code](https://github.com/maswiebe/subway_pollution)), March 2024.
+*Do subway openings reduce air pollution? A replication exercise* ([pdf](https://michaelwiebe.com/assets/subway_pollution/subway_pollution.pdf), [I4R discussion paper](https://www.econstor.eu/handle/10419/295250), [code](https://github.com/maswiebe/subway_pollution)), March 2024.
 - I reanalyze the results in Gendron-Carrier et al. (2022). I find that the main result (new subways in high-pollution cities reduce pollution) is robust, while the effects for low-pollution cities are mixed.
 
 ---
@@ -35,7 +40,7 @@ permalink: /research/
 
 ---
 
-*The Long-Term Effects of Measles Vaccination on Earnings and Employment: Comment* ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf), [code](https://github.com/maswiebe/atwood_comment)), January 2024.
+*The Long-Term Effects of Measles Vaccination on Earnings and Employment: Comment* ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf), [I4R discussion paper](https://www.econstor.eu/handle/10419/305225), [code](https://github.com/maswiebe/atwood_comment)), January 2024.
 - I run an event study and find that the results in Atwood (2022) are explained by trends, instead of a treatment effect of the vaccine.
 - *Extended Commentary on Atwood (2022)*, ([pdf](https://michaelwiebe.com/assets/atwood/atwood_extended.pdf), [code](https://github.com/maswiebe/atwood_extended)): additional results on the the event study, heterogeneous effects, plotting the raw data, redoing the disease event study, and more.
 
