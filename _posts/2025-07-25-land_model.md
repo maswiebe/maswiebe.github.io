@@ -73,7 +73,7 @@ This is progressive, because houses are inherently more of a luxury good than ap
 
 Next let's explore the interior solution where $$P_{A} = P_{H}$$.
 Here we shift supply enough that we reach the horizontal segment of the perfect substitutes demand function.
-In this case, $$P_{A} = P_{H} = P = \approx 2.8$$; this is the maximum possible reduction in the price of apartment-zoned land.
+In this case, $$P_{A} = P_{H} = P \approx 2.8$$; this is the maximum possible reduction in the price of apartment-zoned land.
 We can choose $$S_{A} \geq 4.33$$ and $$S_{H} \leq 8.66$$, subject to $$S_{A} + S_{H} = 13$$; here I've used $$S_{A} = S_{H} = 6.5$$.
 
 ![](https://michaelwiebe.com/assets/land_model/eqm3_apt.png){:width="100%"}
@@ -85,8 +85,8 @@ Because the demand curve is horizontal, these movements don't affect prices, and
 
 # Maximum upzoning
 
-Finally, let's show the case where the entire stock of land is upzoned for apartments.
-Tihs is really the same case as the large upzoning, because we again have $$P_{A} = P_{H} = P = \approx 2.8$$, and the only difference is that we move all of the way to the edge of the interior solution.
+Finally, let's show the case where the entire stock of land is upzoned for apartments: $$S_{H}=0$$ and $$S_{A}=S=13$$.
+Tihs is really the same case as the large upzoning, because we again have $$P_{A} = P_{H} = P \approx 2.8$$, and the only difference is that we move all of the way to the edge of the interior solution.
 
 ![](https://michaelwiebe.com/assets/land_model/eqm4_apt.png){:width="100%"}
 ![](https://michaelwiebe.com/assets/land_model/eqm4_house.png){:width="100%"}
