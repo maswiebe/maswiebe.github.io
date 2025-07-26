@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A two-sector model of land and upzoning"
-date:   2026-07-25 17:00:00
+date:   2025-07-25 17:00:00
 type: post
 ---
 
