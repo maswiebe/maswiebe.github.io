@@ -86,7 +86,7 @@ Because the demand curve is horizontal, these movements don't affect prices, and
 # Maximum upzoning
 
 Finally, let's show the case where the entire stock of land is upzoned for apartments: $$S_{H}=0$$ and $$S_{A}=S=13$$.
-Tihs is really the same case as the large upzoning, because we again have $$P_{A} = P_{H} = P \approx 2.8$$, and the only difference is that we move all of the way to the edge of the interior solution.
+This is really the same case as the large upzoning above, because we again have $$P_{A} = P_{H} = P \approx 2.8$$, and the only difference is that we move all of the way to the edge of the interior solution.
 
 ![](https://michaelwiebe.com/assets/land_model/eqm4_apt.png){:width="100%"}
 ![](https://michaelwiebe.com/assets/land_model/eqm4_house.png){:width="100%"}
