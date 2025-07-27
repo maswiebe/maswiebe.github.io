@@ -24,9 +24,7 @@ To simplify, I assume they have a fixed budget to spend; in a complete model, de
 Also note that we are considering vacant parcels with no teardown cost.
 
 Click below to see the underlying demand functions.
-
 {::options parse_block_html="true" /}
-
 <details>
 <summary markdown="span">Math</summary>
 
