@@ -24,6 +24,7 @@ To simplify, I assume they have a fixed budget to spend; in a complete model, de
 Also note that we are considering vacant parcels with no teardown cost.
 
 Click below to see the underlying demand functions.
+<!-- need line break here -->
 
 {::options parse_block_html="true" /}
 
@@ -48,18 +49,20 @@ $$
 &u_{H}(x_{H},x_{A}) = x_{H} + x_{A} \\
 &u_{A}(x_{H},x_{A}) = x_{A} \\
 
-&m_{H} = 10 \\
-&m_{A} = 20 \\
+&m_{H} = 24 \\
+&m_{A} = 12 \\
 
 &x_{H,H} = \bigg\{ 
     \begin{matrix}
     0, p_{H} > p_{A} \\
-    \frac{m_{H}}{p_{H}}, p_{H} \leq p_{A} \\
+    \in \[0, \frac{m_H}{p_H} \], p_H = p_A \\
+    \frac{m_{H}}{p_{H}}, p_{H} < p_{A} \\
     \end{matrix} \\
 &x_{H,A} = \bigg\{ 
     \begin{matrix}
     \frac{m_{H}}{p_{A}}, p_{H} > p_{A} \\
-    0, p_{H} \leq p_{A} \\
+    \in \[0, \frac{m_H}{p_A} \], p_H = p_A \\
+    0, p_{H} < p_{A} \\
     \end{matrix} \\
 
 &x_{A,H} = 0 \\
@@ -91,13 +94,15 @@ Apartment developers spend their whole budget on apartment-zoned land, regardles
 Because they have higher willingness to pay, their quantity demanded is larger at higher prices.
 (Note that I'm using continuous quantities, which allows buying an infinitesimally-small quantity of land; in practice, the demand curve would intersect the y-axis at some price.)
 As before, house developers will spend everything on apartment-zoned land if it is cheap enough, but otherwise they go all-in on house-zoned land.
+When $$P_A = P_H (= 2)$$, they are indifferent, corresponding to the horizontal segment.
 
 ![](https://michaelwiebe.com/assets/land_model/sec_dem_apt.png){:width="100%"}
 
 Adding up the sector demand curves horizontally, we get aggregate demand for apartment-zoned land (see below).
 In the upper-left curved segment we will get a corner solution where apartment developers buy only apartment-zoned land, and house developers buy only house-zoned land.
-The horizontal segment is the interior solution where both developers buy apartment-zoned land and prices are equal.
-bottom-right curved
+(When $$P_A > 2$$, the aggregate demand curve is equal to the apartment developers' demand curve.)
+The horizontal segment is the interior solution where house developers buy some apartment-zoned land and prices are equal.
+(The bottom-right curved segment is the other corner solution where both developers buy only apartment zoned land and $$P_A < P_H$$; I'll discuss this case later.)
 
 ![](https://michaelwiebe.com/assets/land_model/agg_dem_apt.png){:width="100%"}
 
