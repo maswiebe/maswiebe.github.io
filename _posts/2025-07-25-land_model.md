@@ -25,6 +25,7 @@ Also note that we are considering vacant parcels with no teardown cost.
 
 Click below to see the underlying demand functions.
 {::options parse_block_html="true" /}
+
 <details>
 <summary markdown="span">Math</summary>
 
@@ -77,7 +78,7 @@ $$
 The graph below shows the demand curve for house-zoned land, with the price of of house-zoned land ($$P_H$$) on the y-axis.
 Recall that this is an inverse demand function, so we read it as: for a given price, what quantity of land is demanded?
 
-Here, the price of the substitute good is $$P_A = 12$$, so when $$P_H < 12$$, they buy only house-zoned land and spend their entire budget on it (bottom curved segment).
+Here, the price of the substitute good is $$P_A = 12$$, so when $$P_H < 12$$, the house developer buys only house-zoned land and spend their entire budget on it (bottom curved segment).
 The horizontal segment is where $$P_H = P_A$$, so the house developer is indifferent;
 any quantity along this segment is equally good (and the remaining budget is spent on apartment-zoned land).
 When $$P_H > 12$$, apartment-zoned land is cheaper, so demand for house-zoned land is 0 and the demand curve overlaps the y-axis.
