@@ -7,13 +7,18 @@ type: post
 
 When we upzone land from single-family zoning to apartment zoning, we change the allocation of a city's fixed stock of land.
 Upzoning makes apartment-zoned land more abundant and hence cheaper, while single-family-zoned land becomes scarcer and more expensive.
-Because land is an input into the production of housing, upzoning reduces the cost of building apartments, and hence is a key policy option for shifting the supply curve.
+Because land is an input into the production of housing, upzoning reduces the cost of building apartments, and hence is a key policy option for reducing housing costs.
 
 In this post I'll set up a two-sector model of land and show the effects of upzoning.
-House developers can use either single-family-zoned land or apartment-zoned land to produce houses, while apartment developers can only use apartment-zoned land.
-Since apartments are more lucrative than houses, apartment developers are willing to pay more for land, resulting in a higher price of apartment-zoned land.
-Since upzoning moves a parcel to the higher-price submarket, it effectively makes the parcel unavailable to house developers.
-In the extreme case, if we upzone so much that demand from apartment developers is fully satiated, then house developers are indifferent between the two types of land, and we get an interior solution where prices are equal across submarkets.
+House developers can use either single-family-zoned land or apartment-zoned land to produce houses, while apartment developers can use only apartment-zoned land.
+Since it's more lucrative to build an apartment building than a house on a given parcel, apartment developers are willing to pay more for land; as a result, the price of apartment-zoned land is higher than the price of single-family-zoned land.
+
+Upzoning moves a parcel from the single-family- to the apartment-zoned market.
+This makes apartment-zoned land more abundant, reducing its price;
+because land is an input into the production of apartments, upzoning reduces the price of apartments.
+In the extreme case, if we upzone all land, then house developers are indifferent between the two types of land, and we get an equilibrium where prices are equal across submarkets.
+<!-- so much that demand from apartment developers is fully satiated, -->
+<!-- the higher-price submarket, it effectively makes the parcel unavailable to house developers. -->
 
 # A two-sector model of land
 
@@ -24,7 +29,6 @@ To simplify, I assume they have a fixed budget to spend; in a complete model, de
 Also note that we are considering vacant parcels with no teardown cost.
 
 Click below to see the underlying demand functions.
-<!-- need line break here -->
 
 {::options parse_block_html="true" /}
 
