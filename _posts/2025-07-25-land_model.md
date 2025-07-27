@@ -24,6 +24,7 @@ To simplify, I assume they have a fixed budget to spend; in a complete model, de
 Also note that we are considering vacant parcels with no teardown cost.
 
 Click below to see the underlying demand functions.
+
 {::options parse_block_html="true" /}
 
 <details>
@@ -31,7 +32,7 @@ Click below to see the underlying demand functions.
 
 <!-- need $$ for inline math on kramdown (?), even though it renders as equations here -->
 Let $$x_{H}$$ = house-zoned land, $$x_{A}$$ = apartment-zoned land.
-Let $$x_{i,j}$$ be quantity demanded for developer $$i$$ of land type $$j$$, with budget $$m_{i}$$.
+Let $$x_{i,j}$$ be quantity demanded by developer type $$i$$ for land type $$j$$, with budget $$m_{i}$$.
 Given perfect substitutes utility $$u(x_{H},x_{A}) = a x_{H} + b x_{A}$$, we can derive the demand functions with the threshold defined by equating the marginal rate of substitution ($$a/b$$) with the price ratio ($$p_{H}/p_{A}$$).
 If $$p_{H}/a > p_{A}/b$$, the developer chooses $$x_{H}$$ and spends their entire budget on it; otherwise, they choose $$x_{A}$$.
 Here the house developer has $$a = b = 1$$.
@@ -93,9 +94,10 @@ As before, house developers will spend everything on apartment-zoned land if it 
 
 ![](https://michaelwiebe.com/assets/land_model/sec_dem_apt.png){:width="100%"}
 
-Adding up the sector demand curves horizontally, we get aggregate demand for apartment-zoned land.
-In the upper curved segment we will get a corner solution where apartment developers buy only apartment-zoned land, and house developers buy only house-zoned land.
-The bottom curved segment is the interior solution where both developers buy apartment-zoned land.
+Adding up the sector demand curves horizontally, we get aggregate demand for apartment-zoned land (see below).
+In the upper-left curved segment we will get a corner solution where apartment developers buy only apartment-zoned land, and house developers buy only house-zoned land.
+The horizontal segment is the interior solution where both developers buy apartment-zoned land and prices are equal.
+bottom-right curved
 
 ![](https://michaelwiebe.com/assets/land_model/agg_dem_apt.png){:width="100%"}
 
