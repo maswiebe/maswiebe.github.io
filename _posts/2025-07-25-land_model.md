@@ -20,7 +20,7 @@ In the extreme case, if we upzone so much that demand from apartment developers 
 Consider a representative house developer with perfect substitutes preferences over house-zoned and apartment-zoned land.
 For the house developer, a parcel is a parcel, since regardless of the zoning they can build a house on it.
 Hence, they treat both types of land as interchangeable, and will choose the lower-price option.
-(The horizontal segment is is where they are indifferent.)
+(The horizontal segment is where they are indifferent.)
 
 ![](https://michaelwiebe.com/assets/land_model/agg_dem_house.png){:width="100%"}
 
@@ -55,7 +55,7 @@ This shifts $$S_{A}$$ to the right, which reduces $$P_{A}$$ from 12 to 6.
 At the same time, $$S_{H}$$ shifts left, increasing $$P_{H}$$ from 2 to 2.2.
 Because the house developer treats the two land types as substitutes, these price changes also 'shift' the demand curves.
 (Recall from [last time](https://michaelwiebe.com/blog/2024/08/perfsub_cts) that this is actually a movement along the 3D demand surface.)
-House-zoned land becomes more expensive, so demand for its substitute (apartment-zoned land) increases; this is the shift up/right in demand for apartment-zoned land.
+House-zoned land becomes more expensive, so demand for its substitute (apartment-zoned land) increases; this is the shift up/right in demand for apartment-zoned land (from D1 to D2).
 
 ![](https://michaelwiebe.com/assets/land_model/eqm2_apt.png){:width="100%"}
 
@@ -91,8 +91,19 @@ This is really the same case as the large upzoning above, because we again have 
 ![](https://michaelwiebe.com/assets/land_model/eqm4_apt.png){:width="100%"}
 ![](https://michaelwiebe.com/assets/land_model/eqm4_house.png){:width="100%"}
 
-Note that we can't have an equilibrium in the other corner solution with $$P_{A} < P_{H}$$, because of market clearing: we can't have $$S_{H} <0 $$ or $$ S_{A} > S $$, so we can't shift $$S_{A}$$ farther than the horizontal segment of the demand curve.
+Note that this is the minimum $$P_A$$ achievable, since all supply is allocated to apartment-zoned land.
+So when $$S$$ is fixed, we can't drive $$P_A$$ down to the initial $$P_H=2$$, because we have to clear the market with demand from both types of developer, whereas $$P_H=2$$ comes from a market with only house developers (and hence less total demand).
+
+When $$S_H=0$$ we can also have equilibria with $$P_H > P_A$$, but these have the same equilibrium price $$P_A$$ and quantity $$S_A$$.
+(With larger values of $$P_H$$, the demand curve for apartment-zoned land 'shifts' up, but the intersection of supply and demand is unchanged.)
+
+# Discussion
 
 A full general equilibrium model would include the output markets for houses and apartments, and show explicitly how output prices for housing are linked to input prices for land.
 One interesting case to look at would be where mass upzoning reduces $$P_{H}$$ and hence further reduces house developers' demand for house-zoned land.
 For example, a huge increase in the supply of apartments downtown induces people to move out the exurbs.
+
+Another extension is the N-sector model with multiple types of apartments. 
+For example, the N=3 case could have houses, 3-storey apartments, and 6-storey apartments.
+This would also shed light on how development feasibility changes over time.
+For example, as demand for houses increases, so does the price; this raises house developers' willingness-to-pay for land. If demand from house developers is sufficiently higher than demand from 3-storey apartment developers, then no 3-storey apartments will be built.
