@@ -57,13 +57,11 @@ $$
 &x_{H,H} = \bigg\{ 
     \begin{matrix}
     0, p_{H} > p_{A} \\
-    % \in \[0, \frac{m_H}{p_H} \], p_H = p_A \\
     \frac{m_{H}}{p_{H}}, p_{H} < p_{A} \\
     \end{matrix} \\
 &x_{H,A} = \bigg\{ 
     \begin{matrix}
     \frac{m_{H}}{p_{A}}, p_{H} > p_{A} \\
-    % \in \[0, \frac{m_H}{p_A} \], p_H = p_A \\
     0, p_{H} < p_{A} \\
     \end{matrix} \\
 
@@ -71,7 +69,6 @@ $$
 &x_{A,A} = \frac{m_A}{p_A} \\
 \end{split}
 \end{aligned}
-
 
 $$
 
@@ -197,4 +194,4 @@ This shows the inherent tension in trying to both (a) improve housing affordabil
 Local governments are incentivized to do small spot-upzonings to maximize land lift, but because this limits the stock of apartment-zoned land, this comes at the expense of making apartments more affordable.
 Instead of taxing land only when it is developed, a better approach is to tax land unconditionally, like with a land value tax.
 
-Another extension is to model anticipation effects, where landowners and developers expect upzoning to occur in the future, which raises the price of house-zoned land today.
+Another extension is to model anticipation effects, where landowners expect upzoning to occur in the future, which raises the price of house-zoned land today.
