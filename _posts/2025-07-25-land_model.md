@@ -54,18 +54,18 @@ $$
 &m_{H} = 24 \\
 &m_{A} = 12 \\
 
-&x_{H,H} = \Bigl\{ 
-    \begin{matrix}
-    0, p_{H} > p_{A} \\
-    \in \left[0, \frac{m_H}{p_H} \right], p_H = p_A \\
-    \frac{m_{H}}{p_{H}}, p_{H} < p_{A} \\
-    \end{matrix} \\
-&x_{H,A} = \Biggl\{ 
-    \begin{matrix}
-    \frac{m_{H}}{p_{A}}, p_{H} > p_{A} \\
-    \in \left[0, \frac{m_H}{p_A} \right], p_H = p_A \\
-    0, p_{H} < p_{A} \\
-    \end{matrix} \\
+&x_{H,H} = 
+    \begin{cases}
+    0, & p_{H} > p_{A} \\
+    \in \left[0, \frac{m_H}{p_H} \right], & p_H = p_A \\
+    \frac{m_{H}}{p_{H}}, & p_{H} < p_{A} \\
+    \end{cases} \\
+&x_{H,A} = 
+    \begin{cases}
+    \frac{m_{H}}{p_{A}}, & p_{H} > p_{A} \\
+    \in \left[0, \frac{m_H}{p_A} \right], & p_H = p_A \\
+    0, & p_{H} < p_{A} \\
+    \end{cases} \\
 
 &x_{A,H} = 0 \\
 &x_{A,A} = \frac{m_A}{p_A} \\
