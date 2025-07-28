@@ -57,11 +57,13 @@ $$
 &x_{H,H} = \bigg\{ 
     \begin{matrix}
     0, p_{H} > p_{A} \\
+    \in \left[0, \frac{m_H}{p_H} \right], p_H = p_A \\
     \frac{m_{H}}{p_{H}}, p_{H} < p_{A} \\
     \end{matrix} \\
 &x_{H,A} = \bigg\{ 
     \begin{matrix}
     \frac{m_{H}}{p_{A}}, p_{H} > p_{A} \\
+    \in \left[0, \frac{m_H}{p_A} \right], p_H = p_A \\
     0, p_{H} < p_{A} \\
     \end{matrix} \\
 
