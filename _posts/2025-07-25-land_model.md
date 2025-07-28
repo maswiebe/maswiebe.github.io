@@ -54,13 +54,13 @@ $$
 &m_{H} = 24 \\
 &m_{A} = 12 \\
 
-&x_{H,H} = \left\{ 
+&x_{H,H} = \Bigl\{ 
     \begin{matrix}
     0, p_{H} > p_{A} \\
     \in \left[0, \frac{m_H}{p_H} \right], p_H = p_A \\
     \frac{m_{H}}{p_{H}}, p_{H} < p_{A} \\
     \end{matrix} \\
-&x_{H,A} = \left\{ 
+&x_{H,A} = \Biggl\{ 
     \begin{matrix}
     \frac{m_{H}}{p_{A}}, p_{H} > p_{A} \\
     \in \left[0, \frac{m_H}{p_A} \right], p_H = p_A \\
