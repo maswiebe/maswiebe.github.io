@@ -16,9 +16,7 @@ Since it's more lucrative to build an apartment building than a house on a given
 Upzoning moves a parcel from the single-family- to the apartment-zoned market.
 This makes apartment-zoned land more abundant, reducing its price;
 because land is an input into the production of apartments, upzoning reduces the price of apartments.
-In the extreme case, if we upzone all land, then house developers are indifferent between the two types of land, and we get an equilibrium where prices are equal across submarkets.
-<!-- so much that demand from apartment developers is fully satiated, -->
-<!-- the higher-price submarket, it effectively makes the parcel unavailable to house developers. -->
+In the extreme case, if we upzone all land, then house developers are indifferent between the two types of land, and we get an equilibrium where land prices are equal across submarkets.
 
 # A two-sector model of land
 
@@ -59,13 +57,13 @@ $$
 &x_{H,H} = \bigg\{ 
     \begin{matrix}
     0, p_{H} > p_{A} \\
-    \in \[0, \frac{m_H}{p_H} \], p_H = p_A \\
+    % \in \[0, \frac{m_H}{p_H} \], p_H = p_A \\
     \frac{m_{H}}{p_{H}}, p_{H} < p_{A} \\
     \end{matrix} \\
 &x_{H,A} = \bigg\{ 
     \begin{matrix}
     \frac{m_{H}}{p_{A}}, p_{H} > p_{A} \\
-    \in \[0, \frac{m_H}{p_A} \], p_H = p_A \\
+    % \in \[0, \frac{m_H}{p_A} \], p_H = p_A \\
     0, p_{H} < p_{A} \\
     \end{matrix} \\
 
