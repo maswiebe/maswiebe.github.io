@@ -10,6 +10,7 @@ Upzoning makes apartment-zoned land more abundant and hence cheaper, while singl
 Because land is an input into the production of housing, upzoning reduces the cost of building apartments, and hence is a key policy option for reducing housing costs.
 
 In this post I'll set up a two-sector model of land and show the effects of upzoning.
+(If you get stuck, try reading [this post](https://michaelwiebe.com/blog/2024/08/perfsub_cts) first.)
 House developers can use either single-family-zoned land or apartment-zoned land to produce houses, while apartment developers can use only apartment-zoned land.
 Since it's more lucrative to build an apartment building than a house on a given parcel, apartment developers are willing to pay more for land; as a result, the price of apartment-zoned land is higher than the price of single-family-zoned land.
 
@@ -20,8 +21,9 @@ In the extreme case, if we upzone all land, then house developers are indifferen
 
 # A two-sector model of land
 
-Consider a representative house developer with perfect substitutes preferences over house-zoned and apartment-zoned land.
-For the house developer, a parcel is a parcel, since they can build a house on it regardless of the zoning.
+Consider a representative house developer with [perfect substitutes](https://en.wikipedia.org/wiki/Substitute_good#Perfect_substitutes) preferences over house-zoned and apartment-zoned land.
+For the house developer, a parcel is a parcel, since they can build a house on it regardless of the zoning. 
+(Parcels of different zoning types are identical in size.)
 Hence, they treat both types of land as interchangeable, and will choose the lower-price option.
 To simplify, I assume they have a fixed budget to spend; in a complete model, developer demand for the input (land) is derived from the price of the output (housing).
 Also note that we are considering vacant parcels with no teardown cost.
@@ -82,20 +84,23 @@ $$
 
 The graph below shows the demand curve for house-zoned land, with the price of of house-zoned land ($$P_H$$) on the y-axis.
 Recall that this is an inverse demand function, so we read it as: for a given price, what quantity of land is demanded?
+For example, when the price is 2, quantity demanded is 12.
 
-Here, the price of the substitute good is $$P_A = 12$$, so when $$P_H < 12$$, the house developer buys only house-zoned land and spend their entire budget on it (bottom curved segment).
+Here, I'm showing an equilibrium where the price of the substitute good (apartment-zoned land) is $$P_A = 12$$, so when $$P_H < 12$$, the house developer buys only house-zoned land and spend their entire budget on it (bottom curved segment).
 The horizontal segment is where $$P_H = P_A$$, so the house developer is indifferent;
 any quantity along this segment is equally good (and the remaining budget is spent on apartment-zoned land).
 When $$P_H > 12$$, apartment-zoned land is cheaper, so demand for house-zoned land is 0 and the demand curve overlaps the y-axis.
 
 ![](https://michaelwiebe.com/assets/land_model/agg_dem_house.png){:width="100%"}
 
-For the apartment-zoned land market, we have to aggregate the demand of both house and apartment developers.
+For the apartment-zoned land market, we have to aggregate the demand of both house and apartment developers (see graph below).
 Apartment developers spend their whole budget on apartment-zoned land, regardless of how cheap house-zoned land gets.
 Because they have higher willingness to pay, their quantity demanded is larger at higher prices.
 (Note that I'm using continuous quantities, which allows buying an infinitesimally-small quantity of land; in practice, the demand curve would intersect the y-axis at some price.)
-As before, house developers will spend everything on apartment-zoned land if it is cheap enough, but otherwise they go all-in on house-zoned land.
-When $$P_A = P_H (= 2)$$, they are indifferent, corresponding to the horizontal segment.
+
+As before, house developers will spend everything on apartment-zoned land if it is cheap enough (bottom curved segment in blue).
+If apartment-zoned land is more expensive than house-zoned land, the demand curve is 0 and overlaps the y-axis (and they go all-in on house-zoned land).
+Here, the equilibrium has the substitute price at $$P_H=2$$, so when $$P_A = P_H = 2$$, they are indifferent between the two, corresponding to the horizontal segment.
 
 ![](https://michaelwiebe.com/assets/land_model/sec_dem_apt.png){:width="100%"}
 
