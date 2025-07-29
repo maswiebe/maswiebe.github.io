@@ -145,7 +145,7 @@ Hence, upzoning reduces the price of apartments.
 (The model here shows only the input market (for land), but intuitively, decreased input prices translate to decreased output prices.)
 
 Conversely, houses become a bit more expensive, since house developers have to compete over a more limited stock of land.
-This is progressive, because houses are inherently more of a luxury good than apartments.
+This is progressive, because houses are inherently more of a luxury good than apartments (ask yourself: which has more square footage, a private yard, private parking?).
 (Note that upzoning does not literally remove land from house developers; instead, upzoning moves land to a submarket with higher prices, where house developers are unwilling to pay the market price.)
 
 With this model, we can see where the "but upzoning raises land costs" argument goes wrong.
