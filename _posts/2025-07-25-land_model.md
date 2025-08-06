@@ -79,6 +79,7 @@ I assume the total stock of land is $$S=13$$, which can be allocated to house-zo
 
 In the corner solution with $$p_A > p_H$$, the aggregate demand curves are $$x_H^D = \frac{m_H}{p_H}$$ and $$x_A^D = \frac{m_A}{p_A}$$.
 Since quantity supplied is exogenous, we have $$x_i^D = x_i^S$$, so we can solve for prices $$p_H = \frac{m_H}{x_H^S}$$ and $$p_A = \frac{m_A}{x_A^S}$$.
+
 Hence, we can see that upzoning, by increasing $$x_A^S$$ and decreasing $$x_H^S$$, will reduce $$p_A$$ and increase $$p_H$$.
 (This is the main point, the rest of the post explains how this works out graphically.)
 
