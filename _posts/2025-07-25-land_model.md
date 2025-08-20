@@ -212,3 +212,6 @@ Local governments are incentivized to do small spot-upzonings to maximize land l
 Instead of taxing land only when it is developed, a better approach is to tax land unconditionally, like with a land value tax.
 
 Another extension is to model anticipation effects, where landowners expect upzoning to occur in the future, which raises the price of house-zoned land today.
+
+---
+Code for graphs [here](https://michaelwiebe.com/assets/land_model/perfsub_land.ipynb).
