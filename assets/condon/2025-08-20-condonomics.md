@@ -142,10 +142,4 @@ need two-sector GE model
  -->
 
 ---
-[^1]: Is Condon committing a fallacy of composition here, instead of assuming perfectly elastic demand? 
-That is, upzoning one parcel doesn't reduce housing prices, but upzoning the entire city would; 
-and Condon is arguing from no effect of upzoning one parcel to no effect of upzoning all parcels.
-I don't think this fits.
-When demand is perfectly elastic, neither a single upzoning nor a mass upzoning has any effect on price.
-But if demand is downward-sloping, then upzoning even one parcel would decrease the housing price by a tiny amount, say to $999.99psf.
-But then it's obvious that a larger upzoning would reduce prices even more.
+[^1]: Is Condon committing a fallacy of composition here, instead of assuming perfectly elastic demand? That is, upzoning one parcel doesn't reduce housing prices, but upzoning the entire city would; and Condon is arguing from no effect of upzoning one parcel to no effect of upzoning all parcels. I don't think this fits. When demand is perfectly elastic, neither a single upzoning nor a mass upzoning has any effect on price. But if demand is downward-sloping, then upzoning even one parcel would decrease the housing price by a tiny amount, say to $999.99psf. But then it's obvious that a larger upzoning would reduce prices even more.
