@@ -192,8 +192,8 @@ With Condon's version of IZ, the supply of market-rate housing cannot respond to
 This causes a 'demand cascade', where unabsorbed demand at the top of the market cascades down and increases competition for low-end homes, which in turn forces poorer residents to look for non-market housing.
 Hence, while IZ does increase the supply of subsidized homes, it also increases the need for subsidized housing.
 IZ is self-defeating.[^3]
-<!-- 
-- what about: zoning at height H vs zoning=H + Affordable units + tax cut
+
+<!-- what about: zoning at height H vs zoning=H + Affordable units + tax cut
     - could be: tax cut is worth more than cost of Aff units
     - or: city pays cash for Aff units; can set cash high enough.
     - or: dev pays cash to city, city pays cash to dev; it's a wash?
