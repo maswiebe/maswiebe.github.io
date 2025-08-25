@@ -206,12 +206,15 @@ For example, as demand for houses increases, so does the price; this raises hous
 
 Notice that in the small upzoning, the upzoned parcel increases in price from 2 to 6.
 This 'land lift' is the motivation for value capture policies that tax windfall gains from upzoning.
-But in the large upzoning, the land lift is much smaller: from 2 to 2.8.
+But in the large upzoning, the land lift per parcel is much smaller: from 2 to 2.8.
 This shows the inherent tension in trying to both (a) improve housing affordability, and (b) collect taxes from new developments.
-Local governments are incentivized to do small spot-upzonings to maximize land lift, but because this limits the stock of apartment-zoned land, this comes at the expense of making apartments more affordable.
+Local governments are incentivized to do small spot-upzonings to maximize land lift[^1], but because this limits the stock of apartment-zoned land, it comes at the expense of making apartments more affordable.
 Instead of taxing land only when it is developed, a better approach is to tax land unconditionally, like with a land value tax.
 
 Another extension is to model anticipation effects, where landowners expect upzoning to occur in the future, which raises the price of house-zoned land today.
 
 ---
 Code for graphs [here](https://michaelwiebe.com/assets/land_model/perfsub_land.ipynb).
+
+---
+[^1]: The land lift in a sequence of one-unit upzonings is: 6-2=4, 4-2.2=1.8, 3-2.4=0.6, and 2.8-2.7=0.1, for a total of 6.43. The last upzoning is from $$S_A=$$ 4 to 4.33, where we hit the interior solution. The land lift from upzoning 3.33 parcels at once is 3.33 * 0.8 = 2.67. (Upzoning all parcels at once delivers 12 * 0.8 = 9.6, which is better than spot upzoning. However, in a dynamic model with an optimal timing problem, spot zoning (delaying) has higher revenue when $$P_A$$ grows faster than $$P_H$$. So the revenue-maximizing policy is unclear.)
