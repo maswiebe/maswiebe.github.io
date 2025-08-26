@@ -9,6 +9,8 @@ Condon claims to be a pragmatic empiricist, but actually relies on extreme theor
 He thinks in memes, not models.
 The result is an incoherent analysis of housing policy.
 
+<!-- bottom line up front, tldr -->
+
 <!-- numbered sections? -->
 # An incoherent theory of land values
 
@@ -64,8 +66,11 @@ So Condon has misdiagnosed the problem, confusing cause with effect.
 We can also see the problem with Condon's thesis by applying it more generally.
 His view implies that it's never worth it to upgrade something, because upgrading just increases the cost.
 For example, processing iron ore into steel just means you have to pay more for the finished product.
-But of course, manufacturers can't use iron ore, just as apartment-developers can't use house-zoned land;
-and the increased availability of steel makes it cheaper, so manufacturers are actually better off.
+Let's apply Condon's thesis from above to steel:
+>the [steel] crisis is not caused by an impeded supply of [steel] but by the asset value of [iron ore]. This Rent value is inflated when [ore-processing is] authorized, much to the disappointment of those who argue that the [steel]-affordability problem is caused by constrained supply.
+
+But of course, manufacturers can't use iron ore, just as apartment-developers can't use house-zoned land.
+And the increased availability of steel makes it cheaper, so manufacturers are actually better off, just as apartment-developers are better off when apartment-zoned land is cheaper.
 <!-- Similarly, a company paying for a worker to get an accounting degree just means they have to pay higher wages; -->
 <!-- but if the untrained worker can't do accounting, -->
 
@@ -81,7 +86,7 @@ Condon attributes the problem to land values:
 For Condon, housing demand doesn't affect land prices, so he needs to find some other factor to explain why land values have increased.
 As we've seen, his attempt to pin the problem on upzoning fails, and with it, his attempt to disprove supply and demand.
 
-But a supply and demand model can neatly explain the data.
+In fact, a supply and demand model can neatly explain the data.
 Demand to live in cities like Vancouver has increased, and restrictive zoning has prevented supply from keeping up.
 This mismatch causes both higher housing prices and higher land values.
 
@@ -118,6 +123,7 @@ So Condon is simply _assuming_ that upzoning does not reduce housing prices.
 If we relax this assumption, then the demand curve slopes downward (as usual), and increasing supply reduces the price (Fig 1b).
 For example, if a mass upzoning increases supply and causes housing prices to fall to $900psf, then the land price residual is now $400psf instead of $500psf. 
 Hence, developers would only be willing to pay $400*8000 = $3.2M, instead of $4M.[^1]
+Notice what happened: land values went up and housing prices went down; according to Condon, this should be impossible.
 
 <!-- 
 show housing market graphs: 
@@ -162,26 +168,17 @@ For Condon, IZ reduces housing prices because it reduces land values:
 But this gets the causality backwards.
 The lower housing price is not 'attributable' to the lower land price; rather, the regulated housing price directly causes the lower land price.
 By artificially controlling the housing price, we reduce developers' willingness-to-pay for land, which in turn reduces the land price.
-So the land price is a symptom, not a cause.
+So the land price is a symptom, not a cause.[^2]
 
-More generally, there's no necessary connection between lower land values and more-affordable housing.
-We can always reduce the land price by reducing how much buyers are willing to pay.
-For example, if we change the zoning to "parking lot only", the land value will certainly be reduced!
-But obviously this will not make housing more affordable (in fact, the opposite).
-
-Because the lower housing price is artificial, it does not reflect changes in supply or demand.
-IZ is a _non_-market policy.
-So it would be a mistake to conclude that IZ works like a cost-reduction policy, by reducing the price of housing inputs (namely, land).
-Rather, IZ avoids the market entirely, and has no direct effect on the market forces that led to a housing price of $1,000psf.[^2]
-<!-- Using IZ to reduce prices is like dipping a thermometer in cold water to reduce the air temperature. -->
+Condon mistakenly implies that IZ works like a cost-reduction policy, by reducing the price of housing inputs (namely, land).
+But IZ is a _non_-market policy. 
+It has no direct effect on the market forces that led to a housing price of $1,000psf.[^3]
+Using IZ to reduce land costs is like dipping a thermometer in cold water to reduce the air temperature.
 
 This is an important point.
 IZ doesn't address the question of how we make _market-rate_ housing more affordable.
 Even though the vast majority of people live in market housing, Condon has no answers for them.
 Because he rejects supply and demand, Condon has given up on fixing the housing market, and instead wants to switch to a non-market approach.
-
-<!-- new section here? -->
-<!-- ## ... and is a suboptimal policy -->
 
 
 <!-- And as I've already pointed out, Condon is mistakenly focused on how upzoning affects the upzoned parcel's land price, instead of the market-wide price of land for each zoning type. -->
@@ -191,83 +188,81 @@ While IZ is a better than doing nothing, it is still worse than simple upzoning.
 With Condon's version of IZ, the supply of market-rate housing cannot respond to increases in high-end demand, because only new subsidized units are allowed.
 This causes a 'demand cascade', where unabsorbed demand at the top of the market cascades down and increases competition for low-end homes, which in turn forces poorer residents to look for non-market housing.
 Hence, while IZ does increase the supply of subsidized homes, it also increases the need for subsidized housing.
-IZ is self-defeating.[^3]
+IZ is self-defeating.[^4]
 
-<!-- what about: zoning at height H vs zoning=H + Affordable units + tax cut
-    - could be: tax cut is worth more than cost of Aff units
-    - or: city pays cash for Aff units; can set cash high enough.
-    - or: dev pays cash to city, city pays cash to dev; it's a wash?
-- nothing can be better than no-zoning, which maximally allows S to keep up with D.
-- how does "absorb demand increase" compare to "capture land value increase"?
-    - different comparison: shifting D vs capturing land value 
-    - can still do value capture under max upzoning
-        - and this improves on max upzoning
--->
+# Value capture 
 
-<!-- could do IZ money pump, and then discuss land value money pump -->
-<!--  point is that  -->
+And we can do land value capture in a market system. 
+Using my upzoning example above, when we relax the assumption of perfectly elastic demand, housing prices fall from $1000psf to $900psf and the land value increases from $2M to $3.2M.
+Since the minimum amount the landowner is willing to accept (their reservation price) is $2M, the city could impose a windfall tax of $1.2M on the landowner.
+In this case, the surplus created by upzoning is split between lower market-rate housing prices and higher land values, which are taxed for public benefit.
+Again, higher land values are consistent with lower housing prices.[^5]
 
-Curiously, Condon only uses FSR=2 in his IZ example.
-Why not go higher?
-By adding more storeys, we can split the land cost across more homes, and offer the Affordable housing at an even lower price.
-For example, if we instead use FSR=4, then we have 4,000 sqft of land * 4 FSR = 16,000 sqft of floor space.
-We need the land value to be at least $2M to meet the landowner's reservation price (they can get $2M in the no-upzoning scenario).
-At a total cost of $500 psf, that means we could set a housing price of $625psf.[^4]
-This is a substantial saving on the $750psf with FSR=2.
-But Condon shows no interest in higher-density Affordable housing.
+Because Condon insists that only upzoning can cause higher land values, his approach to value capture is woefully incomplete.
+As we've seen, land values in First Shaughnessy have quadrupled, despite zero upzonings.
+This land lift is driven by increased demand, and cannot be captured by regulations that apply only conditional on redevelopment.
+Condon's fixation on upzoning has blinded him to billions of dollars in land lift that should have been captured for public benefit.
+The solution is to tax land values unconditionally, as with a land value tax.[^6]
+Moreover, the same focus on upzoning means that Condon prescribes taxing new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
 
-We could even go higher, but the cost per sqft also increases with height.
-Suppose that at FSR=8, the cost rises to $650psf.
-Then we could set an Affordable housing price of $712.5psf, which is still an improvement on FSR=2.[^5]
-This process stops when the per-unit cost is higher than the per-unit price.
+# Incidence of development taxes
 
-Could we replicate this city-wide, tiling the town with towers of subsidized housing?
-For Condon, there is no limiting force here, because market housing prices are not affected by supply (recall the constant $1,000psf).
-But increasing the supply of subsidized homes does indirectly reduce market-rate prices, by inducing people to substitute away from market housing and into the non-market sector.
-When demand falls, so does the price.
-So the limiting factor on our tiling exercise is the market price falling below $712.5psf, since at that point, consumers would prefer market-rate housing instead.
+Condon does not have a model of the land market as a whole.
+Instead he analyzes a single parcel, which leads to a misleading analysis of development charges:
 
-But I suspect Condon does not want to acknowledge this, because it is precisely the same mechanism by which increasing the supply of new market-rate homes reduces the price of old housing.
-A higher supply of expensive new homes induces some young professionals to upgrade from their cheap old apartment; this reduces demand for old apartments, and hence reduces their price.
-This is an example of a [vacancy chain](https://www.buildingabundance.ca/p/vacancy-chains), since the young professionals vacate their initial unit.
-<!-- this argument is orthogonal to land values, though; his argument is that upzoning can't reduce home prices because of higher land values -->
-<!-- IZ still has problem of not absorbing demand increases -->
+>Development taxes [...] will affect the residual value of each buildable square foot of a subject parcel. When development taxes are added, the land-price residual goes down, and when development costs are removed, the land-price residual goes up. In this way, development taxes do not add to housing prices for new owners but reduce the residual value per buildable square foot of the development site, thus lowering the money that a developer is able to offer the landowner (p.197-198).
 
-(footnote to upzoning windfall tax money pump)
+This is true for a limited context.
+Specifically, when the tax amount is low enough that the project remains feasible, then the developer does pay less for land.
+Housing prices are set by the total quantity of homes supplied and demanded; since these haven't changed, housing prices are unaffected by the tax.
+So development taxes are another way to implement land value capture.
 
-<!-- another problem: IZ does not capture land value increases in SFH neighborhoods 
-Condon is interested only in taxing land values of new homes, not old homes
--->
+But more generally, excessive taxes can kill projects, which reduces supply and raises prices.
+Obviously a tax of $100M would not merely reduce the land price residual.
+Instead, it would lower the developer's willingness-to-pay below the landowner's reservation price, so the transaction would fail and the project would be cancelled.
+Since the tax reduces the quantity of homes supplied, it raises housing prices.
+In general, to evaluate the effect of a tax on housing prices, we need to look at the change in the total number of homes.[^7]
 
+Condon doesn't seem to recognize the risk of killing projects:
+>However, a development tax imposed late in the approval process _may_ make the business case for a project unworkable. At that point, either the project will be cancelled or the price for the land will be renegotiated down. Municipalities are therefore in a position to moderate or eliminate land-price inflation by signalling their intention, years ahead of time, to impose a development tax. One might call this process disciplining the land market. (p.163)
 
-<!-- could cut this -->
-<!-- A better approach is funded inclusionary zoning (FIZ), where Affordable homes are paid for out of general tax revenues.
-IZ funds new Affordable units by cannibalizing other housing, which turns housing supply into a negative-sum game (because we lose new housing while demand keeps increasing).
-In constrast, FIZ treats subsidized housing as a public good, to be provided by society as a whole.
-[Portland](https://sightline.org/2024/02/23/now-fully-funded-portlands-affordability-mandate-should-be-a-model/) uses this approach by giving property tax cuts in exchange for requiring subsidized units in large apartment buildings. -->
+Again, if projects are cancelled because a tax, then supply is reduced and housing prices are higher compared to the no-tax scenario.
+The same is true if the tax prevents projects from being started in the first place.
+Condon does not show an awareness of how taxes affect housing prices, since he is narrowly focused on minimizing land values.
 
+It's worth spelling out what Condon's strategy of "disciplining the land market" means.
+For Condon, housing does not follow supply and demand, so reducing market-rate housing prices is off the table.
+Instead, our only hope is to make land cheap enough for non-market projects to pencil.
+This requires imposing enough costs on developers that they stop building new projects, and hence stop offering to buy land at high prices.
+In turn, landowners would eventually realize that their land won't sell for a gain, and that they might as well sell it to a non-market developer with a lowball offer.
+Hence, we get cheap land for non-market housing.[^8]
+<!-- downzoning to keep land values low, vs upzoning to create value and capture it -->
 
-
-<!-- better: pump up land values and tax it, rather than suppressing dev WTP 
-shows that land values don't matter
-could bring this up in dev charge section
-- LVT is WTP-suppressor? dev accounts for higher future LVT payments at higher land values
-- whereas windfall/betterment tax is land-pumper 
--->
-
-
-# land lift, CACs
-
-
+But as I noted above, this strategy would be a disaster.
+It does nothing to absorb demand increases, so demand cascades would occur continuously, pushing more and more people into needing subsidized housing.
+Fortunately, Condon's views are incorrect, and we can improve affordability by upzoning to increase housing supply.
 
 
 ---
 [^1]: Is Condon committing a fallacy of composition here, instead of assuming perfectly elastic demand? That is, upzoning one parcel doesn't reduce housing prices, but upzoning the entire city would; and Condon is arguing from no effect of upzoning one parcel to no effect of upzoning all parcels. I don't think this fits. When demand is perfectly elastic, neither a single upzoning nor a mass upzoning has any effect on price. But if demand is downward-sloping, then upzoning even one parcel would decrease the housing price by a tiny amount, say to $999.99psf. But then it's obvious that a larger upzoning would reduce prices even more.
 
-[^2]: Strictly speaking, there is some substitution effect, as new subsidized units reduces demand and prices in the market-rate sector.
+[^2]: More generally, there's no necessary connection between lower land values and more-affordable housing. We can always reduce the land price by reducing how much buyers are willing to pay. For example, if we change the zoning to "parking lot only", the land value will certainly be reduced! But obviously this will not make housing more affordable (in fact, the opposite).
 
-[^3]: Versions of IZ that allow some market-rate housing alonside the Affordable units, and hence absorb demand increases, are better than versions that don't allow any market-rate housing.
+[^3]: Strictly speaking, there is some substitution effect, as new subsidized units reduce demand and prices in the market-rate sector.
 
-[^4]: The land value is $2M = (P - C) * S, for housing price P, total cost C, and floor space S. Solving for P, we get: P = $2M/S + C = $2M/16,000sf + 500 = 125 + 500 = $625psf.
+[^4]: Versions of IZ that allow some market-rate housing alongside the Affordable units, and hence absorb demand increases, are better than versions that don't allow any market-rate housing.
 
-[^5]: For FSR=8, we have P = $2M/32,000sf + 650 = 62.52 + 650 = $712.5psf.
+[^5]: Condon is focused on reducing land values _indirectly_, by reducing how much developers are willing to pay for land, so the price doesn't increase in the first place.
+As the windfall tax shows, this is not necessary; the city can capture the same land value when the transacted price goes up, by directly taxing the landowner.
+Also note that a land value tax works like IZ, by reducing developer willingness-to-pay for land. With a LVT, future tax payments are a liability that reduce the value of owning land.
+
+[^6]: An unconditional tax would also solve the problem of landowners shrinking land lift by raising their selling price in anticipation of future upzonings.
+
+[^7]: Similarly, a tax cut reduces prices by increasing the quantity of homes, since projects that didn't pencil with the tax now become feasible. These new homes increase competition between sellers, which drives prices down.
+
+[^8]: "Condon acknowledged that "disciplining the land market" would take time and require certain projects to go unbuilt, at least for a few years. A city council that attempted to do it could be seen as actively blocking new housing construction in a city where more affordable homes are always needed." [Source](https://www.ctvnews.ca/vancouver/article/land-lift-how-vancouver-zoning-policy-creates-multi-million-dollar-teardowns/)
+
+
+<!-- [^5]: The land value is $2M = (P - C) * S, for housing price P, total cost C, and floor space S. Solving for P, we get: P = $2M/S + C = $2M/16,000sf + 500 = 125 + 500 = $625psf. -->
+
+<!-- [^6]: For FSR=8, we have P = $2M/32,000sf + 650 = 62.52 + 650 = $712.5psf. -->
