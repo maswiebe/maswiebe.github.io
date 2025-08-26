@@ -252,9 +252,7 @@ Fortunately, Condon's views are incorrect, and we can improve affordability by u
 
 [^4]: Versions of IZ that allow some market-rate housing alongside the Affordable units, and hence absorb demand increases, are better than versions that don't allow any market-rate housing.
 
-[^5]: Condon is focused on reducing land values _indirectly_, by reducing how much developers are willing to pay for land, so the price doesn't increase in the first place.
-As the windfall tax shows, this is not necessary; the city can capture the same land value when the transacted price goes up, by directly taxing the landowner.
-Also note that a land value tax works like IZ, by reducing developer willingness-to-pay for land. With a LVT, future tax payments are a liability that reduce the value of owning land.
+[^5]: Condon is focused on reducing land values _indirectly_, by reducing how much developers are willing to pay for land, so the price doesn't increase in the first place. As the windfall tax shows, this is not necessary; the city can capture the same land value when the transacted price goes up, by directly taxing the landowner. Also note that a land value tax works like IZ, by reducing developer willingness-to-pay for land. With a LVT, future tax payments are a liability that reduce the value of owning land.
 
 [^6]: An unconditional tax would also solve the problem of landowners shrinking land lift by raising their selling price in anticipation of future upzonings.
 
