@@ -110,9 +110,9 @@ Only when demand for housing is perfectly elastic, so the demand curve is horizo
 In this case, shifting the supply of housing doesn't reduce the price, because supply always intersects demand at the same price.
 So Condon is simply _assuming_ that upzoning does not reduce housing prices.
 
-If we relax this assumption, then the demand curve slopes downward (as usual), and increasing supply reduces the price (Fig 1b).[^1]
+If we relax this assumption, then the demand curve slopes downward (as usual), and increasing supply reduces the price (Fig 1b).[^migration]
 For example, if a mass upzoning increases supply and causes housing prices to fall to $900psf, then the land price residual is now $400psf instead of $500psf. 
-Hence, developers would only be willing to pay $400*8000 = $3.2M, instead of $4M.[^2]
+Hence, developers would only be willing to pay $400*8000 = $3.2M, instead of $4M.[^fallacy_composition]
 Notice what happened: land values went up and housing prices went down; but according to Condon, this should be impossible.
 
 <!-- 
@@ -149,11 +149,11 @@ For Condon, IZ reduces housing prices because it reduces land values:
 But this gets the causality backwards.
 The lower housing price is not 'attributable' to the lower land price; rather, the regulated housing price directly causes the lower land price.
 By artificially controlling the housing price, we reduce developers' willingness-to-pay for land, which in turn reduces the land price.
-So the land price is a symptom, not a cause.[^3]
+So the land price is a symptom, not a cause.[^parkinglot_zoning]
 
 Condon mistakenly implies that IZ works like a cost-reduction policy, by reducing the price of housing inputs (namely, land).
 But IZ is a _non_-market policy. 
-It has no direct effect on the market forces that led to a housing price of $1,000psf.[^4]
+It has no direct effect on the market forces that led to a housing price of $1,000psf.[^substitution_effect]
 Using IZ to reduce land costs is like dipping a thermometer in cold water to reduce the air temperature.
 
 This is an important point.
@@ -165,7 +165,7 @@ While IZ is a better than doing nothing, it is still worse than simple upzoning.
 With Condon's version of IZ, the supply of market-rate housing cannot respond to increases in high-end demand, because only new subsidized units are allowed.
 This causes a 'demand cascade', where unabsorbed demand at the top of the market cascades down and increases competition for low-end homes, which in turn forces poorer residents to look for non-market housing.
 Hence, while IZ does increase the supply of subsidized homes, it also increases the need for subsidized housing.
-IZ is self-defeating.[^5]
+IZ is self-defeating.[^better_iz]
 
 # Value capture 
 
@@ -173,13 +173,13 @@ And we can do land value capture in a market system.
 Using my upzoning example above, when we relax the assumption of perfectly elastic demand, housing prices fall from $1000psf to $900psf and the land value increases from $2M to $3.2M.
 Since the minimum amount the landowner is willing to accept (their reservation price) is $2M, the city could impose a windfall tax of $1.2M on the landowner.
 In this case, the surplus created by upzoning is split between lower market-rate housing prices and higher land values, which are taxed for public benefit.
-Again, higher land values are consistent with lower housing prices.[^6]
+Again, higher land values are consistent with lower housing prices.[^demand_suppression]
 
 Because Condon insists that only upzoning can cause higher land values, his approach to value capture is woefully incomplete.
 As we've seen, land values in First Shaughnessy have quadrupled, despite zero upzonings.
 This land lift is driven by increased demand, and cannot be captured by regulations that apply only conditional on redevelopment.
 Condon's fixation on upzoning has blinded him to billions of dollars in land lift that should have been captured for public benefit.
-The solution is to tax land values unconditionally, as with a land value tax.[^7]
+The solution is to tax land values unconditionally, as with a land value tax.[^unconditional_tax]
 Moreover, the same focus on upzoning means that Condon prescribes taxing new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
 
 # Incidence of development taxes
@@ -220,22 +220,19 @@ Fortunately, Condon's views are incorrect, and we can improve affordability by u
 
 
 ---
-[^1]: What if inter-city migration makes local housing demand highly elastic? In this case, we evaluate one city's upzoning in the context of the national market, since lower prices induce in-migration from other cities.
-Upzoning in city A also reduces prices in B and C, so the effect is scaled down by A's share of the national population. 
-(The aggregate demand curve is downward-sloping, since immigration into the country is limited.)
-But this is just an argument for upzoning nationally, and for zoning policy to be set at higher-level governments to internalize the externalities of local upzoning.
+[^migration]: What if inter-city migration makes local housing demand highly elastic? In this case, we evaluate one city's upzoning in the context of the national market, since lower prices induce in-migration from other cities. Upzoning in city A also reduces prices in B and C, so the effect is scaled down by A's share of the national population. (The national demand curve is downward-sloping, since immigration into the country is limited.) But this is just an argument for upzoning nationally, and for zoning policy to be set at higher-level governments to internalize the externalities of local upzoning.
 
-[^2]: Is Condon committing a fallacy of composition here, instead of assuming perfectly elastic demand? That is, upzoning one parcel doesn't reduce housing prices, but upzoning the entire city would; and Condon is arguing from no effect of upzoning one parcel to no effect of upzoning all parcels. I don't think this fits. When demand is perfectly elastic, neither a single upzoning nor a mass upzoning has any effect on price. But if demand is downward-sloping, then upzoning even one parcel would decrease the housing price by a tiny amount, say to $999.99psf. But then it's obvious that a larger upzoning would reduce prices even more.
+[^fallacy_composition]: Is Condon committing a fallacy of composition here, instead of assuming perfectly elastic demand? That is, upzoning one parcel doesn't reduce housing prices, but upzoning the entire city would; and Condon is arguing from no effect of upzoning one parcel to no effect of upzoning all parcels. I don't think this fits. When demand is perfectly elastic, neither a single upzoning nor a mass upzoning has any effect on price. But if demand is downward-sloping, then upzoning even one parcel would decrease the housing price by a tiny amount, say to $999.99psf. But then it's obvious that a larger upzoning would reduce prices even more.
 
-[^3]: More generally, there's no necessary connection between lower land values and more-affordable housing. We can always reduce the land price by reducing how much buyers are willing to pay. For example, if we change the zoning to "parking lot only", the land value will certainly be reduced! But obviously this will not make housing more affordable (in fact, the opposite).
+[^parkinglot_zoning]: More generally, there's no necessary connection between lower land values and more-affordable housing. We can always reduce the land price by reducing how much buyers are willing to pay. For example, if we change the zoning to "parking lot only", the land value will certainly be reduced! But obviously this will not make housing more affordable (in fact, the opposite).
 
-[^4]: Strictly speaking, there is some substitution effect, as new subsidized units reduce demand and prices in the market-rate sector.
+[^substitution_effect]: Strictly speaking, there is some substitution effect, as new subsidized units reduce demand and prices in the market-rate sector.
 
-[^5]: Versions of IZ that allow some market-rate housing alongside the Affordable units, and hence absorb demand increases, are better than versions that don't allow any market-rate housing.
+[^better_iz]: Versions of IZ that allow some market-rate housing alongside the Affordable units, and hence absorb demand increases, are better than versions that don't allow any market-rate housing.
 
-[^6]: Condon is focused on reducing land values _indirectly_, by reducing how much developers are willing to pay for land, so the price doesn't increase in the first place. As the windfall tax shows, this is not necessary; the city can capture the same land value when the transacted price goes up, by directly taxing the landowner. Also note that a land value tax works like IZ, by reducing developer willingness-to-pay for land. With a LVT, future tax payments are a liability that reduce the value of owning land.
+[^demand_suppression]: Condon is focused on reducing land values _indirectly_, by reducing how much developers are willing to pay for land, so the price doesn't increase in the first place. As the windfall tax shows, this is not necessary; the city can capture the same land value when the transacted price goes up, by directly taxing the landowner. Also note that a land value tax works like IZ, by reducing developer willingness-to-pay for land. With a LVT, future tax payments are a liability that reduce the value of owning land.
 
-[^7]: An unconditional tax would also solve the problem of landowners shrinking land lift by raising their selling price in anticipation of future upzonings.
+[^unconditional_tax]: An unconditional tax would also solve the problem of landowners shrinking land lift by raising their selling price in anticipation of future upzonings.
 
 [^taxcut_effect]: Similarly, a tax cut reduces prices by increasing the quantity of homes, since projects that didn't pencil with the tax now become feasible. These new homes increase competition between sellers, which drives prices down.
 
