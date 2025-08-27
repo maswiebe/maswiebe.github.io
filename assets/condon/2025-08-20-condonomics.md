@@ -26,7 +26,6 @@ But what is the causal model underlying these correlations?
 Condon's model is that upzoning is the primary driver of land values, which in turn cause higher housing prices.
 
 Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values have quadrupled over 20 years, while building values have roughly tripled.
-<!-- tripled? starts around 0.3-0.4? -->
 
 ![](https://michaelwiebe.com/assets/condon/shaughnessy_land.png){:width="100%"}
 
@@ -68,8 +67,6 @@ Let's apply Condon's thesis from above to steel:
 
 But of course, manufacturers can't use iron ore, just as apartment-developers can't use house-zoned land.
 And the increased availability of steel makes it cheaper, so manufacturers are actually better off, just as apartment-developers are better off when apartment-zoned land is cheaper.
-<!-- Similarly, a company paying for a worker to get an accounting degree just means they have to pay higher wages; -->
-<!-- but if the untrained worker can't do accounting, -->
 
 # A dogmatic rejection of supply and demand
 
@@ -78,7 +75,6 @@ In Condon's worldview, supply and demand cannot explain the housing market:
 
 Condon attributes the problem to land values:
 >[The] increase in urban land price seems to be caused by factors other than the supply and demand for new homes. The increase has to do with the innate limits on the availability of urban land and with how these limits make land perform uniquely in the global marketplace for "real" assets. (p.56)
-<!-- need this quote? it does give the reader more context on Condon's thinking -->
 
 For Condon, housing demand doesn't affect land prices, so he needs to find some other factor to explain why land values have increased.
 As we've seen, his attempt to pin the problem on upzoning fails, and with it, his attempt to disprove supply and demand.
@@ -101,8 +97,7 @@ To see how Condon relies on extreme theoretical edge cases, let's consider his n
 >
 >When the city authorities a doubling of market density without requiring affordability, the residual land price goes up in response. The city gets more efficient use of the land with the new density – all good – but gets no substantial decrease in the [price] per square foot of new housing. [...]
 >
->In this example, with a market sale price of $1,000 per square foot of usable interior space, the developer would calculate a land-price residual of $500 per buildable square foot because that is what is left after paying for construction (at $250 per square foot) and for fees, constants, and profits (at a total of $250 per square foot). The developer can afford only up to $500 per buildable square foot, or roughly $4 million for land (i.e., 8,000 interior square feet at $500 per buildable square foot). [...] But note the land-price residual has doubled from $2 million to $4 million. And if the developer refuses to pay the $4 million, some other developer certainly will. (p.195-96)
-<!-- show 1 to 4 storey upzoning meme? -->
+>In this example, with a market sale price of $1,000 per square foot of usable interior space, the developer would calculate a land-price residual of $500 per buildable square foot because that is what is left after paying for construction (at $250 per square foot) and for fees, constants, and profits (at a total of $250 per square foot). The developer can afford only up to $500 per buildable square foot, or roughly $4 million for land (i.e., 8,000 interior square feet at $500 per buildable square foot). [...] But note the land-price residual has doubled from $2 million to $4 million. And if the developer refuses to pay the $4 million, some other developer certainly will. (p.195-96)[^upzoning_meme]
 
 Note the last sentence: this entire argument depends on this tacked-on clause, though Condon does not realize it. 
 When would a developer be willing to pay $4 million?
@@ -115,11 +110,7 @@ For example, if a mass upzoning increases supply and causes housing prices to fa
 Hence, developers would only be willing to pay $400*8000 = $3.2M, instead of $4M.[^fallacy_composition]
 Notice what happened: land values went up and housing prices went down; but according to Condon, this should be impossible.
 
-<!-- 
-show housing market graphs: 
-1a: horizontal D
-1b: downward-sloping D
--->
+![](https://michaelwiebe.com/assets/condon/perf_elastic.png){:width="100%"}
 
 Another problem is that Condon is focused on the land price of a single parcel, instead of the market-wide price of each type of land.
 When the parcel is upzoned, it switches from FSR=1 to FSR=2. 
@@ -187,7 +178,7 @@ Moreover, the same focus on upzoning means that Condon prescribes taxing new hou
 Condon does not have a model of the land market as a whole.
 Instead he analyzes a single parcel, which leads to a misleading analysis of development charges:
 
->Development taxes [...] will affect the residual value of each buildable square foot of a subject parcel. When development taxes are added, the land-price residual goes down, and when development costs are removed, the land-price residual goes up. In this way, development taxes do not add to housing prices for new owners but reduce the residual value per buildable square foot of the development site, thus lowering the money that a developer is able to offer the landowner (p.197-198).
+>Development taxes [...] will affect the residual value of each buildable square foot of a subject parcel. When development taxes are added, the land-price residual goes down, and when development costs are removed, the land-price residual goes up. In this way, development taxes do not add to housing prices for new owners but reduce the residual value per buildable square foot of the development site, thus lowering the money that a developer is able to offer the landowner (p.197-198).[^fee_meme]
 
 This is true for a limited context.
 Specifically, when the tax amount is low enough that the project remains feasible, then the developer does pay less for land.
@@ -238,3 +229,8 @@ Fortunately, Condon's views are incorrect, and we can improve affordability by u
 
 [^discpline_quote]: "Condon acknowledged that "disciplining the land market" would take time and require certain projects to go unbuilt, at least for a few years. A city council that attempted to do it could be seen as actively blocking new housing construction in a city where more affordable homes are always needed." [Source](https://www.ctvnews.ca/vancouver/article/land-lift-how-vancouver-zoning-policy-creates-multi-million-dollar-teardowns/)
 
+[^upzoning_meme]: Condon has a meme version of this example, where the key point is that housing prices are held fixed by assumption. 
+    ![](https://michaelwiebe.com/assets/condon/condon_land.png){:width="80%"}
+
+[^fee_meme]: Condon also has a meme version of this argument. The key assumption is that fees are less than the land price residual; if fees are larger, then the residual is negative and the project fails.
+    ![](https://michaelwiebe.com/assets/condon/condon-impact_fee.jpeg){:width="80%"}
