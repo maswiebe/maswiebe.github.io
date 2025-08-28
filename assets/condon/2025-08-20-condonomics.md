@@ -236,10 +236,7 @@ Condon's fixation on upzoning has blinded him to billions of dollars in land lif
 The solution is to tax land values unconditionally, as with a land value tax.[^unconditional_tax]
 
 Moreover, the same focus on upzoning means that Condon prescribes taxing only new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
-In fact, we can see in the graph above that the 2019 [property tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax/additional-school-tax-rate) did appear to reduce land values; but Condon appears uninterested in raising taxes that affect all homeowners.
-<!-- or caused also by higher PTT, foreign buyer tax, speculation and vacancy tax?
-https://www.policyalternatives.ca/news-research/property-tax-changes/
- -->
+In fact, we can see in the graph above that the 2019 [property tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax/additional-school-tax-rate) coincided with a decrease in land values; but Condon appears uninterested in raising taxes that affect all homeowners.
 
 # VI. A partial grasp of development taxes
 
