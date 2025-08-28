@@ -19,18 +19,77 @@ Condon's thesis is that rising land values are responsible for increasing housin
 
 In other words, since land is an input into the production of housing, higher land values will drive up housing costs.
 And upzoning in particular is a primary cause of higher land values.
-
 This view is superficially plausible. 
 As a naive empiricist, Condon has observed rising housing prices and land values coincide with upzonings.
-But what is the causal model underlying these correlations?
-Condon's model is that upzoning is the primary driver of land values, which in turn cause higher housing prices.
+But what is the actual causal relationship underlying these correlations?
 
-Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values have quadrupled over 20 years, while building values have roughly tripled.
+Condon thinks that upzoning drives land values, which in turn causes higher housing prices.
+Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values quintupled between 2006 and 2017, before a property tax was implemented. (I'll return to this.)
+Over the same period, building values doubled.
 
-![](https://michaelwiebe.com/assets/condon/shaughnessy_land.png){:width="100%"}
+![](https://michaelwiebe.com/assets/condon/shaughnessy.png){:width="100%"}
 
-(The graph for Vancouver overall is remarkably similar.)
-The entire neighborhood of First Shaughnessy is a [heritage conservation area](https://bylaws.vancouver.ca/ODP/odp-heritage-conservation-area.pdf), so we have a clean natural experiment: no upzonings are happening here.
+{::options parse_block_html="true" /}
+
+<details>
+<summary markdown="span">Code</summary>
+
+```{r}
+library(VancouvR)
+library(tidyverse)
+
+# time series plot of average land and building values in First Shaughnessy
+
+# remove upzoned parcels and character infill
+  # if zoning changes, then no longer FSD
+  # hence, require that zoning is FSD in all years
+# use assessment date: July 1 of previous year
+
+fsd_data <- search_cov_datasets("tax")$dataset_id |>
+  map_df(\(ds)get_cov_data(ds, where = "zoning_district= 'FSD'",
+         select = "pid,land_coordinate,zoning_district,neighbourhood_code,report_year,current_land_value,current_improvement_value")) |>
+  mutate(n=n(),.by=land_coordinate) # count number of times a parcel appears
+
+est_data <- tibble(Date=as.Date(c("2018-02-01")), label=c("Announced"))
+
+png(file=paste0("shaughnessy.png"), width=750, height=400, res=90)
+fsd_data |>
+  # keep parcels with 18 observations as FSD
+  # if >18, then multiple conversion dwelling: multiple dwellings per parcel
+  filter(n==length(unique(fsd_data$report_year))) |>
+  summarize(`Land value`=mean(current_land_value),
+            `Building value`= mean(current_improvement_value),
+            .by=report_year) |>
+  mutate(Date=as.Date(paste0(as.integer(report_year)-1,"-07-01"))) |>
+  arrange(Date) |>
+  pivot_longer(cols=c(`Land value`, `Building value`), names_to="type", values_to="value") |>
+  ggplot(aes(x=Date, y=value, colour=type)) +
+  geom_line() +
+  geom_point(shape=21) +
+  geom_vline(data=est_data, aes(xintercept=Date), colour="black", linetype="dashed") +
+  scale_y_continuous(labels=\(x) scales::dollar(x, scale=10^-6, suffix="M")) +
+  scale_color_manual(values=c("Land value"="#1F77B4", "Building value"="#FF7F0E")) +
+  labs(
+    title="First Shaughnessy land and building values",
+    x="Assessment year",
+    y="Average value",
+    colour=NULL,
+    caption="Note: extra school tax announced in 2018, implemented in 2019."
+  ) +
+  guides(linetype="none") +   # removes legend entry for vline
+  theme(plot.caption = element_text(hjust = 0) # left-align caption
+        , legend.position = "right",
+        legend.justification = "center"
+        ) 
+dev.off()
+```
+
+</details>
+
+{::options parse_block_html="false" /}
+
+<!-- (The graph for Vancouver overall is remarkably similar.) -->
+The entire neighborhood of First Shaughnessy is a [heritage conservation area](https://bylaws.vancouver.ca/ODP/odp-heritage-conservation-area.pdf), so we have a clean natural experiment: very few upzonings are happening here (and any rezoned parcels are removed from the data).
 But then what is causing the increase in land values?
 Condon has no answer.
 He could appeal to speculators bidding up parcels in anticipation of future upzonings, but when the entire neighborhood is heritage-protected, this is obviously strained.
@@ -40,13 +99,13 @@ So what is the correct model of housing and land values?
 
 Consider a simplified setting where land is zoned for either detached houses or six-storey apartments; developers can build houses on house-zoned _or_ apartment-zoned land, and can build apartments only on apartment-zoned land.
 Upzoning means reallocating a parcel from house-zoning to apartment-zoning.
-This makes apartment-zoned land more abundant and hence cheaper, while house-zoned land becomes scarcer and more expensive.
-Since land is an input into housing, upzoning makes apartments cheaper and houses more expensive.
+This makes apartment-zoned land more abundant and hence cheaper (Figure 1b), while house-zoned land becomes scarcer and more expensive (Figure 1a).
+Since land is an input into housing, upzoning makes apartments cheaper and houses more expensive.[^ge_logic]
 (See [here](https://michaelwiebe.com/blog/2025/07/land_model) for a full writeup.)
 
 ![](https://michaelwiebe.com/assets/condon/two_sector_housing.png){:width="100%"}
 
-Condon does get one thing right: the upzoned parcel itself increases in value as it switches markets. 
+Condon does get one thing right: the upzoned parcel itself increases in value as it switches markets (from $$P_1^H$$ to $$P_2^A$$).
 But this 'own-parcel effect' is irrelevant for evaluating upzoning. 
 Developers make decisions based on the market-wide price, not the price of a single parcel.
 Upzoning reduces costs for apartment-developers, because it reduces the price of apartment-zoned land.
@@ -54,8 +113,7 @@ The upzoned parcel itself was previously _legally_ unavailable to apartment-deve
 
 In this model, housing demand is the main driver of land values.
 When demand to live in the city increases while supply is constrained, housing prices go up, which raises developers' willingness-to-pay for land.
-This is why land values in First Shaughnessy have quadrupled: Vancouver has become more attractive to global elite CEO types who want to live in a mansion.
-(Technically, land and housing prices are jointly determined; causality runs in both directions.)
+This is why land values in First Shaughnessy have quadrupled: Vancouver has become more attractive to global-elite CEO types who want to live in a mansion.
 Hence, the cause of the housing crisis is housing demand growing faster than supply, with rising land values being a symptom.
 So Condon has misdiagnosed the problem, confusing cause with effect.
 
@@ -101,11 +159,11 @@ To see how Condon relies on extreme theoretical edge cases, let's consider his n
 
 Note the last sentence: this entire argument depends on this tacked-on clause, though Condon does not realize it. 
 When would a developer be willing to pay $4 million?
-Only when demand for housing is perfectly elastic, so the demand curve is horizontal (see Fig 1a below).
+Only when demand for housing is perfectly elastic, so the demand curve is horizontal (see Fig 2a below).
 In this case, shifting the supply of housing doesn't reduce the price, because supply always intersects demand at the same price.
 So Condon is simply _assuming_ that upzoning does not reduce housing prices.
 
-If we relax this assumption, then the demand curve slopes downward (as usual), and increasing supply reduces the price (Fig 1b).[^migration]
+If we relax this assumption, then the demand curve slopes downward (as usual), and increasing supply reduces the price (Fig 2b).[^migration]
 For example, if a mass upzoning increases supply and causes housing prices to fall to $900psf, then the land price residual is now $400psf instead of $500psf. 
 Hence, developers would only be willing to pay $400*8000 = $3.2M, instead of $4M.[^fallacy_composition]
 Notice what happened: land values went up and housing prices went down; but according to Condon, this should be impossible.
@@ -123,7 +181,6 @@ His claim is that higher land values are the cause of higher housing prices, and
 But in this example, the goalposts have shifted: now the goal is to show that upzoning does not _reduce_ housing prices.
 That's because Condon doesn't have a model of prices; by assuming perfectly elastic demand, he effectively takes prices as fixed, and determined outside of the model.
 Hence, even if we set aside the reliance on a theoretical edge case, Condon is unable to support his thesis that upzoning increases housing prices.
-
 
 # Inclusionary zoning 
 
@@ -152,11 +209,14 @@ IZ doesn't address the question of how we make _market-rate_ housing more afford
 Even though the vast majority of people live in market housing, Condon has no answers for them.
 Because he rejects supply and demand, Condon has given up on fixing the housing market, and instead wants to switch to a non-market approach.
 
-While IZ is a better than doing nothing, it is still worse than simple upzoning.
+While IZ is better than doing nothing, it is still worse than simple upzoning.
 With Condon's version of IZ, the supply of market-rate housing cannot respond to increases in high-end demand, because only new subsidized units are allowed.
-This causes a 'demand cascade', where unabsorbed demand at the top of the market cascades down and increases competition for low-end homes, which in turn forces poorer residents to look for non-market housing.
+This causes a [demand cascade](https://michaelwiebe.com/blog/2024/08/perfsub_cts#demand-cascades-and-yuppie-fishtanks), where unabsorbed demand at the top of the market cascades down and increases competition for low-end homes, which in turn forces poorer residents to look for non-market housing.
 Hence, while IZ does increase the supply of subsidized homes, it also increases the need for subsidized housing.
 IZ is self-defeating.[^better_iz]
+
+![](https://michaelwiebe.com/assets/condon/iz_protect.jpg){:width="100%"}
+
 
 # Value capture 
 
@@ -231,6 +291,11 @@ Fortunately, Condon's views are incorrect, and we can improve affordability by u
 
 [^upzoning_meme]: Condon has a meme version of this example, where the key point is that housing prices are held fixed by assumption. 
     ![](https://michaelwiebe.com/assets/condon/condon_land.png){:width="80%"}
+    By the same logic, upzoning agricultural land to single-family residential doesn't reduce housing prices, because it just increases land values.
+    ![](https://michaelwiebe.com/assets/condon/condon-agri_upzoning.png){:width="80%"}
+
 
 [^fee_meme]: Condon also has a meme version of this argument. The key assumption is that fees are less than the land price residual; if fees are larger, then the residual is negative and the project fails.
     ![](https://michaelwiebe.com/assets/condon/condon-impact_fee.jpeg){:width="80%"}
+
+[^ge_logic]: Equivalently, higher supply of apartment-zoned land increases the supply of apartments, reducing their price. Since apartments are cheaper, the return to owning apartment-zoned land is lower. In a general equilibrium model, land and housing prices are [jointly determined](https://michaelwiebe.com/blog/2025/08/hijack_review#land-and-housing-prices); causality runs in both directions. So lower land prices cause lower apartment prices, and lower apartment prices cause lower land prices.
