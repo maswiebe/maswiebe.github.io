@@ -8,7 +8,7 @@ type: post
 In [Broken City](https://www.ubcpress.ca/broken-city), landscape architect Patrick Condon presents a diagnosis of the housing crisis.
 Condon claims to be a pragmatic empiricist, but he actually relies on extreme theoretical scenarios.
 He thinks in memes, not models.
-The result is an flawed analysis of housing policy.
+The result is a flawed analysis of housing policy.
 Condon misunderstands the relationship between land and housing prices, and incorrectly identifies upzoning as the main cause of the housing crisis.
 This leads him to reject supply and demand theory entirely.
 Applying this erroneous framework to inclusionary zoning and development taxes, Condon recommends policies that would worsen housing affordability.
@@ -26,7 +26,7 @@ As a naive empiricist, Condon has observed rising housing prices and land values
 But what is the actual causal relationship underlying these correlations?
 
 Condon thinks that upzoning drives land values, which in turn causes higher housing prices.
-Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values quintupled between 2006 and 2017, before decreasing after a property tax was implemented. 
+Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values quintupled between 2006 and 2017 (before decreasing after a property tax was implemented). 
 <!-- (I'll return to this.) -->
 Over the same period, building values doubled.
 
@@ -274,12 +274,12 @@ In turn, landowners would eventually realize that their land won't sell for a ga
 Hence, we get cheap land for non-market housing.[^discpline_quote]
 
 But as I noted above, this strategy would be a disaster.
-It does nothing to absorb demand increases, so demand cascades would occur continuously, pushing more and more people into needing subsidized housing.
+It does nothing to absorb demand increases, so demand cascades would occur continuously, raising prices and pushing more and more people into needing subsidized housing.
 Fortunately, Condon's views are incorrect, and we can improve affordability by upzoning to increase housing supply.
 <!-- better conclusion? -->
 
 ---
-[^migration]: What if inter-city migration makes local housing demand highly elastic? In this case, we evaluate one city's upzoning in the context of the national market, since lower prices induce in-migration from other cities. Upzoning in city A also reduces prices in B and C, so the effect is scaled down by A's share of the national population. (The national demand curve is downward-sloping, since immigration into the country is limited.) But this is just an argument for upzoning nationally, and for zoning policy to be set at higher-level governments to internalize the externalities of local upzoning.
+[^migration]: What if inter-city migration makes local housing demand highly elastic? In this case, we evaluate one city's upzoning in the context of the national market, since lower prices induce in-migration from other cities. Upzoning in city A also reduces prices in B and C, so the effect is scaled down by A's share of the national population. But the national demand curve is downward-sloping, since immigration into the country is limited, so we get the same analysis as before. In fact, this is just an argument for upzoning nationally, and for zoning policy to be set at higher-level governments to internalize the externalities of local upzoning.
 
 [^fallacy_composition]: Is Condon committing a fallacy of composition here, instead of assuming perfectly elastic demand? That is, upzoning one parcel doesn't reduce housing prices, but upzoning the entire city would; and Condon is arguing from no effect of upzoning one parcel to no effect of upzoning all parcels. I don't think this fits. When demand is perfectly elastic, neither a single upzoning nor a mass upzoning has any effect on price. But if demand is downward-sloping, then upzoning even one parcel would decrease the housing price by a tiny amount, say to $999.99psf. But then it's obvious that a larger upzoning would reduce prices even more.
 
