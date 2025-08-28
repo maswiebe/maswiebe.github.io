@@ -5,14 +5,16 @@ date: 2025-08-20 17:00:00
 type: post
 ---
 
-Condon claims to be a pragmatic empiricist, but actually relies on extreme theoretical scenarios.
+In [Broken City](https://www.ubcpress.ca/broken-city), landscape architect Patrick Condon presents a diagnosis of the housing crisis.
+Condon claims to be a pragmatic empiricist, but he actually relies on extreme theoretical scenarios.
 He thinks in memes, not models.
-The result is an incoherent analysis of housing policy.
-
-<!-- bottom line up front, tldr -->
+The result is an flawed analysis of housing policy.
+Condon misunderstands the relationship between land and housing prices, and incorrectly identifies upzoning as the main cause of the housing crisis.
+This leads him to reject supply and demand theory entirely.
+Applying this erroneous framework to inclusionary zoning and development taxes, Condon recommends policies that would worsen housing affordability.
 
 <!-- numbered sections? -->
-# An incoherent theory of land values
+# I. An incoherent theory of land values
 
 Condon's thesis is that rising land values are responsible for increasing housing costs:
 >The thesis of this volume [...] is that the housing crisis is not caused by an impeded supply of homes but by the asset value of the land below them. This Rent value is inflated when higher-density homes are authorized, much to the disappointment of those who argue that the housing-affordability problem is caused by constrained supply. (p.177)
@@ -24,7 +26,8 @@ As a naive empiricist, Condon has observed rising housing prices and land values
 But what is the actual causal relationship underlying these correlations?
 
 Condon thinks that upzoning drives land values, which in turn causes higher housing prices.
-Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values quintupled between 2006 and 2017, before a property tax was implemented. (I'll return to this.)
+Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values quintupled between 2006 and 2017, before decreasing after a property tax was implemented. 
+<!-- (I'll return to this.) -->
 Over the same period, building values doubled.
 
 ![](https://michaelwiebe.com/assets/condon/shaughnessy.png){:width="100%"}
@@ -113,7 +116,7 @@ The upzoned parcel itself was previously _legally_ unavailable to apartment-deve
 
 In this model, housing demand is the main driver of land values.
 When demand to live in the city increases while supply is constrained, housing prices go up, which raises developers' willingness-to-pay for land.
-This is why land values in First Shaughnessy have quadrupled: Vancouver has become more attractive to global-elite CEO types who want to live in a mansion.
+This is why land values in First Shaughnessy quintupled: Vancouver became more attractive to global-elite CEO types who want to live in a mansion.
 Hence, the cause of the housing crisis is housing demand growing faster than supply, with rising land values being a symptom.
 So Condon has misdiagnosed the problem, confusing cause with effect.
 
@@ -126,7 +129,7 @@ Let's apply Condon's thesis from above to steel:
 But of course, manufacturers can't use iron ore, just as apartment-developers can't use house-zoned land.
 And the increased availability of steel makes it cheaper, so manufacturers are actually better off, just as apartment-developers are better off when apartment-zoned land is cheaper.
 
-# A dogmatic rejection of supply and demand
+# II. A dogmatic rejection of supply and demand
 
 In Condon's worldview, supply and demand cannot explain the housing market:
 >The theory of supply and demand has been undercut by the observed economic reality [...] that no matter how many new housing units a metropolitan area adds, housing prices continue to rise. (p.56)
@@ -139,7 +142,7 @@ As we've seen, his attempt to pin the problem on upzoning fails, and with it, hi
 
 In fact, a supply and demand model can neatly explain the data.
 Demand to live in cities like Vancouver has increased, and restrictive zoning has prevented supply from keeping up.
-This mismatch causes both higher housing prices and higher land values.
+This supply and demand mismatch causes both higher housing prices and higher land values.
 
 Condon is fond of claiming that Vancouver's city center has tripled the stock of homes, yet prices remain very high.
 He is simply unable to conceive of demand being a cause of housing prices.
@@ -147,7 +150,7 @@ He is simply unable to conceive of demand being a cause of housing prices.
 ![](https://michaelwiebe.com/assets/condon/supply_tripled.jpg){:width="70%"}
 
 
-# A reliance on theoretical edge cases
+# III. A reliance on theoretical edge cases
 
 To see how Condon relies on extreme theoretical edge cases, let's consider his numerical example showing that upzoning merely increases land values:
 
@@ -182,7 +185,7 @@ But in this example, the goalposts have shifted: now the goal is to show that up
 That's because Condon doesn't have a model of prices; by assuming perfectly elastic demand, he effectively takes prices as fixed, and determined outside of the model.
 Hence, even if we set aside the reliance on a theoretical edge case, Condon is unable to support his thesis that upzoning increases housing prices.
 
-# Inclusionary zoning 
+# IV. A backwards analysis of inclusionary zoning 
 
 <!-- no acronym? -->
 Condon favors inclusionary zoning (IZ) as a solution to the housing crisis, because it reduces land values.
@@ -218,7 +221,7 @@ IZ is self-defeating.[^better_iz]
 ![](https://michaelwiebe.com/assets/condon/iz_protect.jpg){:width="100%"}
 
 
-# Value capture 
+# V. A failure of value capture 
 
 And we can do land value capture in a market system. 
 Using my upzoning example above, when we relax the assumption of perfectly elastic demand, housing prices fall from $1000psf to $900psf and the land value increases from $2M to $3.2M.
@@ -227,13 +230,14 @@ In this case, the surplus created by upzoning is split between lower market-rate
 Again, higher land values are consistent with lower housing prices.[^demand_suppression]
 
 Because Condon insists that only upzoning can cause higher land values, his approach to value capture is woefully incomplete.
-As we've seen, land values in First Shaughnessy have quadrupled, despite zero upzonings.
+As we've seen, land values in First Shaughnessy have multiplied, despite zero upzonings.
 This land lift is driven by increased demand, and cannot be captured by regulations that apply only conditional on redevelopment.
 Condon's fixation on upzoning has blinded him to billions of dollars in land lift that should have been captured for public benefit.
 The solution is to tax land values unconditionally, as with a land value tax.[^unconditional_tax]
+In fact, we can see that the 2019 [property tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax/additional-school-tax-rate) did appear to reduce land values; 
 Moreover, the same focus on upzoning means that Condon prescribes taxing new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
 
-# Incidence of development taxes
+# VI. A partial grasp of development taxes
 
 Condon does not have a model of the land market as a whole.
 Instead he analyzes a single parcel, which leads to a misleading analysis of development charges:
@@ -294,8 +298,9 @@ Fortunately, Condon's views are incorrect, and we can improve affordability by u
     By the same logic, upzoning agricultural land to single-family residential doesn't reduce housing prices, because it just increases land values.
     ![](https://michaelwiebe.com/assets/condon/condon-agri_upzoning.png){:width="80%"}
 
-
-[^fee_meme]: Condon also has a meme version of this argument. The key assumption is that fees are less than the land price residual; if fees are larger, then the residual is negative and the project fails.
+[^fee_meme]: Condon also has a meme version of this argument. 
     ![](https://michaelwiebe.com/assets/condon/condon-impact_fee.jpeg){:width="80%"}
+    The key assumption is that fees are less than the land price residual; if fees are larger, then the residual is negative and the project fails.
+    ![](https://michaelwiebe.com/assets/condon/condon_incidence.png){:width="80%"}
 
 [^ge_logic]: Equivalently, higher supply of apartment-zoned land increases the supply of apartments, reducing their price. Since apartments are cheaper, the return to owning apartment-zoned land is lower. In a general equilibrium model, land and housing prices are [jointly determined](https://michaelwiebe.com/blog/2025/08/hijack_review#land-and-housing-prices); causality runs in both directions. So lower land prices cause lower apartment prices, and lower apartment prices cause lower land prices.
