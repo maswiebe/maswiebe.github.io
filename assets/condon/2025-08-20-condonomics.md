@@ -152,7 +152,7 @@ He is simply unable to conceive of demand being a cause of housing prices.
 
 # III. A reliance on theoretical edge cases
 
-To see how Condon relies on extreme theoretical edge cases, let's consider his numerical example showing that upzoning merely increases land values:
+To see how Condon uses extreme theoretical edge cases, let's consider his numerical example showing that upzoning merely increases land values:
 
 >Imagine a parcel of 4,000 square feet with an allowable floor surface ratio of one (FSR 1) that sells for $2 million dollars prior to rezoning. If the allowable density is doubled to a floor surface ratio of two (FSR 2), the redevelopment value increases in kind, forcing a near doubling in the value of the land to $4 million. Why?
 >
@@ -174,9 +174,9 @@ Notice what happened: land values went up and housing prices went down; but acco
 ![](https://michaelwiebe.com/assets/condon/perf_elastic.png){:width="100%"}
 
 Another problem is that Condon is focused on the land price of a single parcel, instead of the market-wide price of each type of land.
-When the parcel is upzoned, it switches from FSR=1 to FSR=2. 
-This makes the set of all FSR=1 parcels smaller by one, and the set of all FSR=2 parcels bigger by one.
-So FSR=1 land becomes more expensive and FSR=2 land becomes cheaper.
+When the parcel is upzoned, it switches from 1-FSR to 2-FSR. 
+This makes the set of all 1-FSR parcels smaller by one, and the set of all 2-FSR parcels bigger by one.
+So 1-FSR land becomes more expensive and 2-FSR land becomes cheaper.
 But Condon completely ignores this effect, because he does not track land prices by type before and after the upzoning.
 
 Finally, this argument doesn't even support Condon's thesis.
@@ -234,8 +234,12 @@ As we've seen, land values in First Shaughnessy have multiplied, despite zero up
 This land lift is driven by increased demand, and cannot be captured by regulations that apply only conditional on redevelopment.
 Condon's fixation on upzoning has blinded him to billions of dollars in land lift that should have been captured for public benefit.
 The solution is to tax land values unconditionally, as with a land value tax.[^unconditional_tax]
-In fact, we can see that the 2019 [property tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax/additional-school-tax-rate) did appear to reduce land values; 
-Moreover, the same focus on upzoning means that Condon prescribes taxing new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
+
+Moreover, the same focus on upzoning means that Condon prescribes taxing only new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
+In fact, we can see in the graph above that the 2019 [property tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax/additional-school-tax-rate) did appear to reduce land values; but Condon appears uninterested in raising taxes that affect all homeowners.
+<!-- or caused also by higher PTT, foreign buyer tax, speculation and vacancy tax?
+https://www.policyalternatives.ca/news-research/property-tax-changes/
+ -->
 
 # VI. A partial grasp of development taxes
 
@@ -272,7 +276,7 @@ Hence, we get cheap land for non-market housing.[^discpline_quote]
 But as I noted above, this strategy would be a disaster.
 It does nothing to absorb demand increases, so demand cascades would occur continuously, pushing more and more people into needing subsidized housing.
 Fortunately, Condon's views are incorrect, and we can improve affordability by upzoning to increase housing supply.
-
+<!-- better conclusion? -->
 
 ---
 [^migration]: What if inter-city migration makes local housing demand highly elastic? In this case, we evaluate one city's upzoning in the context of the national market, since lower prices induce in-migration from other cities. Upzoning in city A also reduces prices in B and C, so the effect is scaled down by A's share of the national population. (The national demand curve is downward-sloping, since immigration into the country is limited.) But this is just an argument for upzoning nationally, and for zoning policy to be set at higher-level governments to internalize the externalities of local upzoning.
