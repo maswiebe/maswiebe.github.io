@@ -17,3 +17,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
 permalink: /blog/:year/:month/:title
+plugins:
+  - jekyll-seo-tag
