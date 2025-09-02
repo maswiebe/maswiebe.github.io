@@ -4,12 +4,7 @@ title: "Condonomics Debunked: A review of Patrick Condon's 'Broken City'"
 description: "A comprehensive refutation of Patrick Condon's view of housing and land markets."
 date: 2025-08-20 17:00:00
 type: post
-
-image:
-  path: https://michaelwiebe.com/assets/condon/shaughnessy.png
-  alt: "Land and building values in Shaughnessy"
-  width: 1024
-  height: 512
+image: "https://michaelwiebe.com/assets/condon/shaughnessy.png"
 ---
 
 In [Broken City](https://www.ubcpress.ca/broken-city), landscape architect Patrick Condon presents a diagnosis of the housing crisis.
