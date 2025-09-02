@@ -107,6 +107,7 @@ Since land is an input into housing, upzoning makes apartments cheaper and house
 (See [here](https://michaelwiebe.com/blog/2025/07/land_model) for a full writeup.)
 
 ![](https://michaelwiebe.com/assets/condon/two_sector_housing.png){:width="100%"}
+_A supply and demand model of upzoning and land prices_
 
 Condon does get one thing right: the upzoned parcel itself increases in value as it switches markets (from $$P_1^H$$ to $$P_2^A$$).
 But this 'own-parcel effect' is irrelevant for evaluating upzoning. 
@@ -172,6 +173,7 @@ Hence, developers would only be willing to pay $400*8000 = $3.2M, instead of $4M
 Notice what happened: land values went up and housing prices went down; but according to Condon, this should be impossible.
 
 ![](https://michaelwiebe.com/assets/condon/perf_elastic.png){:width="100%"}
+_The effect of increased housing supply for different demand curves_
 
 Another problem is that Condon is focused on the land price of a single parcel, instead of the market-wide price of each type of land.
 When the parcel is upzoned, it switches from 1-FSR to 2-FSR. 
@@ -219,7 +221,7 @@ Hence, while IZ does increase the supply of subsidized homes, it also increases 
 IZ is self-defeating.[^better_iz]
 
 ![](https://michaelwiebe.com/assets/condon/iz_protect.jpg){:width="100%"}
-
+_Original [meme](https://imgflip.com/memegenerator/171305372/Soldier-protecting-sleeping-child) for context_
 
 # V. A failure of value capture 
 
