@@ -28,7 +28,6 @@ But what is the actual causal relationship underlying these correlations?
 
 Condon thinks that upzoning drives land values, which in turn causes higher housing prices.
 Right away we can find a fatal flaw in this view: in First Shaughnessy, a heritage-protected mansion neighborhood in Vancouver, land values quintupled between 2006 and 2017 (before decreasing after a property tax was implemented). 
-<!-- (I'll return to this.) -->
 Over the same period, building values doubled.
 
 ![](https://michaelwiebe.com/assets/condon/shaughnessy.png){:width="100%"}
@@ -86,14 +85,52 @@ fsd_data |>
         legend.justification = "center"
         ) 
 dev.off()
+
+# same graph for rest of Vancouver
+nonfsd_data <- search_cov_datasets("tax")$dataset_id |>
+  map_df(\(ds)get_cov_data(ds, where = "zoning_district != 'FSD'",
+                           select = "pid,land_coordinate,zoning_district,neighbourhood_code,report_year,current_land_value,current_improvement_value")) |>
+  mutate(n=n(),.by=land_coordinate) # count number of times a parcel appears
+
+png(file=paste0("non_shaughnessy.png"), width=750, height=400, res=90)
+nonfsd_data |>
+  filter(is.na(current_land_value)==0 & is.na(current_improvement_value)==0) |>
+  summarize(`Land value`=mean(current_land_value),
+            `Building value`= mean(current_improvement_value),
+            .by=report_year) |>
+  mutate(Date=as.Date(paste0(as.integer(report_year)-1,"-07-01"))) |>
+  arrange(Date) |>
+  pivot_longer(cols=c(`Land value`, `Building value`), names_to="type", values_to="value") |>
+  ggplot(aes(x=Date, y=value, colour=type)) +
+  geom_line() +
+  geom_point(shape=21) +
+  geom_vline(data=est_data, aes(xintercept=Date), colour="black", linetype="dashed") +
+  scale_y_continuous(labels=\(x) scales::dollar(x, scale=10^-6, suffix="M")) +
+  scale_color_manual(values=c("Land value"="#1F77B4", "Building value"="#FF7F0E")) +
+  labs(
+    title="Vancouver land and building values (excluding First Shaughnessy)",
+    x="Assessment year",
+    y="Average value",
+    colour=NULL,
+    caption="Note: additional school tax announced in 2018, implemented in 2019."
+  ) +
+  guides(linetype="none") +   # removes legend entry for vline
+  theme(plot.caption = element_text(hjust = 0) # left-align caption
+        , legend.position = "right",
+        legend.justification = "center"
+  ) 
+dev.off()
+
+
 ```
 
 </details>
 
 {::options parse_block_html="false" /}
 
-<!-- (The graph for Vancouver overall is remarkably similar.) -->
-The entire neighborhood of First Shaughnessy is a [heritage conservation area](https://bylaws.vancouver.ca/ODP/odp-heritage-conservation-area.pdf), so we have a clean natural experiment: very few upzonings are happening here (and any rezoned parcels are removed from the data).
+The entire neighborhood of First Shaughnessy is a [heritage conservation area](https://bylaws.vancouver.ca/ODP/odp-heritage-conservation-area.pdf), so we have a clean natural experiment: very few upzonings are happening here (and any rezoned parcels are removed from the data), and yet land values are soaring.
+Moreover, the pattern in the rest of Vancouver is almost identical; so land values are increasing whether or not upzonings occur.[^non_fsd]
+
 But then what is causing the increase in land values?
 Condon has no answer.
 He could appeal to speculators bidding up parcels in anticipation of future upzonings, but when the entire neighborhood is heritage-protected, this is obviously strained.
@@ -308,3 +345,6 @@ Fortunately, Condon's views are incorrect, and we can improve affordability by u
     ![](https://michaelwiebe.com/assets/condon/condon_incidence.png){:width="80%"}
 
 [^ge_logic]: Equivalently, higher supply of apartment-zoned land increases the supply of apartments, reducing their price. Since apartments are cheaper, the return to owning apartment-zoned land is lower. In a general equilibrium model, land and housing prices are [jointly determined](https://michaelwiebe.com/blog/2025/08/hijack_review#land-and-housing-prices); causality runs in both directions. So lower land prices cause lower apartment prices, and lower apartment prices cause lower land prices.
+
+[^non_fsd]: We see a similar increase in land values in the rest of Vancouver, where upzoning happens much more frequently compared to First Shaughnessy. So upzoning cannot be main explanatory factor.
+    ![](https://michaelwiebe.com/assets/condon/non_shaughnessy.png){:width="80%"}
