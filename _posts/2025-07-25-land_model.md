@@ -150,7 +150,7 @@ These changes in the demand curves occur away from the intersections with the su
 
 ![](https://michaelwiebe.com/assets/land_model/eqm2_house.png){:width="100%"}
 
-So upzoning makes apartment-zoned land more abundant, which lessens competitive pressure among developers; this reduces the price of land, making apartments cheaper to produce.
+So upzoning makes apartment-zoned land more abundant, and the price has to fall to clear the market. This reduces the price of land, making apartments cheaper to produce.
 Hence, upzoning reduces the price of apartments.
 (The model here shows only the input market (for land), but intuitively, decreased input prices translate to decreased output prices.)
 
