@@ -15,7 +15,7 @@ This leads him to reject supply and demand theory entirely.
 Applying this erroneous framework to inclusionary zoning and development taxes, Condon recommends policies that would worsen housing affordability.
 
 <!-- numbered sections? -->
-# I. An incoherent theory of land values
+# I. An incoherent theory of land values {#land-value}
 
 Condon's thesis is that rising land values are responsible for increasing housing costs:
 >The thesis of this volume [...] is that the housing crisis is not caused by an impeded supply of homes but by the asset value of the land below them. This Rent value is inflated when higher-density homes are authorized, much to the disappointment of those who argue that the housing-affordability problem is caused by constrained supply. (p.177)
@@ -120,8 +120,6 @@ nonfsd_data |>
         legend.justification = "center"
   ) 
 dev.off()
-
-
 ```
 
 </details>
@@ -168,7 +166,7 @@ Let's apply Condon's thesis from above to steel:
 But of course, manufacturers can't use iron ore, just as apartment-developers can't use house-zoned land.
 And the increased availability of steel makes it cheaper, so manufacturers are actually better off, just as apartment-developers are better off when apartment-zoned land is cheaper.
 
-# II. A dogmatic rejection of supply and demand
+# II. A dogmatic rejection of supply and demand {#supply-demand}
 
 In Condon's worldview, supply and demand cannot explain the housing market:
 >The theory of supply and demand has been undercut by the observed economic reality [...] that no matter how many new housing units a metropolitan area adds, housing prices continue to rise. (p.56)
@@ -189,7 +187,7 @@ He is simply unable to conceive of demand being a cause of housing prices.
 ![](https://michaelwiebe.com/assets/condon/supply_tripled.jpg){:width="70%"}
 
 
-# III. A reliance on theoretical edge cases
+# III. A reliance on theoretical edge cases {#edge-case}
 
 To see how Condon uses extreme theoretical edge cases, let's consider his numerical example showing that upzoning merely increases land values:
 
@@ -225,7 +223,7 @@ But in this example, the goalposts have shifted: now the goal is to show that up
 That's because Condon doesn't have a model of prices; by assuming perfectly elastic demand, he effectively takes prices as fixed, and determined outside of the model.
 Hence, even if we set aside the reliance on a theoretical edge case, Condon is unable to support his thesis that upzoning increases housing prices.
 
-# IV. A backwards analysis of inclusionary zoning 
+# IV. A backwards analysis of inclusionary zoning {#iz}
 
 <!-- no acronym? -->
 Condon favors inclusionary zoning (IZ) as a solution to the housing crisis, because it reduces land values.
@@ -261,7 +259,7 @@ IZ is self-defeating.[^better_iz]
 ![](https://michaelwiebe.com/assets/condon/iz_protect.jpg){:width="100%"}
 _Original [meme](https://imgflip.com/memegenerator/171305372/Soldier-protecting-sleeping-child) for context_
 
-# V. A failure of value capture 
+# V. A failure of value capture {#value-capture}
 
 And we can do land value capture in a market system. 
 Using my upzoning example above, when we relax the assumption of perfectly elastic demand, housing prices fall from $1000psf to $900psf and the land value increases from $2M to $3.2M.
@@ -278,7 +276,7 @@ The solution is to tax land values unconditionally, as with a land value tax.[^u
 Moreover, the same focus on upzoning means that Condon prescribes taxing only new housing, while leaving old housing untouched; this makes him a favorite among NIMBY activists.
 In fact, we can see in the graph above that the 2019 [property tax](https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax/additional-school-tax-rate) coincided with a decrease in land values; but Condon appears uninterested in raising taxes that affect all homeowners.
 
-# VI. A partial grasp of development taxes
+# VI. A partial grasp of development taxes {#dev-tax}
 
 Condon does not have a model of the land market as a whole.
 Instead he analyzes a single parcel, which leads to a misleading analysis of development charges:
