@@ -31,7 +31,7 @@ But why are we talking about imaginary policies? Why don't we talk about the act
 
 Murray attacks YIMBYs as self-contradictory for supporting more homes and more immigration.[^2] But there is a tension only if you take a restrictive view of who matters (incumbent residents, not newcomers). By Murray's logic, we can boost the number of homes per capita by deporting half of the population.
 
-# Land and housing prices
+# Land and housing prices {#land}
 Murray claims that housing prices determine land prices:
 >the price of [vacant land] is the residual of dwelling value, minus the cost of developing that dwelling and a margin for the perceived risk of that arbitrage. [...] The causality runs from the price of dwellings to the price of land via the cost of development. (p.48)
 
@@ -46,7 +46,7 @@ Murray gives a numerical example:
 
 But this does not necessarily follow. It could also be the case that land prices are fixed and housing prices have to adjust upwards to $600k (= 300k + 300k); that is, it's the housing prices that are out of equilibrium. In general equilibrium, both housing and land prices will adjust, but Murray assumes a partial equilibrium view (holding housing prices fixed).
 
-# Spatial equilibrium and the location of housing
+# Spatial equilibrium and the location of housing {#spatial}
 Murray takes a simplistic view of spatial equilibrium, where the location of new housing doesn't matter, because prices will adjust as people sort geographically:
 >We must apparently build ‘where people want to live’. But spatial equilibrium tells us that people will live anywhere, because all locations are substitutes at the right price. Sure, higher value areas have lower travel times and better amenity; the value of this location benefit is exactly equal to the additional rent compared to other areas. (p.65)
 
@@ -63,7 +63,7 @@ Clearly something has gone wrong here.
 By this logic, all cities could impose 100%-binding zoning constraints and there would be no effect on aggregate prices.
 But Murray does not present a model that could generate this result.
 
-# The rate of new supply
+# The rate of new supply {#dynamic}
 Murray skips over a static model and instead uses a dynamic model, where we have a rate of new supply over time ('absorption rate').
 Murray thinks it is an insightful point that developers will limit how fast they build new homes. But this seems like a mundane response to uncertainty and production lags; developers will reduce risk through a diversified portfolio of projects.
 And note that this behavior is encouraged by a discretionary planning regime; if developers could build apartments under apartment zoning, instead of needing permission for every project, they would have less need to smooth out risk.
@@ -75,7 +75,7 @@ The key issue here is whether zoning is a binding constraint. If it is, then rel
 Murray seems to believe this argument: 'developers already leave feasible sites undeveloped, so adding more feasible sites won't make a difference'.
 But upzoning actually changes the feasibility threshold, by reducing land costs, which in turn increases the supply of housing (see [here](https://michaelwiebe.com/blog/2025/07/land_model)).
 
-# Other issues
+# Other issues {#other}
 
 Murray motivates his arguments using striking anecdotes, like a development of detached homes being rejected by city council for being too low density next to a proposed train station in the exurbs.
 This anecdote sets up the question: if lack of density is the cause of high rents, why aren't developers building to the maximum allowed?
