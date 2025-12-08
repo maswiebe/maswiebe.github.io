@@ -7,7 +7,7 @@ type: post
 
 In the [last post](https://michaelwiebe.com/blog/2024/08/perfsub_cts) I used continuous quantities of housing: people could buy, say, 1.26 homes.
 Here I show how a supply and demand model works with discrete quantities, and with a unit demand constraint, where people buy at most one unit of housing.
-This involves a different than the perfect substitutes case, but we arrive at the same conclusion regarding vacancy chains, demand cascades, and yuppie fishtanks.
+This involves a different approach than the perfect substitutes case, but we arrive at the same conclusion regarding vacancy chains, demand cascades, and yuppie fishtanks.
 
 # A supply and demand equilibrium
 
