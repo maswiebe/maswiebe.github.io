@@ -5,6 +5,11 @@ nav: main
 permalink: /research/
 ---
 
+*Infrastructure costs: A replication analysis of Brooks and Liscow (2023)* ([I4R discussion paper](https://www.econstor.eu/handle/10419/333870)), November 2025.
+- The authors find that the cost per mile of the US interstate highway tripled from the 1960s to the 80s. I find that the results are robust.
+
+---
+
 *How many jobs can be done remotely? A reanalysis of Dingel and Neiman (2020)* ([I4R discussion paper](https://www.econstor.eu/handle/10419/318266)), May 2025.
 - The authors report that 37% of jobs in the US can be performed at home. But small changes to the classification algorithm give estimates of 25% and 59%.
 
