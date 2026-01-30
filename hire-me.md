@@ -6,7 +6,7 @@ permalink: /hire-me/
 ---
 
 I'm an independent economist focused on replicating empirical social science research. 
-I check if published findings are reliable by testing for robustness to alternative statistical methods or data sources. 
+I check if published findings are reliable by testing for robustness to alternative statistical methods or data sources. I have published replications in journals including the American Economic Review.
 
 Why replication? 
 Academia is currently too focused on quantity of research at the expense of quality.
