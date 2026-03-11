@@ -5,6 +5,18 @@ nav: main
 permalink: /research/
 ---
 
+*The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_comment_aer.pdf), conditionally accepted Jan. 2026, AER)
+- I show that Moretti (2021) has two major problems. The event study uses an incorrect model, and the IV regressions are based on a coding error. Correcting both problems gives null results, so the baseline elasticity may not be causal.
+- I also document eight other problems in the appendix, including unreproducible code; the citation results using log(y+0.00001); and a coding error in the results for heterogeneity by cluster size.
+
+<!--
+([summary](https://michaelwiebe.com/blog/2024/01/moretti_summary), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf), [code](https://github.com/maswiebe/moretti_comment), [code walkthrough video](https://www.youtube.com/watch?v=mXpGyd5wMos)), November 2023;
+-->
+<!--
+- *Extended Commentary on Moretti (2021)* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf), [code](https://github.com/maswiebe/moretti_extended)): additional results on the event study and IV, heterogeneity by top-10% and bottom-90% inventors, heterogeneity by movers and stayers, testing the mechanism, imputing missing observations, and more.
+-->
+---
+
 *Infrastructure costs: A replication analysis of Brooks and Liscow (2023)* ([I4R discussion paper](https://www.econstor.eu/handle/10419/333870)), November 2025.
 - The authors find that the cost per mile of the US interstate highway tripled from the 1960s to the 80s. I find that the results are robust.
 
@@ -17,6 +29,13 @@ permalink: /research/
 
 *Comment on "Supply Constraints do not Explain House Price and Quantity Growth Across U.S. Cities"* ([pdf](https://michaelwiebe.com/assets/supply_constraints/supply_constraints.pdf)), May 2025.
 - I show that the equations in Louie et al. (2025) are incorrect, because they do not use exogenous variation in housing demand.
+
+---
+
+*Can we detect the effects of racial violence on patenting? Reanalyzing Cook (2014)*. Published in [Econ Journal Watch](https://econjwatch.org/articles/can-we-detect-the-effects-of-racial-violence-on-patenting-reanalyzing-an-article-by-lisa-cook), Oct. 2024.
+- The results in Cook (2014) don't hold up to scrutiny.
+- [Response](https://michaelwiebe.com/assets/cook_reanalysis/response_to_ei_referees.pdf) to referee reports (Economic Inquiry)
+- September 2023 version: [html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf), [code](https://github.com/maswiebe/cook_reanalysis)
 
 ---
 
@@ -40,6 +59,13 @@ permalink: /research/
 
 ---
 
+*Replicating the literature on prefecture-level meritocratic promotion in China*. Published in [Research and Politics](https://journals.sagepub.com/doi/full/10.1177/20531680241229875), Feb. 2024.
+- A popular idea is that Chinese mayors are promoted based on GDP growth. I show that the evidence in the literature is not robust.
+- September 2023 version: [html](https://michaelwiebe.com/assets/promotion), [pdf](https://michaelwiebe.com/assets/promotion.pdf), [code](https://github.com/maswiebe/promotion)
+- [2020 version](https://michaelwiebe.com/assets/ch2.pdf)
+
+---
+
 *Can we detect the long-run effects of the measles vaccine? Replicating Atwood and Pearlman (2023)* ([pdf](https://michaelwiebe.com/assets/measles_mexico/ap_replication.pdf), [code](https://github.com/maswiebe/measles_mexico)), February 2024.
 - I run the same analysis from my [comment](https://michaelwiebe.com/assets/atwood/atwood_comment) on Atwood (2022) in the context of the Mexico measles vaccine, and again find that the results are explained by trends.
 
@@ -48,32 +74,6 @@ permalink: /research/
 *The Long-Term Effects of Measles Vaccination on Earnings and Employment: Comment* ([html](https://michaelwiebe.com/assets/atwood/atwood_comment), [pdf](https://michaelwiebe.com/assets/atwood/atwood_comment.pdf), [I4R discussion paper](https://www.econstor.eu/handle/10419/305225), [code](https://github.com/maswiebe/atwood_comment)), January 2024.
 - I run an event study and find that the results in Atwood (2022) are explained by trends, instead of a treatment effect of the vaccine.
 - *Extended Commentary on Atwood (2022)*, ([pdf](https://michaelwiebe.com/assets/atwood/atwood_extended.pdf), [code](https://github.com/maswiebe/atwood_extended)): additional results on the the event study, heterogeneous effects, plotting the raw data, redoing the disease event study, and more.
-
----
-
-*The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_comment_aer.pdf), conditionally accepted Jan. 2026, AER)
-- I show that Moretti (2021) has two major problems. The event study uses an incorrect model, and the IV regressions are based on a coding error. Correcting both problems gives null results, so the baseline elasticity may not be causal.
-- I also document eight other problems in the appendix, including unreproducible code; the citation results using log(y+0.00001); and a coding error in the results for heterogeneity by cluster size.
-
-<!--
-([summary](https://michaelwiebe.com/blog/2024/01/moretti_summary), [html](https://michaelwiebe.com/assets/moretti/moretti_comment), [pdf](https://michaelwiebe.com/assets/moretti/moretti_comment.pdf), [code](https://github.com/maswiebe/moretti_comment), [code walkthrough video](https://www.youtube.com/watch?v=mXpGyd5wMos)), November 2023;
--->
-<!--
-- *Extended Commentary on Moretti (2021)* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_extended.pdf), [code](https://github.com/maswiebe/moretti_extended)): additional results on the event study and IV, heterogeneity by top-10% and bottom-90% inventors, heterogeneity by movers and stayers, testing the mechanism, imputing missing observations, and more.
--->
-
----
-
-*Can we detect the effects of racial violence on patenting? Reanalyzing Cook (2014)* ([html](https://michaelwiebe.com/assets/cook_reanalysis), [pdf](https://michaelwiebe.com/assets/cook_reanalysis.pdf), [code](https://github.com/maswiebe/cook_reanalysis)), September 2023. Published in [Econ Journal Watch](https://econjwatch.org/articles/can-we-detect-the-effects-of-racial-violence-on-patenting-reanalyzing-an-article-by-lisa-cook), Oct. 2024.
-- The results in Cook (2014) don't hold up to scrutiny.
-- [Response](https://michaelwiebe.com/assets/cook_reanalysis/response_to_ei_referees.pdf) to referee reports (Economic Inquiry)
-
----
-
-*Replicating the literature on prefecture-level meritocratic promotion in China* ([html](https://michaelwiebe.com/assets/promotion), [pdf](https://michaelwiebe.com/assets/promotion.pdf), [code](https://github.com/maswiebe/promotion)), September 2023.
-([2020 version](https://michaelwiebe.com/assets/ch2.pdf)).
-Published in [Research and Politics](https://journals.sagepub.com/doi/full/10.1177/20531680241229875), Feb. 2024.
-- A popular idea is that Chinese mayors are promoted based on GDP growth. I show that the evidence in the literature is not robust.
 
 ---
 
