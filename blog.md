@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Archive
 nav: main
 permalink: /blog/
 ---
