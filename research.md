@@ -5,7 +5,7 @@ nav: main
 permalink: /research/
 ---
 
-*The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_comment_aer.pdf), conditionally accepted Jan. 2026, AER)
+*The Effect of High-Tech Clusters on the Productivity of Top Inventors: Comment* ([pdf](https://michaelwiebe.com/assets/moretti/moretti_comment_aer.pdf), conditionally accepted Jan. 2026, American Economic Review)
 - I show that Moretti (2021) has two major problems. The event study uses an incorrect model, and the IV regressions are based on a coding error. Correcting both problems gives null results, so the baseline elasticity may not be causal.
 - I also document eight other problems in the appendix, including unreproducible code; the citation results using log(y+0.00001); and a coding error in the results for heterogeneity by cluster size.
 
