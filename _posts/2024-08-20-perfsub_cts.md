@@ -215,7 +215,7 @@ So we should see a corresponding drop in demand for Old apartments.
 Here's the effect on Old apartments. 
 The demand curve 'shifts' down from D1 to D2, and now supply intersects demand on the segment where only Person 1 buys Old. 
 The price falls from $$P_{Old}=2.3$$ to $$P_{Old}=0.8$$.
-Following the intuition for subsitute goods, when price(New) falls, Old apartments become relatively less attractive, so demand for Old apartments decreases.
+Following the intuition for substitute goods, when price(New) falls, Old apartments become relatively less attractive, so demand for Old apartments decreases.
 ![](https://michaelwiebe.com/assets/housing/cts_qty/vac_chain/eqm2_oldapt.png){:width="100%"}
 
 <!-- I2 upgrading is incidental to the result?
