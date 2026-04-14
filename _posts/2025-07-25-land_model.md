@@ -211,6 +211,8 @@ This shows the inherent tension in trying to both (a) improve housing affordabil
 Local governments are incentivized to do small spot-upzonings to maximize land lift[^1], but because this limits the stock of apartment-zoned land, it comes at the expense of making apartments more affordable.
 Instead of taxing land only when it is developed, a better approach is to tax land unconditionally, like with a land value tax.
 
+Note that in this setup, aggregate land values are constant: $$S_H P_H + S_A P_A = S_H \frac{m_H}{S_H} + S_A \frac{m_A}{S_A} = m_H + m_A$$. This is because developer demand for land is taken as fixed.
+
 Another extension is to model anticipation effects, where landowners expect upzoning to occur in the future, which raises the price of house-zoned land today.
 
 ---
